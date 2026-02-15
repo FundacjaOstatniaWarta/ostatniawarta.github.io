@@ -4,35 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundacja Ostatnia Warta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Georgia', serif; background-color: #f0f4f0; color: #2c3e50; margin: 0; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
-        .card { background: white; padding: 40px; border-radius: 2px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); max-width: 600px; text-align: center; border-top: 5px solid #2d5a27; }
-        h1 { font-weight: normal; letter-spacing: 2px; text-transform: uppercase; color: #1a3c1a; margin-bottom: 10px; }
-        .motto { font-style: italic; color: #555; margin-bottom: 30px; font-size: 1.1em; }
-        .mission { line-height: 1.8; text-align: justify; margin-bottom: 30px; }
-        .status-box { background: #e8f5e9; padding: 15px; font-size: 0.9em; border: 1px solid #c8e6c9; color: #2e7d32; }
-        .contact { margin-top: 30px; font-size: 0.9em; border-top: 1px solid #eee; padding-top: 20px; }
-        strong { color: #1a3c1a; }
+        :root { --main-green: #1b3d2f; --accent-gold: #c5a059; --bg-light: #f9fbf9; }
+        body { font-family: 'Lato', sans-serif; background-color: var(--bg-light); color: #333; margin: 0; line-height: 1.7; }
+        header { background: var(--main-green); color: white; padding: 80px 20px; text-align: center; border-bottom: 5px solid var(--accent-gold); }
+        h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin: 0; letter-spacing: 2px; }
+        .motto { font-style: italic; font-size: 1.3rem; margin-top: 15px; opacity: 0.9; font-family: 'Playfair Display', serif; }
+        .container { max-width: 900px; margin: -50px auto 60px; background: white; padding: 60px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-radius: 4px; }
+        
+        section { margin-bottom: 50px; }
+        h2 { font-family: 'Playfair Display', serif; color: var(--main-green); border-bottom: 2px solid var(--accent-gold); display: inline-block; margin-bottom: 25px; padding-right: 30px; }
+        
+        .about-text { font-size: 1.1rem; text-align: justify; }
+        .mission-highlight { font-size: 1.25rem; color: var(--main-green); text-align: center; font-weight: 300; font-style: italic; margin-bottom: 40px; }
+        
+        .goals-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .goal-item { padding: 20px; background: #fcfdfc; border-left: 4px solid var(--main-green); }
+        .goal-item strong { display: block; color: var(--main-green); font-size: 1.1rem; margin-bottom: 8px; }
+
+        .status-banner { background: #f0f4f2; border: 1px solid #d1dbd5; padding: 25px; text-align: center; border-radius: 4px; }
+        .contact-area { text-align: center; padding: 40px 0; background: var(--main-green); color: white; margin-top: 50px; }
+        .contact-btn { display: inline-block; padding: 18px 40px; background: var(--accent-gold); color: white; text-decoration: none; font-weight: bold; border-radius: 2px; font-size: 1.1rem; }
+        
+        footer { text-align: center; padding: 30px; font-size: 0.9rem; color: #666; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>Fundacja "Ostatnia Warta"</h1>
-        <div class="motto">„Zostańcie tu i czuwajcie ze mną!”</div>
-        
-        <div class="mission">
-            <p>Wierzymy, że nikt nie powinien odchodzić w samotności. Naszą misją jest niesienie obecności, wsparcia i godności tym, którzy pełnią swoją ostatnią wartę. Czerpiąc z wartości humanistycznych i chrześcijańskiego etosu miłosierdzia, budujemy przestrzeń pełną uważności na drugiego człowieka.</p>
-        </div>
 
-        <div class="status-box">
-            <strong>Status:</strong> Jesteśmy w trakcie rejestracji w KRS. <br>
-            Siedziba: Gdańsk
-        </div>
+<header>
+    <h1>Fundacja "Ostatnia Warta"</h1>
+    <p class="motto">„Zostańcie tu i czuwajcie ze mną!”</p>
+</header>
 
-        <div class="contact">
-            Masz pytanie? Chcesz nas wesprzeć w działaniach u podstaw?<br>
-            Napisz do nas: <strong>wyboisty-agnacki.6v@icloud.com</strong>
+<div class="container">
+    <section>
+        <div class="mission-highlight">
+            "Aby nikt nie musiał odchodzić w samotności."
         </div>
+        <h2>O nas</h2>
+        <div class="about-text">
+            <p>Fundacja „Ostatnia Warta” powstała w Gdańsku z inicjatywy Przemysława Belchnerowskiego, z głębokiej potrzeby przywrócenia godności chwilom ostatecznym. Naszą misję opieramy na uniwersalnych wartościach humanistycznych oraz etosie miłosierdzia.</p>
+            <p>Jako zespół ludzi dobrej woli, chcemy stać na straży obecności tam, gdzie samotność bywa najtrudniejsza. Wierzymy, że towarzyszenie człowiekowi w jego ostatniej drodze jest najwyższym wyrazem solidarności.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Nasza Misja i Cele</h2>
+        <div class="goals-grid">
+            <div class="goal-item">
+                <strong>Doula Umierania</strong>
+                Profesjonalne i pełne empatii towarzyszenie osobom w procesie odchodzenia, dbając o ich dobrostan emocjonalny i duchowy.
+            </div>
+            <div class="goal-item">
+                <strong>Przeciwdziałanie Samotności</strong>
+                Obecność przy łóżku chorego w szpitalach, hospicjach oraz domach prywatnych, aby nikt nie był sam w tej ważnej chwili.
+            </div>
+            <div class="goal-item">
+                <strong>Sitting Service</strong>
+                Realizacja idei stałego czuwania (warta), dająca poczucie bezpieczeństwa choremu i wytchnienie jego najbliższym.
+            </div>
+            <div class="goal-item">
+                <strong>Wsparcie Rodzin</strong>
+                Pomoc bliskim w przejściu przez trudny czas choroby terminalnej oraz wsparcie w procesie żałoby.
+            </div>
+            <div class="goal-item">
+                <strong>Edukacja i Wolontariat</strong>
+                Szkolenie wolontariuszy oraz krzewienie idei godnego umierania w społeczeństwie.
+            </div>
+            <div class="goal-item">
+                <strong>Nadzór i Etyka</strong>
+                Działamy transparentnie pod nadzorem Ministra Zdrowia, niosąc pomoc każdemu bez względu na wyznanie.
+            </div>
+        </div>
+    </section>
+
+    <div class="status-banner">
+        <strong>Aktualności:</strong> Jesteśmy w trakcie rejestracji w KRS. O wszystkich krokach będziemy Państwa informować na bieżąco. Dziękujemy za cierpliwość i wsparcie.
     </div>
+</div>
+
+<div class="contact-area">
+    <h3>Chcesz nas wesprzeć lub zapytać o współpracę?</h3>
+    <p>Jesteśmy dostępni pod adresem:</p>
+    <a href="mailto:kontakt@ostatniawarta.pl" class="contact-btn">kontakt@ostatniawarta.pl</a>
+</div>
+
+<footer>
+    &copy; 2026 Fundacja "Ostatnia Warta" | Siedziba: Gdańsk | Nadzór: Minister właściwy ds. Zdrowia
+</footer>
+
 </body>
 </html>
