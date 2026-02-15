@@ -23,11 +23,18 @@
         .goal-item { padding: 20px; background: #fcfdfc; border-left: 4px solid var(--main-green); }
         .goal-item strong { display: block; color: var(--main-green); font-size: 1.1rem; margin-bottom: 8px; }
 
-        .status-banner { background: #f0f4f2; border: 1px solid #d1dbd5; padding: 25px; text-align: center; border-radius: 4px; }
-        .contact-area { text-align: center; padding: 40px 0; background: var(--main-green); color: white; margin-top: 50px; }
-        .contact-btn { display: inline-block; padding: 18px 40px; background: var(--accent-gold); color: white; text-decoration: none; font-weight: bold; border-radius: 2px; font-size: 1.1rem; }
+        .status-banner { background: #f0f4f2; border: 1px solid #d1dbd5; padding: 25px; text-align: center; border-radius: 4px; margin-top: 20px; }
+        .contact-area { text-align: center; padding: 60px 20px; background: var(--main-green); color: white; margin-top: 50px; }
+        .contact-btn { display: inline-block; padding: 18px 40px; background: var(--accent-gold); color: white; text-decoration: none; font-weight: bold; border-radius: 2px; font-size: 1.1rem; transition: 0.3s; }
+        .contact-btn:hover { background: #b08d4a; transform: translateY(-2px); }
         
         footer { text-align: center; padding: 30px; font-size: 0.9rem; color: #666; }
+
+        @media (max-width: 600px) {
+            .goals-grid { grid-template-columns: 1fr; }
+            .container { padding: 30px; margin-top: -30px; }
+            h1 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
@@ -44,49 +51,50 @@
         </div>
         <h2>O nas</h2>
         <div class="about-text">
-            <p>Fundacja „Ostatnia Warta” powstała w Gdańsku z inicjatywy Przemysława Belchnerowskiego, z głębokiej potrzeby przywrócenia godności chwilom ostatecznym. Naszą misję opieramy na uniwersalnych wartościach humanistycznych oraz etosie miłosierdzia.</p>
-            <p>Jako zespół ludzi dobrej woli, chcemy stać na straży obecności tam, gdzie samotność bywa najtrudniejsza. Wierzymy, że towarzyszenie człowiekowi w jego ostatniej drodze jest najwyższym wyrazem solidarności.</p>
+            <p>Fundacja „Ostatnia Warta” wyrosła z inicjatywy grupy ludzi dobrej woli, którzy osiągnęli już w życiu to, co wymierne i ludzkie, by ostatecznie odnaleźć prawdziwy sens egzystencji w niesieniu bezinteresownej pomocy drugiemu człowiekowi.</p>
+            <p>Choć nasza droga formalna związana z rejestracją w KRS wciąż trwa, serce Fundacji już bije. Nie czekamy na pieczątki, by pomagać – naszą opieką i obecnością objęliśmy już pierwszych podopiecznych, stojąc na straży ich spokoju i godności.</p>
+            <p>Wierzymy, że towarzyszenie człowiekowi w jego ostatniej drodze jest najwyższym wyrazem solidarności. Działamy w Gdańsku, niosąc wsparcie tam, gdzie samotność bywa najtrudniejsza.</p>
         </div>
     </section>
 
     <section>
-        <h2>Nasza Misja i Cele</h2>
+        <h2>Misja i Obszary Działań</h2>
         <div class="goals-grid">
             <div class="goal-item">
                 <strong>Doula Umierania</strong>
-                Profesjonalne i pełne empatii towarzyszenie osobom w procesie odchodzenia, dbając o ich dobrostan emocjonalny i duchowy.
+                Profesjonalne i pełne empatii towarzyszenie osobom w procesie odchodzenia. Dbamy o przestrzeń pełną spokoju, zrozumienia i emocjonalnego wsparcia.
             </div>
             <div class="goal-item">
                 <strong>Przeciwdziałanie Samotności</strong>
-                Obecność przy łóżku chorego w szpitalach, hospicjach oraz domach prywatnych, aby nikt nie był sam w tej ważnej chwili.
+                Obecność przy łóżku chorego w szpitalach, hospicjach oraz domach prywatnych. Jesteśmy tam, gdzie bliscy nie mogą dotrzeć, lub potrzebują wsparcia.
             </div>
             <div class="goal-item">
                 <strong>Sitting Service</strong>
-                Realizacja idei stałego czuwania (warta), dająca poczucie bezpieczeństwa choremu i wytchnienie jego najbliższym.
+                Realizacja idei stałego czuwania – „Warty”. Dajemy poczucie bezpieczeństwa choremu, a jego opiekunom chwilę niezbędnego wytchnienia.
             </div>
             <div class="goal-item">
                 <strong>Wsparcie Rodzin</strong>
-                Pomoc bliskim w przejściu przez trudny czas choroby terminalnej oraz wsparcie w procesie żałoby.
+                Pomoc bliskim w przejściu przez trudny czas choroby terminalnej oraz oferowanie profesjonalnego wsparcia w procesie żałoby.
             </div>
             <div class="goal-item">
                 <strong>Edukacja i Wolontariat</strong>
-                Szkolenie wolontariuszy oraz krzewienie idei godnego umierania w społeczeństwie.
+                Szkolenie wolontariuszy gotowych do towarzyszenia oraz krzewienie w społeczeństwie idei godnego, ludzkiego umierania.
             </div>
             <div class="goal-item">
-                <strong>Nadzór i Etyka</strong>
-                Działamy transparentnie pod nadzorem Ministra Zdrowia, niosąc pomoc każdemu bez względu na wyznanie.
+                <strong>Nadzór i Transparentność</strong>
+                Działamy w oparciu o najwyższe standardy etyczne pod nadzorem Ministra Zdrowia, pomagając każdemu bez względu na wyznanie czy światopogląd.
             </div>
         </div>
     </section>
 
     <div class="status-banner">
-        <strong>Aktualności:</strong> Jesteśmy w trakcie rejestracji w KRS. O wszystkich krokach będziemy Państwa informować na bieżąco. Dziękujemy za cierpliwość i wsparcie.
+        <strong>Aktualności:</strong> Jesteśmy w trakcie finalizacji wpisu do KRS. O każdym kolejnym kroku będziemy Państwa informować na bieżąco. Dziękujemy za zaufanie.
     </div>
 </div>
 
 <div class="contact-area">
-    <h3>Chcesz nas wesprzeć lub zapytać o współpracę?</h3>
-    <p>Jesteśmy dostępni pod adresem:</p>
+    <h3>Chcesz nas wesprzeć lub potrzebujesz pomocy?</h3>
+    <p>Czekamy na Twój sygnał pod adresem:</p>
     <a href="mailto:kontakt@ostatniawarta.pl" class="contact-btn">kontakt@ostatniawarta.pl</a>
 </div>
 
