@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zbiórki i Akcje | FUNDACJA "OSTATNIA WARTA"</title>
+    
+    <link rel="canonical" href="https://ostatniawarta.pl/zbiorki.html" />
+    
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        /* Te same eleganckie style co na reszcie witryny */
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
+        a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
+        h1, h2, h3 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
+        .container { width: 85%; max-width: 1200px; margin: auto; padding: 40px 0; }
+        
+        header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
+        
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+        .logo-container { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
+        .golden-ring {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            border: 3px solid #D4AF37; border-top-color: transparent; border-bottom-color: transparent;
+            border-radius: 50%; animation: spin 5s linear infinite;
+        }
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); }
+        
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; letter-spacing: 1px; text-transform: uppercase; }
+        .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.6em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
+
+        nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
+        nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
+        nav ul li a:hover { color: #D4AF37; }
+
+        /* Przyciski */
+        .btn { display: inline-block; padding: 12px 24px; margin: 10px 5px; border-radius: 4px; font-weight: bold; text-align: center; font-family: 'Arial', sans-serif; border: 2px solid transparent; }
+        .btn-primary { background: #D4AF37; color: #133a2d; }
+        .btn-primary:hover { background: #b5952f; color: #fff; }
+
+        /* Sekcja Zbiórek */
+        .content-section { background: #fff; padding: 40px 60px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; border-top: 4px solid #1a5f4a; text-align: center; }
+        .intro-text { font-size: 1.1em; color: #555; max-width: 800px; margin: 0 auto 40px auto; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .fundraiser-card { background: #fcfcfc; padding: 30px; border-radius: 8px; border: 1px solid #eee; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .fundraiser-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .fundraiser-card h3 { color: #133a2d; margin-top: 0; }
+        .fundraiser-card p { color: #666; font-family: 'Arial', sans-serif; font-size: 0.95em; }
+        .fundraiser-status { display: inline-block; padding: 5px 15px; background: #e2f0ea; color: #1a5f4a; border-radius: 20px; font-size: 0.85em; font-family: 'Arial', sans-serif; font-weight: bold; margin-bottom: 15px; }
+        .fundraiser-status.planned { background: #fdf5e6; color: #b5952f; }
+
+        footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; }
+        footer a { color: #D4AF37; text-decoration: none; }
+        footer a:hover { color: #fff; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container" style="padding: 0 0 0 0;">
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <div class="logo-container">
+                    <div class="golden-ring"></div>
+                    <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img"> 
+                </div>
+            </a>
+        </div>
+        
+        <div class="header-titles">
+            <h1>Zbiórki i Akcje</h1>
+            <h2>FUNDACJA "OSTATNIA WARTA"</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html#o-nas">O Fundacji</a></li>
+                <li><a href="index.html#podopieczni">Podopieczni</a></li>
+                <li><a href="index.html#wolontariat">Wolontariat</a></li>
+                <li><a href="index.html#wesprzyj">Wesprzyj Nas</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="container">
+    <div class="content-section">
+        <p class="intro-text">
+            Szanowni Państwo, w tym miejscu będziemy na bieżąco informować o dedykowanych akcjach charytatywnych oraz zbiórkach organizowanych na zewnętrznych portalach (takich jak Zrzutka.pl czy Siepomaga.pl). Państwa wsparcie pozwala nam docierać tam, gdzie nasza obecność jest najbardziej potrzebna.
+        </p>
+
+        <div class="grid">
+            <div class="fundraiser-card">
+                <div class="fundraiser-status">Aktywna zbiórka</div>
+                <h3>Wsparcie działalności statutowej</h3>
+                <p>Środki z tej zbiórki przeznaczamy na bieżące funkcjonowanie wolontariatu, dojazdy do pacjentów oraz zakup drobnych materiałów higienicznych niezbędnych podczas pełnienia "Sitting Service".</p>
+                <a href="#" class="btn btn-primary">Wesprzyj na portalu Zrzutka.pl</a>
+            </div>
+
+            <div class="fundraiser-card">
+                <div class="fundraiser-status planned">W przygotowaniu</div>
+                <h3>Akcja: Święta z godnością</h3>
+                <p>Zbiórka dedykowana naszym podopiecznym z okazji zbliżających się Świąt. Zbieramy fundusze na przygotowanie paczek oraz organizację spotkań dla najbardziej samotnych seniorów.</p>
+                <a href="#" class="btn btn-primary" style="opacity: 0.6; pointer-events: none;">Link wkrótce</a>
+            </div>
+        </div>
+        
+        <div style="margin-top: 50px; border-top: 1px solid #eee; padding-top: 30px;">
+            <p style="font-style: italic; color: #777;">Wolisz tradycyjną formę wsparcia? Przejdź do sekcji <a href="index.html#wesprzyj" style="font-weight: bold; text-decoration: underline;">Wesprzyj Nas</a> na stronie głównej, aby pobrać blankiet, sprawdzić nasz numer BLIK lub numer konta.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 FUNDACJA "OSTATNIA WARTA". Wszelkie prawa zastrzeżone.</p>
+        <p><a href="index.html">Powrót do Strony Głównej</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
