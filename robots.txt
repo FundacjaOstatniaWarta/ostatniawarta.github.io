@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Plik sitemap - pomoże Google szybciej zindeksować stronę (jeśli go kiedyś stworzymy)
+# Sitemap: https://ostatniawarta.pl/sitemap.xml

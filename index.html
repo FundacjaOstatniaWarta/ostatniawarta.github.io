@@ -3,174 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundacja Ostatnia Warta</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Fundacja Ostatnia Warta | Sitting Service i Wsparcie Seniorów</title>
+    
+    <link rel="canonical" href="https://ostatniawarta.pl/" />
+    
+    <link rel="icon" type="image/png" href="logo.png">
+
     <style>
-        :root { --main-green: #1b3d2f; --accent-gold: #c5a059; --bg-light: #f9fbf9; }
-        body { font-family: 'Lato', sans-serif; background-color: var(--bg-light); color: #333; margin: 0; line-height: 1.8; }
-        header { background: var(--main-green); color: white; padding: 60px 20px; text-align: center; border-bottom: 5px solid var(--accent-gold); }
-        h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; margin: 0; letter-spacing: 2px; }
-        .motto { font-style: italic; font-size: 1.3rem; margin-top: 10px; opacity: 0.9; font-family: 'Playfair Display', serif; }
-        .logo-img { width: 160px; height: auto; margin-bottom: 25px; border-radius: 50%; border: 3px solid var(--accent-gold); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        /* Podstawowe style i reset */
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
+        a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
+        h1, h2, h3 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
+        .container { width: 85%; max-width: 1200px; margin: auto; padding: 40px 0; }
         
-        .container { max-width: 900px; margin: -50px auto 60px; background: white; padding: 60px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-radius: 4px; }
+        /* Ciemna, elegancka góra z wycentrowanym logo */
+        header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
         
-        .mission-highlight { font-size: 1.5rem; color: var(--main-green); text-align: center; font-style: italic; font-family: 'Playfair Display', serif; margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px solid #eee; line-height: 1.5; }
-        
-        section { margin-bottom: 60px; }
-        h2 { font-family: 'Playfair Display', serif; color: var(--main-green); border-bottom: 2px solid var(--accent-gold); display: inline-block; margin-bottom: 30px; padding-right: 30px; font-size: 2rem; }
-        
-        .about-text { font-size: 1.15rem; text-align: justify; color: #2c3e50; }
-        .about-text p { margin-bottom: 25px; }
-        
-        .goals-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 20px; }
-        .goal-item { padding: 25px; background: #fcfdfc; border-left: 4px solid var(--main-green); }
-        .goal-item strong { display: block; color: var(--main-green); font-size: 1.2rem; margin-bottom: 12px; font-family: 'Playfair Display', serif; }
-        .goal-item p { margin: 0; font-size: 1.05rem; line-height: 1.6; text-align: justify; }
-
-        .donation-section { background: #fcfdfc; padding: 50px 40px; border-radius: 4px; border: 1px solid #eee; text-align: center; border-top: 4px solid var(--accent-gold); box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
-        .donation-box { background-color: white; padding: 30px; border: 1px solid #e0e0e0; border-radius: 4px; text-align: left; display: inline-block; width: 100%; max-width: 550px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); margin-top: 20px; }
-        .account-number { margin: 25px 0; padding: 20px; background-color: var(--bg-light); border-left: 4px solid var(--main-green); }
-
-        .news-section { background: #f4f7f4; padding: 40px; border-radius: 4px; border: 1px inset #eee; }
-        .news-title { color: var(--main-green); font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px; display: block; }
-        .news-divider { height: 1px; background: #ddd; margin: 30px 0; border: none; }
-
-        .contact-area { text-align: center; padding: 80px 20px; background: var(--main-green); color: white; }
-        .contact-btn { display: inline-block; padding: 18px 45px; background: var(--accent-gold); color: white; text-decoration: none; font-weight: bold; border-radius: 2px; font-size: 1.1rem; transition: 0.3s; letter-spacing: 1px; }
-        .contact-btn:hover { background: #b08d4a; transform: translateY(-2px); }
-        
-        footer { text-align: center; padding: 40px 20px; font-size: 0.95rem; color: #555; background: #f1f3f1; border-top: 1px solid #ddd; }
-        .legal-info { line-height: 1.8; margin-bottom: 15px; }
-        
-        .footer-link { color: #555; text-decoration: none; transition: color 0.2s; }
-        .footer-link:hover { color: var(--accent-gold); text-decoration: underline; }
-        
-        .doc-link { color: var(--main-green); text-decoration: none; font-weight: bold; margin: 0 10px; transition: color 0.2s; }
-        .doc-link:hover { color: var(--accent-gold); text-decoration: underline; }
-
-        @media (max-width: 600px) {
-            .container { padding: 30px; margin-top: -30px; }
-            h1 { font-size: 1.8rem; }
-            .logo-img { width: 120px; }
-            .goals-grid { grid-template-columns: 1fr; }
-            .doc-link { display: block; margin: 10px 0; }
-            .donation-section { padding: 30px 20px; }
-            .account-number p { font-size: 1.1rem !important; }
+        /* Wycentrowany Złoty Pierścień z Logotypem */
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+        .logo-container { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
+        .golden-ring {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            border: 3px solid #D4AF37; border-top-color: transparent; border-bottom-color: transparent;
+            border-radius: 50%; animation: spin 5s linear infinite;
         }
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); }
+        
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        /* Teksty w nagłówku pod logo */
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; letter-spacing: 1px; }
+        .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.6em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
+        .header-titles p { font-size: 1.1em; max-width: 600px; margin: 0 auto 30px auto; color: #eef7f4; line-height: 1.5; }
+
+        /* Nawigacja */
+        nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
+        nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
+        nav ul li a:hover { color: #D4AF37; }
+
+        /* Przyciski */
+        .btn { display: inline-block; padding: 12px 24px; margin: 10px 5px; border-radius: 4px; font-weight: bold; text-align: center; font-family: 'Arial', sans-serif; border: 2px solid transparent; }
+        .btn-primary { background: #D4AF37; color: #133a2d; }
+        .btn-primary:hover { background: #b5952f; color: #fff; }
+        .btn-outline { border-color: #1a5f4a; color: #1a5f4a; background: transparent; }
+        .btn-outline:hover { background: #1a5f4a; color: #fff; }
+        .btn-dark { border-color: #fff; color: #fff; background: transparent; }
+        .btn-dark:hover { background: #fff; color: #133a2d; }
+
+        /* Siatka dokumentów i kart */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
+        .card { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1a5f4a; }
+        .card ul { list-style: none; padding: 0; }
+        .card ul li { margin-bottom: 15px; padding-left: 20px; position: relative; }
+        .card ul li::before { content: "📄"; position: absolute; left: 0; top: 0; }
+        
+        /* Sekcje */
+        section { padding: 60px 20px; }
+        section:nth-child(even) { background: #fff; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+        
+        /* Specjalna sekcja O nas */
+        .about-text { font-size: 1.15em; font-style: italic; color: #555; text-align: justify; max-width: 900px; margin: 0 auto 40px auto; border-left: 4px solid #D4AF37; padding-left: 20px; }
+        .mission-title { text-align: center; font-size: 2em; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Wsparcie - Bank */
+        .account-box { background: #f0f7f4; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 20px; border: 1px solid #d1e8df; overflow: hidden; }
+        
+        /* Zmodyfikowany numer konta - bez zawijania, mniejsze odstępy */
+        .account-number { 
+            font-size: 1.25em; 
+            letter-spacing: 1px; 
+            word-spacing: 2px; 
+            color: #1a5f4a; 
+            font-family: 'Courier New', Courier, monospace; 
+            font-weight: bold; 
+            margin: 15px 0;
+            white-space: nowrap; 
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+        
+        .qr-code { max-width: 150px; border: 1px solid #ddd; padding: 10px; background: #fff; border-radius: 8px; }
+
+        /* Stopka / Kontakt */
+        footer { background: #133a2d; color: #eef7f4; padding: 50px 20px 20px; text-align: center; }
+        footer h2 { color: #D4AF37; }
+        footer a { color: #D4AF37; text-decoration: underline; }
+        footer a:hover { color: #fff; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto 30px auto; text-align: left; }
+        .contact-info p { margin: 5px 0; font-family: 'Arial', sans-serif; font-size: 0.95em; }
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 30px; padding-top: 20px; font-size: 0.9em; }
+        
+        /* Nadpisanie linków w przyciskach w stopce */
+        footer .btn-dark { text-decoration: none; color: #fff; }
+        footer .btn-dark:hover { color: #133a2d; }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="logo_nowe.jpg" alt="Logo Fundacji Ostatnia Warta" class="logo-img">
-    <h1>Fundacja "Ostatnia Warta"</h1>
-    <p class="motto">„Zostańcie tu i czuwajcie ze mną!”</p>
+    <div class="container" style="padding: 0 0 0 0;">
+        <div class="logo-wrapper">
+            <div class="logo-container">
+                <div class="golden-ring"></div>
+                <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img"> 
+            </div>
+        </div>
+        
+        <div class="header-titles">
+            <h1>FUNDACJA "OSTATNIA WARTA"</h1>
+            <h2>„Zostańcie tu i czuwajcie ze mną!”</h2>
+            <p>
+                Dajemy naszą obecność tam, gdzie brakuje nadziei.<br>
+                Aby nikt nie musiał odchodzić w samotności.
+            </p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#o-nas" style="text-decoration: none;">O Fundacji</a></li>
+                <li><a href="#podopieczni" style="text-decoration: none;">Podopieczni</a></li>
+                <li><a href="#wolontariat" style="text-decoration: none;">Wolontariat</a></li>
+                <li><a href="#wesprzyj" style="text-decoration: none;">Wesprzyj Nas</a></li>
+                <li><a href="#kontakt" style="text-decoration: none;">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<div class="container">
-    <div class="mission-highlight">
-        „Dajemy naszą obecność tam, gdzie brakuje nadziei.<br>
-        Aby nikt nie musiał odchodzić w samotności.”
-    </div>
-
-    <section>
-        <h2>O nas</h2>
+<section id="o-nas">
+    <div class="container">
         <div class="about-text">
             <p>Fundacja „Ostatnia Warta” to wspólnota osób, których ścieżki życiowe splatają się z codziennością gdańskich ulic. Jesteśmy ludźmi takimi jak Państwo – sąsiadami, przechodniami, osobami, które w zgiełku współczesnego świata nie utraciły wrażliwości na cichy głos drugiego człowieka. Nie odnajdą Państwo u nas luksusowych atrybutów statusu ani szklanych biurowców; naszą największą wartością jest empatia oraz gotowość do bezinteresownego pochylenia się nad cierpieniem.</p>
             <p>Nasza misja zrodziła się w dobie powszechnego odosobnienia, kiedy w cieniu globalnego niepokoju dostrzegliśmy, jak wielką wagę ma prosta obecność. To, co przez ostatnie lata było jedynie odruchem serca i nieformalnym wsparciem świadczonym potrzebującym, w lutym 2026 roku zyskało godną, sformalizowaną postać prawną.</p>
-            <p>Wierzymy głęboko, że prawdziwy sens egzystencji nie objawia się w pogoni za dobrami doczesnymi, lecz w uśmiechu drugiego człowieka i poczuciu spełnionego obowiązku. Odnaleźliśmy szczęście w pomocy niesionej bez oczekiwania na nagrodę. W świecie zdominowanym przez tymczasowość, my wybieramy trwałość więzi i godność, która towarzyszy człowiekowi do ostatnich chwil.</p>
+            <p><strong>Wierzymy głęboko, że prawdziwy sens egzystencji nie objawia się w pogoni za dobrami doczesnymi, lecz w uśmiechu drugiego człowieka i poczuciu spełnionego obowiązku.</strong> Odnaleźliśmy szczęście w pomocy niesionej bez oczekiwania na nagrodę. W świecie zdominowanym przez tymczasowość, my wybieramy trwałość więzi i godność, która towarzyszy człowiekowi do ostatnich chwil.</p>
         </div>
-    </section>
 
-    <section>
-        <h2>Misja i obszary działań</h2>
-        <div class="goals-grid">
-            <div class="goal-item">
-                <strong>Doula Umierania</strong>
-                <p>Szlachetna posługa towarzyszenia osobom w procesie odchodzenia. Dbamy o przestrzeń wolną od lęku, nasyconą spokojem i emocjonalnym wsparciem.</p>
-            </div>
-            <div class="goal-item">
-                <strong>Przeciwdziałanie Samotności</strong>
-                <p>Czuwanie przy łóżku chorego w placówkach medycznych oraz domach prywatnych. Jesteśmy tam, gdzie ludzka obecność staje się najcenniejszym lekarstwem.</p>
-            </div>
-            <div class="goal-item">
-                <strong>Sitting Service</strong>
-                <p>Realizacja idei stałej „Warty” – ofiarowanie poczucia bezpieczeństwa podopiecznym oraz chwili niezbędnego wytchnienia ich najbliższym opiekunom.</p>
-            </div>
-            <div class="goal-item">
-                <strong>Wsparcie Rodzin</strong>
-                <p>Towarzyszenie bliskim w trudnym czasie choroby terminalnej oraz oferowanie profesjonalnej pomocy w godnym przeżywaniu żałoby.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="donation-section">
-        <h2 style="border-bottom: none; margin-bottom: 20px; padding-right: 0;">Chcesz nas wesprzeć?</h2>
-        <div class="about-text" style="text-align: center;">
-            <p style="margin: 0 auto; max-width: 750px;">Fundacja „Ostatnia Warta” opiera swoją działalność na bezinteresownej pomocy. Zarząd i Rada Fundacji pracują w 100% <i>pro publico bono</i>. Nie pobieramy wynagrodzeń, nie zatrudniamy administracji. <strong>Każda przekazana nam złotówka trafia bezpośrednio na pomoc naszym Podopiecznym i rozliczymy się z niej co do grosza.</strong></p>
-        </div>
-        
-        <div class="donation-box">
-            <p style="margin: 5px 0; color: #333;"><strong>Odbiorca:</strong> FUNDACJA "OSTATNIA WARTA"</p>
-            <p style="margin: 5px 0; color: #333;"><strong>Adres:</strong> ul. Bronisława Czecha 1/9, 80-288 Gdańsk</p>
-            <p style="margin: 5px 0; color: #333;"><strong>Bank:</strong> Nest Bank S.A.</p>
-            
-            <div class="account-number">
-                <p style="margin: 0 0 5px 0; font-size: 0.9rem; color: #666; text-transform: uppercase; font-weight: bold;">Numer rachunku (PLN):</p>
-                <p style="margin: 0; font-size: 1.4rem; font-family: monospace; color: var(--main-green); font-weight: bold; letter-spacing: 1px;">
-                    61 2530 0008 2049 1089 8921 0001
-                </p>
-            </div>
-            
-            <p style="margin: 5px 0; color: #333;"><strong>Tytuł przelewu:</strong> Darowizna na cele statutowe</p>
-        </div>
-        
-        <p style="margin-top: 30px; font-size: 1.1rem; color: var(--main-green); font-style: italic; font-family: 'Playfair Display', serif;">
-            Dziękujemy za każde, nawet najmniejsze wsparcie. To dzięki Wam możemy pełnić naszą Wartę.
+        <h2 class="mission-title">Godność poprzez obecność</h2>
+        <p style="text-align: center; max-width: 800px; margin: auto;">
+            Zapewniamy bezpłatne wsparcie emocjonalne oraz tzw. <em>sitting service</em> (czuwanie) dla osób terminalnie i przewlekle chorych w hospicjach, szpitalach oraz domach prywatnych. Wspieramy także seniorów w trudach codzienności, aktywnie gasząc ich samotność.
         </p>
-    </section>
-    <section class="news-section">
-        <h2>Aktualności</h2>
-        
-        <span class="news-title">Rozwój Fundacji: Kolejne kroki przed nami</span>
-        <div class="about-text">
-            <p>Szanowni Państwo, z radością informujemy, że nasza witryna internetowa jest na bieżąco aktualizowana i rozbudowywana. Już wkrótce pojawią się tutaj szczegółowe informacje o naszych najnowszych projektach oraz inicjatywach statutowych. Dziękujemy za Państwa dotychczasowe zainteresowanie i zapraszamy do regularnych odwiedzin – to dopiero początek naszej wspólnej warty.</p>
-        </div>
-        
-        <hr class="news-divider">
-
-        <span class="news-title">Gdańska Szkoła Towarzyszenia – Zaproszenie do wolontariatu</span>
-        <div class="about-text">
-            <p>Szanowni Państwo, czuwanie przy drugim człowieku w jego ostatnich chwilach to zadanie wymagające nie tylko wielkiego serca, ale i odpowiedniego przygotowania. Z tego względu w ramach Fundacji „Ostatnia Warta” powołaliśmy do życia <strong>Gdańską Szkołę Towarzyszenia</strong> – nasz autorski program wsparcia i edukacji dla wolontariuszy.</p>
-            <p>Wierzymy, że autentyczna potrzeba niesienia pomocy, poparta rzetelną wiedzą oraz opieką psychologiczną, pozwoli naszym wolontariuszom z pełnym spokojem i godnością pełnić tę szlachetną posługę. Jeśli czują Państwo, że jest to droga, którą chcieliby Państwo kroczyć razem z nami, serdecznie zapraszamy do kontaktu pod adresem: <a href="mailto:wolontariat@ostatniawarta.pl" style="color: var(--main-green); font-weight: bold;">wolontariat@ostatniawarta.pl</a></p>
-        </div>
-    </section>
-</div>
-
-<div class="contact-area">
-    <h3>Kontakt i korespondencja</h3>
-    <p style="margin-bottom: 30px; opacity: 0.9;">Pozostajemy do Państwa dyspozycji pod adresem:</p>
-    <a href="mailto:kontakt@ostatniawarta.pl" class="contact-btn">kontakt@ostatniawarta.pl</a>
-</div>
-
-<footer>
-    <div class="legal-info">
-        <strong>Fundacja "Ostatnia Warta" | Gdańsk</strong><br>
-        <a href="https://wyszukiwarka-krs.ms.gov.pl/" target="_blank" class="footer-link">KRS: 0001224367</a> | 
-        <a href="https://sprawdznip.podatki.gov.pl/" target="_blank" class="footer-link">NIP: 9571199614</a> | 
-        <a href="https://wyszukiwarkaregon.stat.gov.pl/" target="_blank" class="footer-link">REGON: 544069163</a><br>
-        Organ nadzoru: Minister właściwy ds. Zdrowia
     </div>
-    
-    <div style="margin-top: 20px; margin-bottom: 25px;">
-        <a href="statut.pdf" target="_blank" class="doc-link">Statut Fundacji</a> | 
-        <a href="krs.pdf" target="_blank" class="doc-link">Odpis KRS</a> | 
-        <a href="polityka-prywatnosci.html" class="doc-link">Polityka Prywatności i RODO</a>
-    </div>
+</section>
 
-    <div style="font-size: 0.85rem; opacity: 0.7;">
-        &copy; 2026 Fundacja "Ostatnia Warta". Wszelkie prawa zastrzeżone.
+<section id="podopieczni">
+    <div class="container">
+        <h2>Dla Podopiecznych i ich Rodzin</h2>
+        <p>Nasza pomoc jest w 100% bezpłatna. Jeśli potrzebują Państwo wsparcia dla siebie lub bliskiej osoby, prosimy o zapoznanie się z poniższymi dokumentami. Stanowią one podstawę do objęcia opieką przez naszych wolontariuszy.</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Wymagana dokumentacja:</h3>
+                <ul>
+                    <li><a href="01_ 1_Wniosek_o_objecie_opieka.pdf" target="_blank">Wniosek o objęcie opieką</a></li>
+                    <li><a href="01_03_Zasady_wspolpracy.pdf" target="_blank">Zasady współpracy z Fundacją</a></li>
+                    <li><a href="01_2A_Upowaznienie_szpitalne.pdf" target="_blank">Upoważnienie - Placówka Medyczna</a></li>
+                    <li><a href="01_2B_Upowaznienie_Opiekun.pdf" target="_blank">Upoważnienie - Opiekun Faktyczny</a></li>
+                    <li><a href="01_04_Klauzula_RODO_Podopieczni.pdf" target="_blank">Klauzula informacyjna RODO</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="wolontariat">
+    <div class="container">
+        <h2>Zostań Wolontariuszem</h2>
+        <p>Szukamy osób o wielkich sercach, gotowych pełnić „Wartę”. Nie wymagamy wykształcenia medycznego – najważniejsza jest empatia i czas. Oferujemy profesjonalne przygotowanie do posługi, m.in. w ramach szkoleń w Gdańskiej Szkole Towarzyszenia.</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Dokumenty rekrutacyjne:</h3>
+                <ul>
+                    <li><a href="02_01_Kwestionariusz_Wolontariusza.pdf" target="_blank">Kwestionariusz Wolontariusza</a></li>
+                    <li><a href="02_02_Porozumienie_Wolontariat.pdf" target="_blank">Wzór Porozumienia o Wolontariacie</a></li>
+                    <li><a href="02_03_Zasady_Swiadczenia_Pomocy.pdf" target="_blank">Zasady Świadczenia Pomocy</a></li>
+                    <li><a href="02_04_Zasady_Zachowania_Poufnosci.pdf" target="_blank">Zasady Zachowania Poufności</a></li>
+                    <li><a href="02_05_Klauzula_RODO_Wolontariusze.pdf" target="_blank">Klauzula RODO Wolontariusza</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="wesprzyj">
+    <div class="container">
+        <h2>Wesprzyj naszą misję</h2>
+        <p>Zarząd działa w 100% pro publico bono. Państwa darowizny finansują wyłącznie bezpośrednią pomoc: dojazdy wolontariuszy, drobny sprzęt pomocniczy oraz wsparcie logistyczne dla naszych podopiecznych.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Przekaż Darowiznę</h3>
+                <div class="account-box">
+                    <p><strong>FUNDACJA "OSTATNIA WARTA"</strong></p>
+                    <p>Gdańsk</p>
+                    <div class="account-number">PL 61 2530 0008 2049 1089 8921 0001</div>
+                    <p><small>Bank: Nest Bank | SWIFT: NESBPLPW<br>Tytuł: Darowizna na cele statutowe</small></p>
+                    
+                    <hr style="border: 0; border-top: 1px solid #d1e8df; margin: 20px 0;">
+                    
+                    <p style="margin-bottom: 5px;"><strong>Przelew na telefon BLIK:</strong></p>
+                    <div class="account-number" style="margin-top: 5px; font-size: 1.5em; background: #e2f0ea;">+48 502 989 818</div>
+                </div>
+                
+                <div style="text-align: center;">
+                    <img src="qr_konto.png" alt="Zeskanuj kod QR w aplikacji bankowej" class="qr-code">
+                    <p><small>Zeskanuj kod w aplikacji bankowej, aby wypełnić dane automatycznie.</small></p>
+                    <a href="blankiet.pdf" target="_blank" class="btn btn-outline" style="text-decoration: none;">Pobierz blankiet wpłaty</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Pomagaj przy codziennych zakupach</h3>
+                <p>Mogą Państwo wspierać nas całkowicie bezpłatnie. Wystarczy zarejestrować się w serwisie FaniMani przez nasz dedykowany link, a sklepy internetowe przekażą nam procent od Państwa zakupów.</p>
+                <a href="https://fanimani.pl/zaproszenie/139507/7b9dbce0e1d84fc29adb3ee6d2d52e27" target="_blank" class="btn btn-primary" style="text-decoration: none;">Dołącz do FaniMani</a>
+                
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
+                
+                <h3>Współpraca Biznesowa (CSR)</h3>
+                <p>Zapraszamy lokalnych przedsiębiorców do objęcia Fundacji Mecenatem.</p>
+                <ul>
+                    <li><a href="03_02_Oferta_Wspolpracy_CSR.pdf" target="_blank">Oferta Współpracy dla Firm</a></li>
+                    <li><a href="03_01_Wzor_Umowy_Darowizny.pdf" target="_blank">Wzór Umowy Darowizny</a></li>
+                </ul>
+                <div style="margin-top: 20px;">
+                    <a href="zbiorki.html" class="btn btn-outline" style="text-decoration: none;">Zobacz nasze zbiórki online</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="kontakt">
+    <div class="container">
+        <h2 style="font-family: 'Georgia', serif; font-weight: normal; margin-bottom: 40px;">Kontakt i Dane Rejestrowe</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3 style="color: #fff; font-family: 'Georgia', serif; font-weight: normal;">Dane Rejestrowe</h3>
+                <p><strong>FUNDACJA "OSTATNIA WARTA"</strong></p>
+                <p>Gdańsk</p>
+                <br>
+                <p><strong>NIP:</strong> <a href="https://sprawdznip.podatki.gov.pl/" target="_blank">9571199614</a></p>
+                <p><strong>REGON:</strong> <a href="https://wyszukiwarkaregon.stat.gov.pl/appBIR/index.aspx" target="_blank">544069163</a></p>
+                <p><strong>KRS:</strong> <a href="https://wyszukiwarka-krs.ms.gov.pl/" target="_blank">0001224367</a></p>
+                <br>
+                <p><strong>Sąd rejestrowy:</strong><br>Sąd Rejonowy Gdańsk-Północ w Gdańsku,<br>VII Wydział Gospodarczy KRS</p>
+                <p><strong>Nadzór:</strong> Minister Zdrowia</p>
+            </div>
+            
+            <div class="contact-info">
+                <h3 style="color: #fff; font-family: 'Georgia', serif; font-weight: normal;">Drogi kontaktu</h3>
+                <p><strong>Adres pocztowy:</strong><br>ul. Bronisława Czecha 1/9<br>80-288 Gdańsk</p>
+                <br>
+                <p><strong>E-mail:</strong> <a href="mailto:kontakt@ostatniawarta.pl" style="text-decoration: none;">kontakt@ostatniawarta.pl</a></p>
+                <br>
+                <p><strong>Skrzynka e-Doręczeń:</strong></p>
+                <p style="font-family: monospace; color: #D4AF37; font-size: 1.1em;">AE:PL-40811-80625-IESVG-13</p>
+            </div>
+            
+            <div class="contact-info" style="text-align: center;">
+                <h3 style="color: #fff; font-family: 'Georgia', serif; font-weight: normal;">Dokumenty Statutowe</h3>
+                <br>
+                <a href="https://wyszukiwarka-krs.ms.gov.pl/dane/szczegoly?nip=9571199614" target="_blank" class="btn btn-dark">Sprawdź nas w KRS</a><br>
+                <a href="statut.pdf" target="_blank" class="btn btn-dark">Pobierz Statut Fundacji</a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2026 FUNDACJA "OSTATNIA WARTA". Wszelkie prawa zastrzeżone.</p>
+            <p><a href="polityka-prywatnosci.html" style="text-decoration: none;">Polityka Prywatności i RODO</a></p>
+        </div>
     </div>
 </footer>
 
