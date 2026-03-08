@@ -3,31 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zbiórki i Akcje | FUNDACJA "OSTATNIA WARTA"</title>
+    
+    <title>Zbiórki i Akcje | Fundacja Ostatnia Warta</title>
+    <meta name="description" content="Wesprzyj nasze zbiórki na działalność statutową. Zbieramy fundusze na dojazdy wolontariuszy i środki higieniczne dla terminalnie chorych w Gdańsku.">
+    <meta name="keywords" content="zbiórki charytatywne, wsparcie dla fundacji, ostatnia warta darowizna, zrzutka opieka, sitting service wsparcie">
     
     <link rel="canonical" href="https://ostatniawarta.pl/zbiorki.html" />
-    
     <link rel="icon" type="image/png" href="logo.png">
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3VQ06C7HQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z3VQ06C7HQ');
+    </script>
+
     <style>
-        /* Te same eleganckie style co na reszcie witryny */
+        /* Podstawowe style i reset */
         body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
         a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
         h1, h2, h3 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
-        .container { width: 85%; max-width: 1200px; margin: auto; padding: 40px 0; }
+        .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
         
+        /* Ciemna, elegancka góra z wycentrowanym logo */
         header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
         
+        /* ZEGAR ZAMIAST PIERŚCIENIA (Ujednolicenie z index.html) */
         .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
-        .logo-container { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
-        .golden-ring {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            border: 3px solid #D4AF37; border-top-color: transparent; border-bottom-color: transparent;
-            border-radius: 50%; animation: spin 5s linear infinite;
-        }
-        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); }
-        
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
+        .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
+        .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
+        .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
+        .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
 
         .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; letter-spacing: 1px; text-transform: uppercase; }
         .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.6em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
@@ -39,9 +49,13 @@
         nav ul li a:hover { color: #D4AF37; }
 
         /* Przyciski */
-        .btn { display: inline-block; padding: 12px 24px; margin: 10px 5px; border-radius: 4px; font-weight: bold; text-align: center; font-family: 'Arial', sans-serif; border: 2px solid transparent; }
+        .btn { display: inline-block; padding: 12px 24px; margin: 10px 5px; border-radius: 4px; font-weight: bold; text-align: center; font-family: 'Arial', sans-serif; border: 2px solid transparent; transition: all 0.3s ease; }
         .btn-primary { background: #D4AF37; color: #133a2d; }
         .btn-primary:hover { background: #b5952f; color: #fff; }
+        
+        /* Nowy przycisk powrotu */
+        .btn-back { display: inline-block; background-color: #133a2d; color: #D4AF37; padding: 15px 35px; border-radius: 6px; text-decoration: none; font-weight: bold; font-family: 'Arial', sans-serif; font-size: 1.15em; border: 2px solid #133a2d; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .btn-back:hover { background-color: #fff; color: #133a2d; border-color: #133a2d; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
 
         /* Sekcja Zbiórek */
         .content-section { background: #fff; padding: 40px 60px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; border-top: 4px solid #1a5f4a; text-align: center; }
@@ -56,8 +70,22 @@
         .fundraiser-status.planned { background: #fdf5e6; color: #b5952f; }
 
         footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; }
-        footer a { color: #D4AF37; text-decoration: none; }
+        footer a { color: #D4AF37; text-decoration: none; transition: color 0.3s ease; }
         footer a:hover { color: #fff; }
+        
+        /* Baner Cookie */
+        #cookie-banner { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background-color: #133a2d; color: #fff; text-align: center; padding: 15px; z-index: 9999; box-shadow: 0 -4px 15px rgba(0,0,0,0.3); font-family: 'Arial', sans-serif;}
+        #cookie-banner p { margin: 0; font-size: 0.9em; display: inline-block; vertical-align: middle; max-width: 800px; line-height: 1.5;}
+        #cookie-banner button { margin-left: 20px; background-color: #D4AF37; color: #133a2d; border: none; padding: 10px 20px; font-weight: bold; border-radius: 4px; cursor: pointer; vertical-align: middle; transition: 0.3s;}
+        #cookie-banner button:hover { background-color: #fff; }
+
+        /* Ulepszenia dla smartfonów */
+        @media (max-width: 768px) { 
+            .content-section { padding: 30px 15px; }
+            .btn-back { display: block; width: 100%; box-sizing: border-box; padding: 15px 10px; }
+            #cookie-banner button { margin-top: 15px; margin-left: 0; display: block; width: 100%; } 
+            .header-titles h1 { font-size: 1.8em; }
+        }
     </style>
 </head>
 <body>
@@ -65,9 +93,12 @@
 <header>
     <div class="container" style="padding: 0 0 0 0;">
         <div class="logo-wrapper">
-            <a href="index.html">
-                <div class="logo-container">
-                    <div class="golden-ring"></div>
+            <a href="index.html" title="Powrót do strony głównej">
+                <div class="clock-wrapper">
+                    <div class="clock-center"></div>
+                    <div class="hand hour-hand" id="hourHand"></div>
+                    <div class="hand minute-hand" id="minuteHand"></div>
+                    <div class="hand second-hand" id="secondHand"></div>
                     <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img"> 
                 </div>
             </a>
@@ -112,18 +143,68 @@
             </div>
         </div>
         
-        <div style="margin-top: 50px; border-top: 1px solid #eee; padding-top: 30px;">
-            <p style="font-style: italic; color: #777;">Wolisz tradycyjną formę wsparcia? Przejdź do sekcji <a href="index.html#wesprzyj" style="font-weight: bold; text-decoration: underline;">Wesprzyj Nas</a> na stronie głównej, aby pobrać blankiet, sprawdzić nasz numer BLIK lub numer konta.</p>
+        <div style="text-align: center; margin-top: 60px; padding: 40px 20px; background-color: #f4f8f6; border-radius: 8px; border-top: 4px solid #D4AF37;">
+            <h3 style="color: #133a2d; margin-top: 0; font-family: 'Arial', sans-serif;">Wolisz tradycyjną formę wsparcia?</h3>
+            <p style="color: #555; margin-bottom: 25px; font-size: 1.05em; max-width: 600px; margin-left: auto; margin-right: auto; font-family: 'Arial', sans-serif;">
+                Znajdziesz tam nasz numer konta bankowego, przelew na telefon BLIK oraz gotowy blankiet wpłaty do pobrania na pocztę.
+            </p>
+            <a href="index.html#wesprzyj" class="btn-back">
+                ⬅ Wróć do Strony Głównej
+            </a>
         </div>
+
     </div>
 </section>
 
 <footer>
     <div class="container">
         <p>&copy; 2026 FUNDACJA "OSTATNIA WARTA". Wszelkie prawa zastrzeżone.</p>
-        <p><a href="index.html">Powrót do Strony Głównej</a></p>
+        <p style="margin-top: 20px;"><a href="index.html" style="font-weight: bold; text-decoration: underline; font-size: 1.1em; letter-spacing: 1px;">⬅ STRONA GŁÓWNA</a></p>
     </div>
 </footer>
+
+<div id="cookie-banner">
+    <p>
+        Nasza witryna używa plików cookie do celów analitycznych, by lepiej docierać do potrzebujących. 
+        Szczegóły w naszej <a href="polityka-prywatnosci.html" style="color: #D4AF37; text-decoration: underline;">Polityce Prywatności</a>.
+    </p>
+    <button onclick="acceptCookies()">Rozumiem i akceptuję</button>
+</div>
+
+<script>
+    // Obsługa Zegara
+    function updateClock() {
+        const now = new Date();
+        const second = now.getSeconds();
+        const minute = now.getMinutes();
+        const hour = now.getHours();
+
+        const secondDeg = ((second / 60) * 360);
+        const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
+        const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
+
+        const secHand = document.getElementById('secondHand');
+        const minHand = document.getElementById('minuteHand');
+        const hrHand = document.getElementById('hourHand');
+
+        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
+        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
+        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // Obsługa ciasteczek
+    function acceptCookies() {
+        localStorage.setItem('cookiesAccepted', 'true');
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+    window.onload = function() {
+        if (!localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('cookie-banner').style.display = 'block';
+        }
+    };
+</script>
 
 </body>
 </html>
