@@ -9,24 +9,28 @@
     <link rel="icon" type="image/png" href="logo.png">
 
     <style>
-        /* Te same eleganckie style co na stronie głównej */
+        /* Podstawowe style i reset */
         body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
         a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
         h1, h2, h3 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
         .container { width: 85%; max-width: 1200px; margin: auto; padding: 40px 0; }
         
+        /* Ciemna, elegancka góra z wycentrowanym logo */
         header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
         
+        /* ZEGAR ZAMIAST PIERŚCIENIA */
         .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
-        .logo-container { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
-        .golden-ring {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            border: 3px solid #D4AF37; border-top-color: transparent; border-bottom-color: transparent;
-            border-radius: 50%; animation: spin 5s linear infinite;
-        }
-        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); }
+        .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
         
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        /* Środek wskazówek */
+        .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
+        
+        /* Wskazówki zegara */
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
+        .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
+        .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
+        .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
 
         .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; }
         .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.6em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
@@ -43,7 +47,7 @@
 
         footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; }
         footer a { color: #D4AF37; text-decoration: none; }
-        footer a:hover { color: #fff; }
+        footer a:hover { color: #fff; text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -52,8 +56,11 @@
     <div class="container" style="padding: 0 0 0 0;">
         <div class="logo-wrapper">
             <a href="index.html">
-                <div class="logo-container">
-                    <div class="golden-ring"></div>
+                <div class="clock-wrapper">
+                    <div class="clock-center"></div>
+                    <div class="hand hour-hand" id="hourHand"></div>
+                    <div class="hand minute-hand" id="minuteHand"></div>
+                    <div class="hand second-hand" id="secondHand"></div>
                     <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img"> 
                 </div>
             </a>
@@ -87,14 +94,14 @@
         <ul>
             <li><strong>Realizacja celów statutowych Fundacji</strong>, w tym objęcie opieką podopiecznych oraz organizacja wolontariatu (art. 6 ust. 1 lit. a i b RODO).</li>
             <li><strong>Obsługa darowizn i spraw księgowo-podatkowych</strong>, w tym rozliczenia wpłat na rachunek bankowy i współpracę z darczyńcami (art. 6 ust. 1 lit. c RODO).</li>
-            <li><strong>Komunikacja i udzielanie odpowiedzi</strong> na zapytania kierowane drogą elektroniczną lub tradycyjną (art. 6 ust. 1 lit. f RODO – prawnie uzasadniony interes Administratora).</li>
+            <li><strong>Komunikacja i udzielanie odpowiedzi</strong> na zapytania kierowane drogą elektroniczną, przez formularz kontaktowy lub pocztą tradycyjną (art. 6 ust. 1 lit. f RODO – prawnie uzasadniony interes Administratora).</li>
         </ul>
 
         <h2>3. Odbiorcy danych osobowych</h2>
         <p>Dane osobowe mogą być udostępniane podmiotom wspierającym Fundację w realizacji jej celów, w tym:</p>
         <ul>
             <li>Biuru rachunkowemu obsługującemu księgowość Fundacji.</li>
-            <li>Dostawcom usług IT i hostingu poczty elektronicznej.</li>
+            <li>Dostawcom usług IT, formularzy kontaktowych i hostingu poczty elektronicznej.</li>
             <li>W uzasadnionych przypadkach (na podstawie odrębnych upoważnień) placówkom medycznym w celu realizacji opieki (tzw. sitting service).</li>
         </ul>
         <p>Fundacja nie sprzedaje danych osobowych podmiotom trzecim ani nie przekazuje ich poza Europejski Obszar Gospodarczy (EOG).</p>
@@ -111,8 +118,13 @@
         </ul>
         <p>W celu skorzystania z powyższych praw prosimy o kontakt pod adresem: <strong><a href="mailto:kontakt@ostatniawarta.pl">kontakt@ostatniawarta.pl</a></strong>.</p>
 
-        <h2>5. Pliki Cookies (Ciasteczka)</h2>
-        <p>Nasza witryna internetowa ogranicza gromadzenie danych do absolutnego minimum. Wykorzystujemy jedynie niezbędne pliki cookies służące prawidłowemu funkcjonowaniu i wyświetlaniu strony internetowej. Strona nie wykorzystuje ciasteczek śledzących ani profili marketingowych.</p>
+        <h2>5. Pliki Cookies (Ciasteczka) i Analityka</h2>
+        <p>Nasza witryna internetowa wykorzystuje pliki cookies (ciasteczka) w dwóch celach:</p>
+        <ul>
+            <li><strong>Niezbędne:</strong> Służące do prawidłowego funkcjonowania strony, zapewnienia bezpieczeństwa formularzy oraz zapamiętywania Twojej zgody na ciasteczka.</li>
+            <li><strong>Analityczne (Google Analytics 4):</strong> Za Twoją wyraźną zgodą korzystamy z narzędzia Google Analytics, aby zbierać w pełni zanonimizowane dane statystyczne (np. liczba odwiedzin, rodzaj urządzenia, z jakiego miasta pochodzi ruch). Pozwala nam to lepiej optymalizować stronę i skuteczniej docierać do osób potrzebujących pomocy.</li>
+        </ul>
+        <p>Google Analytics nie gromadzi danych pozwalających na Twoją bezpośrednią identyfikację (np. nazwisk czy dokładnych adresów IP). W każdej chwili możesz zarządzać ustawieniami cookies lub je zablokować bezpośrednio w ustawieniach swojej przeglądarki internetowej.</p>
 
         <h2>6. Zmiany w Polityce Prywatności</h2>
         <p>Fundacja zastrzega sobie prawo do wprowadzania zmian w niniejszej Polityce Prywatności w związku z ewentualnymi zmianami w przepisach prawa lub rozwojem funkcjonalności serwisu internetowego. Aktualna wersja Polityki jest zawsze dostępna na stronie głównej Fundacji.</p>
@@ -125,6 +137,30 @@
         <p><a href="index.html">Powrót do Strony Głównej</a></p>
     </div>
 </footer>
+
+<script>
+    // Zegar
+    function updateClock() {
+        const now = new Date();
+        const second = now.getSeconds();
+        const minute = now.getMinutes();
+        const hour = now.getHours();
+
+        const secondDeg = ((second / 60) * 360);
+        const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
+        const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
+
+        const secHand = document.getElementById('secondHand');
+        const minHand = document.getElementById('minuteHand');
+        const hrHand = document.getElementById('hourHand');
+
+        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
+        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
+        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
 
 </body>
 </html>
