@@ -19,17 +19,19 @@
         /* Ciemna, elegancka góra z wycentrowanym logo */
         header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
         
-        /* Wycentrowany Złoty Pierścień z Logotypem */
+        /* ZEGAR ZAMIAST PIERŚCIENIA */
         .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
-        .logo-container { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
-        .golden-ring {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            border: 3px solid #D4AF37; border-top-color: transparent; border-bottom-color: transparent;
-            border-radius: 50%; animation: spin 5s linear infinite;
-        }
-        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); }
+        .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
         
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        /* Środek wskazówek */
+        .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
+        
+        /* Wskazówki zegara */
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
+        .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
+        .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
+        .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
 
         /* Teksty w nagłówku pod logo */
         .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; letter-spacing: 1px; }
@@ -95,6 +97,10 @@
         .contact-info p { margin: 5px 0; font-family: 'Arial', sans-serif; font-size: 0.95em; }
         .copyright { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 30px; padding-top: 20px; font-size: 0.9em; }
         
+        /* Ukryty link do Księgi Znaku */
+        .ksiega-link { color: inherit; text-decoration: none; border-bottom: 1px dashed rgba(255,255,255,0.3); transition: border-color 0.3s; }
+        .ksiega-link:hover { border-bottom-color: #D4AF37; color: #fff; text-decoration: none; }
+        
         /* Nadpisanie linków w przyciskach w stopce */
         footer .btn-dark { text-decoration: none; color: #fff; }
         footer .btn-dark:hover { color: #133a2d; }
@@ -105,8 +111,11 @@
 <header>
     <div class="container" style="padding: 0 0 0 0;">
         <div class="logo-wrapper">
-            <div class="logo-container">
-                <div class="golden-ring"></div>
+            <div class="clock-wrapper">
+                <div class="clock-center"></div>
+                <div class="hand hour-hand" id="hourHand"></div>
+                <div class="hand minute-hand" id="minuteHand"></div>
+                <div class="hand second-hand" id="secondHand"></div>
                 <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img"> 
             </div>
         </div>
@@ -252,9 +261,13 @@
             
             <div class="contact-info">
                 <h3 style="color: #fff; font-family: 'Georgia', serif; font-weight: normal;">Drogi kontaktu</h3>
-                <p><strong>Adres pocztowy:</strong><br>ul. Bronisława Czecha 1/9<br>80-288 Gdańsk</p>
+                <p><strong>Obszar działania:</strong><br>Gdańsk, Trójmiasto i okolice</p>
                 <br>
                 <p><strong>E-mail:</strong> <a href="mailto:kontakt@ostatniawarta.pl" style="text-decoration: none;">kontakt@ostatniawarta.pl</a></p>
+                <br>
+                <p><strong>Znajdź nas w sieci:</strong><br>
+                <a href="https://www.facebook.com/profile.php?id=61583555455246" target="_blank" style="text-decoration: none;">Nasz profil na Facebooku</a><br>
+                <a href="https://x.com/ostatniawarta" target="_blank" style="text-decoration: none;">Nasz profil na X.com</a></p>
                 <br>
                 <p><strong>Skrzynka e-Doręczeń:</strong></p>
                 <p style="font-family: monospace; color: #D4AF37; font-size: 1.1em;">AE:PL-40811-80625-IESVG-13</p>
@@ -263,17 +276,37 @@
             <div class="contact-info" style="text-align: center;">
                 <h3 style="color: #fff; font-family: 'Georgia', serif; font-weight: normal;">Dokumenty Statutowe</h3>
                 <br>
-                <a href="https://wyszukiwarka-krs.ms.gov.pl/dane/szczegoly?nip=9571199614" target="_blank" class="btn btn-dark">Sprawdź nas w KRS</a><br>
+                <a href="krs.pdf" target="_blank" class="btn btn-dark">Pobierz odpis KRS</a><br>
                 <a href="statut.pdf" target="_blank" class="btn btn-dark">Pobierz Statut Fundacji</a>
             </div>
         </div>
 
         <div class="copyright">
-            <p>&copy; 2026 FUNDACJA "OSTATNIA WARTA". Wszelkie prawa zastrzeżone.</p>
+            <p>&copy; 2026 FUNDACJA "OSTATNIA WARTA". <a href="ksiega_znaku.pdf" target="_blank" class="ksiega-link">Wszelkie prawa zastrzeżone.</a></p>
             <p><a href="polityka-prywatnosci.html" style="text-decoration: none;">Polityka Prywatności i RODO</a></p>
         </div>
     </div>
 </footer>
+
+<script>
+    function updateClock() {
+        const now = new Date();
+        const second = now.getSeconds();
+        const minute = now.getMinutes();
+        const hour = now.getHours();
+
+        const secondDeg = ((second / 60) * 360);
+        const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
+        const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
+
+        document.getElementById('secondHand').style.transform = `rotate(${secondDeg}deg)`;
+        document.getElementById('minuteHand').style.transform = `rotate(${minuteDeg}deg)`;
+        document.getElementById('hourHand').style.transform = `rotate(${hourDeg}deg)`;
+    }
+    
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
 
 </body>
 </html>
