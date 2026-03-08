@@ -17,6 +17,14 @@
     <link rel="canonical" href="https://ostatniawarta.pl/" />
     <link rel="icon" type="image/png" href="logo.png">
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3VQ06C7HQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z3VQ06C7HQ');
+    </script>
+
     <style>
         /* Podstawowe style i reset */
         body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
@@ -79,21 +87,7 @@
 
         /* Wsparcie - Bank */
         .account-box { background: #f0f7f4; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 20px; border: 1px solid #d1e8df; overflow: hidden; }
-        
-        /* Zmodyfikowany numer konta - bez zawijania, mniejsze odstępy */
-        .account-number { 
-            font-size: 1.25em; 
-            letter-spacing: 1px; 
-            word-spacing: 2px; 
-            color: #1a5f4a; 
-            font-family: 'Courier New', Courier, monospace; 
-            font-weight: bold; 
-            margin: 15px 0;
-            white-space: nowrap; 
-            overflow-x: auto;
-            padding-bottom: 5px;
-        }
-        
+        .account-number { font-size: 1.25em; letter-spacing: 1px; word-spacing: 2px; color: #1a5f4a; font-family: 'Courier New', Courier, monospace; font-weight: bold; margin: 15px 0; white-space: nowrap; overflow-x: auto; padding-bottom: 5px; }
         .qr-code { max-width: 150px; border: 1px solid #ddd; padding: 10px; background: #fff; border-radius: 8px; }
 
         /* Stopka / Kontakt */
@@ -104,14 +98,17 @@
         .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto 30px auto; text-align: left; }
         .contact-info p { margin: 5px 0; font-family: 'Arial', sans-serif; font-size: 0.95em; }
         .copyright { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 30px; padding-top: 20px; font-size: 0.9em; }
-        
-        /* Ukryty link do Księgi Znaku */
         .ksiega-link { color: inherit; text-decoration: none; border-bottom: 1px dashed rgba(255,255,255,0.3); transition: border-color 0.3s; }
         .ksiega-link:hover { border-bottom-color: #D4AF37; color: #fff; text-decoration: none; }
-        
-        /* Nadpisanie linków w przyciskach w stopce */
         footer .btn-dark { text-decoration: none; color: #fff; }
         footer .btn-dark:hover { color: #133a2d; }
+        
+        /* Baner Cookie */
+        #cookie-banner { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background-color: #133a2d; color: #fff; text-align: center; padding: 15px; z-index: 9999; box-shadow: 0 -4px 15px rgba(0,0,0,0.3); font-family: 'Arial', sans-serif;}
+        #cookie-banner p { margin: 0; font-size: 0.9em; display: inline-block; vertical-align: middle; max-width: 800px; line-height: 1.5;}
+        #cookie-banner button { margin-left: 20px; background-color: #D4AF37; color: #133a2d; border: none; padding: 10px 20px; font-weight: bold; border-radius: 4px; cursor: pointer; vertical-align: middle; transition: 0.3s;}
+        #cookie-banner button:hover { background-color: #fff; }
+        @media (max-width: 768px) { #cookie-banner button { margin-top: 15px; margin-left: 0; display: block; width: 100%; } }
     </style>
 </head>
 <body>
@@ -264,9 +261,18 @@
                     <li><a href="logo.png" target="_blank">Logo Fundacji - Wersja Podstawowa Jasna (PNG)</a></li>
                     <li><a href="dark_Logo.jpg" target="_blank">Logo Fundacji - Wersja w Kontrze Ciemna (JPG)</a></li>
                 </ul>
-                <div style="margin-top: 20px;">
-                    <a href="mailto:kontakt@ostatniawarta.pl" class="btn btn-outline" style="text-decoration: none;">Kontakt dla mediów</a>
-                </div>
+            </div>
+            
+            <div class="card" style="border-top: 4px solid #D4AF37;">
+                <h3>Napisz do nas bezpośrednio</h3>
+                <p style="font-size: 0.9em; margin-bottom: 15px;">Możesz skontaktować się z nami bezpośrednio przez poniższy formularz.</p>
+                
+                <form action="https://formspree.io/f/maqpngoy" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+                    <input type="text" name="Imię" placeholder="Twoje imię / organizacja" required style="padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: 'Arial', sans-serif;">
+                    <input type="email" name="Email" placeholder="Twój adres e-mail" required style="padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: 'Arial', sans-serif;">
+                    <textarea name="Wiadomość" rows="4" placeholder="W czym możemy pomóc?" required style="padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: 'Arial', sans-serif;"></textarea>
+                    <button type="submit" class="btn btn-primary" style="border: none; cursor: pointer; font-size: 1em;">Wyślij wiadomość</button>
+                </form>
             </div>
         </div>
     </div>
@@ -318,7 +324,16 @@
     </div>
 </footer>
 
+<div id="cookie-banner">
+    <p>
+        Nasza witryna używa plików cookie do celów analitycznych, by lepiej docierać do potrzebujących. 
+        Szczegóły w naszej <a href="polityka-prywatnosci.html" style="color: #D4AF37; text-decoration: underline;">Polityce Prywatności</a>.
+    </p>
+    <button onclick="acceptCookies()">Rozumiem i akceptuję</button>
+</div>
+
 <script>
+    // Zegar
     function updateClock() {
         const now = new Date();
         const second = now.getSeconds();
@@ -333,9 +348,19 @@
         document.getElementById('minuteHand').style.transform = `rotate(${minuteDeg}deg)`;
         document.getElementById('hourHand').style.transform = `rotate(${hourDeg}deg)`;
     }
-    
     setInterval(updateClock, 1000);
     updateClock();
+
+    // Obsługa ciasteczek
+    function acceptCookies() {
+        localStorage.setItem('cookiesAccepted', 'true');
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+    window.onload = function() {
+        if (!localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('cookie-banner').style.display = 'block';
+        }
+    };
 </script>
 
 </body>
