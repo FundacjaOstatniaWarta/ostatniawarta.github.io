@@ -29,7 +29,7 @@
         /* Podstawowe style i reset */
         body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
         a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
-        h1, h2, h3 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
+        h1, h2, h3, h4 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
         
         .container { width: 90%; max-width: 1200px; margin: auto; padding: 0; }
         
@@ -87,6 +87,12 @@
         .about-text { font-size: 1.15em; font-style: italic; color: #555; text-align: justify; max-width: 900px; margin: 0 auto 40px auto; border-left: 4px solid #D4AF37; padding-left: 20px; }
         .mission-title { text-align: center; font-size: 2em; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
 
+        /* Kafelki Misji i Obszarów działań - Wymuszone 2 kolumny */
+        .mission-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 20px; }
+        .mission-item { background: #fff; padding: 25px; border-left: 4px solid #1a5f4a; box-shadow: 0 4px 10px rgba(0,0,0,0.04); text-align: left; }
+        .mission-item h4 { margin-top: 0; color: #133a2d; font-family: 'Georgia', serif; font-size: 1.25em; }
+        .mission-item p { font-size: 0.95em; color: #555; margin-bottom: 0; line-height: 1.6; }
+
         /* Wsparcie - Bank */
         .account-box { background: #f0f7f4; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 20px; border: 1px solid #d1e8df; overflow: hidden; }
         .account-number { font-size: 1.25em; letter-spacing: 1px; word-spacing: 2px; color: #1a5f4a; font-family: 'Courier New', Courier, monospace; font-weight: bold; margin: 15px 0; white-space: nowrap; overflow-x: auto; padding-bottom: 5px; }
@@ -119,6 +125,7 @@
             .card { padding: 20px; height: auto; }
             .about-text { padding-left: 10px; font-size: 1.05em; margin-bottom: 30px; }
             .header-titles h1 { font-size: 1.8em; }
+            .mission-grid { grid-template-columns: 1fr; } /* Na telefonie ułoży się w jedną kolumnę */
         }
     </style>
 </head>
@@ -170,7 +177,30 @@
         <p style="text-align: center; max-width: 800px; margin: auto;">
             Zapewniamy bezpłatne wsparcie emocjonalne oraz tzw. <em>sitting service</em> (czuwanie) dla osób terminalnie i przewlekle chorych w hospicjach, szpitalach oraz domach prywatnych. Wspieramy także seniorów w trudach codzienności, aktywnie gasząc ich samotność.
         </p>
-    </div>
+
+        <div style="max-width: 1000px; margin: 60px auto 0 auto;">
+            <h3 style="font-family: 'Georgia', serif; font-size: 1.8em; color: #1a5f4a; border-bottom: 2px solid #D4AF37; padding-bottom: 10px; margin-bottom: 30px; display: inline-block;">Misja i obszary działań</h3>
+            
+            <div class="mission-grid">
+                <div class="mission-item">
+                    <h4>Doula Umierania</h4>
+                    <p>Szlachetna posługa towarzyszenia osobom w procesie odchodzenia. Dbamy o przestrzeń wolną od lęku, nasyconą spokojem i emocjonalnym wsparciem.</p>
+                </div>
+                <div class="mission-item">
+                    <h4>Przeciwdziałanie Samotności</h4>
+                    <p>Czuwanie przy łóżku chorego w placówkach medycznych oraz domach prywatnych. Jesteśmy tam, gdzie ludzka obecność staje się najcenniejszym lekarstwem.</p>
+                </div>
+                <div class="mission-item">
+                    <h4>Sitting Service</h4>
+                    <p>Realizacja idei stałej „Warty” – ofiarowanie poczucia bezpieczeństwa podopiecznym oraz chwili niezbędnego wytchnienia ich najbliższym opiekunom.</p>
+                </div>
+                <div class="mission-item">
+                    <h4>Wsparcie Rodzin</h4>
+                    <p>Towarzyszenie bliskim w trudnym czasie choroby terminalnej oraz oferowanie profesjonalnej pomocy w godnym przeżywaniu żałoby.</p>
+                </div>
+            </div>
+        </div>
+        </div>
 </section>
 
 <section id="podopieczni">
@@ -287,7 +317,7 @@
                 <p><strong>KRS:</strong> <a href="https://wyszukiwarka-krs.ms.gov.pl/" target="_blank">0001224367</a></p>
                 <br>
                 <p><strong>Sąd rejestrowy:</strong><br>Sąd Rejonowy Gdańsk-Północ w Gdańsku,<br>VII Wydział Gospodarczy KRS</p>
-                <p><strong>Nadzór:</strong> Minister Zdrowia</p>
+                <p><strong>Nadzór:</strong> <a href="https://www.gov.pl/web/zdrowie" target="_blank">Minister Zdrowia</a></p>
             </div>
             
             <div class="contact-info">
