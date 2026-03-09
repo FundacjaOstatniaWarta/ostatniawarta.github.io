@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regulamin Darowizn | Fundacja Ostatnia Warta</title>
+    
+    <link rel="canonical" href="https://ostatniawarta.pl/regulamin-darowizn.html" />
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        /* Podstawowe style i reset */
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
+        a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
+        h1, h2, h3 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
+        .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
+        
+        /* Ciemna, elegancka góra z wycentrowanym logo */
+        header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
+        
+        /* ZEGAR ZAMIAST PIERŚCIENIA */
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+        .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
+        
+        /* Środek wskazówek */
+        .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
+        
+        /* Wskazówki zegara */
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
+        .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
+        .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
+        .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
+
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; }
+        .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.6em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
+
+        nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
+        nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
+        nav ul li a:hover { color: #D4AF37; }
+
+        .content-section { background: #fff; padding: 40px 60px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; border-top: 4px solid #1a5f4a; }
+        
+        /* Domyślnie na komputerach tekst jest wyjustowany (równy po bokach) */
+        .content-section p, .content-section ul { font-family: 'Arial', sans-serif; font-size: 1.05em; color: #555; text-align: justify; line-height: 1.8; }
+        .content-section li { margin-bottom: 10px; }
+
+        footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; }
+        footer a { color: #D4AF37; text-decoration: none; }
+        footer a:hover { color: #fff; text-decoration: underline; }
+        
+        /* POPRAWKA DLA TELEFONÓW WYMUSZONA PRZEZ ZARZĄD */
+        @media (max-width: 768px) { 
+            .content-section { padding: 25px 20px; }
+            /* Zmieniamy na wyrównanie do lewej, aby usunąć luki między słowami na wąskim ekranie */
+            .content-section p, .content-section ul { text-align: left; font-size: 1em; }
+            .header-titles h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container" style="padding: 0 0 0 0;">
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <div class="clock-wrapper">
+                    <div class="clock-center"></div>
+                    <div class="hand hour-hand" id="hourHand"></div>
+                    <div class="hand minute-hand" id="minuteHand"></div>
+                    <div class="hand second-hand" id="secondHand"></div>
+                    <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img"> 
+                </div>
+            </a>
+        </div>
+        
+        <div class="header-titles">
+            <h1>Regulamin Przekazywania Darowizn</h1>
+            <h2>Fundacja „Ostatnia Warta”</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html#o-nas">O Fundacji</a></li>
+                <li><a href="index.html#podopieczni">Podopieczni</a></li>
+                <li><a href="index.html#wolontariat">Wolontariat</a></li>
+                <li><a href="index.html#wesprzyj">Wesprzyj Nas</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="container">
+    <div class="content-section">
+        <h2>1. Postanowienia ogólne</h2>
+        <p>1.1. Niniejszy regulamin określa zasady przekazywania darowizn online na rzecz <strong>Fundacji „Ostatnia Warta”</strong> z siedzibą w Gdańsku (80-288), ul. Bronisława Czecha 1/9, wpisanej do Rejestru Stowarzyszeń, Innych Organizacji Społecznych i Zawodowych, Fundacji oraz SP ZOZ pod numerem KRS: 0001224367, NIP: 9571199614, REGON: 544069163 (zwanej dalej „Fundacją”).</p>
+        <p>1.2. Darowizny przekazywane za pośrednictwem serwisu internetowego <a href="https://ostatniawarta.pl">www.ostatniawarta.pl</a> służą wyłącznie realizacji celów statutowych Fundacji, ze szczególnym uwzględnieniem wsparcia osób terminalnie chorych oraz samotnych seniorów.</p>
+
+        <h2>2. Zasady przekazywania darowizn</h2>
+        <p>2.1. Przekazywanie darowizn odbywa się całkowicie dobrowolnie.</p>
+        <p>2.2. Darczyńcą może być każda osoba fizyczna, osoba prawna lub jednostka organizacyjna (zwana dalej „Darczyńcą”).</p>
+        <p>2.3. Darowizny mogą być przekazywane w walucie PLN (Polski Złoty) za pomocą systemu płatności online udostępnionego na stronie Fundacji lub poprzez bezpośredni przelew bankowy na konto Fundacji.</p>
+
+        <h2>3. Obsługa płatności online</h2>
+        <p>3.1. Operatorem kart płatniczych oraz systemów szybkich przelewów internetowych (w tym BLIK) jest <strong>PayPro SA</strong> (operator serwisu Przelewy24) z siedzibą w Poznaniu, ul. Pastelowa 8, 60-198 Poznań, wpisana do Rejestru Przedsiębiorców KRS pod numerem 0000347935, NIP: 7792369887, REGON: 301345068.</p>
+        <p>3.2. W celu dokonania płatności Darczyńca zostaje przekierowany na bezpieczną, szyfrowaną stronę operatora płatności.</p>
+        <p>3.3. Fundacja nie gromadzi, nie przetwarza ani nie przechowuje danych kart płatniczych ani danych dostępowych do bankowości internetowej Darczyńców.</p>
+
+        <h2>4. Reklamacje i zwroty darowizn</h2>
+        <p>4.1. W przypadku wystąpienia błędów technicznych podczas procesu płatności (np. podwójne obciążenie konta), Darczyńca ma prawo złożyć reklamację.</p>
+        <p>4.2. Reklamacje należy zgłaszać drogą elektroniczną na adres e-mail: <strong><a href="mailto:kontakt@ostatniawarta.pl">kontakt@ostatniawarta.pl</a></strong> w terminie do 14 dni od daty wystąpienia błędu.</p>
+        <p>4.3. Zgłoszenie reklamacyjne powinno zawierać: imię i nazwisko Darczyńcy, adres e-mail użyty podczas transakcji, kwotę i datę wpłaty oraz krótki opis problemu.</p>
+        <p>4.4. Fundacja rozpatruje reklamacje w terminie 14 dni roboczych od ich wpłynęścia. W uzasadnionych przypadkach zwrot środków następuje na to samo konto bankowe lub kartę, z której dokonano wpłaty.</p>
+        <p>4.5. Darowizny prawidłowo i skutecznie zaksięgowane na koncie Fundacji nie podlegają zwrotowi, z wyjątkami przewidzianymi w powszechnie obowiązujących przepisach prawa (Kodeks Cywilny).</p>
+
+        <h2>5. Ochrona Danych Osobowych</h2>
+        <p>5.1. Administratorem danych osobowych Darczyńców jest Fundacja „Ostatnia Warta”.</p>
+        <p>5.2. Dane Darczyńców przekazane w procesie wpłaty (np. imię, nazwisko, adres e-mail) są przetwarzane wyłącznie w celu księgowego rozliczenia darowizny oraz podziękowania za wsparcie.</p>
+        <p>5.3. Szczegółowe informacje dotyczące przetwarzania danych osobowych oraz praw Darczyńców znajdują się w naszej <a href="polityka-prywatnosci.html" style="text-decoration: underline;">Polityce Prywatności</a>.</p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Fundacja „Ostatnia Warta”. Wszelkie prawa zastrzeżone.</p>
+        <p><a href="index.html">Powrót do Strony Głównej</a> | <a href="polityka-prywatnosci.html">Polityka Prywatności</a></p>
+    </div>
+</footer>
+
+<script>
+    // Zegar
+    function updateClock() {
+        const now = new Date();
+        const second = now.getSeconds();
+        const minute = now.getMinutes();
+        const hour = now.getHours();
+
+        const secondDeg = ((second / 60) * 360);
+        const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
+        const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
+
+        const secHand = document.getElementById('secondHand');
+        const minHand = document.getElementById('minuteHand');
+        const hrHand = document.getElementById('hourHand');
+
+        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
+        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
+        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>

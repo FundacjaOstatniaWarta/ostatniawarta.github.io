@@ -62,7 +62,7 @@
         nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
         nav ul li a:hover { color: #D4AF37; }
 
-        /* Przyciski */
+        /* Przyciski podstawowe */
         .btn { display: inline-block; padding: 12px 24px; margin: 10px 5px; border-radius: 4px; font-weight: bold; text-align: center; font-family: 'Arial', sans-serif; border: 2px solid transparent; box-sizing: border-box; }
         .btn-primary { background: #D4AF37; color: #133a2d; }
         .btn-primary:hover { background: #b5952f; color: #fff; }
@@ -70,6 +70,16 @@
         .btn-outline:hover { background: #1a5f4a; color: #fff; }
         .btn-dark { border-color: #fff; color: #fff; background: transparent; }
         .btn-dark:hover { background: #fff; color: #133a2d; }
+
+        /* NOWE PRZYCISKI PŁATNOŚCI ONLINE */
+        .donate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+        .btn-donate { display: flex; align-items: center; justify-content: center; padding: 12px 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-family: 'Arial', sans-serif; font-size: 0.9em; transition: all 0.3s ease; text-align: center; border: none; color: #fff;}
+        .btn-donate:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); color: #fff;}
+        .bg-p24 { background: #133a2d; }
+        .bg-paypal { background: #003087; }
+        .bg-coffee { background: #FFDD00; color: #333 !important; }
+        .bg-coffee:hover { color: #000 !important; }
+        .bg-patronite { background: #E84D4D; }
 
         /* Siatka dokumentów i kart */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; align-items: stretch; }
@@ -87,7 +97,7 @@
         .about-text { font-size: 1.15em; font-style: italic; color: #555; text-align: justify; max-width: 900px; margin: 0 auto 40px auto; border-left: 4px solid #D4AF37; padding-left: 20px; }
         .mission-title { text-align: center; font-size: 2em; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* Kafelki Misji i Obszarów działań - Wymuszone 2 kolumny */
+        /* Kafelki Misji i Obszarów działań */
         .mission-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 20px; }
         .mission-item { background: #fff; padding: 25px; border-left: 4px solid #1a5f4a; box-shadow: 0 4px 10px rgba(0,0,0,0.04); text-align: left; }
         .mission-item h4 { margin-top: 0; color: #133a2d; font-family: 'Georgia', serif; font-size: 1.25em; }
@@ -125,7 +135,8 @@
             .card { padding: 20px; height: auto; }
             .about-text { padding-left: 10px; font-size: 1.05em; margin-bottom: 30px; }
             .header-titles h1 { font-size: 1.8em; }
-            .mission-grid { grid-template-columns: 1fr; } /* Na telefonie ułoży się w jedną kolumnę */
+            .mission-grid { grid-template-columns: 1fr; }
+            .donate-grid { grid-template-columns: 1fr; } /* Przyciski jeden pod drugim na telefonie */
         }
     </style>
 </head>
@@ -271,11 +282,42 @@
             <div style="display: flex; flex-direction: column; gap: 30px;">
                 
                 <div class="card" style="height: auto;">
-                    <h3>Szybkie wsparcie i zakupy</h3>
-                    <p style="line-height: 1.4; margin-bottom: 10px; font-size: 0.95em;">Wspieraj nas bezpłatnie podczas zakupów online przez FaniMani lub wpłać szybki datek na zrzutce.</p>
-                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                        <a href="https://fanimani.pl/zaproszenie/139507/7b9dbce0e1d84fc29adb3ee6d2d52e27" target="_blank" class="btn btn-primary" style="flex: 1; padding: 10px; font-size: 0.85em; margin: 0;">Dołącz do FaniMani</a>
-                        <a href="zbiorki.html" class="btn btn-outline" style="flex: 1; padding: 10px; font-size: 0.85em; margin: 0;">Zbiórki online</a>
+                    <h3>Szybkie wsparcie online</h3>
+                    <p style="line-height: 1.4; margin-bottom: 15px; font-size: 0.95em;">Wybierz najwygodniejszą dla siebie formę płatności i wesprzyj naszą misję w kilka sekund.</p>
+                    
+                    <div class="donate-grid">
+                        <a href="#" target="_blank" class="btn-donate bg-p24" title="Szybki przelew, BLIK, Karty">
+                            <span style="font-size: 1.3em; margin-right: 8px;">💳</span> Przelewy24 / BLIK
+                        </a>
+                        
+                        <a href="#" target="_blank" class="btn-donate bg-paypal">
+                            <span style="font-size: 1.3em; margin-right: 8px;">🅿️</span> PayPal
+                        </a>
+                        
+                        <a href="#" target="_blank" class="btn-donate bg-coffee">
+                            <span style="font-size: 1.3em; margin-right: 8px;">☕</span> Postaw kawę
+                        </a>
+                        
+                        <a href="#" target="_blank" class="btn-donate bg-patronite">
+                            <span style="font-size: 1.3em; margin-right: 8px;">🛡️</span> Patronite
+                        </a>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 5px; font-size: 0.8em; color: #555; line-height: 1.4;">
+                        Obsługujemy płatności bezpieczne: <strong>BLIK, Visa, Mastercard, Przelewy24</strong><br>
+                        Klikając w powyższe opcje, akceptujesz nasz <a href="regulamin-darowizn.html" style="color: #1a5f4a; text-decoration: underline;">Regulamin Darowizn</a>.
+                    </div>
+
+                    <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
+
+                    <h3>Wspieraj podczas zakupów</h3>
+                    <p style="line-height: 1.4; margin-bottom: 15px; font-size: 0.95em;">Pomagaj nam bezpłatnie przy okazji codziennych zakupów online lub wpłać datek na Zrzutce.</p>
+                    
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: center; justify-content: center;">
+                        <a href="https://fanimani.pl/zaproszenie/139507/7b9dbce0e1d84fc29adb3ee6d2d52e27" target="_blank" style="flex: 1; min-width: 120px; text-align: center; transition: transform 0.3s ease; display: inline-block;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            <img src="fanimani.png" alt="Wspieraj nas przez FaniMani" style="max-height: 45px; width: auto; border-radius: 4px;">
+                        </a>
+                        <a href="zbiorki.html" class="btn btn-outline" style="flex: 1; min-width: 120px; padding: 10px; font-size: 0.85em; margin: 0; text-align: center;">Zbiórki online</a>
                     </div>
                     
                     <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
@@ -300,7 +342,9 @@
                     </form>
                 </div>
 
-            </div> </div> </div>
+            </div> 
+        </div> 
+    </div>
 </section>
 
 <footer id="kontakt">
@@ -352,8 +396,13 @@
         </div>
 
         <div class="copyright">
+            <p style="font-size: 0.85em; margin-bottom: 15px; color: #a3c2b5; line-height: 1.4;">Operatorem kart płatniczych oraz płatności online jest PayPro SA Agent Rozliczeniowy, ul. Pastelowa 8, 60-198 Poznań, wpisany do Rejestru Przedsiębiorców KRS pod numerem 0000347935, NIP 7792369887, REGON 301345068.</p>
+            
             <p>&copy; 2026 FUNDACJA "OSTATNIA WARTA". <a href="ksiega_znaku.pdf" target="_blank" class="ksiega-link">Wszelkie prawa zastrzeżone.</a></p>
-            <p><a href="polityka-prywatnosci.html" style="text-decoration: none;">Polityka Prywatności i RODO</a></p>
+            <p style="margin-top: 10px;">
+                <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px;">Polityka Prywatności i RODO</a>
+                <a href="regulamin-darowizn.html" style="text-decoration: none;">Regulamin Darowizn</a>
+            </p>
         </div>
     </div>
 </footer>
