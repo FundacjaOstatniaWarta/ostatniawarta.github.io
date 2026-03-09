@@ -75,11 +75,8 @@
         .donate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
         .btn-donate { display: flex; align-items: center; justify-content: center; padding: 12px 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-family: 'Arial', sans-serif; font-size: 0.9em; transition: all 0.3s ease; text-align: center; border: none; color: #fff;}
         .btn-donate:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); color: #fff;}
-        .bg-p24 { background: #133a2d; }
         .bg-paypal { background: #003087; }
-        .bg-coffee { background: #FFDD00; color: #333 !important; }
-        .bg-coffee:hover { color: #000 !important; }
-        .bg-patronite { background: #E84D4D; }
+        .bg-disabled { background: #f0f0f0; color: #999 !important; border: 1px solid #ccc; cursor: not-allowed; box-shadow: none !important; transform: none !important; }
 
         /* Siatka dokumentów i kart */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; align-items: stretch; }
@@ -264,11 +261,20 @@
                 <div class="account-box">
                     <p style="margin: 0;"><strong>FUNDACJA "OSTATNIA WARTA"</strong></p>
                     <div class="account-number" style="margin: 10px 0;">PL 61 2530 0008 2049 1089 8921 0001</div>
-                    <p style="margin: 0;"><small>Bank: Nest Bank<br>Tytuł: Darowizna na cele statutowe</small></p>
+                    
+                    <p style="margin: 0; display: flex; justify-content: center; align-items: center; gap: 10px;">
+                        <span style="font-size: 1.1em; font-weight: bold; color: #555;">Bank: </span> 
+                        <img src="nest1.png" alt="Nest Bank" style="height: 45px; object-fit: contain;">
+                    </p>
+                    <p style="margin: 5px 0 0 0;"><small>Tytuł: Darowizna na cele statutowe</small></p>
                     
                     <hr style="border: 0; border-top: 1px solid #d1e8df; margin: 15px 0;">
                     
-                    <p style="margin-bottom: 5px;"><strong>Przelew na telefon BLIK:</strong></p>
+                    <p style="margin-bottom: 5px; display: flex; justify-content: center; align-items: center; gap: 10px;">
+                        <span style="font-size: 1.1em; font-weight: bold; color: #555;">Przelew na telefon</span> 
+                        <img src="blik.png" alt="BLIK" style="height: 40px; object-fit: contain;">
+                        <span style="font-size: 1.1em; font-weight: bold; color: #555;">:</span>
+                    </p>
                     <div class="account-number" style="margin-top: 5px; font-size: 1.3em; background: #e2f0ea;">+48 502 989 818</div>
                 </div>
                 
@@ -286,19 +292,19 @@
                     <p style="line-height: 1.4; margin-bottom: 15px; font-size: 0.95em;">Wybierz najwygodniejszą dla siebie formę płatności i wesprzyj naszą misję w kilka sekund.</p>
                     
                     <div class="donate-grid">
-                        <a href="#" target="_blank" class="btn-donate bg-p24" title="Szybki przelew, BLIK, Karty">
-                            <span style="font-size: 1.3em; margin-right: 8px;">💳</span> Przelewy24 / BLIK
+                        <a href="#wesprzyj" class="btn-donate bg-disabled" title="Trwa weryfikacja bramki">
+                            <img src="Przelewy24.png" alt="Przelewy24" style="height: 24px; opacity: 0.6; filter: grayscale(100%);">
                         </a>
                         
-                        <a href="#" target="_blank" class="btn-donate bg-paypal">
+                        <a href="https://www.paypal.com/donate/?hosted_button_id=W2SJKWQZVWTSA" target="_blank" class="btn-donate bg-paypal">
                             <span style="font-size: 1.3em; margin-right: 8px;">🅿️</span> PayPal
                         </a>
                         
-                        <a href="#" target="_blank" class="btn-donate bg-coffee">
-                            <span style="font-size: 1.3em; margin-right: 8px;">☕</span> Postaw kawę
+                        <a href="https://buycoffee.to/ostatniawarta" target="_blank" style="display: flex; justify-content: center; align-items: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                            <img src="https://buycoffee.to/static/img/share/share-button-primary.png" style="width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" alt="Postaw mi kawę na buycoffee.to">
                         </a>
                         
-                        <a href="#" target="_blank" class="btn-donate bg-patronite">
+                        <a href="#wesprzyj" class="btn-donate bg-disabled" title="Profil w przygotowaniu">
                             <span style="font-size: 1.3em; margin-right: 8px;">🛡️</span> Patronite
                         </a>
                     </div>
