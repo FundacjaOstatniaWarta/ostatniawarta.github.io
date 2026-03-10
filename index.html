@@ -100,6 +100,18 @@
         .mission-item h4 { margin-top: 0; color: #133a2d; font-family: 'Georgia', serif; font-size: 1.25em; }
         .mission-item p { font-size: 0.95em; color: #555; margin-bottom: 0; line-height: 1.6; }
 
+        /* ZESPOLONA SEKCJA (PODOPIECZNI + WOLONTARIAT) - MAGICZNY CSS GRID */
+        .split-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
+        .split-col { display: flex; flex-direction: column; gap: 20px; }
+        @media (min-width: 768px) {
+            .split-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+            .split-col { display: contents; } /* Pozwala zarządzać elementami dzieci z poziomu głównego grida */
+            .split-text-l { grid-column: 1; grid-row: 1; }
+            .split-card-l { grid-column: 1; grid-row: 2; align-self: stretch; }
+            .split-text-r { grid-column: 2; grid-row: 1; }
+            .split-card-r { grid-column: 2; grid-row: 2; align-self: stretch; }
+        }
+
         /* Wsparcie - Bank */
         .account-box { background: #f0f7f4; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 20px; border: 1px solid #d1e8df; overflow: hidden; }
         .account-number { font-size: 1.25em; letter-spacing: 1px; word-spacing: 2px; color: #1a5f4a; font-family: 'Courier New', Courier, monospace; font-weight: bold; margin: 15px 0; white-space: nowrap; overflow-x: auto; padding-bottom: 5px; }
@@ -133,7 +145,7 @@
             .about-text { padding-left: 10px; font-size: 1.05em; margin-bottom: 30px; }
             .header-titles h1 { font-size: 1.8em; }
             .mission-grid { grid-template-columns: 1fr; }
-            .donate-grid { grid-template-columns: 1fr; } /* Przyciski jeden pod drugim na telefonie */
+            .donate-grid { grid-template-columns: 1fr; } 
         }
     </style>
 </head>
@@ -208,43 +220,47 @@
                 </div>
             </div>
         </div>
-        </div>
-</section>
-
-<section id="podopieczni">
-    <div class="container">
-        <h2 style="text-align: center;">Dla Podopiecznych i ich Rodzin</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto 30px auto;">Nasza pomoc jest w 100% bezpłatna. Jeśli potrzebują Państwo wsparcia dla siebie lub bliskiej osoby, prosimy o zapoznanie się z poniższymi dokumentami. Stanowią one podstawę do objęcia opieką przez naszych wolontariuszy.</p>
-        <div class="grid" style="justify-content: center; display: flex;">
-            <div class="card" style="width: 100%; max-width: 600px;">
-                <h3>Wymagana dokumentacja:</h3>
-                <ul>
-                    <li><a href="01_ 1_Wniosek_o_objecie_opieka.pdf" target="_blank">Wniosek o objęcie opieką</a></li>
-                    <li><a href="01_03_Zasady_wspolpracy.pdf" target="_blank">Zasady współpracy z Fundacją</a></li>
-                    <li><a href="01_2A_Upowaznienie_szpitalne.pdf" target="_blank">Upoważnienie - Placówka Medyczna</a></li>
-                    <li><a href="01_2B_Upowaznienie_Opiekun.pdf" target="_blank">Upoważnienie - Opiekun Faktyczny</a></li>
-                    <li><a href="01_04_Klauzula_RODO_Podopieczni.pdf" target="_blank">Klauzula informacyjna RODO</a></li>
-                </ul>
-            </div>
-        </div>
     </div>
 </section>
 
-<section id="wolontariat">
+<section id="wsparcie-dokumenty">
     <div class="container">
-        <h2 style="text-align: center;">Zostań Wolontariuszem</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto 30px auto;">Szukamy osób o wielkich sercach, gotowych pełnić „Wartę”. Nie wymagamy wykształcenia medycznego – najważniejsza jest empatia i czas. Oferujemy profesjonalne przygotowanie do posługi, m.in. w ramach szkoleń w Gdańskiej Szkole Towarzyszenia.</p>
-        <div class="grid" style="justify-content: center; display: flex;">
-            <div class="card" style="width: 100%; max-width: 600px;">
-                <h3>Dokumenty rekrutacyjne:</h3>
-                <ul>
-                    <li><a href="02_01_Kwestionariusz_Wolontariusza.pdf" target="_blank">Kwestionariusz Wolontariusza</a></li>
-                    <li><a href="02_02_Porozumienie_Wolontariat.pdf" target="_blank">Wzór Porozumienia o Wolontariacie</a></li>
-                    <li><a href="02_03_Zasady_Swiadczenia_Pomocy.pdf" target="_blank">Zasady Świadczenia Pomocy</a></li>
-                    <li><a href="02_04_Zasady_Zachowania_Poufnosci.pdf" target="_blank">Zasady Zachowania Poufności</a></li>
-                    <li><a href="02_05_Klauzula_RODO_Wolontariusze.pdf" target="_blank">Klauzula RODO Wolontariusza</a></li>
-                </ul>
+        <div class="split-grid">
+            
+            <div class="split-col">
+                <div class="split-text-l" id="podopieczni" style="scroll-margin-top: 100px;">
+                    <h2 style="text-align: center; margin-top: 0;">Dla Podopiecznych i ich Rodzin</h2>
+                    <p style="text-align: center; margin: 0 auto; max-width: 90%;">Nasza pomoc jest w 100% bezpłatna. Jeśli potrzebują Państwo wsparcia dla siebie lub bliskiej osoby, prosimy o zapoznanie się z poniższymi dokumentami. Stanowią one podstawę do objęcia opieką przez naszych wolontariuszy.</p>
+                </div>
+                <div class="split-card-l card">
+                    <h3>Wymagana dokumentacja:</h3>
+                    <ul>
+                        <li><a href="01_ 1_Wniosek_o_objecie_opieka.pdf" target="_blank">Wniosek o objęcie opieką</a></li>
+                        <li><a href="01_03_Zasady_wspolpracy.pdf" target="_blank">Zasady współpracy z Fundacją</a></li>
+                        <li><a href="01_2A_Upowaznienie_szpitalne.pdf" target="_blank">Upoważnienie - Placówka Medyczna</a></li>
+                        <li><a href="01_2B_Upowaznienie_Opiekun.pdf" target="_blank">Upoważnienie - Opiekun Faktyczny</a></li>
+                        <li><a href="01_04_Klauzula_RODO_Podopieczni.pdf" target="_blank">Klauzula informacyjna RODO</a></li>
+                    </ul>
+                </div>
             </div>
+
+            <div class="split-col">
+                <div class="split-text-r" id="wolontariat" style="scroll-margin-top: 100px;">
+                    <h2 style="text-align: center; margin-top: 0;">Zostań Wolontariuszem</h2>
+                    <p style="text-align: center; margin: 0 auto; max-width: 90%;">Szukamy osób o wielkich sercach, gotowych pełnić „Wartę”. Nie wymagamy wykształcenia medycznego – najważniejsza jest empatia i czas. Oferujemy profesjonalne przygotowanie do posługi, m.in. w ramach szkoleń w Gdańskiej Szkole Towarzyszenia.</p>
+                </div>
+                <div class="split-card-r card">
+                    <h3>Dokumenty rekrutacyjne:</h3>
+                    <ul>
+                        <li><a href="02_01_Kwestionariusz_Wolontariusza.pdf" target="_blank">Kwestionariusz Wolontariusza</a></li>
+                        <li><a href="02_02_Porozumienie_Wolontariat.pdf" target="_blank">Wzór Porozumienia o Wolontariacie</a></li>
+                        <li><a href="02_03_Zasady_Swiadczenia_Pomocy.pdf" target="_blank">Zasady Świadczenia Pomocy</a></li>
+                        <li><a href="02_04_Zasady_Zachowania_Poufnosci.pdf" target="_blank">Zasady Zachowania Poufności</a></li>
+                        <li><a href="02_05_Klauzula_RODO_Wolontariusze.pdf" target="_blank">Klauzula RODO Wolontariusza</a></li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
@@ -323,7 +339,10 @@
                         <a href="https://fanimani.pl/zaproszenie/139507/7b9dbce0e1d84fc29adb3ee6d2d52e27" target="_blank" style="flex: 1; min-width: 120px; text-align: center; transition: transform 0.3s ease; display: inline-block;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                             <img src="fanimani.png" alt="Wspieraj nas przez FaniMani" style="max-height: 45px; width: auto; border-radius: 4px;">
                         </a>
-                        <a href="zbiorki.html" class="btn btn-outline" style="flex: 1; min-width: 120px; padding: 10px; font-size: 0.85em; margin: 0; text-align: center;">Zbiórki online</a>
+                        
+                        <a href="zbiorki.html" style="flex: 1; min-width: 120px; text-align: center; transition: transform 0.3s ease; display: inline-block;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            <img src="zrzutka.png" alt="Nasze zbiórki na Zrzutka.pl" style="max-height: 45px; width: auto; border-radius: 4px; object-fit: contain;">
+                        </a>
                     </div>
                     
                     <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
