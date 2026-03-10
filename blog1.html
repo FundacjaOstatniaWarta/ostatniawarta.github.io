@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wyznanie wolontariusza | Fundacja Ostatnia Warta</title>
+    
+    <link rel="canonical" href="https://ostatniawarta.pl/blog1.html" />
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
+        a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
+        h1, h2, h3 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
+        .container { width: 90%; max-width: 1000px; margin: auto; padding: 40px 0; }
+        
+        header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
+        
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+        .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
+        
+        .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
+        .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
+        .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
+        .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
+
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; }
+        .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.4em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
+
+        nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
+        nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
+        nav ul li a:hover { color: #D4AF37; }
+
+        .content-section { background: #fff; padding: 50px 60px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; border-top: 4px solid #1a5f4a; }
+        
+        .article-title { font-size: 2em; line-height: 1.3; margin-top: 0; margin-bottom: 25px; border-bottom: 2px solid #e2f0ea; padding-bottom: 15px; }
+        .content-section p { font-family: 'Georgia', serif; font-size: 1.15em; color: #444; text-align: justify; line-height: 1.8; margin-bottom: 20px; }
+        .content-section ul { font-family: 'Georgia', serif; font-size: 1.15em; color: #444; line-height: 1.8; }
+        .content-section li { margin-bottom: 15px; }
+        .post-meta { font-family: 'Arial', sans-serif; font-size: 0.9em; color: #888; margin-bottom: 30px; font-style: italic; }
+
+        .btn { display: inline-block; padding: 12px 24px; margin: 20px 0; border-radius: 4px; font-weight: bold; text-align: center; font-family: 'Arial', sans-serif; border: 2px solid #1a5f4a; color: #1a5f4a; background: transparent; transition: 0.3s; }
+        .btn:hover { background: #1a5f4a; color: #fff; }
+
+        footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; }
+        footer a { color: #D4AF37; text-decoration: none; }
+        footer a:hover { color: #fff; text-decoration: underline; }
+        
+        @media (max-width: 768px) { 
+            .content-section { padding: 30px 20px; }
+            .content-section p, .content-section ul { text-align: left; font-size: 1.05em; }
+            .article-title { font-size: 1.5em; }
+            .header-titles h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container" style="padding: 0 0 0 0;">
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <div class="clock-wrapper">
+                    <div class="clock-center"></div>
+                    <div class="hand hour-hand" id="hourHand"></div>
+                    <div class="hand minute-hand" id="minuteHand"></div>
+                    <div class="hand second-hand" id="secondHand"></div>
+                    <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img"> 
+                </div>
+            </a>
+        </div>
+        
+        <div class="header-titles">
+            <h1>Z pamiętnika wolontariusza</h1>
+            <h2>Prawdziwe historie z pierwszej linii frontu</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html#o-nas">O Fundacji</a></li>
+                <li><a href="index.html#podopieczni">Podopieczni</a></li>
+                <li><a href="index.html#wolontariat">Wolontariat</a></li>
+                <li><a href="index.html#wesprzyj">Wesprzyj Nas</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="container">
+    <div class="content-section">
+        <h2 class="article-title">Wyznanie wolontariusza. Zobaczyć morze po raz ostatni i jak możesz nam pomóc, nie dając ani złotówki?</h2>
+        
+        <p>Jeszcze kilka lat temu wydawało mi się, że dokładnie wiem, do czego dążę. Przez lata rozpychałem się w życiu łokciami. Musiałem być zawsze pierwszy, zawsze najlepszy, bez przerwy na najwyższych obrotach. Traktowałem codzienność jak wyścig, w którym liczyło się tylko moje własne zwycięstwo. Krok po kroku zrealizowałem plan, który w dzisiejszym świecie uchodzi za ostateczną definicję sukcesu. Własne duże „M” bez kredytu w mieście wojewódzkim, luksusowe auto kupione za gotówkę prosto z salonu, wygoda, bezpieczeństwo finansowe.</p>
+        
+        <p>Pamiętam ten moment, gdy w końcu to wszystko zdobyłem. I wiecie co? Nikt nie bił braw. Nie wręczono mi medalu za życiowe osiągnięcia. Zamiast obiecanej, wiecznej satysfakcji, poczułem przerażającą pustkę.</p>
+        
+        <p>Zrozumiałem, że to bezwzględne dążenie na szczyt to tak naprawdę ślepa uliczka. Szybko zorientowałem się, że wpadłem w pułapkę, w której tkwi wielu z nas. Wejście na rzekomo wyższy poziom życia nie dało mi wolności – wygenerowało po prostu zupełnie innego rodzaju problemy. Zaczyna pojawiać się paraliżujący lęk o zgromadzony majątek. Przedmioty wymuszają ciągłe działania związane z ich utrzymaniem, ubezpieczeniem, serwisowaniem i doglądaniem.</p>
+        
+        <p>Niepostrzeżenie dochodzi się do absurdalnego etapu, w którym to majątek przejmuje kontrolę nad człowiekiem i całkowicie determinuje jego życiowe decyzje. Przecież zawsze można kupić jeszcze większą nieruchomość, w której trzeba będzie zamontować lepszy alarm. Wymienić auto na model o rok nowszy, o który będziemy drżeć na każdym parkingu. Ustawić się w kolejce po kolejnego, najnowszego iPhone'a, żeby poczuć ten ułamek sekundy ekscytacji przy zrywaniu folii z pudełka.</p>
+        
+        <p>Teraz wiem, że to iluzja szczęścia. Konsumpcyjna satysfakcja, która ulatnia się szybciej, niż zapach nowości w samochodzie. W tym niekończącym się pędzie gubimy to, co w człowieku najbardziej kruche i jednocześnie najważniejsze – naszą duchowość, uważność i czas dla drugiego człowieka. Uwierzyliśmy jako społeczeństwo, że przedmioty nas ocalą, a tymczasem staliśmy się w tym luksusie przeraźliwie wręcz samotni.</p>
+        
+        <p>Pierwsze sygnały, że muszę całkowicie zmienić kierunek, narzuciła mi zresztą sama pandemia. Kiedy świat nagle się zatrzymał, zewsząd zaczęły płynąć apele o wsparcie dla osób starszych i odizolowanych. Pamiętam ten dzień, gdy po raz pierwszy wziąłem ciężkie torby z zakupami i wniosłem je starszej sąsiadce na czwarte piętro. Innym razem, zupełnie spontanicznie, wrzuciłem komuś datek do puszki. Zaskoczyło mnie to, co wtedy poczułem. Ta dziwna satysfakcja z tak drobnej, bezinteresownej pomocy była nie do opisania. Zwykły, zmęczony uśmiech drugiego człowieka i jego ciche „dziękuję” dały mi więcej radości niż cokolwiek, co do tej pory zdobyłem czy kupiłem.</p>
+        
+        <p>A co najważniejsze – to uczucie było trwałe. Zostawało ze mną na długo. To właśnie te z pozoru błahe momenty zaczęły powoli przestawiać moje życie na właściwe tory.</p>
+        
+        <p>Ten wewnętrzny przełom zderzył się z brutalną rzeczywistością. Ile to razy słyszymy w wiadomościach te same historie? Ktoś umiera w swoim mieszkaniu, w bloku pełnym ludzi, a sąsiedzi i organy ścigania dowiadują się o tym dopiero po wielu tygodniach, zaalarmowani zapachem na klatce schodowej. Jak to możliwe, że w świecie, w którym jesteśmy tak hiper-połączeni, człowiek odchodzi w absolutnej, potwornej samotności? Jak to świadczy o kondycji naszego społeczeństwa?</p>
+        
+        <p>W 2025 roku podjąłem ostateczną decyzję – zrezygnowałem z wyścigu i odzyskałem kontrolę. Sprzedałem swój luksusowy samochód i przesiadłem się do starego, trzydrzwiowego i taniego w eksploatacji wozidła, o które nie muszę się już martwić. Środki ze sprzedaży stały się kapitałem na pomaganie, fundamentem Fundacji "Ostatnia Warta". Odkryłem coś, czego nie kupi się w żadnym salonie: radość z bezinteresownego działania. Gaszenie ludzkiej samotności i bycie blisko kogoś, kto gaśnie – wciąga. Nadaje życiu głęboki, duchowy sens, którego tak długo szukałem.</p>
+        
+        <p>Pieniądze zawsze się przydadzą w fundacji, ale szybko dotarło do mnie coś jeszcze – same banknoty nie potrzymają nikogo za rękę. Kilka dni temu siedziałem przy łóżku pana Ignacego. Cicho, z trudem łapiąc oddech, zdradził mi swoje ostatnie marzenie: <strong>„Chciałbym jeszcze chociaż raz zobaczyć morze”</strong>.</p>
+        
+        <p>Serce mi pękło. Morze mamy na wyciągnięcie ręki, tuż za obwodnicą. Ale mój mały, trzydrzwiowy VW go tam nie zabierze. Potrzebowalibyśmy większego, 3-4 osobowego auta z windą, żeby pan Ignacy mógł bezpiecznie wjechać do niego na wózku inwalidzkim. Oczywiście, jako fundacja chcielibyśmy kiedyś kupić takie auto, by móc spełniać takie ostatnie życzenia. Ale na tym etapie naszej działalności po prostu nie śmiemy prosić nikogo z Was o tak duże pieniądze na ten cel.</p>
+        
+        <p>I tu pojawia się pytanie, które często słyszę: „Jak mogę wam pomóc, jeśli nie mam gotówki na darowiznę?”. Odpowiedź brzmi: <strong>potrzebujemy Ciebie i Twoich umiejętności!</strong> Wolontariat w „Ostatniej Warcie” to nie tylko czuwanie przy umierających. Możesz nam pomóc zza własnego biurka:</p>
+        
+        <ul>
+            <li><strong>Masz lekkie pióro i znasz się na procedurach?</strong> Potrzebujemy kogoś, kto umie pisać wnioski lub aplikować o dotacje celowe. Sam chory nie ma siły złożyć wniosku na specjalistyczne łóżko czy koncentrator tlenu. Gdy my pozyskamy te fundusze, kupiony sprzęt będzie służył wielu podopiecznym w ramach naszej bezpłatnej wypożyczalni.</li>
+            <li><strong>Jesteś mistrzem social mediów?</strong> Umiesz obsługiwać zbiórki internetowe i pisać posty? Jesteś nam niezbędny, by świat o nas usłyszał!</li>
+            <li><strong>A może jesteś psychologiem?</strong> Nasi wolontariusze niosą na barkach ogromny ciężar emocjonalny. Bardzo potrzebujemy kogoś, kto po trudnych dyżurach zechciałby z nimi usiąść, porozmawiać i pomóc zrzucić ten balast.</li>
+            <li><strong>Masz możliwości lokalowe?</strong> Dziś nasze „centrum operacyjne” to wydzielony kawałek mieszkania i wysłużony, 10-letni MacBook. Może dysponujesz salką, którą moglibyśmy zaadaptować na punkt spotkań? A może znasz kogoś, kto mógłby nam chociaż jednorazowo użyczyć auta z windą dla pana Ignacego?</li>
+            <li><strong>Masz inny pomysł?</strong> Nie zamykamy się w swojej bańce i nie twierdzimy, że mamy monopol na jedyny słuszny model pomagania. Odezwij się. Z pełną powagą pochylimy się nad każdym dobrym pomysłem.</li>
+        </ul>
+        
+        <p>W naszej pracy waluta jest tylko jedna: <strong>CZAS</strong>. Liczy się każda minuta, bo nasi podopieczni bardzo szybko odchodzą. Zanim sami uzbieramy środki na auto czy dopełnimy urzędowych formalności, pana Ignacego może już z nami nie być.</p>
+        
+        <p>Dlatego prosimy, podziel się z nami tym, co masz najcenniejszego: swoim talentem i czasem. Dołącz do naszej warty.</p>
+        
+        <p style="font-size: 0.85em; color: #888; margin-top: 40px;"><em>(PS. Ze względu na naszą Politykę Prywatności oraz postanowienia RODO imiona podopiecznych w artykułach mogły zostać zmienione).</em></p>
+        
+        <div style="text-align: center; border-top: 1px solid #eee; margin-top: 40px; padding-top: 20px;">
+            <a href="index.html" class="btn">Wróć do Strony Głównej</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Fundacja „Ostatnia Warta”. Wszelkie prawa zastrzeżone.</p>
+        <p><a href="index.html">Strona Główna</a> | <a href="polityka-prywatnosci.html">Polityka Prywatności</a></p>
+    </div>
+</footer>
+
+<script>
+    function updateClock() {
+        const now = new Date();
+        const second = now.getSeconds();
+        const minute = now.getMinutes();
+        const hour = now.getHours();
+
+        const secondDeg = ((second / 60) * 360);
+        const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
+        const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
+
+        const secHand = document.getElementById('secondHand');
+        const minHand = document.getElementById('minuteHand');
+        const hrHand = document.getElementById('hourHand');
+
+        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
+        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
+        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>

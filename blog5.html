@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdejmiemy drzwi z zawiasów, by zrobić stół | Fundacja Ostatnia Warta</title>
+    
+    <link rel="canonical" href="https://ostatniawarta.pl/blog5.html" />
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
+        a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
+        h1, h2, h3 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
+        .container { width: 90%; max-width: 1000px; margin: auto; padding: 40px 0; }
+        
+        header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
+        
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+        .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
+        
+        .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
+        .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
+        .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
+        .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
+
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; }
+        .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.4em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
+
+        nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
+        nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
+        nav ul li a:hover { color: #D4AF37; }
+
+        .content-section { background: #fff; padding: 50px 60px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; border-top: 4px solid #1a5f4a; }
+        
+        .article-title { font-size: 2em; line-height: 1.3; margin-top: 0; margin-bottom: 10px; }
+        .article-subtitle { font-family: 'Arial', sans-serif; font-size: 0.95em; color: #888; font-style: italic; margin-bottom: 25px; border-bottom: 2px solid #e2f0ea; padding-bottom: 15px; }
+        
+        .content-section p { font-family: 'Georgia', serif; font-size: 1.15em; color: #444; text-align: justify; line-height: 1.8; margin-bottom: 20px; }
+        
+        .btn { display: inline-block; padding: 12px 24px; margin: 20px 0; border-radius: 4px; font-weight: bold; text-align: center; font-family: 'Arial', sans-serif; border: 2px solid #1a5f4a; color: #1a5f4a; background: transparent; transition: 0.3s; }
+        .btn:hover { background: #1a5f4a; color: #fff; }
+
+        footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; }
+        footer a { color: #D4AF37; text-decoration: none; }
+        footer a:hover { color: #fff; text-decoration: underline; }
+        
+        @media (max-width: 768px) { 
+            .content-section { padding: 30px 20px; }
+            .content-section p { text-align: left; font-size: 1.05em; }
+            .article-title { font-size: 1.5em; }
+            .header-titles h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container" style="padding: 0 0 0 0;">
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <div class="clock-wrapper">
+                    <div class="clock-center"></div>
+                    <div class="hand hour-hand" id="hourHand"></div>
+                    <div class="hand minute-hand" id="minuteHand"></div>
+                    <div class="hand second-hand" id="secondHand"></div>
+                    <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img"> 
+                </div>
+            </a>
+        </div>
+        
+        <div class="header-titles">
+            <h1>Z pamiętnika wolontariusza</h1>
+            <h2>Prawdziwe historie z pierwszej linii frontu</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html#o-nas">O Fundacji</a></li>
+                <li><a href="index.html#podopieczni">Podopieczni</a></li>
+                <li><a href="index.html#wolontariat">Wolontariat</a></li>
+                <li><a href="index.html#wesprzyj">Wesprzyj Nas</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="container">
+    <div class="content-section">
+        <h2 class="article-title">Zdejmiemy drzwi z zawiasów, by zrobić stół. Ale jak odpowiedzieć na to jedno pytanie naszej Podopiecznej?</h2>
+        <div class="article-subtitle">…z życia wzięte...</div>
+        
+        <p>Wielkimi krokami zbliża się Wielkanoc. Zewsząd słyszymy o pięknych, szlachetnych inicjatywach: miejskich śniadaniach, gminnych spotkaniach przy jajku, świątecznych paczkach. Problem w tym, że te wszystkie „systemowe” wydarzenia odbywają się zazwyczaj na kilka dni przed samymi świętami. Są potrzebne, nakarmią ciało, dadzą chwilę radości. Ale potem nadchodzi TEN dzień. Wielka Niedziela.</p>
+        
+        <p>I wtedy wszystkie kręgi nagle się zamykają. Rodziny zasiadają we własnych, bezpiecznych domach. A ci, którzy są sami – pozostają sami w najbardziej dotkliwy sposób. To nie dotyczy tylko seniorów. To dotyczy młodych singli w wynajętych kawalerkach, ludzi skłóconych z bliskimi, osób odrzuconych, dla których te świąteczne dni to po prostu kilkadziesiąt godzin tortury i wpatrywania się w sufit.</p>
+        
+        <p>Wczoraj nasza wolontariuszka Monika siedziała przy łóżku pani Jadwigi. Pani Jadwiga jest osobą poruszającą się z trudem. Nie ma własnej rodziny, jej jedyną żyjącą krewną jest siostra. Niestety, siostra przeszła niedawno zabieg, pojawiły się komplikacje i wszystko wskazuje na to, że nie wydobrzeje na tyle, by opuścić szpital przed świętami.</p>
+        
+        <p>O panią Jadwigę dba wspaniała opieka medyczna – pielęgniarki i lekarze robią, co mogą, odwiedza ją też fantastyczny ksiądz. Ten system naprawdę działa znakomicie. Ale prawda jest brutalna: w wielkanocny poranek ten wspaniały personel też wróci do swoich rodzin.</p>
+        
+        <p>W pewnym momencie pani Jadwiga spojrzała na naszą wolontariuszkę i zapytała cicho: – <em>Pani Moniko… a wy co robicie w święta?</em></p>
+        
+        <p>To jedno z tych pytań, po których staje ci gula w gardle. Bo co miała odpowiedzieć? Jako Fundacja „Ostatnia Warta” organizujemy w niedzielę śniadanie wielkanocne. Będą nasi wolontariusze i ci podopieczni, którzy są w stanie do nas dotrzeć. Szacujemy, że będzie nas kilkadziesiąt osób.</p>
+        
+        <p>Miejsca u nas niewiele, ale dla chcącego nic trudnego – <strong>zdejmiemy drzwi z zawiasów</strong>, położymy na kozłach, przykryjemy białym obrusem i wielki stół się znajdzie. Miejsca do siedzenia też zorganizujemy, choćbyśmy mieli siedzieć na podłodze. Więc serce krzyczy, żeby odpowiedzieć: <em>„Pani Jadwigo, zabieramy panią do nas!”</em>.</p>
+        
+        <p>Ale rzeczywistość brutalnie weryfikuje chęci. Pani Jadwiga wymaga transportu na łóżku lub w specjalistycznym wózku inwalidzkim. A my, jako młoda fundacja, po prostu nie mamy jak jej przetransportować. Nasze prywatne, małe 3 drzwiowe auto, z którego korzystamy na co dzień, nie jest do tego przystosowane.</p>
+        
+        <p>Jak się zachować w takiej sytuacji? Jak powiedzieć osobie, która z utęsknieniem patrzy w twoje oczy, że choć bardzo byś chciał, nie możesz wyrwać jej z tych czterech ścian na świąteczny poranek, bo brakuje ci specjalistycznego transportu? Nie potrafimy kłamać. Monika szczerze opowiedziała o naszym śniadaniu, o zdejmowanych drzwiach i o barierze, której dziś jeszcze nie potrafimy przeskoczyć.</p>
+        
+        <p>Zobaczyła w jej oczach smutek.</p>
+        
+        <p>Nie możemy przenieść pani Jadwigi do naszego stołu. Ale możemy zrobić coś innego. Nasz wolontariuszka obiecała jej, że jeśli ona nie może przyjechać na nasze święta, to my te święta przyniesiemy do niej. Choćby na chwilę, w ramach dyżuru. Bo „Ostatnia Warta” to nie tylko czuwanie przy odchodzących.</p>
+        
+        <p>To także, a może przede wszystkim, dbanie o to, by nikt – niezależnie od wieku, choroby czy statusu – nie musiał w święta płakać w samotności.</p>
+        
+        <p>Z każdym takim dniem i z każdą taką panią Jadwigą wiemy jedno: kiedyś w końcu zdobędziemy auto z windą. Żeby w kolejne święta móc po prostu powiedzieć: <em>„Zabierzemy panią do nas, miejsce przy drzwiach już czeka”</em>.</p>
+        
+        <p style="font-size: 0.85em; color: #888; margin-top: 40px;"><em>(PS. Ze względu na naszą Politykę Prywatności oraz postanowienia RODO imiona podopiecznych w artykułach mogły zostać zmienione).</em></p>
+        
+        <div style="text-align: center; border-top: 1px solid #eee; margin-top: 40px; padding-top: 20px;">
+            <a href="index.html" class="btn">Wróć do Strony Głównej</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Fundacja „Ostatnia Warta”. Wszelkie prawa zastrzeżone.</p>
+        <p><a href="index.html">Strona Główna</a> | <a href="polityka-prywatnosci.html">Polityka Prywatności</a></p>
+    </div>
+</footer>
+
+<script>
+    function updateClock() {
+        const now = new Date();
+        const second = now.getSeconds();
+        const minute = now.getMinutes();
+        const hour = now.getHours();
+
+        const secondDeg = ((second / 60) * 360);
+        const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
+        const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
+
+        const secHand = document.getElementById('secondHand');
+        const minHand = document.getElementById('minuteHand');
+        const hrHand = document.getElementById('hourHand');
+
+        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
+        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
+        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>
