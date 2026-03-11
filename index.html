@@ -75,8 +75,12 @@
         .donate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
         .btn-donate { display: flex; align-items: center; justify-content: center; padding: 12px 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-family: 'Arial', sans-serif; font-size: 0.9em; transition: all 0.3s ease; text-align: center; border: none; color: #fff;}
         .btn-donate:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); color: #fff;}
+        
         .bg-paypal { background: #003087; }
-        .bg-patronite { background: #E52320; } /* NOWY KOLOR PATRONITE */
+        .bg-patronite { background: #E52320; }
+        .bg-p24 { background: #ffffff; color: #333 !important; border: 1px solid #ddd !important; }
+        .bg-p24:hover { color: #1a5f4a !important; border-color: #1a5f4a !important; }
+        
         .bg-disabled { background: #f0f0f0; color: #999 !important; border: 1px solid #ccc; cursor: not-allowed; box-shadow: none !important; transform: none !important; }
 
         /* Siatka dokumentów i kart */
@@ -324,8 +328,10 @@
                     <p style="line-height: 1.4; margin-bottom: 15px; font-size: 0.95em;">Wybierz najwygodniejszą dla siebie formę płatności i wesprzyj naszą misję w kilka sekund.</p>
                     
                     <div class="donate-grid">
-                        <a href="#wesprzyj" class="btn-donate bg-disabled" title="Trwa weryfikacja bramki">
-                            <img src="Przelewy24.png" alt="Przelewy24" style="height: 24px; opacity: 0.6; filter: grayscale(100%);">
+                        
+                        <a href="https://s.przelewy24.pl/GRK1Y2fyNz3m" target="_blank" class="btn-donate bg-p24">
+                            <img src="Przelewy24.png" alt="Przelewy24" style="height: 20px; margin-right: 8px;">
+                            <span style="font-weight: normal; font-size: 0.95em;">Cegiełka 50 zł</span>
                         </a>
                         
                         <a href="https://www.paypal.com/donate/?hosted_button_id=W2SJKWQZVWTSA" target="_blank" class="btn-donate bg-paypal">
