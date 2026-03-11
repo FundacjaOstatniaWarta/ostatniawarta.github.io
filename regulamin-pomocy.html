@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regulamin Świadczenia Pomocy | Fundacja Ostatnia Warta</title>
+    
+    <link rel="canonical" href="https://ostatniawarta.pl/regulamin-pomocy.html" />
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        /* Podstawowe style i reset */
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
+        a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
+        h1, h2, h3 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
+        .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
+        
+        /* Ciemna, elegancka góra z wycentrowanym logo */
+        header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
+        
+        /* ZEGAR ZAMIAST PIERŚCIENIA */
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+        .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
+        
+        /* Środek wskazówek */
+        .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
+        
+        /* Wskazówki zegara */
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
+        .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
+        .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
+        .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
+
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; }
+        .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.6em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
+
+        nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
+        nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
+        nav ul li a:hover { color: #D4AF37; }
+
+        .content-section { background: #fff; padding: 40px 60px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; border-top: 4px solid #1a5f4a; }
+        
+        /* Formatowanie tekstu */
+        .content-section p, .content-section ul { font-family: 'Arial', sans-serif; font-size: 1.05em; color: #555; text-align: justify; line-height: 1.8; }
+        .content-section li { margin-bottom: 10px; }
+        .content-section h2 { border-bottom: 2px solid #e2f0ea; padding-bottom: 10px; margin-top: 40px; margin-bottom: 5px; }
+        .content-section h3 { text-align: center; color: #1a5f4a; margin-top: 10px; margin-bottom: 25px; font-size: 1.1em; }
+
+        footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; }
+        footer a { color: #D4AF37; text-decoration: none; }
+        footer a:hover { color: #fff; text-decoration: underline; }
+        
+        @media (max-width: 768px) { 
+            .content-section { padding: 25px 20px; }
+            .content-section p, .content-section ul { text-align: left; font-size: 1em; }
+            .header-titles h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container" style="padding: 0 0 0 0;">
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <div class="clock-wrapper">
+                    <div class="clock-center"></div>
+                    <div class="hand hour-hand" id="hourHand"></div>
+                    <div class="hand minute-hand" id="minuteHand"></div>
+                    <div class="hand second-hand" id="secondHand"></div>
+                    <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img"> 
+                </div>
+            </a>
+        </div>
+        
+        <div class="header-titles">
+            <h1>Regulamin Świadczenia Pomocy</h1>
+            <h2>Fundacja „Ostatnia Warta”</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html#o-nas">O Fundacji</a></li>
+                <li><a href="index.html#podopieczni">Podopieczni</a></li>
+                <li><a href="index.html#wolontariat">Wolontariat</a></li>
+                <li><a href="index.html#wesprzyj">Wesprzyj Nas</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="container">
+    <div class="content-section">
+        
+        <h2>Rozdział I. Postanowienia ogólne</h2>
+        <h3>§ 1</h3>
+        <p>1. Niniejszy Regulamin określa zasady, zakres oraz formy świadczenia pomocy przez Fundację „Ostatnia Warta” (zwaną dalej „Fundacją”).</p>
+        <p>2. Działalność Fundacji opiera się na poszanowaniu godności człowieka oraz bezinteresownym wsparciu osób przewlekle i terminalnie chorych, samotnych oraz ich rodzin, zgodnie z celami określonymi w Statucie Fundacji.</p>
+        <p>3. Ilekroć w Regulaminie jest mowa o:</p>
+        <ul>
+            <li><strong>Podopiecznym</strong> – rozumie się przez to osobę fizyczną, która po pozytywnym rozpatrzeniu Wniosku została objęta opieką Fundacji.</li>
+            <li><strong>Wolontariuszu</strong> – rozumie się przez to osobę świadczącą bezpłatną, dobrowolną pracę na rzecz Podopiecznych w imieniu Fundacji.</li>
+            <li><strong>Zarządzie</strong> – rozumie się przez to Zarząd Fundacji „Ostatnia Warta”.</li>
+        </ul>
+
+        <h2>Rozdział II. Formy i zakres pomocy</h2>
+        <h3>§ 2</h3>
+        <p>1. Wszelka pomoc świadczona przez Fundację na rzecz Podopiecznych jest całkowicie bezpłatna.</p>
+        <p>2. Fundacja świadczy pomoc dwutorowo, w zależności od zdiagnozowanych potrzeb Podopiecznego oraz aktualnych możliwości organizacyjnych i finansowych Fundacji:</p>
+        <ul>
+            <li><strong>A. Pomoc wolontaryjna (Sitting Service)</strong> – polegająca na niemedycznym wsparciu, obecności, czuwaniu, rozmowie oraz towarzyszeniu osobom chorym i samotnym.</li>
+            <li><strong>B. Pomoc rzeczowo-finansowa</strong> – polegająca na wsparciu w zaspokajaniu uzasadnionych potrzeb bytowych i zdrowotnych (np. dofinansowanie zakupu leków, sprzętu medycznego, środków higienicznych, transportu medycznego).</li>
+        </ul>
+        <p>3. Przyznanie jednej formy pomocy nie gwarantuje automatycznego przyznania drugiej.</p>
+
+        <h2>Rozdział III. Kwalifikacja do objęcia pomocą</h2>
+        <h3>§ 3</h3>
+        <p>1. Warunkiem wszczęcia procedury o przyznanie pomocy jest złożenie w Fundacji prawidłowo wypełnionego i podpisanego „Wniosku o objęcie opieką” wraz z niezbędnymi załącznikami (w tym klauzulą RODO).</p>
+        <p>2. Wniosek może złożyć sam pacjent, jego opiekun prawny lub osoba bliska faktycznie sprawująca nad nim opiekę.</p>
+        <p>3. Weryfikacja Wniosku dokonywana jest przez Zarząd lub upoważnionego Koordynatora Fundacji i może wymagać przedstawienia dodatkowej dokumentacji (np. zaświadczeń lekarskich) lub przeprowadzenia wywiadu środowiskowego.</p>
+        <p>4. Decyzję o objęciu pomocą, jej zakresie i czasie trwania podejmuje każdorazowo Zarząd Fundacji, biorąc pod uwagę sytuację Podopiecznego oraz zasoby Fundacji. Decyzja ta jest ostateczna.</p>
+
+        <h2>Rozdział IV. Prawa i obowiązki Podopiecznego</h2>
+        <h3>§ 4</h3>
+        <p>1. Podopieczny i jego rodzina mają prawo do poszanowania godności, prywatności oraz intymności w trakcie świadczenia pomocy.</p>
+        <p>2. Podopieczny (lub jego opiekun) ma obowiązek:</p>
+        <ul>
+            <li>traktować Wolontariuszy i przedstawicieli Fundacji z szacunkiem;</li>
+            <li>udzielać zgodnych z prawdą informacji o stanie zdrowia i sytuacji życiowej, niezbędnych do bezpiecznego świadczenia pomocy;</li>
+            <li>informować Fundację o zmianach mających wpływ na realizację pomocy (np. przeniesienie do innego szpitala, zmiana stanu zdrowia, poprawa sytuacji materialnej w przypadku pomocy finansowej);</li>
+            <li>powstrzymać się od prób przekazywania Wolontariuszom jakichkolwiek korzyści majątkowych (ewentualne darowizny winny być kierowane na oficjalne konto bankowe Fundacji).</li>
+        </ul>
+
+        <h2>Rozdział V. Zasady pracy Wolontariuszy</h2>
+        <h3>§ 5</h3>
+        <p>1. Wolontariusze Fundacji nie są personelem medycznym. Obowiązuje ich bezwzględny zakaz wykonywania jakichkolwiek czynności medycznych i specjalistycznych czynności pielęgnacyjnych.</p>
+        <p>2. Wolontariusz zobowiązany jest do zachowania ścisłej tajemnicy na temat wszelkich informacji o Podopiecznym uzyskanych w toku świadczenia pomocy.</p>
+        <p>3. Wolontariusz ma prawo w każdej chwili przerwać dyżur, jeśli uzna, że sytuacja zagraża jego zdrowiu fizycznemu lub psychicznemu.</p>
+
+        <h2>Rozdział VI. Wstrzymanie i zakończenie świadczenia pomocy</h2>
+        <h3>§ 6</h3>
+        <p>1. Zakończenie świadczenia pomocy następuje w przypadku:</p>
+        <ul>
+            <li>śmierci Podopiecznego;</li>
+            <li>rezygnacji Podopiecznego (lub jego opiekuna prawnego) ze wsparcia Fundacji;</li>
+            <li>ustania przesłanek, na podstawie których pomoc została przyznana.</li>
+        </ul>
+        <p>2. Fundacja zastrzega sobie prawo do natychmiastowego wstrzymania lub zakończenia świadczenia pomocy w przypadku:</p>
+        <ul>
+            <li>rażącego naruszenia postanowień niniejszego Regulaminu przez Podopiecznego lub jego rodzinę (w tym m.in. agresji słownej lub fizycznej wobec Wolontariusza);</li>
+            <li>zatajenia lub podania nieprawdziwych informacji we Wniosku;</li>
+            <li>żądania od Wolontariusza wykonywania czynności medycznych;</li>
+            <li>wyczerpania się środków finansowych lub zasobów kadrowych Fundacji.</li>
+        </ul>
+
+        <h2>Rozdział VII. Postanowienia końcowe</h2>
+        <h3>§ 7</h3>
+        <p>1. W sprawach nieuregulowanych niniejszym Regulaminem zastosowanie mają przepisy prawa powszechnie obowiązującego, a decyzje rozstrzygające podejmuje Zarząd Fundacji.</p>
+        <p>2. Fundacja zastrzega sobie prawo do zmiany niniejszego Regulaminu. O wszelkich zmianach Podopieczni będą informowani na bieżąco.</p>
+        
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Fundacja „Ostatnia Warta”. Wszelkie prawa zastrzeżone.</p>
+        <p><a href="index.html">Powrót do Strony Głównej</a></p>
+    </div>
+</footer>
+
+<script>
+    // Zegar
+    function updateClock() {
+        const now = new Date();
+        const second = now.getSeconds();
+        const minute = now.getMinutes();
+        const hour = now.getHours();
+
+        const secondDeg = ((second / 60) * 360);
+        const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
+        const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
+
+        const secHand = document.getElementById('secondHand');
+        const minHand = document.getElementById('minuteHand');
+        const hrHand = document.getElementById('hourHand');
+
+        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
+        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
+        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>
