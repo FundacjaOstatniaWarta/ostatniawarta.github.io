@@ -80,8 +80,28 @@
         .bg-patronite { background: #E52320; }
         .bg-p24 { background: #ffffff; color: #333 !important; border: 1px solid #ddd !important; }
         .bg-p24:hover { color: #1a5f4a !important; border-color: #1a5f4a !important; }
-        
-        .bg-disabled { background: #f0f0f0; color: #999 !important; border: 1px solid #ccc; cursor: not-allowed; box-shadow: none !important; transform: none !important; }
+
+        /* GLOBALNE KLASY DLA NAGŁÓWKÓW I TEKSTÓW WPROWADZAJĄCYCH - KONIEC Z CHAOESM WIZUALNYM */
+        .heading-wrapper { text-align: center; width: 100%; margin-bottom: 15px; }
+        .section-heading {
+            font-family: 'Georgia', serif;
+            font-size: 1.8em;
+            color: #1a5f4a;
+            border-bottom: 2px solid #D4AF37;
+            padding-bottom: 10px;
+            margin: 0 0 15px 0;
+            display: inline-block;
+            font-weight: normal;
+        }
+        .section-desc {
+            font-size: 1.15em;
+            color: #555;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 30px auto;
+            line-height: 1.8;
+            font-family: 'Arial', sans-serif; /* Spójność z resztą tekstów opisu */
+        }
 
         /* Siatka dokumentów i kart */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; align-items: stretch; }
@@ -91,13 +111,12 @@
         .card ul li::before { content: "📄"; position: absolute; left: 0; top: 0; }
         
         /* Sekcje */
-        section { padding: 60px 0; }
-        section:nth-child(even) { background: #fff; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
-        .section-dark { background: #f4f8f6; }
+        section { padding: 60px 0; border-bottom: 1px solid #eee; }
+        .bg-white { background-color: #fff; }
+        .bg-gray { background-color: #f4f8f6; }
         
         /* Specjalna sekcja O nas */
-        .about-text { font-size: 1.15em; font-style: italic; color: #555; text-align: justify; max-width: 900px; margin: 0 auto 40px auto; border-left: 4px solid #D4AF37; padding-left: 20px; }
-        .mission-title { text-align: center; font-size: 2em; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
+        .about-text { font-size: 1.15em; color: #555; text-align: justify; max-width: 900px; margin: 0 auto 40px auto; border-left: 4px solid #D4AF37; padding-left: 20px; line-height: 1.8; font-style: italic;}
 
         /* Kafelki Misji i Obszarów działań */
         .mission-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 20px; }
@@ -148,6 +167,7 @@
             .grid { gap: 20px; }
             .card { padding: 20px; height: auto; }
             .about-text { padding-left: 10px; font-size: 1.05em; margin-bottom: 30px; }
+            .section-desc { font-size: 1.05em; }
             .header-titles h1 { font-size: 1.8em; }
             .mission-grid { grid-template-columns: 1fr; }
             .donate-grid { grid-template-columns: 1fr; } 
@@ -191,53 +211,69 @@
     </div>
 </header>
 
-<section id="o-nas">
+<section id="o-nas" class="bg-white">
     <div class="container">
+        <div class="heading-wrapper">
+            <h2 class="section-heading">O Fundacji</h2>
+        </div>
+        
         <div class="about-text">
             <p>Fundacja „Ostatnia Warta” to wspólnota osób, których ścieżki życiowe splatają się z codziennością gdańskich ulic. Jesteśmy ludźmi takimi jak Państwo – sąsiadami, przechodniami, osobami, które w zgiełku współczesnego świata nie utraciły wrażliwości na cichy głos drugiego człowieka. Nie odnajdą Państwo u nas luksusowych atrybutów statusu ani szklanych biurowców; naszą największą wartością jest empatia oraz gotowość do bezinteresownego pochylenia się nad cierpieniem.</p>
             <p>Nasza misja zrodziła się w dobie powszechnego odosobnienia, kiedy w cieniu globalnego niepokoju dostrzegliśmy, jak wielką wagę ma prosta obecność. To, co przez ostatnie lata było jedynie odruchem serca i nieformalnym wsparciem świadczonym potrzebującym, w lutym 2026 roku zyskało godną, sformalizowaną postać prawną.</p>
             <p>Wierzymy głęboko, że prawdziwy sens egzystencji nie objawia się w pogoni za dobrami doczesnymi, lecz w uśmiechu drugiego człowieka i poczuciu spełnionego obowiązku. Odnaleźliśmy szczęście w pomocy niesionej bez oczekiwania na nagrodę. W świecie zdominowanym przez tymczasowość, my wybieramy trwałość więzi i godność, która towarzyszy człowiekowi do ostatnich chwil.</p>
-            <p><strong>Dlaczego „Ostatnia Warta”? Ponieważ z największą pokorą stajemy na straży ludzkiego życia zawsze wtedy, gdy spowija je mrok niepewności, bólu czy zapomnienia. Pełnimy tę najważniejszą z wart wszędzie tam, gdzie gaśnie nadzieja, a horyzont przysłania nagły ciężar trudnej diagnozy, bezkresnej samotności czy nieuchronnego pożegnania. Jesteśmy niezachwianym oparciem i tarczą przeciwko rozpaczy. Jesteśmy po to, aby żaden człowiek – bez względu na to, na jakim etapie swojej drogi się znajduje – nie musiał mierzyć się z cierpieniem w pojedynkę i nigdy nie kroczył w nieznane bez bezpiecznego uścisku dłoni.</strong></p>
+            <p style="font-family: 'Arial', sans-serif;"><strong>Dlaczego „Ostatnia Warta”? Ponieważ z największą pokorą stajemy na straży ludzkiego życia zawsze wtedy, gdy spowija je mrok niepewności, bólu czy zapomnienia. Pełnimy tę najważniejszą z wart wszędzie tam, gdzie gaśnie nadzieja, a horyzont przysłania nagły ciężar trudnej diagnozy, bezkresnej samotności czy nieuchronnego pożegnania. Jesteśmy niezachwianym oparciem i tarczą przeciwko rozpaczy. Jesteśmy po to, aby żaden człowiek – bez względu na to, na jakim etapie swojej drogi się znajduje – nie musiał mierzyć się z cierpieniem w pojedynkę i nigdy nie kroczył w nieznane bez bezpiecznego uścisku dłoni.</strong></p>
         </div>
+    </div>
+</section>
 
-        <h2 class="mission-title">Godność, obecność, wymierna pomoc</h2>
-        <p style="text-align: center; max-width: 800px; margin: auto;">
+<section class="bg-gray">
+    <div class="container">
+        <div class="heading-wrapper">
+            <h2 class="section-heading">Godność, obecność, wymierna pomoc</h2>
+        </div>
+        <p class="section-desc">
             Od cichej warty (<em>sitting service</em>) w chwilach trwogi, po żelazne oparcie finansowe. Obejmujemy darmową troską osoby naznaczone ciężarem trudnych diagnoz oraz tych zepchniętych w najgłębsze odmęty zapomnienia – ludzi opuszczonych i niewidzialnych dla społeczeństwa. Niestrudzenie dowodzimy, że w konfrontacji z cierpieniem nikt nie pozostaje sam.
         </p>
+    </div>
+</section>
 
-        <div style="max-width: 1000px; margin: 60px auto 0 auto;">
-            <h3 style="font-family: 'Georgia', serif; font-size: 1.8em; color: #1a5f4a; border-bottom: 2px solid #D4AF37; padding-bottom: 10px; margin-bottom: 30px; display: inline-block;">Misja i obszary działań</h3>
-            
-            <div class="mission-grid">
-                <div class="mission-item">
-                    <h4>Doula Umierania</h4>
-                    <p>Szlachetna posługa towarzyszenia osobom w procesie odchodzenia. Dbamy o przestrzeń wolną od lęku, nasyconą spokojem i emocjonalnym wsparciem.</p>
-                </div>
-                <div class="mission-item">
-                    <h4>Przeciwdziałanie Samotności</h4>
-                    <p>Czuwanie przy łóżku chorego w placówkach medycznych oraz domach prywatnych. Jesteśmy tam, gdzie ludzka obecność staje się najcenniejszym lekarstwem.</p>
-                </div>
-                <div class="mission-item">
-                    <h4>Sitting Service</h4>
-                    <p>Realizacja idei stałej „Warty” – ofiarowanie poczucia bezpieczeństwa podopiecznym oraz chwili niezbędnego wytchnienia ich najbliższym opiekunom.</p>
-                </div>
-                <div class="mission-item">
-                    <h4>Wsparcie w chorobie</h4>
-                    <p>Kompleksowa pomoc rzeczowo-finansowa. Aktywnie wspieramy w leczeniu, zakupie sprzętu i codziennym funkcjonowaniu osób chorych.</p>
-                </div>
+<section class="bg-white">
+    <div class="container">
+        <div class="heading-wrapper">
+            <h2 class="section-heading">Misja i obszary działań</h2>
+        </div>
+        
+        <div class="mission-grid">
+            <div class="mission-item">
+                <h4>Doula Umierania</h4>
+                <p>Szlachetna posługa towarzyszenia osobom w procesie odchodzenia. Dbamy o przestrzeń wolną od lęku, nasyconą spokojem i emocjonalnym wsparciem.</p>
+            </div>
+            <div class="mission-item">
+                <h4>Przeciwdziałanie Samotności</h4>
+                <p>Czuwanie przy łóżku chorego w placówkach medycznych oraz domach prywatnych. Jesteśmy tam, gdzie ludzka obecność staje się najcenniejszym lekarstwem.</p>
+            </div>
+            <div class="mission-item">
+                <h4>Sitting Service</h4>
+                <p>Realizacja idei stałej „Warty” – ofiarowanie poczucia bezpieczeństwa podopiecznym oraz chwili niezbędnego wytchnienia ich najbliższym opiekunom.</p>
+            </div>
+            <div class="mission-item">
+                <h4>Wsparcie w chorobie</h4>
+                <p>Kompleksowa pomoc rzeczowo-finansowa. Aktywnie wspieramy w leczeniu, zakupie sprzętu i codziennym funkcjonowaniu osób chorych.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section id="wsparcie-dokumenty">
+<section id="wsparcie-dokumenty" class="bg-white">
     <div class="container">
         <div class="split-grid">
             
             <div class="split-col">
                 <div class="split-text-l" id="podopieczni" style="scroll-margin-top: 100px;">
-                    <h2 style="text-align: center; margin-top: 0;">Dla Podopiecznych i ich Rodzin</h2>
-                    <p style="text-align: center; margin: 0 auto; max-width: 90%;">Nasza pomoc jest w 100% bezpłatna. Jeśli potrzebują Państwo wsparcia dla siebie lub bliskiej osoby, prosimy o zapoznanie się z poniższymi dokumentami. Stanowią one podstawę do objęcia opieką przez naszych wolontariuszy.</p>
+                    <div class="heading-wrapper">
+                        <h2 class="section-heading">Dla Podopiecznych i ich Rodzin</h2>
+                    </div>
+                    <p class="section-desc" style="max-width: 90%;">Nasza pomoc jest w 100% bezpłatna. Jeśli potrzebują Państwo wsparcia dla siebie lub bliskiej osoby, prosimy o zapoznanie się z poniższymi dokumentami. Stanowią one podstawę do objęcia opieką przez naszych wolontariuszy.</p>
                 </div>
                 <div class="split-card-l card">
                     <h3>Wymagana dokumentacja:</h3>
@@ -253,8 +289,10 @@
 
             <div class="split-col">
                 <div class="split-text-r" id="wolontariat" style="scroll-margin-top: 100px;">
-                    <h2 style="text-align: center; margin-top: 0;">Zostań Wolontariuszem</h2>
-                    <p style="text-align: center; margin: 0 auto; max-width: 90%;">Szukamy osób o wielkich sercach, gotowych pełnić „Wartę”. Nie wymagamy wykształcenia medycznego – najważniejsza jest empatia i czas. Oferujemy profesjonalne przygotowanie do posługi, m.in. w ramach szkoleń w Gdańskiej Szkole Towarzyszenia.</p>
+                    <div class="heading-wrapper">
+                        <h2 class="section-heading">Zostań Wolontariuszem</h2>
+                    </div>
+                    <p class="section-desc" style="max-width: 90%;">Szukamy osób o wielkich sercach, gotowych pełnić „Wartę”. Nie wymagamy wykształcenia medycznego – najważniejsza jest empatia i czas. Oferujemy profesjonalne przygotowanie do posługi, m.in. w ramach szkoleń w Gdańskiej Szkole Towarzyszenia.</p>
                 </div>
                 <div class="split-card-r card">
                     <h3>Dokumenty rekrutacyjne:</h3>
@@ -272,10 +310,12 @@
     </div>
 </section>
 
-<section id="wesprzyj" style="background-color: #f4f8f6;">
+<section id="wesprzyj" class="bg-gray">
     <div class="container">
-        <h2 style="text-align: center;">Wesprzyj naszą misję</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto 30px auto;">Zarząd działa w 100% pro publico bono. Państwa darowizny finansują wyłącznie bezpośrednią pomoc: dojazdy wolontariuszy, drobny sprzęt pomocniczy oraz wsparcie logistyczne dla naszych podopiecznych.</p>
+        <div class="heading-wrapper">
+            <h2 class="section-heading">Wesprzyj naszą misję</h2>
+        </div>
+        <p class="section-desc" style="max-width: 800px;">Zarząd działa w 100% pro publico bono. Państwa darowizny finansują wyłącznie bezpośrednią pomoc: dojazdy wolontariuszy, drobny sprzęt pomocniczy oraz wsparcie logistyczne dla naszych podopiecznych.</p>
         
         <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
             
