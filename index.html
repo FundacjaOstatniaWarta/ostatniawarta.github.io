@@ -99,7 +99,7 @@
             font-family: 'Georgia', serif;
             font-size: 1.15em;
             color: #555;
-            text-align: justify;
+            text-align: justify; /* Pełne wyjustowanie do obu marginesów */
             max-width: 900px;
             margin: 0 auto 30px auto;
             line-height: 1.8;
@@ -186,10 +186,8 @@
             .grid { gap: 20px; }
             .card { padding: 20px; height: auto; }
             .about-text { padding-left: 10px; margin-bottom: 30px; }
-            /* Na małych ekranach telefony mają problem z szerokimi przerwami przy justowaniu, 
-               ale zgodnie z poleceniem trzymamy wyjustowanie lub wyrównujemy do lewej dla wygody czytania na komórce.
-               Dla bezpieczeństwa czytelności na 6-calowym ekranie: */
-            .section-desc, .about-text, .mission-item p { text-align: left; font-size: 1.05em; }
+            /* ZMUSZAMY TELEFONY DO ZACHOWANIA WYJUSTOWANIA (KOLUMNY) */
+            .section-desc, .about-text, .mission-item p { text-align: justify; font-size: 1.05em; }
             .header-titles h1 { font-size: 1.8em; }
             .mission-grid { grid-template-columns: 1fr; }
             .donate-grid { grid-template-columns: 1fr; } 
@@ -295,7 +293,7 @@
                     <div class="heading-wrapper">
                         <h2 class="section-heading">Dla Podopiecznych i ich Rodzin</h2>
                     </div>
-                    <p class="section-desc" style="max-width: 90%;">Nasza pomoc jest w 100% bezpłatna. Jeśli potrzebują Państwo wsparcia dla siebie lub bliskiej osoby, prosimy o zapoznanie się z poniższymi dokumentami. Stanowią one podstawę do objęcia opieką przez naszych wolontariuszy.</p>
+                    <p class="section-desc">Nasza pomoc jest w 100% bezpłatna. Jeśli potrzebują Państwo wsparcia dla siebie lub bliskiej osoby, prosimy o zapoznanie się z poniższymi dokumentami. Stanowią one podstawę do objęcia opieką przez naszych wolontariuszy.</p>
                 </div>
                 <div class="split-card-l card">
                     <h3>Wymagana dokumentacja:</h3>
@@ -314,7 +312,7 @@
                     <div class="heading-wrapper">
                         <h2 class="section-heading">Zostań Wolontariuszem</h2>
                     </div>
-                    <p class="section-desc" style="max-width: 90%;">Szukamy osób o wielkich sercach, gotowych pełnić „Wartę”. Nie wymagamy wykształcenia medycznego – najważniejsza jest empatia i czas. Oferujemy profesjonalne przygotowanie do posługi, m.in. w ramach szkoleń w Gdańskiej Szkole Towarzyszenia.</p>
+                    <p class="section-desc">Szukamy osób o wielkich sercach, gotowych pełnić „Wartę”. Nie wymagamy wykształcenia medycznego – najważniejsza jest empatia i czas. Oferujemy profesjonalne przygotowanie do posługi, m.in. w ramach szkoleń w Gdańskiej Szkole Towarzyszenia.</p>
                 </div>
                 <div class="split-card-r card">
                     <h3>Dokumenty rekrutacyjne:</h3>
@@ -337,7 +335,7 @@
         <div class="heading-wrapper">
             <h2 class="section-heading">Wesprzyj naszą misję</h2>
         </div>
-        <p class="section-desc" style="max-width: 800px;">Zarząd działa w 100% pro publico bono. Państwa darowizny finansują wyłącznie bezpośrednią pomoc: dojazdy wolontariuszy, drobny sprzęt pomocniczy oraz wsparcie logistyczne dla naszych podopiecznych.</p>
+        <p class="section-desc">Organy Fundacji działają całkowicie <em>pro publico bono</em>. Oznacza to, że Państwa szlachetne wsparcie trafia w całości na realizację celów statutowych, finansując kompleksową opiekę nad tymi, którzy najbardziej jej potrzebują.</p>
         
         <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
             
