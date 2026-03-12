@@ -9,19 +9,24 @@
     <link rel="icon" type="image/png" href="logo.png">
 
     <style>
+        /* Podstawowe style i reset */
         body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
         a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
         h1, h2, h3 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
         .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
         
+        /* Ciemna, elegancka góra z wycentrowanym logo */
         header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
         
+        /* ZEGAR ZAMIAST PIERŚCIENIA */
         .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
         .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
         .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
         
+        /* Środek wskazówek */
         .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
         
+        /* Wskazówki zegara */
         .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
         .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
         .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
@@ -36,6 +41,7 @@
         nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
         nav ul li a:hover { color: #D4AF37; }
 
+        /* BLOG GRID I KAFELKI */
         .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 20px; }
         
         .blog-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1a5f4a; padding: 30px; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; box-sizing: border-box; height: 100%; }
@@ -139,24 +145,6 @@
             <a href="blog6.html" class="read-more">Czytaj dalej &rarr;</a>
         </div>
 
-        <div class="blog-card">
-            <h3>Najdłuższa rozmowa</h3>
-            <p class="excerpt">Niektóre dyżury zaczynają się od ciszy. Człowiek w łóżku patrzy w sufit, a wolontariusz siedzi obok i przez chwilę nie wiadomo, od czego zacząć rozmowę.</p>
-            <a href="blog7.html" class="read-more">Czytaj dalej &rarr;</a>
-        </div>
-
-        <div class="blog-card">
-            <h3>Herbaty o drugiej w nocy</h3>
-            <p class="excerpt">Druga w nocy to dziwna godzina. Świat śpi. Miasto milknie. Nawet szpitale wydają się wtedy cichsze niż zwykle. To pora, kiedy rozmowy zaczynają płynąć inaczej.</p>
-            <a href="blog8.html" class="read-more">Czytaj dalej &rarr;</a>
-        </div>
-
-        <div class="blog-card">
-            <h3>Ostatnie życzenie</h3>
-            <p class="excerpt">Ludzie czasem myślą, że ostatnie życzenia są wielkie. Że ktoś chce zobaczyć ocean, polecieć balonem albo przeżyć jeszcze jedną wielką przygodę. Prawda wygląda inaczej.</p>
-            <a href="blog9.html" class="read-more">Czytaj dalej &rarr;</a>
-        </div>
-
     </div>
 
     <div style="text-align: center; margin-top: 50px;">
@@ -173,6 +161,7 @@
 </footer>
 
 <script>
+    // Zegar
     function updateClock() {
         const now = new Date();
         const second = now.getSeconds();
