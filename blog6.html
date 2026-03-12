@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cisza przed świtem | Fundacja Ostatnia Warta</title>
+    
+    <link rel="canonical" href="https://ostatniawarta.pl/blog6.html" />
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
+        a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
+        h1, h2, h3 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
+        .container { width: 90%; max-width: 1000px; margin: auto; padding: 40px 0; }
+        
+        header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
+        
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+        .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
+        
+        .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
+        .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
+        .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
+        .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
+
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; }
+        .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.4em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
+
+        nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
+        nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
+        nav ul li a:hover { color: #D4AF37; }
+
+        .content-section { background: #fff; padding: 50px 60px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; border-top: 4px solid #1a5f4a; }
+        
+        .article-title { font-size: 2em; line-height: 1.3; margin-top: 0; margin-bottom: 25px; border-bottom: 2px solid #e2f0ea; padding-bottom: 15px; text-align: center; }
+        .post-meta { font-family: 'Arial', sans-serif; font-size: 0.9em; color: #888; margin-bottom: 40px; font-style: italic; text-align: center; }
+        
+        .content-section p { font-family: 'Georgia', serif; font-size: 1.15em; color: #444; text-align: justify; line-height: 1.8; margin-bottom: 20px; }
+        
+        .btn { display: inline-block; padding: 12px 24px; margin: 20px 0; border-radius: 4px; font-weight: bold; text-align: center; font-family: 'Arial', sans-serif; border: 2px solid #1a5f4a; color: #1a5f4a; background: transparent; transition: 0.3s; }
+        .btn:hover { background: #1a5f4a; color: #fff; }
+
+        footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; }
+        footer a { color: #D4AF37; text-decoration: none; }
+        footer a:hover { color: #fff; text-decoration: underline; }
+        
+        @media (max-width: 768px) { 
+            .content-section { padding: 30px 20px; }
+            .content-section p { text-align: left; font-size: 1.05em; }
+            .article-title { font-size: 1.5em; }
+            .header-titles h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container" style="padding: 0 0 0 0;">
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <div class="clock-wrapper">
+                    <div class="clock-center"></div>
+                    <div class="hand hour-hand" id="hourHand"></div>
+                    <div class="hand minute-hand" id="minuteHand"></div>
+                    <div class="hand second-hand" id="secondHand"></div>
+                    <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img"> 
+                </div>
+            </a>
+        </div>
+        
+        <div class="header-titles">
+            <h1>Z pamiętnika wolontariusza</h1>
+            <h2>Prawdziwe historie z pierwszej linii frontu</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html#o-nas">O Fundacji</a></li>
+                <li><a href="index.html#podopieczni">Podopieczni</a></li>
+                <li><a href="index.html#wolontariat">Wolontariat</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#wesprzyj">Wesprzyj Nas</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="container">
+    <div class="content-section">
+        <h2 class="article-title">Cisza przed świtem</h2>
+        
+        <p>Czasem największą pomocą, jaką można komuś dać, jest po prostu czuwać. Nie lekarstwo. Nie skomplikowana aparatura. Nie wielkie słowa. Po prostu obecność.</p>
+        
+        <p>Są takie dyżury, które zostają z człowiekiem na długo. Nie dlatego, że wydarzyło się coś spektakularnego. Czasem wręcz przeciwnie. Bo nie wydarzyło się nic, co można by zapisać w raporcie czy statystyce. Tylko cisza. I człowiek.</p>
+        
+        <p>Ten dyżur przypadł na jeden z pierwszych naprawdę ciepłych wieczorów tej wiosny. W powietrzu było już coś z nadchodzącej Wielkanocy. W sklepach pojawiały się pierwsze palmy, gdzieś w oknach wisiały papierowe zajączki, a w radiu zaczynały się rozmowy o świątecznych przygotowaniach. Świat powoli szykował się do świętowania.</p>
+        
+        <p>A my siedzieliśmy przy łóżku człowieka, który wiedział, że jego czas płynie już inaczej. W takich chwilach zegar nie tyka tak jak zwykle. Minuty potrafią się wydłużać, a godziny kurczyć. Człowiek zaczyna słyszeć rzeczy, których na co dzień nie zauważa: cichy szum aparatury, spokojny oddech drugiej osoby, odległe kroki na korytarzu. I nagle okazuje się, że najważniejsze rzeczy wcale nie potrzebują wielu słów.</p>
+        
+        <p>Często ludzie pytają, co właściwie robi wolontariusz w takich momentach. Odpowiedź jest zaskakująco prosta. Czasem po prostu siedzi. Siedzi przy łóżku, poprawi poduszkę, poda wodę, zapyta czy nie jest za zimno. A czasem nie robi nic, poza tym, że jest. Dla świata z zewnątrz może to wyglądać jak bezczynność. Dla człowieka, który zbliża się do końca swojej drogi, bywa to jednak coś znacznie większego. Obecność.</p>
+        
+        <p>Noc minęła spokojnie. Tak spokojnie, że przez chwilę zaczęliśmy się zastanawiać, czy w ogóle jesteśmy potrzebni. Aparatura cicho szumiała, oddech był równy, a człowiek, przy którego łóżku czuwaliśmy, spał. Naprawdę spał. Bez niepokoju, bez nagłych przebudzeń, bez napięcia i krzyku, które tak często towarzyszą ostatnim tygodniom życia. Czasem tylko lekko poruszał dłonią, jakby upewniał się, że ktoś obok jest. W takich chwilach człowiek rozumie, że czuwanie nie zawsze polega na działaniu. Czasem polega na tym, że po prostu jesteś.</p>
+        
+        <p>Największą ulgę tamtej nocy odczuła jednak córka naszego podopiecznego. Od wielu miesięcy opiekowała się swoim ojcem niemal bez przerwy. Nocne czuwania, niepokój, nagłe pobudki. Sen przychodził do niej rzadko i na krótko. Tamtej nocy mogła położyć się w pokoju obok i zasnąć. Spokojnie.</p>
+        
+        <p>Kiedy rano kończyliśmy dyżur, powiedziała coś półgłosem, trochę z niedowierzaniem:</p>
+        
+        <p>– <em>Wiecie, że tata tak spokojnie nie spał od dwóch lat?</em></p>
+        
+        <p>Patrzyła na niego przez chwilę. Człowiek, który przez wiele miesięcy zmagał się z bólem i niepokojem, spał wtedy cicho, prawie jak dziecko. Jakby wiedział, że ktoś czuwa.</p>
+        
+        <p>Tego samego dnia przed południem odszedł. Cicho. Bez pośpiechu. Kilka godzin po tej spokojnej nocy.</p>
+        
+        <p>Kilka dni później dostaliśmy wiadomość od jego córki. Krótki tekst, bez wielkich słów. Podziękowanie za obecność. Za spokój. Za godność tej ostatniej nocy. Napisała, że tata był spokojny. Że zasnął spokojny. Że chyba czuł, że nie jest sam. I że dla niej ta noc była pierwszą spokojną nocą od bardzo dawna.</p>
+        
+        <p>Czasem ktoś pyta, czy wolontariat naprawdę coś zmienia. Czy obecność jednej osoby przy łóżku chorego może mieć znaczenie. Myślę wtedy o tej nocy. O człowieku, który po wielu miesiącach niepokoju po prostu zasnął. I o córce, która po dwóch latach czuwania mogła wreszcie przespać kilka godzin. Może właśnie na tym polega sens tego zajęcia. Nie tylko na wielkich gestach. Na małych nocach, które przynoszą ludziom trochę spokoju. Czasem ostatniego.</p>
+
+        <p style="font-size: 0.85em; color: #888; margin-top: 40px; text-align: left;"><em>(PS. Ze względu na ochronę prywatności imiona i niektóre szczegóły w historii zostały zmienione).</em></p>
+        
+        <div style="text-align: center; border-top: 1px solid #eee; margin-top: 40px; padding-top: 20px;">
+            <a href="blog.html" class="btn">Wróć do listy historii</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Fundacja „Ostatnia Warta”. Wszelkie prawa zastrzeżone.</p>
+        <p><a href="index.html">Strona Główna</a> | <a href="polityka-prywatnosci.html">Polityka Prywatności</a></p>
+    </div>
+</footer>
+
+<script>
+    function updateClock() {
+        const now = new Date();
+        const second = now.getSeconds();
+        const minute = now.getMinutes();
+        const hour = now.getHours();
+
+        const secondDeg = ((second / 60) * 360);
+        const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
+        const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
+
+        const secHand = document.getElementById('secondHand');
+        const minHand = document.getElementById('minuteHand');
+        const hrHand = document.getElementById('hourHand');
+
+        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
+        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
+        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>
