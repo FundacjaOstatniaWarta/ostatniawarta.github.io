@@ -36,34 +36,27 @@
         /* Ciemna, elegancka góra z wycentrowanym logo */
         header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
         
-        /* ZEGAR ZAMIAST PIERŚCIENIA */
         .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
         .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
         .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
         
-        /* Środek wskazówek */
         .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
-        
-        /* Wskazówki zegara */
         .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
         .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
         .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
         .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
 
-        /* Teksty w nagłówku pod logo */
         .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; letter-spacing: 1px; }
         .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.6em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
         .header-titles p { font-size: 1.1em; max-width: 600px; margin: 0 auto 30px auto; color: #eef7f4; line-height: 1.5; }
 
-        /* Nawigacja */
         nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
         nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
         nav ul li { margin: 0 15px; }
         nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
         nav ul li a:hover { color: #D4AF37; }
 
-        /* Przyciski podstawowe */
-        .btn { display: inline-block; padding: 12px 24px; margin: 10px 5px; border-radius: 4px; font-weight: bold; text-align: center; font-family: 'Arial', sans-serif; border: 2px solid transparent; box-sizing: border-box; }
+        .btn { display: inline-block; padding: 12px 24px; margin: 10px 5px; border-radius: 4px; font-weight: bold; text-align: center; font-family: 'Arial', sans-serif; border: 2px solid transparent; box-sizing: border-box; cursor: pointer; }
         .btn-primary { background: #D4AF37; color: #133a2d; }
         .btn-primary:hover { background: #b5952f; color: #fff; }
         .btn-outline { border-color: #1a5f4a; color: #1a5f4a; background: transparent; }
@@ -71,99 +64,71 @@
         .btn-dark { border-color: #fff; color: #fff; background: transparent; }
         .btn-dark:hover { background: #fff; color: #133a2d; }
 
-        /* NOWE PRZYCISKI PŁATNOŚCI ONLINE */
-        .donate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
-        .btn-donate { display: flex; align-items: center; justify-content: center; padding: 12px 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-family: 'Arial', sans-serif; font-size: 0.9em; transition: all 0.3s ease; text-align: center; border: none; color: #fff; box-sizing: border-box; }
-        .btn-donate:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); color: #fff;}
-        
-        .bg-paypal { background: #003087; }
-        .bg-patronite { background: #E52320; }
-        .bg-p24 { background: #ffffff; color: #333 !important; border: 1px solid #ddd !important; }
-        .bg-p24:hover { color: #1a5f4a !important; border-color: #1a5f4a !important; }
-        
-        /* Klasa dla przycisku Zrzutki, by idealnie zrównał się z siatką pod spodem */
-        .zrzutka-btn { width: calc(50% - 6px); }
-
-        /* GLOBALNE KLASY DLA NAGŁÓWKÓW I TEKSTÓW WPROWADZAJĄCYCH - PEŁNA SPÓJNOŚĆ WIZUALNA */
-        .heading-wrapper { text-align: center; width: 100%; margin-bottom: 15px; }
-        .section-heading {
-            font-family: 'Georgia', serif;
-            font-size: 1.8em;
-            color: #1a5f4a;
-            border-bottom: 2px solid #D4AF37;
-            padding-bottom: 10px;
-            margin: 0 0 15px 0;
+        /* KLASY DO ROZWIJANYCH AKORDEONÓW */
+        .hidden-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, margin 0.3s ease-in-out;
+            opacity: 0;
+            margin-top: 0;
+        }
+        .hidden-content.open {
+            max-height: 800px; /* Zapas wysokości na płynną animację */
+            opacity: 1;
+            margin-top: 15px;
+        }
+        .toggle-arrow {
             display: inline-block;
-            font-weight: normal;
+            transition: transform 0.3s ease;
+            margin-left: 5px;
+            font-size: 0.9em;
         }
-        
-        /* UNIFIKACJA WSZYSTKICH GŁÓWNYCH TEKSTÓW (O Fundacji, Godność, Podopieczni, Wolontariat) */
-        .section-desc, .about-text {
-            font-family: 'Georgia', serif;
-            font-size: 1.15em;
-            color: #555;
-            text-align: justify; /* Pełne wyjustowanie do obu marginesów */
-            max-width: 900px;
-            margin: 0 auto 30px auto;
-            line-height: 1.8;
-        }
-        .about-text {
-            border-left: 4px solid #D4AF37;
-            padding-left: 20px;
+        .btn.open .toggle-arrow {
+            transform: rotate(180deg);
         }
 
-        /* Siatka dokumentów i kart */
+        .heading-wrapper { text-align: center; width: 100%; margin-bottom: 15px; }
+        .section-heading { font-family: 'Georgia', serif; font-size: 1.8em; color: #1a5f4a; border-bottom: 2px solid #D4AF37; padding-bottom: 10px; margin: 0 0 15px 0; display: inline-block; font-weight: normal; }
+        
+        .section-desc, .about-text { font-family: 'Georgia', serif; font-size: 1.15em; color: #555; text-align: justify; max-width: 900px; margin: 0 auto 30px auto; line-height: 1.8; }
+        .about-text { border-left: 4px solid #D4AF37; padding-left: 20px; }
+
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; align-items: stretch; }
         .card { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1a5f4a; height: 100%; box-sizing: border-box; }
-        .card ul { list-style: none; padding: 0; }
+        .card ul { list-style: none; padding: 0; margin: 0; }
         .card ul li { margin-bottom: 15px; padding-left: 20px; position: relative; }
         .card ul li::before { content: "📄"; position: absolute; left: 0; top: 0; }
         
-        /* Sekcje */
         section { padding: 60px 0; border-bottom: 1px solid #eee; }
         .bg-white { background-color: #fff; }
         .bg-gray { background-color: #f4f8f6; }
 
-        /* Kafelki Misji i Obszarów działań */
-        .mission-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 20px; }
+        .mission-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 20px; margin-bottom: 30px; }
         .mission-item { background: #fff; padding: 25px; border-left: 4px solid #1a5f4a; box-shadow: 0 4px 10px rgba(0,0,0,0.04); text-align: left; }
-        .mission-item h4 { 
-            margin-top: 0; 
-            color: #133a2d; 
-            font-family: 'Georgia', serif; 
-            font-size: 1.25em; 
-            border-bottom: 2px solid #D4AF37; /* Złote podkreślenie w 4 misjach */
-            padding-bottom: 5px;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-        .mission-item p { 
-            font-family: 'Georgia', serif; /* Unifikacja czcionki */
-            font-size: 1.15em; /* Unifikacja rozmiaru */
-            color: #555; 
-            margin-bottom: 0; 
-            line-height: 1.8; 
-            text-align: justify; /* Wyjustowanie */
-        }
+        .mission-item h4 { margin: 0; color: #133a2d; font-family: 'Georgia', serif; font-size: 1.25em; border-bottom: 2px solid #D4AF37; padding-bottom: 5px; display: inline-block; }
+        .mission-item p { font-family: 'Georgia', serif; font-size: 1.15em; color: #555; margin-bottom: 0; line-height: 1.8; text-align: justify; }
 
-        /* ZESPOLONA SEKCJA (PODOPIECZNI + WOLONTARIAT) */
         .split-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
         .split-col { display: flex; flex-direction: column; gap: 20px; }
         @media (min-width: 768px) {
             .split-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
             .split-col { display: contents; } 
             .split-text-l { grid-column: 1; grid-row: 1; }
-            .split-card-l { grid-column: 1; grid-row: 2; align-self: stretch; }
+            .split-card-l { grid-column: 1; grid-row: 2; align-self: flex-start; }
             .split-text-r { grid-column: 2; grid-row: 1; }
-            .split-card-r { grid-column: 2; grid-row: 2; align-self: stretch; }
+            .split-card-r { grid-column: 2; grid-row: 2; align-self: flex-start; }
         }
 
-        /* Wsparcie - Bank */
         .account-box { background: #f0f7f4; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 20px; border: 1px solid #d1e8df; overflow: hidden; }
         .account-number { font-size: 1.25em; letter-spacing: 1px; word-spacing: 2px; color: #1a5f4a; font-family: 'Courier New', Courier, monospace; font-weight: bold; margin: 15px 0; white-space: nowrap; overflow-x: auto; padding-bottom: 5px; }
         .qr-code { max-width: 150px; border: 1px solid #ddd; padding: 10px; background: #fff; border-radius: 8px; }
 
-        /* Stopka / Kontakt */
+        /* PORTAL WSPARCIA */
+        .portal-card { cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; text-decoration: none; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .portal-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .trust-badges img { height: 20px; opacity: 0.6; filter: grayscale(100%); transition: filter 0.3s ease, opacity 0.3s ease; }
+        .portal-card:hover .trust-badges img { filter: grayscale(0%); opacity: 1; }
+
         footer { background: #133a2d; color: #eef7f4; padding: 50px 20px 20px; text-align: center; }
         footer h2 { color: #D4AF37; }
         footer a { color: #D4AF37; text-decoration: underline; }
@@ -176,26 +141,20 @@
         footer .btn-dark { text-decoration: none; color: #fff; }
         footer .btn-dark:hover { color: #133a2d; }
         
-        /* Baner Cookie */
         #cookie-banner { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background-color: #133a2d; color: #fff; text-align: center; padding: 15px; z-index: 9999; box-shadow: 0 -4px 15px rgba(0,0,0,0.3); font-family: 'Arial', sans-serif;}
         #cookie-banner p { margin: 0; font-size: 0.9em; display: inline-block; vertical-align: middle; max-width: 800px; line-height: 1.5;}
         #cookie-banner button { margin-left: 20px; background-color: #D4AF37; color: #133a2d; border: none; padding: 10px 20px; font-weight: bold; border-radius: 4px; cursor: pointer; vertical-align: middle; transition: 0.3s;}
         #cookie-banner button:hover { background-color: #fff; }
         
-        /* POPRAWKI DLA TELEFONÓW */
         @media (max-width: 768px) { 
             #cookie-banner button { margin-top: 15px; margin-left: 0; display: block; width: 100%; } 
             section { padding: 40px 10px; }
             .grid { gap: 20px; }
             .card { padding: 20px; height: auto; }
             .about-text { padding-left: 10px; margin-bottom: 30px; }
-            /* ZMUSZAMY TELEFONY DO ZACHOWANIA WYJUSTOWANIA (KOLUMNY) */
             .section-desc, .about-text, .mission-item p { text-align: justify; font-size: 1.05em; }
             .header-titles h1 { font-size: 1.8em; }
             .mission-grid { grid-template-columns: 1fr; }
-            .donate-grid { grid-template-columns: 1fr; } 
-            /* Zrzutka na telefonie na całą szerokość tak jak reszta */
-            .zrzutka-btn { width: 100%; } 
         }
     </style>
 </head>
@@ -271,44 +230,54 @@
         <div class="mission-grid">
             <div class="mission-item">
                 <h4>Doula Umierania</h4>
-                <p>Szlachetna posługa towarzyszenia osobom w procesie odchodzenia. Dbamy o przestrzeń wolną od lęku, nasyconą spokojem i emocjonalnym wsparciem.</p>
+                <p class="mission-content hidden-content">Szlachetna posługa towarzyszenia osobom w procesie odchodzenia. Dbamy o przestrzeń wolną od lęku, nasyconą spokojem i emocjonalnym wsparciem.</p>
             </div>
             <div class="mission-item">
                 <h4>Przeciwdziałanie Samotności</h4>
-                <p>Czuwanie przy łóżku chorego w placówkach medycznych oraz domach prywatnych. Jesteśmy tam, gdzie ludzka obecność staje się najcenniejszym lekarstwem.</p>
+                <p class="mission-content hidden-content">Czuwanie przy łóżku chorego w placówkach medycznych oraz domach prywatnych. Jesteśmy tam, gdzie ludzka obecność staje się najcenniejszym lekarstwem.</p>
             </div>
             <div class="mission-item">
                 <h4>Sitting Service</h4>
-                <p>Realizacja idei stałej „Warty” – ofiarowanie poczucia bezpieczeństwa podopiecznym oraz chwili niezbędnego wytchnienia ich najbliższym opiekunom.</p>
+                <p class="mission-content hidden-content">Realizacja idei stałej „Warty” – ofiarowanie poczucia bezpieczeństwa podopiecznym oraz chwili niezbędnego wytchnienia ich najbliższym opiekunom.</p>
             </div>
             <div class="mission-item">
                 <h4>Wsparcie w chorobie</h4>
-                <p>Kompleksowa pomoc rzeczowo-finansowa. Aktywnie wspieramy w leczeniu, zakupie sprzętu i codziennym funkcjonowaniu osób chorych.</p>
+                <p class="mission-content hidden-content">Kompleksowa pomoc rzeczowo-finansowa. Aktywnie wspieramy w leczeniu, zakupie sprzętu i codziennym funkcjonowaniu osób chorych.</p>
             </div>
+        </div>
+        
+        <div style="text-align: center;">
+            <button id="mission-btn" class="btn btn-outline" onclick="toggleMission()">Poznaj szczegóły naszej misji <span class="toggle-arrow">▼</span></button>
         </div>
     </div>
 </section>
 
-<section id="wsparcie-dokumenty" class="bg-white">
+<section id="wsparcie-dokumenty" class="bg-gray">
     <div class="container">
+        
+        <div style="text-align: center; margin-bottom: 40px;">
+            <button id="docs-btn" class="btn btn-primary" onclick="toggleDocs()" style="font-size: 1.1em; padding: 15px 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">Rozwiń szczegóły i dokumenty do pobrania <span class="toggle-arrow">▼</span></button>
+        </div>
+
         <div class="split-grid">
-            
             <div class="split-col">
                 <div class="split-text-l" id="podopieczni" style="scroll-margin-top: 100px;">
                     <div class="heading-wrapper">
                         <h2 class="section-heading">Dla Podopiecznych i ich Rodzin</h2>
                     </div>
-                    <p class="section-desc">Nasza pomoc jest w 100% bezpłatna. Jeśli potrzebują Państwo wsparcia dla siebie lub bliskiej osoby, prosimy o zapoznanie się z poniższymi dokumentami. Stanowią one podstawę do objęcia opieką przez naszych wolontariuszy.</p>
+                    <p class="section-desc">Nasza pomoc jest w 100% bezpłatna. Jeśli potrzebują Państwo wsparcia dla siebie lub bliskiej osoby, prosimy o zapoznanie się z dokumentami. Stanowią one podstawę do objęcia opieką przez naszych wolontariuszy.</p>
                 </div>
                 <div class="split-card-l card">
-                    <h3>Wymagana dokumentacja:</h3>
-                    <ul>
-                        <li><a href="01_ 1_Wniosek_o_objecie_opieka.pdf" target="_blank">Wniosek o objęcie opieką</a></li>
-                        <li><a href="01_03_Zasady_wspolpracy.pdf" target="_blank">Zasady współpracy z Fundacją</a></li>
-                        <li><a href="01_2A_Upowaznienie_szpitalne.pdf" target="_blank">Upoważnienie - Placówka Medyczna</a></li>
-                        <li><a href="01_2B_Upowaznienie_Opiekun.pdf" target="_blank">Upoważnienie - Opiekun Faktyczny</a></li>
-                        <li><a href="01_04_Klauzula_RODO_Podopieczni.pdf" target="_blank">Klauzula informacyjna RODO</a></li>
-                    </ul>
+                    <h3 style="margin-top: 0;">Wymagana dokumentacja:</h3>
+                    <div class="docs-content hidden-content">
+                        <ul>
+                            <li><a href="01_ 1_Wniosek_o_objecie_opieka.pdf" target="_blank">Wniosek o objęcie opieką</a></li>
+                            <li><a href="01_03_Zasady_wspolpracy.pdf" target="_blank">Zasady współpracy z Fundacją</a></li>
+                            <li><a href="01_2A_Upowaznienie_szpitalne.pdf" target="_blank">Upoważnienie - Placówka Medyczna</a></li>
+                            <li><a href="01_2B_Upowaznienie_Opiekun.pdf" target="_blank">Upoważnienie - Opiekun Faktyczny</a></li>
+                            <li><a href="01_04_Klauzula_RODO_Podopieczni.pdf" target="_blank">Klauzula informacyjna RODO</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -317,25 +286,26 @@
                     <div class="heading-wrapper">
                         <h2 class="section-heading">Zostań Wolontariuszem</h2>
                     </div>
-                    <p class="section-desc">Szukamy osób o wielkich sercach, gotowych pełnić „Wartę”. Nie wymagamy wykształcenia medycznego – najważniejsza jest empatia i czas. Oferujemy profesjonalne przygotowanie do posługi, m.in. w ramach szkoleń w Gdańskiej Szkole Towarzyszenia.</p>
+                    <p class="section-desc">Szukamy osób o wielkich sercach, gotowych pełnić „Wartę”. Nie wymagamy wykształcenia medycznego – najważniejsza jest empatia i czas. Oferujemy profesjonalne przygotowanie do posługi.</p>
                 </div>
                 <div class="split-card-r card">
-                    <h3>Dokumenty rekrutacyjne:</h3>
-                    <ul>
-                        <li><a href="02_01_Kwestionariusz_Wolontariusza.pdf" target="_blank">Kwestionariusz Wolontariusza</a></li>
-                        <li><a href="02_02_Porozumienie_Wolontariat.pdf" target="_blank">Wzór Porozumienia o Wolontariacie</a></li>
-                        <li><a href="02_03_Zasady_Swiadczenia_Pomocy.pdf" target="_blank">Zasady Świadczenia Pomocy</a></li>
-                        <li><a href="02_04_Zasady_Zachowania_Poufnosci.pdf" target="_blank">Zasady Zachowania Poufności</a></li>
-                        <li><a href="02_05_Klauzula_RODO_Wolontariusze.pdf" target="_blank">Klauzula RODO Wolontariusza</a></li>
-                    </ul>
+                    <h3 style="margin-top: 0;">Dokumenty rekrutacyjne:</h3>
+                    <div class="docs-content hidden-content">
+                        <ul>
+                            <li><a href="02_01_Kwestionariusz_Wolontariusza.pdf" target="_blank">Kwestionariusz Wolontariusza</a></li>
+                            <li><a href="02_02_Porozumienie_Wolontariat.pdf" target="_blank">Wzór Porozumienia o Wolontariacie</a></li>
+                            <li><a href="02_03_Zasady_Swiadczenia_Pomocy.pdf" target="_blank">Zasady Świadczenia Pomocy</a></li>
+                            <li><a href="02_04_Zasady_Zachowania_Poufnosci.pdf" target="_blank">Zasady Zachowania Poufności</a></li>
+                            <li><a href="02_05_Klauzula_RODO_Wolontariusze.pdf" target="_blank">Klauzula RODO Wolontariusza</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
 
-<section id="wesprzyj" class="bg-gray">
+<section id="wesprzyj" class="bg-white">
     <div class="container">
         <div class="heading-wrapper">
             <h2 class="section-heading">Wesprzyj naszą misję</h2>
@@ -347,7 +317,7 @@
             <div style="display: flex; flex-direction: column; gap: 30px;">
                 
                 <div class="card" style="height: auto;">
-                    <h3>Przekaż Darowiznę</h3>
+                    <h3>Tradycyjny Przelew Bankowy</h3>
                     <div class="account-box">
                         <p style="margin: 0;"><strong>FUNDACJA "OSTATNIA WARTA"</strong></p>
                         <div class="account-number" style="margin: 10px 0;">PL 61 2530 0008 2049 1089 8921 0001</div>
@@ -389,43 +359,24 @@
 
             <div style="display: flex; flex-direction: column; gap: 30px;">
                 
+                <a href="zbiorki.html" class="card portal-card" style="border-top: 4px solid #a83232; height: auto;">
+                    <h3 style="margin-top: 0; margin-bottom: 5px; font-size: 1.8em; color: #a83232;">Dołącz do naszej Warty</h3>
+                    <p style="font-size: 1.05em; line-height: 1.4; margin-bottom: 25px; color: #555;">Wesprzyj Fundację – poznaj wszystkie formy pomocy online.</p>
+                    
+                    <img src="logo-czerwone.jpg" alt="Pieczęć Fundacji Ostatnia Warta" style="width: 150px; height: auto; margin-bottom: 30px; border-radius: 50%;">
+                    
+                    <div class="trust-badges" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; border-top: 1px solid #eee; padding-top: 20px; width: 100%;">
+                        <img src="zrzutka.png" alt="Zrzutka.pl">
+                        <img src="Przelewy24.png" alt="Przelewy24">
+                        <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="PayPal">
+                        <span style="font-weight: bold; font-family: 'Arial', sans-serif; font-size: 14px; opacity: 0.6; color: #333; transition: 0.3s ease;">PATRONITE</span>
+                        <img src="blik.png" alt="BLIK" style="height: 25px;">
+                    </div>
+                    
+                    <span style="margin-top: 25px; display: inline-block; padding: 12px 24px; background: #a83232; color: #fff; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif;">Wybierz cel i formę wpłaty &rarr;</span>
+                </a>
+
                 <div class="card" style="height: auto;">
-                    <h3>Szybkie wsparcie online</h3>
-                    <p style="line-height: 1.4; margin-bottom: 15px; font-size: 0.95em;">Wybierz najwygodniejszą dla siebie formę płatności i wesprzyj naszą misję w kilka sekund.</p>
-                    
-                    <div style="display: flex; justify-content: center; margin-bottom: 12px;">
-                        <a href="zbiorki.html" class="btn-donate bg-p24 zrzutka-btn">
-                            <img src="zrzutka.png" alt="Zrzutka.pl" style="height: 20px; margin-right: 8px; object-fit: contain;">
-                            <span style="font-weight: normal; font-size: 0.95em;">Wpłać na Zrzutce</span>
-                        </a>
-                    </div>
-                    
-                    <div class="donate-grid">
-                        <a href="https://s.przelewy24.pl/GRK1Y2fyNz3m" target="_blank" class="btn-donate bg-p24">
-                            <img src="Przelewy24.png" alt="Przelewy24" style="height: 20px; margin-right: 8px;">
-                            <span style="font-weight: normal; font-size: 0.95em;">Cegiełka 50 zł</span>
-                        </a>
-                        
-                        <a href="https://www.paypal.com/donate/?hosted_button_id=W2SJKWQZVWTSA" target="_blank" class="btn-donate bg-paypal">
-                            <span style="font-size: 1.3em; margin-right: 8px;">🅿️</span> PayPal
-                        </a>
-                        
-                        <a href="https://buycoffee.to/ostatniawarta" target="_blank" style="display: flex; justify-content: center; align-items: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                            <img src="https://buycoffee.to/static/img/share/share-button-primary.png" style="width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" alt="Postaw mi kawę na buycoffee.to">
-                        </a>
-                        
-                        <a href="https://patronite.pl/ostatniawarta.pl" target="_blank" class="btn-donate bg-patronite">
-                            <span style="font-size: 1.3em; margin-right: 8px;">🛡️</span> Patronite
-                        </a>
-                    </div>
-                    
-                    <div style="text-align: center; margin-top: 5px; font-size: 0.8em; color: #555; line-height: 1.4;">
-                        Obsługujemy płatności bezpieczne: <strong>BLIK, Visa, Mastercard, Przelewy24</strong><br>
-                        Klikając w powyższe opcje, akceptujesz nasz <a href="regulamin-darowizn.html" style="color: #1a5f4a; text-decoration: underline;">Regulamin Darowizn</a>.
-                    </div>
-
-                    <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
-
                     <h3>Wspieraj podczas zakupów</h3>
                     <p style="line-height: 1.4; margin-bottom: 15px; font-size: 0.95em;">Pomagaj nam bezpłatnie przy okazji codziennych zakupów online.</p>
                     
@@ -550,6 +501,51 @@
     }
     setInterval(updateClock, 1000);
     updateClock();
+
+    // Akordeony (Zwijanie i rozwijanie sekcji)
+    function toggleMission() {
+        const contents = document.querySelectorAll('.mission-content');
+        const btn = document.getElementById('mission-btn');
+        const isOpen = btn.classList.contains('open');
+
+        contents.forEach(el => {
+            if (isOpen) {
+                el.classList.remove('open');
+            } else {
+                el.classList.add('open');
+            }
+        });
+
+        if (isOpen) {
+            btn.classList.remove('open');
+            btn.innerHTML = 'Poznaj szczegóły naszej misji <span class="toggle-arrow">▼</span>';
+        } else {
+            btn.classList.add('open');
+            btn.innerHTML = 'Zwiń szczegóły <span class="toggle-arrow">▲</span>';
+        }
+    }
+
+    function toggleDocs() {
+        const contents = document.querySelectorAll('.docs-content');
+        const btn = document.getElementById('docs-btn');
+        const isOpen = btn.classList.contains('open');
+
+        contents.forEach(el => {
+            if (isOpen) {
+                el.classList.remove('open');
+            } else {
+                el.classList.add('open');
+            }
+        });
+
+        if (isOpen) {
+            btn.classList.remove('open');
+            btn.innerHTML = 'Rozwiń szczegóły i dokumenty do pobrania <span class="toggle-arrow">▼</span>';
+        } else {
+            btn.classList.add('open');
+            btn.innerHTML = 'Zwiń dokumenty <span class="toggle-arrow">▲</span>';
+        }
+    }
 
     // Obsługa ciasteczek
     function acceptCookies() {
