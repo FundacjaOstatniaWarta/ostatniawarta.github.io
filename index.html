@@ -73,13 +73,16 @@
 
         /* NOWE PRZYCISKI PŁATNOŚCI ONLINE */
         .donate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
-        .btn-donate { display: flex; align-items: center; justify-content: center; padding: 12px 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-family: 'Arial', sans-serif; font-size: 0.9em; transition: all 0.3s ease; text-align: center; border: none; color: #fff;}
+        .btn-donate { display: flex; align-items: center; justify-content: center; padding: 12px 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-family: 'Arial', sans-serif; font-size: 0.9em; transition: all 0.3s ease; text-align: center; border: none; color: #fff; box-sizing: border-box; }
         .btn-donate:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); color: #fff;}
         
         .bg-paypal { background: #003087; }
         .bg-patronite { background: #E52320; }
         .bg-p24 { background: #ffffff; color: #333 !important; border: 1px solid #ddd !important; }
         .bg-p24:hover { color: #1a5f4a !important; border-color: #1a5f4a !important; }
+        
+        /* Klasa dla przycisku Zrzutki, by idealnie zrównał się z siatką pod spodem */
+        .zrzutka-btn { width: calc(50% - 6px); }
 
         /* GLOBALNE KLASY DLA NAGŁÓWKÓW I TEKSTÓW WPROWADZAJĄCYCH - PEŁNA SPÓJNOŚĆ WIZUALNA */
         .heading-wrapper { text-align: center; width: 100%; margin-bottom: 15px; }
@@ -191,6 +194,8 @@
             .header-titles h1 { font-size: 1.8em; }
             .mission-grid { grid-template-columns: 1fr; }
             .donate-grid { grid-template-columns: 1fr; } 
+            /* Zrzutka na telefonie na całą szerokość tak jak reszta */
+            .zrzutka-btn { width: 100%; } 
         }
     </style>
 </head>
@@ -388,8 +393,14 @@
                     <h3>Szybkie wsparcie online</h3>
                     <p style="line-height: 1.4; margin-bottom: 15px; font-size: 0.95em;">Wybierz najwygodniejszą dla siebie formę płatności i wesprzyj naszą misję w kilka sekund.</p>
                     
+                    <div style="display: flex; justify-content: center; margin-bottom: 12px;">
+                        <a href="zbiorki.html" class="btn-donate bg-p24 zrzutka-btn">
+                            <img src="zrzutka.png" alt="Zrzutka.pl" style="height: 20px; margin-right: 8px; object-fit: contain;">
+                            <span style="font-weight: normal; font-size: 0.95em;">Wpłać na Zrzutce</span>
+                        </a>
+                    </div>
+                    
                     <div class="donate-grid">
-                        
                         <a href="https://s.przelewy24.pl/GRK1Y2fyNz3m" target="_blank" class="btn-donate bg-p24">
                             <img src="Przelewy24.png" alt="Przelewy24" style="height: 20px; margin-right: 8px;">
                             <span style="font-weight: normal; font-size: 0.95em;">Cegiełka 50 zł</span>
@@ -416,15 +427,11 @@
                     <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
 
                     <h3>Wspieraj podczas zakupów</h3>
-                    <p style="line-height: 1.4; margin-bottom: 15px; font-size: 0.95em;">Pomagaj nam bezpłatnie przy okazji codziennych zakupów online lub wpłać datek na Zrzutce.</p>
+                    <p style="line-height: 1.4; margin-bottom: 15px; font-size: 0.95em;">Pomagaj nam bezpłatnie przy okazji codziennych zakupów online.</p>
                     
-                    <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: center; justify-content: center;">
-                        <a href="https://fanimani.pl/zaproszenie/139507/7b9dbce0e1d84fc29adb3ee6d2d52e27" target="_blank" style="flex: 1; min-width: 120px; text-align: center; transition: transform 0.3s ease; display: inline-block;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <div style="display: flex; justify-content: center;">
+                        <a href="https://fanimani.pl/zaproszenie/139507/7b9dbce0e1d84fc29adb3ee6d2d52e27" target="_blank" style="transition: transform 0.3s ease; display: inline-block;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                             <img src="fanimani.png" alt="Wspieraj nas przez FaniMani" style="max-height: 45px; width: auto; border-radius: 4px;">
-                        </a>
-                        
-                        <a href="zbiorki.html" style="flex: 1; min-width: 120px; text-align: center; transition: transform 0.3s ease; display: inline-block;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                            <img src="zrzutka.png" alt="Nasze zbiórki na Zrzutka.pl" style="max-height: 45px; width: auto; border-radius: 4px; object-fit: contain;">
                         </a>
                     </div>
                     
