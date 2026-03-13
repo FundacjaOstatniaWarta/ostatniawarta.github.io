@@ -64,7 +64,7 @@
         .btn-dark { border-color: #fff; color: #fff; background: transparent; }
         .btn-dark:hover { background: #fff; color: #133a2d; }
 
-        /* KLASY DO ROZWIJANYCH AKORDEONÓW */
+        /* KLASY DO ROZWIJANYCH AKORDEONÓW (Dla dokumentów) */
         .hidden-content {
             max-height: 0;
             overflow: hidden;
@@ -110,7 +110,7 @@
 
         .mission-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 20px; margin-bottom: 30px; }
         .mission-item { background: #fff; padding: 25px; border-left: 4px solid #1a5f4a; box-shadow: 0 4px 10px rgba(0,0,0,0.04); text-align: left; }
-        .mission-item h4 { margin: 0; color: #133a2d; font-family: 'Georgia', serif; font-size: 1.25em; border-bottom: 2px solid #D4AF37; padding-bottom: 5px; display: inline-block; }
+        .mission-item h4 { margin: 0 0 10px 0; color: #133a2d; font-family: 'Georgia', serif; font-size: 1.25em; border-bottom: 2px solid #D4AF37; padding-bottom: 5px; display: inline-block; }
         .mission-item p { font-family: 'Georgia', serif; font-size: 1.15em; color: #555; margin-bottom: 0; line-height: 1.8; text-align: justify; }
 
         .split-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
@@ -245,25 +245,22 @@
         <div class="mission-grid">
             <div class="mission-item">
                 <h4>Doula Umierania</h4>
-                <p class="mission-content hidden-content">Szlachetna posługa towarzyszenia osobom w procesie odchodzenia. Dbamy o przestrzeń wolną od lęku, nasyconą spokojem i emocjonalnym wsparciem.</p>
+                <p>Szlachetna posługa towarzyszenia osobom w procesie odchodzenia. Dbamy o przestrzeń wolną od lęku, nasyconą spokojem i emocjonalnym wsparciem.</p>
             </div>
             <div class="mission-item">
                 <h4>Przeciwdziałanie Samotności</h4>
-                <p class="mission-content hidden-content">Czuwanie przy łóżku chorego w placówkach medycznych oraz domach prywatnych. Jesteśmy tam, gdzie ludzka obecność staje się najcenniejszym lekarstwem.</p>
+                <p>Czuwanie przy łóżku chorego w placówkach medycznych oraz domach prywatnych. Jesteśmy tam, gdzie ludzka obecność staje się najcenniejszym lekarstwem.</p>
             </div>
             <div class="mission-item">
                 <h4>Sitting Service</h4>
-                <p class="mission-content hidden-content">Realizacja idei stałej „Warty” – ofiarowanie poczucia bezpieczeństwa podopiecznym oraz chwili niezbędnego wytchnienia ich najbliższym opiekunom.</p>
+                <p>Realizacja idei stałej „Warty” – ofiarowanie poczucia bezpieczeństwa podopiecznym oraz chwili niezbędnego wytchnienia ich najbliższym opiekunom.</p>
             </div>
             <div class="mission-item">
                 <h4>Wsparcie w chorobie</h4>
-                <p class="mission-content hidden-content">Kompleksowa pomoc rzeczowo-finansowa. Aktywnie wspieramy w leczeniu, zakupie sprzętu i codziennym funkcjonowaniu osób chorych.</p>
+                <p>Kompleksowa pomoc rzeczowo-finansowa. Aktywnie wspieramy w leczeniu, zakupie sprzętu i codziennym funkcjonowaniu osób chorych.</p>
             </div>
         </div>
         
-        <div style="text-align: center;">
-            <button id="mission-btn" class="btn btn-outline" onclick="toggleMission()">Poznaj szczegóły naszej misji <span class="toggle-arrow">▼</span></button>
-        </div>
     </div>
 </section>
 
@@ -523,29 +520,6 @@
     }
     setInterval(updateClock, 1000);
     updateClock();
-
-    // Akordeony (Zwijanie i rozwijanie sekcji)
-    function toggleMission() {
-        const contents = document.querySelectorAll('.mission-content');
-        const btn = document.getElementById('mission-btn');
-        const isOpen = btn.classList.contains('open');
-
-        contents.forEach(el => {
-            if (isOpen) {
-                el.classList.remove('open');
-            } else {
-                el.classList.add('open');
-            }
-        });
-
-        if (isOpen) {
-            btn.classList.remove('open');
-            btn.innerHTML = 'Poznaj szczegóły naszej misji <span class="toggle-arrow">▼</span>';
-        } else {
-            btn.classList.add('open');
-            btn.innerHTML = 'Zwiń szczegóły <span class="toggle-arrow">▲</span>';
-        }
-    }
 
     function toggleDocs() {
         const contents = document.querySelectorAll('.docs-content');
