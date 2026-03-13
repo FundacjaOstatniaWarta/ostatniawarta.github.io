@@ -73,7 +73,7 @@
             margin-top: 0;
         }
         .hidden-content.open {
-            max-height: 800px; /* Zapas wysokości na płynną animację */
+            max-height: 800px; 
             opacity: 1;
             margin-top: 15px;
         }
@@ -93,7 +93,12 @@
         .section-desc, .about-text { font-family: 'Georgia', serif; font-size: 1.15em; color: #555; text-align: justify; max-width: 900px; margin: 0 auto 30px auto; line-height: 1.8; }
         .about-text { border-left: 4px solid #D4AF37; padding-left: 20px; }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; align-items: stretch; }
+        /* Nowe style linków tekstowych w sekcji O Fundacji */
+        .text-link { color: #1a5f4a; text-decoration: underline; font-weight: bold; transition: color 0.3s; }
+        .text-link:hover { color: #D4AF37; }
+        .gold-link { color: #D4AF37; font-weight: bold; text-decoration: none; font-style: italic; font-size: 1.1em; transition: 0.3s; padding: 0 4px; }
+        .gold-link:hover { color: #1a5f4a; text-decoration: underline; }
+
         .card { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1a5f4a; height: 100%; box-sizing: border-box; }
         .card ul { list-style: none; padding: 0; margin: 0; }
         .card ul li { margin-bottom: 15px; padding-left: 20px; position: relative; }
@@ -123,7 +128,9 @@
         .account-number { font-size: 1.25em; letter-spacing: 1px; word-spacing: 2px; color: #1a5f4a; font-family: 'Courier New', Courier, monospace; font-weight: bold; margin: 15px 0; white-space: nowrap; overflow-x: auto; padding-bottom: 5px; }
         .qr-code { max-width: 150px; border: 1px solid #ddd; padding: 10px; background: #fff; border-radius: 8px; }
 
-        /* PORTAL WSPARCIA */
+        /* PORTAL WSPARCIA I ZAMIANA KOLUMN NA MOBILE */
+        .support-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 30px; align-items: stretch; }
+        
         .portal-card { cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; text-decoration: none; display: flex; flex-direction: column; justify-content: center; align-items: center; }
         .portal-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
         .trust-badges img { height: 20px; opacity: 0.6; filter: grayscale(100%); transition: filter 0.3s ease, opacity 0.3s ease; }
@@ -146,10 +153,15 @@
         #cookie-banner button { margin-left: 20px; background-color: #D4AF37; color: #133a2d; border: none; padding: 10px 20px; font-weight: bold; border-radius: 4px; cursor: pointer; vertical-align: middle; transition: 0.3s;}
         #cookie-banner button:hover { background-color: #fff; }
         
+        @media (max-width: 800px) { 
+            .support-columns { display: flex; flex-direction: column; }
+            .support-col-left { order: 2; }
+            .support-col-right { order: 1; }
+        }
+
         @media (max-width: 768px) { 
             #cookie-banner button { margin-top: 15px; margin-left: 0; display: block; width: 100%; } 
             section { padding: 40px 10px; }
-            .grid { gap: 20px; }
             .card { padding: 20px; height: auto; }
             .about-text { padding-left: 10px; margin-bottom: 30px; }
             .section-desc, .about-text, .mission-item p { text-align: justify; font-size: 1.05em; }
@@ -202,10 +214,13 @@
         </div>
         
         <div class="about-text">
-            <p>Fundacja „Ostatnia Warta” to wspólnota osób, których ścieżki życiowe splatają się z codziennością gdańskich ulic. Jesteśmy ludźmi takimi jak Państwo – sąsiadami, przechodniami, osobami, które w zgiełku współczesnego świata nie utraciły wrażliwości na cichy głos drugiego człowieka. Nie odnajdą Państwo u nas luksusowych atrybutów statusu ani szklanych biurowców; naszą największą wartością jest empatia oraz gotowość do bezinteresownego pochylenia się nad cierpieniem.</p>
-            <p>Nasza misja zrodziła się w dobie powszechnego odosobnienia, kiedy w cieniu globalnego niepokoju dostrzegliśmy, jak wielką wagę ma prosta obecność. To, co przez ostatnie lata było jedynie odruchem serca i nieformalnym wsparciem świadczonym potrzebującym, w lutym 2026 roku zyskało godną, sformalizowaną postać prawną.</p>
+            <p><a href="manifest.html" class="text-link">Fundacja „Ostatnia Warta”</a> to wspólnota osób, których ścieżki życiowe splatają się z codziennością gdańskich ulic. Jesteśmy ludźmi takimi jak Państwo – sąsiadami, przechodniami, osobami, które w zgiełku współczesnego świata nie utraciły wrażliwości na cichy głos drugiego człowieka. Nie odnajdą Państwo u nas luksusowych atrybutów statusu ani szklanych biurowców; naszą największą wartością jest empatia oraz gotowość do bezinteresownego pochylenia się nad cierpieniem.</p>
+            <p>Nasza misja zrodziła się w dobie powszechnego odosobnienia, kiedy w cieniu globalnego niepokoju dostrzegliśmy, jak wielką wagę ma prosta obecność. To, co przez ostatnie lata było jedynie odruchem serca i nieformalnym wsparciem świadczonym potrzebującym, w lutym 2026 roku zyskało godną, sformalizowaną postać prawną. <a href="manifest.html" class="text-link">[Zobacz też Manifest "Ostatniej Warty"]</a></p>
             <p>Wierzymy głęboko, że prawdziwy sens egzystencji nie objawia się w pogoni za dobrami doczesnymi, lecz w uśmiechu drugiego człowieka i poczuciu spełnionego obowiązku. Odnaleźliśmy szczęście w pomocy niesionej bez oczekiwania na nagrodę. W świecie zdominowanym przez tymczasowość, my wybieramy trwałość więzi i godność, która towarzyszy człowiekowi do ostatnich chwil.</p>
-            <p><strong>Dlaczego „Ostatnia Warta”? Ponieważ z największą pokorą stajemy na straży ludzkiego życia zawsze wtedy, gdy spowija je mrok niepewności, bólu czy zapomnienia. Pełnimy tę najważniejszą z wart wszędzie tam, gdzie gaśnie nadzieja, a horyzont przysłania nagły ciężar trudnej diagnozy, bezkresnej samotności czy nieuchronnego pożegnania. Jesteśmy niezachwianym oparciem i tarczą przeciwko rozpaczy. Jesteśmy po to, aby żaden człowiek – bez względu na to, na jakim etapie swojej drogi się znajduje – nie musiał mierzyć się z cierpieniem w pojedynkę i nigdy nie kroczył w nieznane bez bezpiecznego uścisku dłoni.</strong></p>
+            
+            <a href="manifest.html" style="text-decoration: none; color: inherit; display: block; transition: all 0.3s ease;" onmouseover="this.style.opacity='0.7'; this.style.transform='translateY(-2px)';" onmouseout="this.style.opacity='1'; this.style.transform='translateY(0)';">
+                <p><strong>Dlaczego „Ostatnia Warta”? Ponieważ z największą pokorą stajemy na straży ludzkiego życia zawsze wtedy, gdy spowija je mrok niepewności, bólu czy zapomnienia. Pełnimy tę najważniejszą z wart wszędzie tam, gdzie gaśnie nadzieja, a horyzont przysłania nagły ciężar trudnej diagnozy, bezkresnej samotności czy nieuchronnego pożegnania. Jesteśmy niezachwianym oparciem i tarczą przeciwko rozpaczy. Jesteśmy po to, aby żaden człowiek – bez względu na to, na jakim etapie swojej drogi się znajduje – nie musiał mierzyć się z cierpieniem w pojedynkę i nigdy nie kroczył w nieznane bez bezpiecznego uścisku dłoni.</strong></p>
+            </a>
         </div>
     </div>
 </section>
@@ -216,7 +231,7 @@
             <h2 class="section-heading">Godność, obecność, wymierna pomoc</h2>
         </div>
         <p class="section-desc">
-            Od cichej warty (<em>sitting service</em>) w chwilach trwogi, po żelazne oparcie finansowe. Obejmujemy darmową troską osoby naznaczone ciężarem trudnych diagnoz oraz tych zepchniętych w najgłębsze odmęty zapomnienia – ludzi opuszczonych i niewidzialnych dla społeczeństwa. Niestrudzenie dowodzimy, że w konfrontacji z cierpieniem nikt nie pozostaje sam.
+            Od cichej warty (<em>sitting service</em>) w chwilach trwogi, po żelazne oparcie finansowe. <a href="zbiorki.html" class="gold-link">Dzięki Tobie!</a> Obejmujemy darmową troską osoby naznaczone ciężarem trudnych diagnoz oraz tych zepchniętych w najgłębsze odmęty zapomnienia – ludzi opuszczonych i niewidzialnych dla społeczeństwa. Niestrudzenie dowodzimy, że w konfrontacji z cierpieniem nikt nie pozostaje sam.
         </p>
     </div>
 </section>
@@ -308,13 +323,15 @@
 <section id="wesprzyj" class="bg-white">
     <div class="container">
         <div class="heading-wrapper">
-            <h2 class="section-heading">Wesprzyj naszą misję</h2>
+            <h2 class="section-heading">
+                <a href="zbiorki.html" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='inherit'">Wesprzyj naszą misję</a>
+            </h2>
         </div>
         <p class="section-desc">Organy Fundacji działają całkowicie <em>pro publico bono</em>. Oznacza to, że Państwa szlachetne wsparcie trafia w całości na realizację celów statutowych, finansując kompleksową opiekę nad tymi, którzy najbardziej jej potrzebują.</p>
         
-        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+        <div class="support-columns">
             
-            <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 20px; height: 100%;">
+            <div class="support-col-left" style="display: flex; flex-direction: column; justify-content: space-between; gap: 20px; height: 100%;">
                 
                 <div class="card" style="height: auto; padding: 25px;">
                     <h3>Tradycyjny Przelew Bankowy</h3>
@@ -362,7 +379,7 @@
 
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 30px; height: 100%;">
+            <div class="support-col-right" style="display: flex; flex-direction: column; gap: 30px; height: 100%;">
                 
                 <a href="zbiorki.html" class="card portal-card" style="border-top: 4px solid #a83232; height: auto;">
                     <h3 style="margin-top: 0; margin-bottom: 5px; font-size: 1.8em; color: #a83232;">Dołącz do naszej Warty</h3>
