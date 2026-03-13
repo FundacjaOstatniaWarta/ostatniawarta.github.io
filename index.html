@@ -314,13 +314,13 @@
         
         <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
             
-            <div style="display: flex; flex-direction: column; gap: 30px;">
+            <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 20px; height: 100%;">
                 
-                <div class="card" style="height: auto;">
+                <div class="card" style="height: auto; padding: 25px;">
                     <h3>Tradycyjny Przelew Bankowy</h3>
-                    <div class="account-box">
+                    <div class="account-box" style="margin-bottom: 15px;">
                         <p style="margin: 0;"><strong>FUNDACJA "OSTATNIA WARTA"</strong></p>
-                        <div class="account-number" style="margin: 10px 0;">PL 61 2530 0008 2049 1089 8921 0001</div>
+                        <div class="account-number" style="margin: 5px 0;">PL 61 2530 0008 2049 1089 8921 0001</div>
                         
                         <p style="margin: 0; display: flex; justify-content: center; align-items: center; gap: 10px;">
                             <span style="font-size: 1.1em; font-weight: bold; color: #555;">Bank: </span> 
@@ -328,7 +328,7 @@
                         </p>
                         <p style="margin: 5px 0 0 0;"><small>Tytuł: Darowizna na cele statutowe</small></p>
                         
-                        <hr style="border: 0; border-top: 1px solid #d1e8df; margin: 15px 0;">
+                        <hr style="border: 0; border-top: 1px solid #d1e8df; margin: 10px 0;">
                         
                         <p style="margin-bottom: 5px; display: flex; justify-content: center; align-items: center; gap: 10px;">
                             <span style="font-size: 1.1em; font-weight: bold; color: #555;">Przelew na telefon</span> 
@@ -340,24 +340,29 @@
                     
                     <div style="text-align: center;">
                         <img src="qr_konto.png" alt="Zeskanuj kod QR w aplikacji bankowej" class="qr-code">
-                        <p style="line-height: 1.3; margin-top: 10px; margin-bottom: 25px;"><small>Zeskanuj kod w aplikacji bankowej, aby wypełnić dane automatycznie.</small></p>
+                        <p style="line-height: 1.3; margin-top: 5px; margin-bottom: 15px;"><small>Zeskanuj kod w aplikacji bankowej, aby wypełnić dane automatycznie.</small></p>
                         
                         <a href="blankiet.pdf" target="_blank" style="display: inline-block; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'" title="Kliknij, aby pobrać gotowy blankiet (PDF)">
-                            <img src="druczek.png" alt="Pobierz blankiet wpłaty" style="height: 150px; width: auto; max-width: 100%; border: 1px solid #ddd; padding: 5px; background: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); object-fit: contain;">
+                            <img src="druczek.png" alt="Pobierz blankiet wpłaty" style="height: 130px; width: auto; max-width: 100%; border: 1px solid #ddd; padding: 5px; background: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); object-fit: contain;">
                         </a>
                         <p style="line-height: 1.3; margin-top: 5px; margin-bottom: 0;"><small>Pobierz i wydrukuj gotowy blankiet wpłaty (PDF)</small></p>
                     </div>
                 </div>
 
-                <div class="card" style="height: auto; text-align: center; border-top: 4px solid #D4AF37; display: flex; flex-direction: column; justify-content: center;">
+                <div class="card" style="height: auto; text-align: center; border-top: 4px solid #D4AF37; display: flex; flex-direction: column; justify-content: center; padding: 25px;">
                     <h3 style="margin-top: 0; margin-bottom: 10px;">Z pamiętnika wolontariusza</h3>
-                    <p style="font-size: 0.95em; line-height: 1.5; margin-bottom: 25px; color: #555;">Poznaj wstrząsające, piękne i skłaniające do refleksji historie z naszej codziennej posługi przy łóżkach chorych i samotnych.</p>
+                    <p style="font-size: 0.95em; line-height: 1.5; margin-bottom: 20px; color: #555;">Poznaj wstrząsające, piękne i skłaniające do refleksji historie z naszej codziennej posługi przy łóżkach chorych i samotnych.</p>
                     <a href="blog.html" class="btn btn-outline" style="text-decoration: none; padding: 12px 20px; display: inline-block; transition: all 0.3s; margin: 0 auto; border-color: #1a5f4a; color: #1a5f4a;">Przeczytaj nasze historie</a>
+                </div>
+                
+                <div class="card" style="height: auto; text-align: center; border-top: 4px solid #a83232; display: flex; flex-direction: column; justify-content: center; padding: 25px;">
+                    <h3 style="margin-top: 0; margin-bottom: 15px;">Wspierają nas</h3>
+                    <a href="wsparcie.html" class="btn btn-outline" style="text-decoration: none; padding: 12px 20px; display: inline-block; transition: all 0.3s; margin: 0 auto; border-color: #1a5f4a; color: #1a5f4a;">Poznaj wspierających ❤️</a>
                 </div>
 
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 30px;">
+            <div style="display: flex; flex-direction: column; gap: 30px; height: 100%;">
                 
                 <a href="zbiorki.html" class="card portal-card" style="border-top: 4px solid #a83232; height: auto;">
                     <h3 style="margin-top: 0; margin-bottom: 5px; font-size: 1.8em; color: #a83232;">Dołącz do naszej Warty</h3>
