@@ -110,9 +110,11 @@
         .bg-gray { background-color: #f4f8f6; }
 
         .mission-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 20px; margin-bottom: 30px; }
-        .mission-item { background: #fff; padding: 25px; border-left: 4px solid #1a5f4a; box-shadow: 0 4px 10px rgba(0,0,0,0.04); text-align: left; }
-        .mission-item h4 { margin: 0 0 10px 0; color: #133a2d; font-family: 'Georgia', serif; font-size: 1.25em; border-bottom: 2px solid #D4AF37; padding-bottom: 5px; display: inline-block; }
-        .mission-item p { font-family: 'Georgia', serif; font-size: 1.15em; color: #555; margin-bottom: 0; line-height: 1.8; text-align: justify; }
+        .mission-item { display: block; text-decoration: none; color: inherit; background: #fff; padding: 25px; border-left: 4px solid #1a5f4a; box-shadow: 0 4px 10px rgba(0,0,0,0.04); text-align: left; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+        .mission-item:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); border-left-color: #D4AF37; }
+        .mission-item h4 { margin: 0 0 10px 0; color: #133a2d; font-family: 'Georgia', serif; font-size: 1.25em; border-bottom: 2px solid #D4AF37; padding-bottom: 5px; display: inline-block; transition: color 0.3s ease; }
+        .mission-item:hover h4 { color: #a83232; }
+        .mission-item p { font-family: 'Georgia', serif; font-size: 1.15em; color: #555; margin-bottom: 0; line-height: 1.8; text-align: justify; transition: color 0.3s ease; }
 
         .split-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
         .split-col { display: flex; flex-direction: column; gap: 20px; }
@@ -242,23 +244,27 @@
             <h2 class="section-heading">Misja i obszary działań</h2>
         </div>
         
+        <p style="text-align: center; font-family: 'Georgia', serif; font-size: 1.15em; color: #555; max-width: 900px; margin: 0 auto 40px auto; line-height: 1.8;">
+            Naszą misją jest obecność tam, gdzie człowiek najbardziej potrzebuje drugiego człowieka — w chorobie, samotności i w ostatnich chwilach życia.
+        </p>
+        
         <div class="mission-grid">
-            <div class="mission-item">
+            <a href="doula.html" class="mission-item">
                 <h4>Doula Umierania</h4>
                 <p>Szlachetna posługa towarzyszenia osobom w procesie odchodzenia. Dbamy o przestrzeń wolną od lęku, nasyconą spokojem i emocjonalnym wsparciem.</p>
-            </div>
-            <div class="mission-item">
-                <h4>Przeciwdziałanie Samotności</h4>
-                <p>Czuwanie przy łóżku chorego w placówkach medycznych oraz domach prywatnych. Jesteśmy tam, gdzie ludzka obecność staje się najcenniejszym lekarstwem.</p>
-            </div>
-            <div class="mission-item">
+            </a>
+            <a href="gst.html" class="mission-item">
+                <h4>Gdańska Szkoła Towarzyszenia</h4>
+                <p>Program edukacyjny Fundacji Ostatnia Warta poświęcony sztuce obecności przy osobach chorych i umierających. Tworzymy przestrzeń nauki, refleksji i formacji wolontariuszy, którzy chcą towarzyszyć innym z empatią, spokojem i szacunkiem dla godności człowieka.</p>
+            </a>
+            <a href="sservice.html" class="mission-item">
                 <h4>Sitting Service</h4>
                 <p>Realizacja idei stałej „Warty” – ofiarowanie poczucia bezpieczeństwa podopiecznym oraz chwili niezbędnego wytchnienia ich najbliższym opiekunom.</p>
-            </div>
-            <div class="mission-item">
-                <h4>Wsparcie w chorobie</h4>
-                <p>Kompleksowa pomoc rzeczowo-finansowa. Aktywnie wspieramy w leczeniu, zakupie sprzętu i codziennym funkcjonowaniu osób chorych.</p>
-            </div>
+            </a>
+            <a href="sic.html" class="mission-item">
+                <h4>Samotność i Choroba</h4>
+                <p>Wsparcie dla osób zmagających się z ciężką chorobą oraz ich bliskich. Pomagamy w codziennych trudnościach, organizujemy pomoc rzeczową i społeczną, a przede wszystkim staramy się, aby w czasie choroby nikt nie pozostał sam.</p>
+            </a>
         </div>
         
     </div>
