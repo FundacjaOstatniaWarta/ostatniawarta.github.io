@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zostań Wolontariuszem | Fundacja Ostatnia Warta</title>
+    
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
+        a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
+        h1, h2, h3 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
+        .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
+        
+        header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+        .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
+        .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
+        .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
+        .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
+        .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
+
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; }
+        .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.6em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
+
+        nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
+        nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
+        nav ul li a:hover { color: #D4AF37; }
+
+        .content-section { background: #fff; padding: 50px 60px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; border-top: 4px solid #1a5f4a; max-width: 900px; margin: 0 auto; }
+        
+        .content-section p { font-size: 1.15em; color: #444; text-align: justify; line-height: 1.8; margin-bottom: 20px; }
+        .content-section ul { font-size: 1.15em; color: #444; line-height: 1.8; list-style: none; padding: 0; margin-top: 15px; margin-bottom: 25px; }
+        .content-section ul li { margin-bottom: 12px; padding-left: 25px; position: relative; text-align: justify; }
+        .content-section ul li::before { content: "•"; color: #D4AF37; font-weight: bold; position: absolute; left: 0; top: 0; font-size: 1.2em;}
+        
+        /* Lista dokumentów */
+        .docs-list li::before { content: "📄" !important; font-size: 1em !important; }
+        .docs-list a { font-weight: bold; text-decoration: underline; transition: color 0.3s; }
+        .docs-list a:hover { color: #D4AF37; }
+
+        .content-section h3 { margin-top: 40px; margin-bottom: 20px; font-size: 1.3em; color: #1a5f4a; border-bottom: 2px solid #e2f0ea; padding-bottom: 10px; }
+
+        .btn-outline { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; border: 2px solid #D4AF37; color: #133a2d; transition: all 0.3s ease; }
+        .btn-outline:hover { background: #D4AF37; color: #fff; }
+        
+        .btn-primary { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #D4AF37; color: #133a2d; transition: background 0.3s ease, color 0.3s ease; }
+        .btn-primary:hover { background: #b5952f; color: #fff; }
+
+        footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; margin-top: 50px; }
+        footer a { color: #D4AF37; text-decoration: none; }
+        footer a:hover { color: #fff; text-decoration: underline; }
+        
+        @media (max-width: 768px) { 
+            .content-section { padding: 30px 20px; }
+            .content-section p, .content-section ul li { text-align: left; font-size: 1.05em; }
+            .header-titles h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container" style="padding: 0 0 0 0;">
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <div class="clock-wrapper">
+                    <div class="clock-center"></div>
+                    <div class="hand hour-hand" id="hourHand"></div>
+                    <div class="hand minute-hand" id="minuteHand"></div>
+                    <div class="hand second-hand" id="secondHand"></div>
+                    <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img"> 
+                </div>
+            </a>
+        </div>
+        
+        <div class="header-titles">
+            <h1>Zostań Wolontariuszem</h1>
+            <h2>Pełnij Wartę tam, gdzie brakuje nadziei</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html#o-nas">O Fundacji</a></li>
+                <li><a href="index.html#podopieczni">Podopieczni</a></li>
+                <li><a href="index.html#wolontariat">Wolontariat</a></li>
+                <li><a href="index.html#wesprzyj">Wesprzyj Nas</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="container">
+    <div class="content-section">
+        
+        <p>Fundacja „Ostatnia Warta” tworzy w Polsce unikalny wolontariat obecności przy osobach chorych i umierających.</p>
+        <p>Naszym zadaniem nie jest leczenie.<br><strong>Naszym zadaniem jest być.</strong></p>
+        <p>Czasem oznacza to rozmowę. Czasem ciszę. Czasem kilka godzin spokojnego czuwania przy łóżku chorego.</p>
+
+        <h3>Kogo szukamy</h3>
+        <p>Zapraszamy osoby, które:</p>
+        <ul>
+            <li>chcą pomagać w sposób odpowiedzialny i spokojny</li>
+            <li>potrafią okazać empatię i szacunek drugiemu człowiekowi</li>
+            <li>są gotowe poświęcić część swojego wolnego czasu na wolontariat</li>
+        </ul>
+        <p><strong>Nie wymagamy wykształcenia medycznego.</strong> Każdy wolontariusz przechodzi przygotowanie do swojej nowej roli w ramach programu edukacyjnego Fundacji.</p>
+
+        <h3>Jak zostać wolontariuszem</h3>
+        <p>Proces dołączenia do naszej Warty obejmuje zapoznanie się z kluczowymi zasadami działania fundacji oraz wypełnienie podstawowych dokumentów rekrutacyjnych.</p>
+
+        <h3>Dokumenty rekrutacyjne</h3>
+        <ul class="docs-list">
+            <li><a href="02_01_Kwestionariusz_Wolontariusza.pdf" target="_blank">Kwestionariusz Wolontariusza</a></li>
+            <li><a href="02_02_Porozumienie_Wolontariat.pdf" target="_blank">Wzór Porozumienia o Wolontariacie</a></li>
+            <li><a href="02_03_Zasady_Swiadczenia_Pomocy.pdf" target="_blank">Zasady Świadczenia Pomocy</a></li>
+            <li><a href="02_04_Zasady_Zachowania_Poufnosci.pdf" target="_blank">Zasady Zachowania Poufności</a></li>
+            <li><a href="02_05_Klauzula_RODO_Wolontariusze.pdf" target="_blank">Klauzula RODO Wolontariusza</a></li>
+        </ul>
+
+        <div style="background: #f4f8f6; padding: 35px 25px; border-radius: 8px; border-top: 4px solid #D4AF37; margin-top: 50px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+            <h3 style="margin-top: 0; margin-bottom: 15px; border-bottom: none;">Masz pytania?</h3>
+            <p style="font-size: 1.05em; color: #555; margin-bottom: 25px; line-height: 1.5;">
+                Chcesz dowiedzieć się więcej, zanim wypełnisz dokumenty? Skontaktuj się z nami.
+            </p>
+            <a href="mailto:kontakt@ostatniawarta.pl" class="btn-primary">kontakt@ostatniawarta.pl</a>
+        </div>
+
+        <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #eee; text-align: center;">
+            <h3 style="margin-top: 0; margin-bottom: 15px; font-family: 'Georgia', serif; color: #133a2d; font-size: 1.4em; border-bottom: none;">Poznaj pozostałe obszary naszej działalności:</h3>
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <a href="doula.html" class="btn-outline" style="margin-top: 10px;">Doula Umierania</a>
+                <a href="sservice.html" class="btn-outline" style="margin-top: 10px;">Sitting Service</a>
+                <a href="sic.html" class="btn-outline" style="margin-top: 10px;">Samotność i Choroba</a>
+                <a href="gst.html" class="btn-outline" style="margin-top: 10px;">Gdańska Szkoła Towarzyszenia</a>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="btn-outline" style="border-color: #ccc; color: #777; margin-top: 0;">&larr; Wróć na Stronę Główną</a>
+        </div>
+        
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="copyright">
+            <p style="font-size: 0.85em; margin-bottom: 15px; color: #a3c2b5; line-height: 1.4; text-align: center; max-width: 900px; margin-left: auto; margin-right: auto;">
+                <strong>Zastrzeżenie:</strong> Fundacja „Ostatnia Warta” i jej wolontariusze świadczą wyłącznie wsparcie niemedyczne. Nie udzielamy świadczeń zdrowotnych, nie stawiamy diagnoz ani nie podejmujemy decyzji terapeutycznych. Nasza działalność uzupełnia, a nie zastępuje opiekę medyczną i hospicyjną.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Zegar
+    function updateClock() {
+        const now = new Date();
+        const second = now.getSeconds();
+        const minute = now.getMinutes();
+        const hour = now.getHours();
+
+        const secondDeg = ((second / 60) * 360);
+        const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
+        const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
+
+        const secHand = document.getElementById('secondHand');
+        const minHand = document.getElementById('minuteHand');
+        const hrHand = document.getElementById('hourHand');
+
+        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
+        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
+        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>
