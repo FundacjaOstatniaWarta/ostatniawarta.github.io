@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Prace społeczne – gdzie odbyć karę ograniczenia wolności | Fundacja Ostatnia Warta</title>
+    <meta name="description" content="Gdzie odbyć prace społeczne? Fundacja Ostatnia Warta umożliwia realizację kary ograniczenia wolności i prac społecznych we współpracy z kuratorem sądowym (Program w przygotowaniu).">
+    <meta name="keywords" content="prace społeczne gdzie odbyć, kara ograniczenia wolności prace społeczne, fundacja prace społeczne, kurator sądowy prace społeczne, odpracowanie wyroku, odpracowanie godzin sądowych">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Prace na cele społeczne – Fundacja Ostatnia Warta">
+    <meta property="og:description" content="Odpracuj wyrok sądu z sensem, wspierając naszą misję na zapleczu Fundacji. Dowiedz się, jak odbyć u nas prace społeczne.">
+    <meta property="og:url" content="https://ostatniawarta.pl/pracespol.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ostatniawarta.pl/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="canonical" href="https://ostatniawarta.pl/pracespol.html" />
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        /* Podstawowe style i reset */
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
+        a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
+        h1, h2, h3, h4 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
+        .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
+        
+        /* Ciemna, elegancka góra z wycentrowanym logo */
+        header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
+        
+        /* ZEGAR ZAMIAST PIERŚCIENIA */
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+        .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
+        
+        /* Środek wskazówek */
+        .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
+        
+        /* Wskazówki zegara */
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
+        .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
+        .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
+        .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
+
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; line-height: 1.3; }
+        .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.4em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
+
+        nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
+        nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
+        nav ul li a:hover { color: #D4AF37; }
+
+        /* WSTĘP */
+        .intro-text { font-size: 1.15em; color: #444; text-align: justify; max-width: 900px; margin: 0 auto 40px auto; line-height: 1.8; }
+        .intro-text .text-link { color: #1a5f4a; text-decoration: underline; font-weight: bold; transition: color 0.3s; }
+        .intro-text .text-link:hover { color: #D4AF37; }
+        
+        .section-heading { font-family: 'Georgia', serif; font-size: 1.8em; color: #1a5f4a; border-bottom: 2px solid #D4AF37; padding-bottom: 10px; margin: 0 0 25px 0; display: inline-block; font-weight: normal; }
+        .heading-wrapper { text-align: center; width: 100%; margin-bottom: 15px; }
+
+        /* GRID INFO */
+        .support-grid { display: grid; grid-template-columns: 1fr; gap: 30px; margin-top: 20px; align-items: stretch; }
+        
+        .support-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1a5f4a; padding: 30px; display: flex; flex-direction: column; justify-content: flex-start; text-align: left; box-sizing: border-box; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .support-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        
+        .support-card h3 { margin-top: 0; font-size: 1.3em; font-family: 'Georgia', serif; margin-bottom: 10px; color: #133a2d; }
+        .support-card p { font-family: 'Arial', sans-serif; font-size: 1em; color: #555; line-height: 1.6; margin-bottom: 0; }
+
+        .disclaimer-box { background: #fdf8e6; border-left: 4px solid #D4AF37; padding: 25px; margin-top: 20px; margin-bottom: 40px; font-family: 'Arial', sans-serif; color: #333; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.03);}
+        .disclaimer-box h3 { margin-top: 0; color: #b5952f; border-bottom: none; padding-bottom: 0; font-family: 'Georgia', serif; font-size: 1.4em;}
+        .disclaimer-box p { font-size: 1.05em; text-align: left; color: #444; margin-bottom: 0; line-height: 1.6;}
+
+        /* NATIVE HTML5 ACCORDION DLA FAQ */
+        .faq-section { max-width: 900px; margin: 0 auto; }
+        details { background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); margin-bottom: 15px; border-left: 4px solid #1a5f4a; overflow: hidden; transition: all 0.3s ease; }
+        details:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        summary { font-family: 'Georgia', serif; font-size: 1.1em; font-weight: normal; color: #133a2d; padding: 18px 25px; cursor: pointer; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; background: #fff; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; color: #D4AF37; font-size: 1.5em; font-weight: bold; line-height: 1; transition: transform 0.3s ease; }
+        details[open] summary::after { content: '-'; transform: rotate(180deg); }
+        details p { padding: 0 25px 20px 25px; margin: 0; color: #555; font-family: 'Arial', sans-serif; font-size: 0.95em; line-height: 1.6; text-align: left; }
+
+        .btn-outline { border-color: #1a5f4a; color: #1a5f4a; background: transparent; display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; border: 2px solid #D4AF37; transition: all 0.3s ease; text-align: center;}
+        .btn-outline:hover { background: #D4AF37; color: #fff; }
+        
+        .btn-primary { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #D4AF37; color: #133a2d; border: 2px solid #D4AF37; transition: background 0.3s ease, color 0.3s ease; text-align: center; }
+        .btn-primary:hover { background: #b5952f; border-color: #b5952f; color: #fff; }
+
+        .btn-dark { border-color: #ccc; color: #555; background: transparent; display: inline-block; padding: 10px 20px; margin-top: 20px; border: 2px solid #ccc; font-weight: bold; border-radius: 4px; font-family: 'Arial', sans-serif; transition: 0.3s; }
+        .btn-dark:hover { background: #eee; color: #333; }
+
+        footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; margin-top: 40px; }
+        footer a { color: #D4AF37; text-decoration: none; }
+        footer a:hover { color: #fff; text-decoration: underline; }
+        
+        @media (min-width: 768px) { 
+            .support-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) { 
+            .header-titles h1 { font-size: 1.5em; }
+            .support-card { padding: 20px; }
+            .intro-text { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container" style="padding: 0 0 0 0;">
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <div class="clock-wrapper">
+                    <div class="clock-center"></div>
+                    <div class="hand hour-hand" id="hourHand"></div>
+                    <div class="hand minute-hand" id="minuteHand"></div>
+                    <div class="hand second-hand" id="secondHand"></div>
+                    <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img"> 
+                </div>
+            </a>
+        </div>
+        
+        <div class="header-titles">
+            <h1>Prace na cele społeczne</h1>
+            <h2>[JUŻ WKRÓTCE] Zrealizuj orzeczenie sądu z sensem</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html#o-nas">O Fundacji</a></li>
+                <li><a href="index.html#podopieczni">Podopieczni</a></li>
+                <li><a href="index.html#wolontariat">Wolontariat</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#wesprzyj">Wesprzyj Nas</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="container">
+    
+    <div class="disclaimer-box" style="max-width: 900px; margin: 0 auto 40px auto;">
+        <h3>[STATUS: W PRZYGOTOWANIU]</h3>
+        <p>Fundacja „Ostatnia Warta” jest w trakcie oficjalnej procedury wpisu na listę podmiotów, w których może być wykonywana praca na cele społeczne (wniosek procedowany przez Prezesa Sądu Rejonowego). Zaglądaj na tę stronę regularnie – już wkrótce udostępnimy możliwość bezpiecznego i zorganizowanego odpracowania wyroku w naszej organizacji.</p>
+    </div>
+
+    <div class="intro-text">
+        <p>Wykonywanie kary ograniczenia wolności lub prac społecznie użytecznych nie musi być jedynie uciążliwym obowiązkiem. W Fundacji „Ostatnia Warta” będziesz mógł odpracować wyrok sądu, jednocześnie realnie wspierając misję pomocy osobom samotnym i terminalnie chorym.</p>
+        <p>Nawiązujemy współpracę z Zespołami Kuratorskiej Służby Sądowej, aby umożliwić skazanym wykonywanie nieodpłatnej, kontrolowanej pracy na cele społeczne w bezpiecznym i zorganizowanym środowisku.</p>
+    </div>
+
+    <div class="heading-wrapper" style="margin-top: 60px;">
+        <h2 class="section-heading">Jakie zadania możesz u nas wykonywać?</h2>
+    </div>
+    
+    <div class="intro-text" style="margin-bottom: 20px; text-align: center;">
+        <p>Z uwagi na specyfikę i delikatność naszej misji statutowej, <strong>osoby wykonujące prace społeczne nie mają bezpośredniego kontaktu z osobami terminalnie chorymi</strong>. Twoja pomoc będzie jednak nieoceniona na zapleczu organizacyjnym Fundacji.</p>
+    </div>
+
+    <div class="support-grid">
+        <div class="support-card" style="border-top-color: #D4AF37;">
+            <h3 style="color: #133a2d;">Wsparcie organizacyjne i biurowe</h3>
+            <p>Pomoc przy segregowaniu dokumentacji niepoufnej, kompletowaniu materiałów edukacyjnych czy przygotowywaniu wysyłek pocztowych.</p>
+        </div>
+        <div class="support-card" style="border-top-color: #D4AF37;">
+            <h3 style="color: #133a2d;">Działania logistyczne</h3>
+            <p>Pomoc w transporcie sprzętu pomocowego, odbieraniu, segregacji i magazynowaniu darowizn rzeczowych dla Fundacji.</p>
+        </div>
+        <div class="support-card" style="border-top-color: #D4AF37; grid-column: 1 / -1;">
+            <h3 style="color: #133a2d; text-align: center;">Prace porządkowe i techniczne</h3>
+            <p style="text-align: center;">Dbanie o przestrzeń biurową i magazynową Fundacji oraz wsparcie techniczne przy organizacji wydarzeń i akcji charytatywnych.</p>
+        </div>
+    </div>
+
+    <div class="heading-wrapper" style="margin-top: 60px;">
+        <h2 class="section-heading">Najczęściej Zadawane Pytania (FAQ)</h2>
+    </div>
+    
+    <div class="faq-section">
+        <details>
+            <summary>Gdzie odbyć prace społeczne po wyroku sądu?</summary>
+            <p>Prace społeczne można wykonywać w wyznaczonych instytucjach publicznych lub organizacjach społecznych (fundacjach, stowarzyszeniach), które oficjalnie współpracują z kuratorami sądowymi.</p>
+        </details>
+        
+        <details>
+            <summary>Czy można odbyć prace społeczne w fundacji?</summary>
+            <p>Tak. Fundacje prowadzące działalność pożytku publicznego mogą przyjmować osoby skierowane przez sąd do wykonywania prac społecznie użytecznych, po uprzednim wpisaniu na specjalną listę.</p>
+        </details>
+
+        <details>
+            <summary>Jak znaleźć miejsce do odbycia prac społecznych?</summary>
+            <p>Najlepszym rozwiązaniem jest bezpośredni kontakt z przydzielonym kuratorem sądowym, który wskazuje dostępne placówki z oficjalnej listy lub akceptuje miejsce wybrane przez skazanego.</p>
+        </details>
+
+        <details>
+            <summary>Czy fundacja wystawia potwierdzenie wykonanych godzin?</summary>
+            <p>Tak. Każde przepracowane godziny są przez nas ściśle dokumentowane, a następnie raportowane bezpośrednio do właściwego Zespołu Kuratorskiej Służby Sądowej zgodnie z obowiązującymi przepisami.</p>
+        </details>
+        
+        <details>
+            <summary>Czy prace społeczne można odbywać bez kontaktu z kuratorem?</summary>
+            <p>Nie. Każda forma realizacji prac społecznych wynikających z wyroku sądowego wymaga uprzedniej zgody, skierowania i stałego nadzoru kuratora sądowego.</p>
+        </details>
+    </div>
+
+    <div class="heading-wrapper" style="margin-top: 60px;">
+        <h2 class="section-heading" style="border-bottom: none; margin-bottom: 5px; color: #133a2d;">Odpracowanie wyroku z sensem</h2>
+    </div>
+    
+    <div class="intro-text" style="text-align: center; margin-bottom: 30px;">
+        <p>Wykonywanie prac społecznych może być nie tylko obowiązkiem wynikającym z wyroku sądu, ale również realnym wsparciem dla osób chorych i samotnych.</p>
+    </div>
+
+    <div style="background: #fff; padding: 40px 25px; border-radius: 8px; border-top: 4px solid #D4AF37; margin-top: 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+        <h3 style="margin-top: 0; margin-bottom: 15px; font-family: 'Georgia', serif; font-size: 1.6em; color: #133a2d;">Masz pytania dotyczące programu?</h3>
+        <p style="font-size: 1.1em; color: #555; margin-bottom: 25px; line-height: 1.5; max-width: 800px; margin-left: auto; margin-right: auto;">
+            Jeśli chcesz dowiedzieć się więcej o tym, jak w przyszłości będzie wyglądała realizacja prac społecznych w naszej Fundacji, skontaktuj się z nami.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <a href="mailto:kontakt@ostatniawarta.pl" class="btn-outline">Napisz: kontakt@ostatniawarta.pl</a>
+        </div>
+    </div>
+
+    <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #eee; text-align: center;">
+        <h3 style="margin-top: 0; margin-bottom: 15px; font-family: 'Georgia', serif; color: #133a2d; font-size: 1.4em; border-bottom: none;">Poznaj inne formy zaangażowania:</h3>
+        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <a href="zbiorki.html" class="btn-outline" style="margin-top: 10px;">Stań na Warcie (Zbiórki)</a>
+            <a href="pbic.html" class="btn-outline" style="margin-top: 10px;">Partnerstwo i CSR</a>
+            <a href="zwol.html" class="btn-outline" style="margin-top: 10px;">Zostań wolontariuszem</a>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px;">
+        <a href="index.html" class="btn-dark">&larr; Wróć na Stronę Główną</a>
+    </div>
+
+</section>
+
+<footer>
+    <div class="container">
+        <div class="copyright" style="border-top: none; margin-top: 0; padding-top: 0;">
+            <p style="font-size: 0.85em; margin-bottom: 15px; color: #a3c2b5; line-height: 1.4; text-align: justify;">
+                <strong>Zastrzeżenie:</strong> Fundacja „Ostatnia Warta” i jej wolontariusze świadczą wyłącznie wsparcie niemedyczne. Nie udzielamy świadczeń zdrowotnych, nie stawiamy diagnoz ani nie podejmujemy decyzji terapeutycznych. Nasza działalność uzupełnia, a nie zastępuje opiekę medyczną i hospicyjną.
+            </p>
+
+            <p style="font-size: 0.85em; margin-bottom: 15px; color: #a3c2b5; line-height: 1.4; text-align: justify;">Operatorem kart płatniczych oraz płatności online jest PayPro SA Agent Rozliczeniowy, ul. Pastelowa 8, 60-198 Poznań, wpisany do Rejestru Przedsiębiorców KRS pod numerem 0000347935, NIP 7792369887, REGON 301345068.</p>
+            
+            <p>&copy; 2026 FUNDACJA "OSTATNIA WARTA". Wszelkie prawa zastrzeżone.</p>
+            <p style="margin-top: 10px;">
+                <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Polityka Prywatności i RODO</a>
+                <a href="regulamin-darowizn.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Regulamin Darowizn</a>
+                <a href="regulamin-pomocy.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Regulamin Świadczenia Pomocy</a>
+                <a href="warunki-korzystania.html" style="text-decoration: none; color: #D4AF37;">Warunki Korzystania</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Zegar
+    function updateClock() {
+        const now = new Date();
+        const second = now.getSeconds();
+        const minute = now.getMinutes();
+        const hour = now.getHours();
+
+        const secondDeg = ((second / 60) * 360);
+        const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
+        const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
+
+        const secHand = document.getElementById('secondHand');
+        const minHand = document.getElementById('minuteHand');
+        const hrHand = document.getElementById('hourHand');
+
+        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
+        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
+        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>
