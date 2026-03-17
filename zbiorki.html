@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formy wsparcia i zbiórki online | Fundacja Ostatnia Warta</title>
+    
+    <title>Darowizny, zbiórki i nawiązki sądowe – Fundacja Ostatnia Warta</title>
+    <meta name="description" content="Darowizny, zbiórki oraz nawiązki sądowe. Wystawiamy zaświadczenia dla sądu w 24h. Wesprzyj Fundację Ostatnia Warta.">
+    <meta name="keywords" content="darowizna fundacja, wesprzyj fundację, zbiórki online fundacja, zadośćuczynienie fundacja, świadczenie pieniężne wyrok sądu, gdzie wpłacić zadośćuczynienie, zaświadczenie o darowiźnie dla sądu, fundacja pomoc chorym, wsparcie wolontariatu, sitting service Polska">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Wesprzyj Fundację Ostatnia Warta – darowizny i zbiórki">
+    <meta property="og:description" content="Pomóż nam być tam, gdzie ktoś potrzebuje obecności drugiego człowieka. Darowizny, zbiórki i wsparcie działań Fundacji.">
+    <meta property="og:url" content="https://ostatniawarta.pl/zbiorki.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ostatniawarta.pl/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
     
     <link rel="canonical" href="https://ostatniawarta.pl/zbiorki.html" />
     <link rel="icon" type="image/png" href="logo.png">
@@ -32,8 +42,8 @@
         .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
         .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
 
-        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; }
-        .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.6em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 1.8em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; line-height: 1.3; }
+        .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.4em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
 
         nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
         nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
@@ -42,19 +52,24 @@
         nav ul li a:hover { color: #D4AF37; }
 
         /* WSTĘP */
-        .intro-text { font-size: 1.15em; color: #555; text-align: justify; max-width: 900px; margin: 0 auto 40px auto; line-height: 1.8; }
+        .intro-text { font-size: 1.15em; color: #444; text-align: justify; max-width: 900px; margin: 0 auto 40px auto; line-height: 1.8; }
         
         .section-heading { font-family: 'Georgia', serif; font-size: 1.8em; color: #1a5f4a; border-bottom: 2px solid #D4AF37; padding-bottom: 10px; margin: 0 0 25px 0; display: inline-block; font-weight: normal; }
         .heading-wrapper { text-align: center; width: 100%; margin-bottom: 15px; }
 
         /* GRID ZBIÓREK */
-        .support-grid { display: grid; grid-template-columns: 1fr; gap: 30px; margin-top: 20px; }
+        .support-grid { display: grid; grid-template-columns: 1fr; gap: 30px; margin-top: 20px; align-items: stretch; }
         
-        .support-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1a5f4a; padding: 30px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; box-sizing: border-box; }
+        .support-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1a5f4a; padding: 30px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; box-sizing: border-box; transition: transform 0.3s ease, box-shadow 0.3s ease; }
         
         .support-card h3 { margin-top: 0; font-size: 1.4em; font-family: 'Georgia', serif; margin-bottom: 15px; color: #133a2d; }
         .support-card p { font-family: 'Arial', sans-serif; font-size: 0.95em; color: #666; line-height: 1.6; margin-bottom: 25px; }
         
+        /* Box z danymi do przelewu */
+        .account-box { background: #f0f7f4; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 20px; border: 1px solid #d1e8df; overflow: hidden; width: 100%; box-sizing: border-box; }
+        .account-number { font-size: 1.25em; letter-spacing: 1px; word-spacing: 2px; color: #1a5f4a; font-family: 'Arial', sans-serif; font-weight: bold; margin: 15px 0; white-space: nowrap; overflow-x: auto; padding-bottom: 5px; }
+        .qr-code { max-width: 150px; border: 1px solid #ddd; padding: 10px; background: #fff; border-radius: 8px; }
+
         /* Klasy dla przycisków i widgetu */
         .widget-container { width: 100%; max-width: 600px; margin: 0 auto; }
         
@@ -68,6 +83,13 @@
         .bg-black { background: #111111; color: #ffffff !important; }
         .bg-black:hover { background: #333333; }
 
+        /* Kafelki interaktywne */
+        .portal-card { cursor: pointer; text-decoration: none; color: inherit; }
+        .portal-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+
+        .btn-outline { border-color: #1a5f4a; color: #1a5f4a; background: transparent; display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; border: 2px solid #D4AF37; transition: all 0.3s ease; text-align: center;}
+        .btn-outline:hover { background: #D4AF37; color: #fff; }
+
         .btn-dark { border-color: #fff; color: #fff; background: transparent; display: inline-block; padding: 10px 20px; margin-top: 20px; border: 2px solid #D4AF37; color: #D4AF37; font-weight: bold; border-radius: 4px; font-family: 'Arial', sans-serif; transition: 0.3s; }
         .btn-dark:hover { background: #D4AF37; color: #133a2d; }
 
@@ -80,7 +102,7 @@
         }
 
         @media (max-width: 768px) { 
-            .header-titles h1 { font-size: 1.8em; }
+            .header-titles h1 { font-size: 1.5em; }
             .support-card { padding: 20px; }
             .intro-text { text-align: left; }
         }
@@ -103,7 +125,7 @@
         </div>
         
         <div class="header-titles">
-            <h1>Zbiórki i Formy Wsparcia</h1>
+            <h1>Darowizny, zbiórki i zadośćuczynienia Fundacji Ostatnia Warta</h1>
             <h2>Dołącz do naszej warty</h2>
         </div>
 
@@ -123,59 +145,65 @@
 <section class="container">
     
     <div class="heading-wrapper">
-        <h2 class="section-heading">Aktualne formy wsparcia</h2>
+        <h2 class="section-heading">Darowizny i wsparcie fundacji</h2>
     </div>
     
     <div class="intro-text">
-        Pomoc, którą niesiemy osobom samotnym, terminalnie chorym oraz u kresu życia, pozostaje zawsze bezpłatna. To nasz fundament i niezmienna misja. Możemy ją realizować wyłącznie dzięki wsparciu ludzi o wielkich sercach. Zapraszamy Cię – stań razem z nami na tej warcie. Wybierz jedną z poniższych form płatności lub zbiórek celowych i pomóż nam nieść obecność tam, gdzie jest ona najbardziej potrzebna.
+        <p><strong>Dziękujemy, że stajecie z nami na Warcie!</strong></p>
+        <p>Misją Fundacji Ostatnia Warta jest obecność przy drugim człowieku w najtrudniejszych chwilach życia – w samotności, terminalnej chorobie i w procesie odchodzenia. To szlachetne wyzwanie możemy realizować wyłącznie dzięki wsparciu ludzi o wielkich sercach. Każdy Twój gest ma znaczenie. Zapraszamy Cię – stań razem z nami na tej najważniejszej z wart. Wybierz dogodną dla siebie formę płatności lub zbiórki celowej.</p>
+    </div>
+
+    <div class="heading-wrapper" style="margin-top: 40px;">
+        <h2 class="section-heading" style="font-size: 1.5em; border-bottom: none; color: #133a2d; margin-bottom: 5px;">Jak wesprzeć fundację</h2>
     </div>
 
     <div class="support-grid">
         
-        <div class="support-card" style="border-top: 4px solid #D4AF37; justify-content: flex-start;">
-            <h3 style="color: #a83232; margin-bottom: 5px; text-transform: uppercase; font-size: 1.5em;">Wesprzyj czuwanie<br>i zostań na warcie</h3>
-            <p style="font-weight: bold; margin-bottom: 25px; font-size: 1.1em; color: #133a2d; font-family: 'Georgia', serif;">„Co robi Twoja darowizna?”</p>
-            
-            <ul style="list-style: none; padding: 0; margin: 0; text-align: left; width: 100%; font-family: 'Arial', sans-serif;">
-                <li style="margin-bottom: 15px; padding: 15px; background: #fcfcfc; border-radius: 6px; border-left: 4px solid #D4AF37;">
-                    <span style="font-size: 1.3em; display: block; margin-bottom: 5px; color: #133a2d;">💛 <strong>50 zł</strong></span>
-                    <span style="font-size: 0.95em; color: #555;">Pomaga opłacić dojazd i wysłać wolontariusza na dyżur.</span>
-                </li>
-                <li style="margin-bottom: 15px; padding: 15px; background: #fcfcfc; border-radius: 6px; border-left: 4px solid #D4AF37;">
-                    <span style="font-size: 1.3em; display: block; margin-bottom: 5px; color: #133a2d;">💛 <strong>200 zł</strong></span>
-                    <span style="font-size: 0.95em; color: #555;">Pozwala sfinansować całą noc czuwania przy łóżku chorego.</span>
-                </li>
-                <li style="margin-bottom: 15px; padding: 15px; background: #fcfcfc; border-radius: 6px; border-left: 4px solid #D4AF37;">
-                    <span style="font-size: 1.3em; display: block; margin-bottom: 5px; color: #133a2d;">💛 <strong>500 zł</strong></span>
-                    <span style="font-size: 0.95em; color: #555;">Zapewnia pełne przeszkolenie i przygotowanie nowego wolontariusza.</span>
-                </li>
-            </ul>
-            
-            <p style="margin-top: auto; padding-top: 25px; font-style: italic; color: #777; font-size: 0.95em; margin-bottom: 0;">
-                Jesteś we właściwym miejscu. Obok i poniżej znajdziesz swoją preferowaną, bezpieczną metodę wsparcia. Dziękujemy!
-            </p>
+        <div class="support-card" style="border-top: 4px solid #D4AF37;">
+            <h3>Tradycyjny Przelew Bankowy</h3>
+            <div class="account-box">
+                <p style="margin: 0;"><strong>FUNDACJA "OSTATNIA WARTA"</strong></p>
+                <div class="account-number" style="margin: 5px 0;">PL 61 2530 0008 2049 1089 8921 0001</div>
+                
+                <p style="margin: 5px 0 15px 0; color: #a83232; font-weight: bold; font-size: 0.9em; letter-spacing: 0.5px;">Ta forma wsparcia = 0% prowizji = 100% kwoty na pomoc</p>
+
+                <p style="margin: 0; display: flex; justify-content: center; align-items: center; gap: 10px;">
+                    <span style="font-size: 1.1em; font-weight: bold; color: #555;">Bank: </span> 
+                    <img src="nest1.png" alt="Nest Bank" style="height: 45px; object-fit: contain;">
+                </p>
+                <p style="margin: 5px 0 0 0;"><small>Tytuł: Darowizna na cele statutowe</small></p>
+                
+                <hr style="border: 0; border-top: 1px solid #d1e8df; margin: 10px 0;">
+                
+                <p style="margin-bottom: 5px; display: flex; justify-content: center; align-items: center; gap: 10px;">
+                    <span style="font-size: 1.1em; font-weight: bold; color: #555;">Przelew na telefon</span> 
+                    <img src="blik.png" alt="BLIK" style="height: 40px; object-fit: contain;">
+                    <span style="font-size: 1.1em; font-weight: bold; color: #555;">:</span>
+                </p>
+                <div class="account-number" style="margin-top: 5px; font-size: 1.3em; background: #e2f0ea;">+48 502 989 818</div>
+            </div>
         </div>
 
-        <div class="support-card" style="border-top: 4px solid #1a5f4a;">
+        <div class="support-card portal-card" style="border-top: 4px solid #1a5f4a; justify-content: flex-start;">
             <h3>Zrzutka.pl</h3>
-            <p style="max-width: 800px;">Jedna z oficjalnych zbiórek statutowych Fundacji.<br>Twoje wsparcie przeznaczymy bezpośrednio na finansowanie pomocy osobom opuszczonym i zmagającym się z ciężką diagnozą. Zapraszamy Cię do dołączenia do naszej warty!</p>
+            <p style="max-width: 800px;">Jedna z oficjalnych zbiórek statutowych Fundacji. Twoje wsparcie przeznaczymy bezpośrednio na finansowanie pomocy osobom opuszczonym i zmagającym się z ciężką diagnozą.</p>
             
             <div class="widget-container">
                 <div style="position: relative; width: 100%; height: 500px; overflow: hidden;"><iframe style="position: absolute; top:0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;" src="https://zrzutka.pl/rf7npz/widget/23" frameborder="0" scrolling="no"></iframe></div>
             </div>
         </div>
 
-        <div class="support-card">
+        <div class="support-card portal-card">
             <h3 style="line-height: 1.3;">Wirtualna cegiełka<br><span style="font-size: 0.85em; font-weight: normal; color: #555;">na wsparcie czuwających</span></h3>
-            <p>Symboliczna cegiełka wsparcia, która pomaga nam nieść pomoc osobom opuszczonym i zmagającym się z ciężką diagnozą. Wesprzyj jak Ci wygodnie (Blik, Visa, MasterCard). Dołóż swoją cegiełkę i dołącz do naszej warty.</p>
+            <p>Symboliczna cegiełka wsparcia, która pomaga nam nieść pomoc osobom opuszczonym i zmagającym się z ciężką diagnozą. Wesprzyj jak Ci wygodnie (Blik, Visa, MasterCard).</p>
             <a href="https://s.przelewy24.pl/mD9PWA3gP1ny" target="_blank" class="btn-donate bg-p24">
                 <img src="Przelewy24.png" alt="Przelewy24" style="height: 24px; object-fit: contain;">
             </a>
         </div>
 
-        <div class="support-card">
+        <div class="support-card portal-card" style="border-top: 4px solid #a83232;">
             <h3>PayPal</h3>
-            <p>Jeśli chcesz wesprzeć nas w szybki i wygodny sposób z dowolnego miejsca na świecie, możesz skorzystać z PayPal.<br>Każde wsparcie pomaga nam docierać do osób opuszczonych i zmagających się z ciężką diagnozą oraz umożliwia wolontariuszom pełnienie warty przy łóżkach chorych.</p>
+            <p>Szybki i wygodny sposób wsparcia z dowolnego miejsca na świecie. Każde wsparcie pomaga nam docierać do osób opuszczonych i umożlwia wolontariuszom pełnienie warty.</p>
             
             <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; width: 100%;">
                 <a href="https://www.paypal.com/ncp/payment/75B5XSLBHCSFE" target="_blank" class="btn-donate bg-black">
@@ -188,34 +216,88 @@
             </div>
         </div>
         
-        <div class="support-card">
-            <h3>Patronite</h3>
-            <p><strong>Zostań Patronem naszej warty.</strong><br>Regularne wsparcie pozwala nam docierać do osób opuszczonych i ciężko chorych oraz zapewniać obecność wolontariuszy tam, gdzie jest najbardziej potrzebna.</p>
-            <div style="width: 100%; display: flex; justify-content: center; margin-top: 10px;">
-                <iframe src="https://patronite.pl/widget/ostatniawarta.pl/1120559/small/light/colorful?description=Dzi%C4%99kuj%C4%99%20za%20Twoje%20wsparcie!&buttonText=Sta%C5%84%20z%20nami%20na%20Warcie" width="360" height="330" frameborder="0" scrolling="no" style="max-width: 100%;"></iframe>
-            </div>
-        </div>
-
-        <div class="support-card">
+        <div class="support-card portal-card" style="justify-content: center;">
             <h3>Kawa dla wolontariusza</h3>
-            <p>Jeśli chcesz wesprzeć nas w prosty i szybki sposób, możesz postawić naszej Fundacji symboliczną kawę.<br>Jedna taka kawa to często jeden dojazd wolontariusza do chorego.</p>
+            <p>Prosty sposób wsparcia symboliczną kawą. Jedna taka kawa to często jeden dojazd wolontariusza do chorego.</p>
             <a href="https://buycoffee.to/ostatniawarta" target="_blank" style="display: inline-block; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
                 <img src="logo-pionowe.png" style="max-height: 100px; width: auto; object-fit: contain;" alt="Kup nam kawę">
             </a>
         </div>
 
+        <div class="support-card portal-card">
+            <h3>Wspieraj podczas zakupów</h3>
+            <p>Pomagaj nam bezpłatnie przy okazji codziennych zakupów online. Nic Cię to nie kosztuje, a sklepy przekazują nam ułamek wartości Twoich zakupów.</p>
+            <div style="display: flex; justify-content: center; margin-top: 20px;">
+                <a href="https://fanimani.pl/zaproszenie/139507/7b9dbce0e1d84fc29adb3ee6d2d52e27" target="_blank" style="transition: transform 0.3s ease; display: inline-block;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="fanimani.png" alt="Wspieraj nas przez FaniMani" style="max-height: 50px; width: auto; border-radius: 4px;">
+                </a>
+            </div>
+        </div>
+        
+        <div class="support-card" style="border-top: 4px solid #a83232; padding-top: 50px; padding-bottom: 50px;">
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; width: 100%;">
+                
+                <div style="text-align: center; width: 100%;">
+                    <p style="font-weight: bold; font-family: 'Arial', sans-serif; color: #1a5f4a; margin-bottom: 5px; font-size: 0.9em;">Kod QR do szybkiego przelewu w aplikacji Twojego Banku</p>
+                    <img src="qr_konto.png" alt="Zeskanuj kod QR w aplikacji bankowej" class="qr-code">
+                    <p style="line-height: 1.3; margin-top: 5px; margin-bottom: 0;"><small>Zeskanuj w aplikacji bankowej</small></p>
+                </div>
+                
+                <hr style="border: 0; border-top: 1px solid #eee; width: 100%; margin: 10px 0;">
+                
+                <div style="text-align: center; width: 100%;">
+                    <p style="font-weight: bold; font-family: 'Arial', sans-serif; color: #1a5f4a; margin-bottom: 5px; font-size: 0.9em;">Pobierz gotowy blankiet wpłaty</p>
+                    <a href="blankiet.pdf" target="_blank" style="display: inline-block; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'" title="Kliknij, aby pobrać gotowy blankiet (PDF)">
+                        <img src="druczek.png" alt="Pobierz blankiet wpłaty" style="height: 120px; width: auto; max-width: 100%; border: 1px solid #ddd; padding: 5px; background: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); object-fit: contain;">
+                    </a>
+                    <p style="line-height: 1.3; margin-top: 5px; margin-bottom: 0;"><small>Pobierz i wydrukuj (PDF)</small></p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="support-card portal-card">
+            <h3>Patronite</h3>
+            <p><strong>Zostań Patronem naszej warty.</strong> Regularne wsparcie pozwala nam docierać do osób opuszczonych i ciężko chorych oraz zapewniać obecność wolontariuszy.</p>
+            <div style="width: 100%; display: flex; justify-content: center; margin-top: 10px;">
+                <iframe src="https://patronite.pl/widget/ostatniawarta.pl/1120559/small/light/colorful?description=Dzi%C4%99kuj%C4%99%20za%20Twoje%20wsparcie!&buttonText=Sta%C5%84%20z%20nami%20na%20Warcie" width="360" height="330" frameborder="0" scrolling="no" style="max-width: 100%;"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+    <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #eee; text-align: center;">
+        <h3 style="margin-top: 0; margin-bottom: 15px; font-family: 'Georgia', serif; color: #133a2d; font-size: 1.4em; border-bottom: none;">Poznaj inne formy wsparcia Fundacji:</h3>
+        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <a href="pbic.html" class="btn-outline" style="margin-top: 10px;">Partnerstwo i CSR</a>
+            <a href="progzad.html" class="btn-outline" style="margin-top: 10px;">Dobrowolne Zadośćuczynienie</a>
+            <a href="pracespol.html" class="btn-outline" style="margin-top: 10px;">Prace społeczne</a>
+        </div>
     </div>
 
     <div style="text-align: center; margin-top: 50px;">
-        <a href="index.html" class="btn-dark">&larr; Wróć na Stronę Główną</a>
+        <a href="index.html" class="btn-dark" style="color: #555; border-color: #ccc;">&larr; Wróć na Stronę Główną</a>
     </div>
 
 </section>
 
 <footer>
     <div class="container">
-        <p>&copy; 2026 Fundacja „Ostatnia Warta”. Wszelkie prawa zastrzeżone.</p>
-        <p><a href="index.html">Strona Główna</a> | <a href="polityka-prywatnosci.html">Polityka Prywatności</a> | <a href="regulamin-darowizn.html">Regulamin Darowizn</a></p>
+        <div class="copyright" style="border-top: none; margin-top: 0; padding-top: 0;">
+            <p style="font-size: 0.85em; margin-bottom: 15px; color: #a3c2b5; line-height: 1.4; text-align: justify;">
+                <strong>Zastrzeżenie:</strong> Fundacja „Ostatnia Warta” i jej wolontariusze świadczą wyłącznie wsparcie niemedyczne. Nie udzielamy świadczeń zdrowotnych, nie stawiamy diagnoz ani nie podejmujemy decyzji terapeutycznych. Nasza działalność uzupełnia, a nie zastępuje opiekę medyczną i hospicyjną.
+            </p>
+
+            <p style="font-size: 0.85em; margin-bottom: 15px; color: #a3c2b5; line-height: 1.4; text-align: justify;">Operatorem kart płatniczych oraz płatności online jest PayPro SA Agent Rozliczeniowy, ul. Pastelowa 8, 60-198 Poznań, wpisany do Rejestru Przedsiębiorców KRS pod numerem 0000347935, NIP 7792369887, REGON 301345068.</p>
+            
+            <p>&copy; 2026 FUNDACJA "OSTATNIA WARTA". Wszelkie prawa zastrzeżone.</p>
+            <p style="margin-top: 10px;">
+                <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Polityka Privaty i RODO</a>
+                <a href="regulamin-darowizn.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Regulamin Darowizn</a>
+                <a href="regulamin-pomocy.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Regulamin Świadczenia Pomocy</a>
+                <a href="warunki-korzystania.html" style="text-decoration: none; color: #D4AF37;">Warunki Korzystania</a>
+            </p>
+        </div>
     </div>
 </footer>
 
