@@ -71,69 +71,47 @@
         .section-desc, .about-text { font-family: 'Georgia', serif; font-size: 1.15em; color: #555; text-align: justify; max-width: 900px; margin: 0 auto 30px auto; line-height: 1.8; }
         .about-text { border-left: 4px solid #D4AF37; padding-left: 20px; }
 
-        /* Nowe style linków tekstowych w sekcji O Fundacji */
+        /* Style linków tekstowych */
         .text-link { color: #1a5f4a; text-decoration: underline; font-weight: bold; transition: color 0.3s; }
         .text-link:hover { color: #D4AF37; }
         .gold-link { color: #D4AF37; font-weight: bold; text-decoration: none; font-style: italic; font-size: 1.1em; transition: 0.3s; padding: 0 4px; }
         .gold-link:hover { color: #1a5f4a; text-decoration: underline; }
 
-        .card { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1a5f4a; height: 100%; box-sizing: border-box; }
-        .card ul { list-style: none; padding: 0; margin: 0; }
-        .card ul li { margin-bottom: 15px; padding-left: 20px; position: relative; }
-        .card ul li::before { content: "📄"; position: absolute; left: 0; top: 0; }
-        
         section { padding: 60px 0; border-bottom: 1px solid #eee; }
         .bg-white { background-color: #fff; }
         .bg-gray { background-color: #f4f8f6; }
 
         .mission-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 20px; margin-bottom: 30px; }
-        .mission-item { display: block; text-decoration: none; color: inherit; background: #fff; padding: 25px; border-left: 4px solid #1a5f4a; box-shadow: 0 4px 10px rgba(0,0,0,0.04); text-align: left; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+        .mission-item { display: flex; flex-direction: column; text-decoration: none; color: inherit; background: #fff; padding: 25px; border-left: 4px solid #1a5f4a; box-shadow: 0 4px 10px rgba(0,0,0,0.04); text-align: left; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; height: 100%; box-sizing: border-box;}
         .mission-item:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); border-left-color: #D4AF37; }
         .mission-item h4 { margin: 0 0 10px 0; color: #133a2d; font-family: 'Georgia', serif; font-size: 1.25em; border-bottom: 2px solid #D4AF37; padding-bottom: 5px; display: inline-block; transition: color 0.3s ease; }
         .mission-item:hover h4 { color: #a83232; }
-        .mission-item p { font-family: 'Georgia', serif; font-size: 1.15em; color: #555; margin-bottom: 0; line-height: 1.8; text-align: justify; transition: color 0.3s ease; }
-
-        .account-box { background: #f0f7f4; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 20px; border: 1px solid #d1e8df; overflow: hidden; }
-        .account-number { font-size: 1.25em; letter-spacing: 1px; word-spacing: 2px; color: #1a5f4a; font-family: 'Arial', sans-serif; font-weight: bold; margin: 15px 0; white-space: nowrap; overflow-x: auto; padding-bottom: 5px; }
-        .qr-code { max-width: 150px; border: 1px solid #ddd; padding: 10px; background: #fff; border-radius: 8px; }
-
-        /* PORTAL WSPARCIA I ZAMIANA KOLUMN NA MOBILE */
-        .support-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 30px; align-items: stretch; }
-        
-        .portal-card { cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; text-decoration: none; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-        .portal-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
-        .trust-badges img { height: 20px; opacity: 0.6; filter: grayscale(100%); transition: filter 0.3s ease, opacity 0.3s ease; }
-        .portal-card:hover .trust-badges img { filter: grayscale(0%); opacity: 1; }
+        .mission-item p { font-family: 'Georgia', serif; font-size: 1.1em; color: #555; margin-bottom: 0; line-height: 1.8; text-align: justify; transition: color 0.3s ease; flex-grow: 1; }
+        .mission-item span { display: inline-block; margin-top: 15px; color: #a83232; font-weight: bold; font-family: 'Arial', sans-serif; font-size: 0.95em; transition: 0.3s; }
+        .mission-item:hover span { color: #1a5f4a; }
 
         footer { background: #133a2d; color: #eef7f4; padding: 50px 20px 20px; text-align: center; }
         footer h2 { color: #D4AF37; }
-        footer a { color: #D4AF37; text-decoration: underline; }
+        footer a { color: #D4AF37; text-decoration: none; transition: 0.3s; }
         footer a:hover { color: #fff; }
+        
         .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto 30px auto; text-align: left; align-items: start; }
         .contact-info p { margin: 5px 0; font-family: 'Arial', sans-serif; font-size: 0.95em; }
         .copyright { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 30px; padding-top: 20px; font-size: 0.9em; }
-        footer .btn-dark { text-decoration: none; color: #fff; }
-        footer .btn-dark:hover { color: #133a2d; }
         
         #cookie-banner { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background-color: #133a2d; color: #fff; text-align: center; padding: 15px; z-index: 9999; box-shadow: 0 -4px 15px rgba(0,0,0,0.3); font-family: 'Arial', sans-serif;}
         #cookie-banner p { margin: 0; font-size: 0.9em; display: inline-block; vertical-align: middle; max-width: 800px; line-height: 1.5;}
         #cookie-banner button { margin-left: 20px; background-color: #D4AF37; color: #133a2d; border: none; padding: 10px 20px; font-weight: bold; border-radius: 4px; cursor: pointer; vertical-align: middle; transition: 0.3s;}
         #cookie-banner button:hover { background-color: #fff; }
         
-        @media (max-width: 800px) { 
-            .support-columns { display: flex; flex-direction: column; }
-            .support-col-left { order: 2; }
-            .support-col-right { order: 1; }
-        }
-
         @media (max-width: 768px) { 
             #cookie-banner button { margin-top: 15px; margin-left: 0; display: block; width: 100%; } 
             section { padding: 40px 10px; }
-            .card { padding: 20px; height: auto; }
             .about-text { padding-left: 10px; margin-bottom: 30px; }
             .section-desc, .about-text, .mission-item p { text-align: justify; font-size: 1.05em; }
             .header-titles h1 { font-size: 1.8em; }
             .mission-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -163,11 +141,10 @@
         <nav>
             <ul>
                 <li><a href="#o-nas" style="text-decoration: none;">O Fundacji</a></li>
-                <li><a href="#podopieczni" style="text-decoration: none;">Podopieczni</a></li>
-                <li><a href="#wolontariat" style="text-decoration: none;">Wolontariat</a></li>
                 <li><a href="blog.html" style="text-decoration: none;">Blog</a></li>
-                <li><a href="#wesprzyj" style="text-decoration: none;">Wesprzyj Nas</a></li>
-                <li><a href="#formularz" style="text-decoration: none;">Napisz do nas</a></li>
+                <li><a href="#dolacz" style="text-decoration: none;">Dołącz</a></li>
+                <li><a href="#misja" style="text-decoration: none;">Misja</a></li>
+                <li><a href="#wesprzyj" style="text-decoration: none;">Wesprzyj</a></li>
                 <li><a href="#kontakt" style="text-decoration: none;">Kontakt</a></li>
             </ul>
         </nav>
@@ -203,7 +180,7 @@
     </div>
 </section>
 
-<section class="bg-white">
+<section id="misja" class="bg-white">
     <div class="container">
         <div class="heading-wrapper">
             <h2 class="section-heading">Misja i obszary działań</h2>
@@ -217,38 +194,44 @@
             <a href="doula.html" class="mission-item">
                 <h4>Doula Umierania</h4>
                 <p>Szlachetna posługa towarzyszenia osobom w procesie odchodzenia. Dbamy o przestrzeń wolną od lęku, nasyconą spokojem i emocjonalnym wsparciem.</p>
+                <span>Poznaj Doule Umierania &rarr;</span>
             </a>
             <a href="gst.html" class="mission-item">
                 <h4>Gdańska Szkoła Towarzyszenia</h4>
                 <p>Program edukacyjny Fundacji Ostatnia Warta poświęcony sztuce obecności przy osobach chorych i umierających. Tworzymy przestrzeń nauki, refleksji i formacji wolontariuszy, którzy chcą towarzyszyć innym z empatią, spokojem i szacunkiem dla godności człowieka.</p>
+                <span>Dołącz do Szkoły &rarr;</span>
             </a>
             <a href="sservice.html" class="mission-item">
                 <h4>Sitting Service</h4>
                 <p>Fundacja „Ostatnia Warta” rozwija w Polsce ideę Sitting Service, czyli wolontariatu obecności przy osobach chorych i umierających.</p>
+                <span>Odkryj Sitting Service &rarr;</span>
             </a>
             <a href="sic.html" class="mission-item">
                 <h4>Samotność i Choroba</h4>
                 <p>Wsparcie dla osób zmagających się z ciężką chorobą oraz ich bliskich. Pomagamy w codziennych trudnościach, organizujemy pomoc rzeczową i społeczną, a przede wszystkim staramy się, aby w czasie choroby nikt nie pozostał sam.</p>
+                <span>Sprawdź jak pomagamy &rarr;</span>
             </a>
         </div>
         
     </div>
 </section>
 
-<section id="dolacz-skorzystaj" class="bg-gray">
+<section id="dolacz" class="bg-gray">
     <div class="container">
         <div class="heading-wrapper">
             <h2 class="section-heading">Dołącz lub skorzystaj z pomocy</h2>
         </div>
         
         <div class="mission-grid">
-            <a href="dpir.html" id="podopieczni" class="mission-item" style="scroll-margin-top: 100px;">
+            <a href="dpir.html" class="mission-item">
                 <h4>Dla Podopiecznych i ich Rodzin</h4>
                 <p>Pomoc dla osób zmagających się z ciężką chorobą oraz ich bliskich. Jeśli potrzebują Państwo obecności wolontariusza lub wsparcia w trudnym czasie, zapraszamy do zapoznania się z zasadami objęcia opieką przez Fundację.</p>
+                <span>Dokumenty dla Podopiecznych &rarr;</span>
             </a>
-            <a href="zwol.html" id="wolontariat" class="mission-item" style="scroll-margin-top: 100px;">
+            <a href="zwol.html" class="mission-item">
                 <h4>Zostań Wolontariuszem</h4>
                 <p>Szukamy osób gotowych pełnić „Wartę” przy drugim człowieku. Nie wymagamy wykształcenia medycznego — najważniejsze są empatia, odpowiedzialność i gotowość do obecności przy osobach chorych.</p>
+                <span>Dołącz do Wolontariatu &rarr;</span>
             </a>
         </div>
     </div>
@@ -257,170 +240,98 @@
 <section id="wesprzyj" class="bg-white">
     <div class="container">
         <div class="heading-wrapper">
-            <h2 class="section-heading">
-                <a href="zbiorki.html" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#D4AF37'" onmouseout="this.style.color='inherit'">Wesprzyj naszą misję</a>
-            </h2>
+            <h2 class="section-heading">Wesprzyj naszą misję</h2>
         </div>
-        <p class="section-desc">Organy Fundacji działają całkowicie <em>pro publico bono</em>. Oznacza to, że Państwa szlachetne wsparcie trafia w całości na realizację celów statutowych, finansując kompleksową opiekę nad tymi, którzy najbardziej jej potrzebują.</p>
         
-        <div class="support-columns">
-            
-            <div class="support-col-left" style="display: flex; flex-direction: column; justify-content: space-between; gap: 20px; height: 100%;">
-                
-                <div class="card" style="height: auto; padding: 25px;">
-                    <h3>Tradycyjny Przelew Bankowy</h3>
-                    <div class="account-box" style="margin-bottom: 15px;">
-                        <p style="margin: 0;"><strong>FUNDACJA "OSTATNIA WARTA"</strong></p>
-                        <div class="account-number" style="margin: 5px 0;">PL 61 2530 0008 2049 1089 8921 0001</div>
-                        
-                        <p style="margin: 5px 0 15px 0; color: #a83232; font-weight: bold; font-size: 0.9em; letter-spacing: 0.5px;">Ta forma wsparcia = 0% prowizji = 100% kwoty na pomoc</p>
-
-                        <p style="margin: 0; display: flex; justify-content: center; align-items: center; gap: 10px;">
-                            <span style="font-size: 1.1em; font-weight: bold; color: #555;">Bank: </span> 
-                            <img src="nest1.png" alt="Nest Bank" style="height: 45px; object-fit: contain;">
-                        </p>
-                        <p style="margin: 5px 0 0 0;"><small>Tytuł: Darowizna na cele statutowe</small></p>
-                        
-                        <hr style="border: 0; border-top: 1px solid #d1e8df; margin: 10px 0;">
-                        
-                        <p style="margin-bottom: 5px; display: flex; justify-content: center; align-items: center; gap: 10px;">
-                            <span style="font-size: 1.1em; font-weight: bold; color: #555;">Przelew na telefon</span> 
-                            <img src="blik.png" alt="BLIK" style="height: 40px; object-fit: contain;">
-                            <span style="font-size: 1.1em; font-weight: bold; color: #555;">:</span>
-                        </p>
-                        <div class="account-number" style="margin-top: 5px; font-size: 1.3em; background: #e2f0ea;">+48 502 989 818</div>
-                    </div>
-                    
-                    <div style="text-align: center;">
-                        <img src="qr_konto.png" alt="Zeskanuj kod QR w aplikacji bankowej" class="qr-code">
-                        <p style="line-height: 1.3; margin-top: 5px; margin-bottom: 15px;"><small>Zeskanuj kod w aplikacji bankowej, aby wypełnić dane automatycznie.</small></p>
-                        
-                        <a href="blankiet.pdf" target="_blank" style="display: inline-block; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'" title="Kliknij, aby pobrać gotowy blankiet (PDF)">
-                            <img src="druczek.png" alt="Pobierz blankiet wpłaty" style="height: 130px; width: auto; max-width: 100%; border: 1px solid #ddd; padding: 5px; background: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); object-fit: contain;">
-                        </a>
-                        <p style="line-height: 1.3; margin-top: 5px; margin-bottom: 0;"><small>Pobierz i wydrukuj gotowy blankiet wpłaty (PDF)</small></p>
-                    </div>
-                </div>
-
-                <div class="card" style="height: auto; text-align: center; border-top: 4px solid #D4AF37; display: flex; flex-direction: column; justify-content: center; padding: 25px;">
-                    <h3 style="margin-top: 0; margin-bottom: 10px;">Z pamiętnika wolontariusza</h3>
-                    <p style="font-size: 0.95em; line-height: 1.5; margin-bottom: 20px; color: #555;">Poznaj wstrząsające, piękne i skłaniające do refleksji historie z naszej codziennej posługi przy łóżkach chorych i samotnych.</p>
-                    <a href="blog.html" class="btn btn-outline" style="text-decoration: none; padding: 12px 20px; display: inline-block; transition: all 0.3s; margin: 0 auto; border-color: #1a5f4a; color: #1a5f4a;">Przeczytaj nasze historie</a>
-                </div>
-                
-                <div class="card" style="height: auto; text-align: center; border-top: 4px solid #a83232; display: flex; flex-direction: column; justify-content: center; padding: 25px;">
-                    <h3 style="margin-top: 0; margin-bottom: 15px;">Wspierają nas</h3>
-                    <a href="wsparcie.html" class="btn btn-outline" style="text-decoration: none; padding: 12px 20px; display: inline-block; transition: all 0.3s; margin: 0 auto; border-color: #1a5f4a; color: #1a5f4a;">Poznaj wspierających ❤️</a>
-                </div>
-
-            </div>
-
-            <div class="support-col-right" style="display: flex; flex-direction: column; gap: 30px; height: 100%;">
-                
-                <a href="zbiorki.html" class="card portal-card" style="border-top: 4px solid #a83232; height: auto;">
-                    <h3 style="margin-top: 0; margin-bottom: 5px; font-size: 1.8em; color: #a83232;">Dołącz do naszej Warty</h3>
-                    <p style="font-size: 1.05em; line-height: 1.4; margin-bottom: 25px; color: #555;">Wesprzyj Fundację – poznaj wszystkie formy pomocy online.</p>
-                    
-                    <img src="logo-czerwone.jpg" alt="Pieczęć Fundacji Ostatnia Warta" style="width: 150px; height: auto; margin-bottom: 30px; border-radius: 50%;">
-                    
-                    <div class="trust-badges" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; border-top: 1px solid #eee; padding-top: 20px; width: 100%;">
-                        <img src="zrzutka.png" alt="Zrzutka.pl">
-                        <img src="Przelewy24.png" alt="Przelewy24">
-                        <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="PayPal">
-                        <span style="font-weight: bold; font-family: 'Arial', sans-serif; font-size: 14px; opacity: 0.6; color: #333; transition: 0.3s ease;">PATRONITE</span>
-                        <img src="blik.png" alt="BLIK" style="height: 25px;">
-                    </div>
-                    
-                    <span style="margin-top: 25px; display: inline-block; padding: 12px 24px; background: #a83232; color: #fff; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif;">Wybierz cel i formę wpłaty &rarr;</span>
-                </a>
-
-                <div class="card" style="height: auto;">
-                    <h3>Wspieraj podczas zakupów</h3>
-                    <p style="line-height: 1.4; margin-bottom: 15px; font-size: 0.95em;">Pomagaj nam bezpłatnie przy okazji codziennych zakupów online.</p>
-                    
-                    <div style="display: flex; justify-content: center;">
-                        <a href="https://fanimani.pl/zaproszenie/139507/7b9dbce0e1d84fc29adb3ee6d2d52e27" target="_blank" style="transition: transform 0.3s ease; display: inline-block;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                            <img src="fanimani.png" alt="Wspieraj nas przez FaniMani" style="max-height: 45px; width: auto; border-radius: 4px;">
-                        </a>
-                    </div>
-                    
-                    <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
-                    
-                    <h3>Współpraca Biznesowa (CSR)</h3>
-                    <p style="line-height: 1.4; margin-bottom: 10px; font-size: 0.95em;">Zapraszamy lokalnych przedsiębiorców do objęcia Fundacji Mecenatem.</p>
-                    <ul style="line-height: 1.4; font-size: 0.95em;">
-                        <li style="margin-bottom: 5px;"><a href="03_02_Oferta_Wspolpracy_CSR.pdf" target="_blank">Oferta Współpracy dla Firm</a></li>
-                        <li style="margin-bottom: 0;"><a href="03_01_Wzor_Umowy_Darowizny.pdf" target="_blank">Wzór Umowy Darowizny</a></li>
-                    </ul>
-                </div>
-                
-                <div class="card" id="formularz" style="border-top: 4px solid #D4AF37; height: auto;">
-                    <h3>Napisz do nas bezpośrednio</h3>
-                    <p style="font-size: 0.9em; margin-bottom: 15px; line-height: 1.4;">Masz pytania? Skontaktuj się z nami poprzez poniższy formularz.</p>
-                    
-                    <form action="https://formspree.io/f/maqpngoy" method="POST" style="display: flex; flex-direction: column; gap: 10px;">
-                        <input type="text" name="Imię" placeholder="Twoje imię / organizacja" required style="padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: 'Arial', sans-serif;">
-                        <input type="email" name="Email" placeholder="Twój adres e-mail" required style="padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: 'Arial', sans-serif;">
-                        <textarea name="Wiadomość" rows="4" placeholder="W czym możemy pomóc?" required style="padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: 'Arial', sans-serif;"></textarea>
-                        <button type="submit" class="btn btn-primary" style="border: none; cursor: pointer; padding: 12px; font-size: 0.95em; margin: 0;">Wyślij wiadomość</button>
-                    </form>
-                </div>
-
-            </div> 
-        </div> 
+        <p style="text-align: center; font-family: 'Georgia', serif; font-size: 1.15em; color: #555; max-width: 900px; margin: 0 auto 40px auto; line-height: 1.8;">
+            Istniejemy po to, by towarzyszyć, wspierać i nieść godność tam, gdzie pojawia się samotność, choroba i kres życia. Każdy może pomóc w inny sposób, można być przy drugim człowieku, możesz wesprzeć działania fundacji, możesz pomóc nam rozwijać ideę.<br>
+            <a href="zbiorki.html" class="text-link">Zobacz, jak możesz wesprzeć naszą misję</a> oraz <a href="progzad.html" class="text-link">Dowiedz się więcej o zaświadczeniach dla sądu</a>.
+        </p>
+        
+        <div class="mission-grid">
+            <a href="zbiorki.html" class="mission-item">
+                <h4>Stań z nami na Warcie (Zbiórki)</h4>
+                <p>Nasza misja zależy od ludzi takich jak Ty. Pomóż nam pełnić Ostatnią Wartę.</p>
+                <span>Dołącz do naszej Warty &rarr;</span>
+            </a>
+            <a href="pbic.html" class="mission-item">
+                <h4>Partnerstwo biznesowe i CSR</h4>
+                <p>Zbuduj odpowiedzialny społecznie wizerunek swojej firmy. Zapraszamy do współpracy przedsiębiorstwa, które chcą realnie wpływać na los osób samotnych i terminalnie chorych. Razem możemy stworzyć coś wielkiego.</p>
+                <span>Poznaj ofertę dla firm &rarr;</span>
+            </a>
+            <a href="progzad.html" class="mission-item">
+                <h4>Dobrowolne Zadośćuczynienie</h4>
+                <p>Znalazłeś się w trudnej sytuacji prawnej? Pokaż przed sądem swoją prospołeczną postawę i chęć naprawienia błędów. Wesprzyj naszą misję i uzyskaj oficjalne zaświadczenie o darowiźnie do akt sprawy (zgodnie z art. 53 § 2 k.k.).</p>
+                <span>Dowiedz się więcej &rarr;</span>
+            </a>
+            <a href="pracespol.html" class="mission-item">
+                <h4>[JUŻ WKRÓTCE] Prace na cele społeczne</h4>
+                <p>Sąd orzekł wobec Ciebie karę ograniczenia wolności w formie prac społecznych? Zrealizuj ten obowiązek w miejscu, gdzie Twoja praca nabierze głębokiego sensu. Pomóż nam w działaniach organizacyjnych i logistycznych.</p>
+                <span>Sprawdź zasady &rarr;</span>
+            </a>
+        </div>
+        
     </div>
 </section>
 
 <footer id="kontakt">
     <div class="container">
         <h2 style="font-family: 'Georgia', serif; font-weight: normal; margin-bottom: 40px;">Kontakt i Dane Rejestrowe</h2>
+        
         <div class="contact-grid">
             <div class="contact-info">
-                <h3 style="color: #fff; font-family: 'Georgia', serif; font-weight: normal;">Dane Rejestrowe</h3>
+                <h3 style="color: #fff; font-family: 'Georgia', serif; font-weight: normal; margin-top: 0;">Dane Rejestrowe</h3>
                 <p><strong>FUNDACJA "OSTATNIA WARTA"</strong></p>
                 <p>ul. Bronisława Czecha 1/9</p>
                 <p>80-288 Gdańsk</p>
                 <br>
-                <p><strong>NIP:</strong> <a href="https://sprawdznip.podatki.gov.pl/" target="_blank">9571199614</a></p>
-                <p><strong>REGON:</strong> <a href="https://wyszukiwarkaregon.stat.gov.pl/appBIR/index.aspx" target="_blank">544069163</a></p>
-                <p><strong>KRS:</strong> <a href="https://wyszukiwarka-krs.ms.gov.pl/" target="_blank">0001224367</a></p>
+                <p><strong>NIP:</strong> <a href="https://sprawdznip.podatki.gov.pl/" target="_blank" style="text-decoration: underline;">9571199614</a></p>
+                <p><strong>REGON:</strong> <a href="https://wyszukiwarkaregon.stat.gov.pl/appBIR/index.aspx" target="_blank" style="text-decoration: underline;">544069163</a></p>
+                <p><strong>KRS:</strong> <a href="https://wyszukiwarka-krs.ms.gov.pl/" target="_blank" style="text-decoration: underline;">0001224367</a></p>
                 <br>
                 <p><strong>IBAN:</strong></p>
                 <p style="font-family: 'Arial', sans-serif; font-weight: bold; font-size: 0.95em; color: #D4AF37;">PL 61 2530 0008 2049 1089 8921 0001</p>
                 <br>
                 <p><strong>Sąd rejestrowy:</strong><br>Sąd Rejonowy Gdańsk-Północ w Gdańsku,<br>VII Wydział Gospodarczy KRS</p>
-                <p><strong>Nadzór:</strong> <a href="https://www.gov.pl/web/zdrowie" target="_blank">Minister Zdrowia</a></p>
+                <p><strong>Nadzór:</strong> <a href="https://www.gov.pl/web/zdrowie" target="_blank" style="text-decoration: underline;">Minister Zdrowia</a></p>
             </div>
             
             <div class="contact-info">
-                <h3 style="color: #fff; font-family: 'Georgia', serif; font-weight: normal;">Drogi kontaktu</h3>
+                <h3 style="color: #fff; font-family: 'Georgia', serif; font-weight: normal; margin-top: 0;">Drogi kontaktu</h3>
                 
                 <p><strong>Skrzynka e-Doręczeń:</strong></p>
                 <p style="font-family: 'Arial', sans-serif; font-weight: bold; color: #D4AF37; font-size: 1.1em;">AE:PL-40811-80625-IESVG-13</p>
                 <br>
-                <p><strong>E-mail:</strong> <a href="mailto:kontakt@ostatniawarta.pl" style="text-decoration: none;">kontakt@ostatniawarta.pl</a></p>
+                <p><strong>E-mail:</strong> <a href="mailto:kontakt@ostatniawarta.pl" style="text-decoration: underline;">kontakt@ostatniawarta.pl</a></p>
                 <br>
                 <p><strong>Znajdź nas w sieci:</strong><br>
-                <a href="https://www.facebook.com/profile.php?id=61583555455246" target="_blank" style="text-decoration: none;">Nasz profil na Facebooku</a><br>
-                <a href="https://x.com/ostatniawarta" target="_blank" style="text-decoration: none;">Nasz profil na X.com</a></p>
+                <a href="https://www.facebook.com/profile.php?id=61583555455246" target="_blank" style="text-decoration: underline;">Nasz profil na Facebooku</a><br>
+                <a href="https://x.com/ostatniawarta" target="_blank" style="text-decoration: underline;">Nasz profil na X.com</a></p>
                 <br>
                 <p><strong>Obszar działania:</strong><br>województwo pomorskie<br>Trójmiasto<br>Gdańsk</p>
             </div>
             
-            <div class="contact-info" style="text-align: center;">
-                <h3 style="color: #fff; font-family: 'Georgia', serif; font-weight: normal;">Dokumenty Statutowe</h3>
-                <br>
-                <a href="krs.pdf" target="_blank" class="btn btn-dark" style="width: 90%; padding: 10px 0; margin-bottom: 10px; margin-top: 0;">Pobierz odpis KRS</a><br>
-                <a href="statut.pdf" target="_blank" class="btn btn-dark" style="width: 90%; padding: 10px 0; margin-top: 0;">Pobierz Statut Fundacji</a>
+            <div class="contact-info">
+                <h3 style="color: #fff; font-family: 'Georgia', serif; font-weight: normal; margin-top: 0;">Dokumenty Statutowe</h3>
+                <ul style="list-style: none; padding: 0; margin: 0; font-family: 'Arial', sans-serif; font-size: 0.95em; line-height: 1.6;">
+                    <li style="margin-bottom: 8px;"><a href="krs.pdf" target="_blank" style="text-decoration: underline;">Odpis KRS (PDF)</a></li>
+                    <li style="margin-bottom: 8px;"><a href="statut.pdf" target="_blank" style="text-decoration: underline;">Statut Fundacji (PDF)</a></li>
+                </ul>
                 
-                <h3 style="color: #fff; font-family: 'Georgia', serif; font-weight: normal; margin-top: 40px; margin-bottom: 20px;">Materiały do pobrania</h3>
-                <div style="text-align: left; margin: 0 auto; width: 90%;">
-                    <ul style="list-style: none; padding: 0; margin: 0; font-family: 'Arial', sans-serif; font-size: 0.9em; line-height: 1.6;">
-                        <li style="margin-bottom: 8px;"><a href="ksiega_znaku.pdf" target="_blank" style="color: #D4AF37; text-decoration: underline;">Księga Znaku i Identyfikacji (PDF)</a></li>
-                        <li style="margin-bottom: 8px;"><a href="logo.png" target="_blank" style="color: #D4AF37; text-decoration: underline;">Logo Fundacji - Wersja Jasna (PNG)</a></li>
-                        <li><a href="dark_Logo.png" target="_blank" style="color: #D4AF37; text-decoration: underline;">Logo Fundacji - Wersja Ciemna (PNG)</a></li>
-                    </ul>
-                </div>
+                <h3 style="color: #fff; font-family: 'Georgia', serif; font-weight: normal; margin-top: 30px; margin-bottom: 15px;">Materiały do pobrania</h3>
+                <ul style="list-style: none; padding: 0; margin: 0; font-family: 'Arial', sans-serif; font-size: 0.95em; line-height: 1.6;">
+                    <li style="margin-bottom: 8px;"><a href="ksiega_znaku.pdf" target="_blank" style="text-decoration: underline;">Księga Znaku i Identyfikacji (PDF)</a></li>
+                    <li style="margin-bottom: 8px;"><a href="logo.png" target="_blank" style="text-decoration: underline;">Logo Fundacji - Wersja Jasna (PNG)</a></li>
+                    <li><a href="dark_Logo.png" target="_blank" style="text-decoration: underline;">Logo Fundacji - Wersja Ciemna (PNG)</a></li>
+                </ul>
+
+                <h3 style="color: #fff; font-family: 'Georgia', serif; font-weight: normal; margin-top: 30px; margin-bottom: 15px;">Napisz do nas</h3>
+                <form action="https://formspree.io/f/maqpngoy" method="POST" style="display: flex; flex-direction: column; gap: 10px;">
+                    <input type="text" name="Imię" placeholder="Twoje imię / organizacja" required style="padding: 10px; border: none; border-radius: 4px; font-family: 'Arial', sans-serif;">
+                    <input type="email" name="Email" placeholder="Twój adres e-mail" required style="padding: 10px; border: none; border-radius: 4px; font-family: 'Arial', sans-serif;">
+                    <textarea name="Wiadomość" rows="3" placeholder="W czym możemy pomóc?" required style="padding: 10px; border: none; border-radius: 4px; font-family: 'Arial', sans-serif; resize: vertical;"></textarea>
+                    <button type="submit" style="border: none; cursor: pointer; padding: 12px; font-size: 0.95em; margin: 0; background: #D4AF37; color: #133a2d; font-weight: bold; border-radius: 4px; transition: 0.3s;" onmouseover="this.style.background='#fff'" onmouseout="this.style.background='#D4AF37'">Wyślij wiadomość</button>
+                </form>
             </div>
         </div>
 
@@ -433,10 +344,10 @@
             
             <p>&copy; 2026 FUNDACJA "OSTATNIA WARTA". Wszelkie prawa zastrzeżone.</p>
             <p style="margin-top: 10px;">
-                <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px;">Polityka Prywatności i RODO</a>
-                <a href="regulamin-darowizn.html" style="text-decoration: none; margin-right: 15px;">Regulamin Darowizn</a>
-                <a href="regulamin-pomocy.html" style="text-decoration: none; margin-right: 15px;">Regulamin Świadczenia Pomocy</a>
-                <a href="warunki-korzystania.html" style="text-decoration: none;">Warunki Korzystania</a>
+                <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px; transition: 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#D4AF37'">Polityka Prywatności i RODO</a>
+                <a href="regulamin-darowizn.html" style="text-decoration: none; margin-right: 15px; transition: 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#D4AF37'">Regulamin Darowizn</a>
+                <a href="regulamin-pomocy.html" style="text-decoration: none; margin-right: 15px; transition: 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#D4AF37'">Regulamin Świadczenia Pomocy</a>
+                <a href="warunki-korzystania.html" style="text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#D4AF37'">Warunki Korzystania</a>
             </p>
         </div>
     </div>
@@ -468,6 +379,17 @@
     }
     setInterval(updateClock, 1000);
     updateClock();
+
+    // Obsługa ciasteczek
+    function acceptCookies() {
+        localStorage.setItem('cookiesAccepted', 'true');
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+    window.onload = function() {
+        if (!localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('cookie-banner').style.display = 'block';
+        }
+    };
 </script>
 
 </body>
