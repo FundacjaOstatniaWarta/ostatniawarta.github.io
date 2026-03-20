@@ -57,19 +57,10 @@
         nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
         nav ul li a:hover { color: #D4AF37; }
 
-        .btn { display: inline-block; padding: 12px 24px; margin: 10px 5px; border-radius: 4px; font-weight: bold; text-align: center; font-family: 'Arial', sans-serif; border: 2px solid transparent; box-sizing: border-box; cursor: pointer; }
-        .btn-primary { background: #D4AF37; color: #133a2d; }
-        .btn-primary:hover { background: #b5952f; color: #fff; }
-        .btn-outline { border-color: #1a5f4a; color: #1a5f4a; background: transparent; }
-        .btn-outline:hover { background: #1a5f4a; color: #fff; }
-        .btn-dark { border-color: #fff; color: #fff; background: transparent; }
-        .btn-dark:hover { background: #fff; color: #133a2d; }
-
         .heading-wrapper { text-align: center; width: 100%; margin-bottom: 15px; }
         .section-heading { font-family: 'Georgia', serif; font-size: 1.8em; color: #1a5f4a; border-bottom: 2px solid #D4AF37; padding-bottom: 10px; margin: 0 0 15px 0; display: inline-block; font-weight: normal; }
         
-        .section-desc, .about-text { font-family: 'Georgia', serif; font-size: 1.15em; color: #555; text-align: justify; max-width: 900px; margin: 0 auto 30px auto; line-height: 1.8; }
-        .about-text { border-left: 4px solid #D4AF37; padding-left: 20px; }
+        .section-desc { font-family: 'Georgia', serif; font-size: 1.15em; color: #555; text-align: justify; max-width: 900px; margin: 0 auto 30px auto; line-height: 1.8; }
 
         /* Style linków tekstowych */
         .text-link { color: #1a5f4a; text-decoration: underline; font-weight: bold; transition: color 0.3s; }
@@ -107,8 +98,7 @@
         @media (max-width: 768px) { 
             #cookie-banner button { margin-top: 15px; margin-left: 0; display: block; width: 100%; } 
             section { padding: 40px 10px; }
-            .about-text { padding-left: 10px; margin-bottom: 30px; }
-            .section-desc, .about-text, .mission-item p { text-align: justify; font-size: 1.05em; }
+            .section-desc, .mission-item p { text-align: left; font-size: 1.05em; }
             .header-titles h1 { font-size: 1.8em; }
             .mission-grid { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; }
@@ -133,7 +123,6 @@
             <h1>FUNDACJA "OSTATNIA WARTA"</h1>
             <h2>„Zostańcie tu i czuwajcie ze mną!”</h2>
             <p>
-                Dajemy naszą obecność tam, gdzie brakuje nadziei.<br>
                 Aby nikt nie musiał odchodzić w samotności.
             </p>
         </div>
@@ -151,20 +140,29 @@
     </div>
 </header>
 
-<section id="o-nas" class="bg-white">
+<section id="o-nas" class="bg-white" style="text-align: center; padding: 40px 20px 30px;">
     <div class="container">
-        <div class="heading-wrapper">
-            <h2 class="section-heading">O Fundacji</h2>
+        
+        <div class="heading-wrapper" style="margin-bottom: 10px;">
+            <h2 class="section-heading" style="margin-bottom: 10px;">Dajemy naszą obecność tam, gdzie brakuje nadziei.</h2>
         </div>
         
-        <div class="about-text">
-            <p><a href="manifest.html" class="text-link">Fundacja „Ostatnia Warta”</a> to wspólnota osób, których ścieżki życiowe splatają się z codziennością gdańskich ulic. Jesteśmy ludźmi takimi jak Państwo – sąsiadami, przechodniami, osobami, które w zgiełku współczesnego świata nie utraciły wrażliwości na cichy głos drugiego człowieka. Nie odnajdą Państwo u nas luksusowych atrybutów statusu ani szklanych biurowców; naszą największą wartością jest empatia oraz gotowość do bezinteresownego pochylenia się nad cierpieniem.</p>
-            <p>Nasza misja zrodziła się w dobie powszechnego odosobnienia, kiedy w cieniu globalnego niepokoju dostrzegliśmy, jak wielką wagę ma prosta obecność. To, co przez ostatnie lata było jedynie odruchem serca i nieformalnym wsparciem świadczonym potrzebującym, w lutym 2026 roku zyskało godną, sformalizowaną postać prawną. <a href="manifest.html" class="text-link">[Zobacz też Manifest "Ostatniej Warty"]</a></p>
-            <p>Wierzymy głęboko, że prawdziwy sens egzystencji nie objawia się w pogoni za dobrami doczesnymi, lecz w uśmiechu drugiego człowieka i poczuciu spełnionego obowiązku. Odnaleźliśmy szczęście w pomocy niesionej bez oczekiwania na nagrodę. W świecie zdominowanym przez tymczasowość, my wybieramy trwałość więzi i godność, która towarzyszy człowiekowi do ostatnich chwil.</p>
-            
-            <a href="manifest.html" style="text-decoration: none; color: inherit; display: block; transition: all 0.3s ease;" onmouseover="this.style.opacity='0.7'; this.style.transform='translateY(-2px)';" onmouseout="this.style.opacity='1'; this.style.transform='translateY(0)';">
-                <p><strong>Dlaczego „Ostatnia Warta”? Ponieważ z największą pokorą stajemy na straży ludzkiego życia zawsze wtedy, gdy spowija je mrok niepewności, bólu czy zapomnienia. Pełnimy tę najważniejszą z wart wszędzie tam, gdzie gaśnie nadzieja, a horyzont przysłania nagły ciężar trudnej diagnozy, bezkresnej samotności czy nieuchronnego pożegnania. Jesteśmy niezachwianym oparciem i tarczą przeciwko rozpaczy. Jesteśmy po to, aby żaden człowiek – bez względu na to, na jakim etapie swojej drogi się znajduje – nie musiał mierzyć się z cierpieniem w pojedynkę i nigdy nie kroczył w nieznane bez bezpiecznego uścisku dłoni.</strong></p>
-            </a>
+        <p style="font-size: 1.25em; max-width: 800px; margin: 0 auto 5px auto; color: #444; line-height: 1.6; font-family: 'Georgia', serif;">
+            Towarzyszymy osobom samotnym, zapomnianym, ciężko chorym i umierającym.
+        </p>
+        
+        <p style="font-size: 1.25em; max-width: 800px; margin: 0 auto 15px auto; color: #444; line-height: 1.6; font-family: 'Georgia', serif;">
+            <a href="manifest.html" class="text-link" style="font-weight: bold; font-size: 1.05em;">Fundacja „Ostatnia Warta”</a> to wolontariat pomocy i obecności.
+        </p>
+        
+        <p style="font-size: 1.25em; font-family: 'Georgia', serif; font-weight: bold; color: #133a2d; margin: 15px 0;">
+            Nie podajemy leków.<br>
+            Podajemy obecność.
+        </p>
+        
+        <div style="margin-top: 15px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+            <a href="zbiorki.html" style="font-family: 'Arial', sans-serif; font-weight: bold; color: #D4AF37; font-size: 1.1em; text-decoration: underline; transition: 0.3s;" onmouseover="this.style.color='#1a5f4a'" onmouseout="this.style.color='#D4AF37'">Wesprzyj naszą wartę</a>
+            <a href="o_fundacji.html" style="font-family: 'Arial', sans-serif; font-weight: bold; color: #D4AF37; font-size: 1.1em; text-decoration: underline; transition: 0.3s;" onmouseover="this.style.color='#1a5f4a'" onmouseout="this.style.color='#D4AF37'">Poznaj naszą historię</a>
         </div>
     </div>
 </section>
@@ -320,7 +318,7 @@
                 
                 <h3 style="color: #fff; font-family: 'Georgia', serif; font-weight: normal; margin-top: 30px; margin-bottom: 15px;">Materiały do pobrania</h3>
                 <ul style="list-style: none; padding: 0; margin: 0; font-family: 'Arial', sans-serif; font-size: 0.95em; line-height: 1.6;">
-                    <li style="margin-bottom: 8px;"><a href="ksiega_znaku.pdf" target="_blank" style="text-decoration: underline;">Księga Znaku i Identyfikacji (PDF)</a></li>
+                    <li style="margin-bottom: 8px;"><a href="ksiega_znaku.html" style="text-decoration: underline;">Księga Znaku i Identyfikacji</a></li>
                     <li style="margin-bottom: 8px;"><a href="logo.png" target="_blank" style="text-decoration: underline;">Logo Fundacji - Wersja Jasna (PNG)</a></li>
                     <li><a href="dark_Logo.png" target="_blank" style="text-decoration: underline;">Logo Fundacji - Wersja Ciemna (PNG)</a></li>
                 </ul>
