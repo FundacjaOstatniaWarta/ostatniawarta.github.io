@@ -35,8 +35,8 @@
         h1, h2, h3, h4 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
         .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
         
-        /* Ciemna, elegancka góra z wycentrowanym logo */
-        header { background: #133a2d; color: #fff; padding: 0; text-align: center; border-bottom: 4px solid #D4AF37; }
+        /* Ciemna, elegancka góra z wycentrowanym logo - POPRAWIONE PADDINGI */
+        header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
         
         /* ZEGAR ZAMIAST PIERŚCIENIA */
         .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
@@ -70,14 +70,14 @@
         /* GRID ZBIÓREK */
         .support-grid { display: grid; grid-template-columns: 1fr; gap: 30px; margin-top: 20px; align-items: stretch; }
         
-        .support-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1a5f4a; padding: 30px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; box-sizing: border-box; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .support-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1a5f4a; padding: 30px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; box-sizing: border-box; transition: transform 0.3s ease, box-shadow 0.3s ease; overflow-wrap: anywhere; }
         
         .support-card h3 { margin-top: 0; font-size: 1.4em; font-family: 'Georgia', serif; margin-bottom: 15px; color: #133a2d; }
         .support-card p { font-family: 'Arial', sans-serif; font-size: 0.95em; color: #666; line-height: 1.6; margin-bottom: 25px; }
         
-        /* Box z danymi do przelewu */
+        /* Box z danymi do przelewu - POPRAWIONE ZAWIJANIE NUMERU */
         .account-box { background: #f0f7f4; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 20px; border: 1px solid #d1e8df; overflow: hidden; width: 100%; box-sizing: border-box; }
-        .account-number { font-size: 1.25em; letter-spacing: 1px; word-spacing: 2px; color: #1a5f4a; font-family: 'Arial', sans-serif; font-weight: bold; margin: 15px 0; white-space: nowrap; overflow-x: auto; padding-bottom: 5px; }
+        .account-number { font-size: 1.25em; letter-spacing: 1px; word-spacing: 2px; color: #1a5f4a; font-family: 'Arial', sans-serif; font-weight: bold; margin: 15px 0; white-space: normal; word-break: break-word; padding-bottom: 5px; }
         .qr-code { max-width: 150px; border: 1px solid #ddd; padding: 10px; background: #fff; border-radius: 8px; }
 
         /* Klasy dla przycisków i widgetu */
@@ -103,7 +103,8 @@
         .btn-dark { border-color: #fff; color: #fff; background: transparent; display: inline-block; padding: 10px 20px; margin-top: 20px; border: 2px solid #D4AF37; color: #D4AF37; font-weight: bold; border-radius: 4px; font-family: 'Arial', sans-serif; transition: 0.3s; }
         .btn-dark:hover { background: #D4AF37; color: #133a2d; }
 
-        footer { background: #133a2d; color: #eef7f4; padding: 0; text-align: center; margin-top: 40px; }
+        /* POPRAWIONA STOPKA */
+        footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; margin-top: 40px; }
         footer a { color: #D4AF37; text-decoration: none; }
         footer a:hover { color: #fff; text-decoration: underline; }
         
@@ -115,6 +116,9 @@
             .header-titles h1 { font-size: 1.5em; }
             .support-card { padding: 20px; }
             .intro-text { text-align: left; }
+            /* Na telefonie zwężamy wielki numer konta, by się nie wylewał z kart */
+            .account-number { font-size: 1.1em; letter-spacing: 0px; }
+            .support-card iframe { max-width: 100% !important; }
         }
     </style>
 </head>
