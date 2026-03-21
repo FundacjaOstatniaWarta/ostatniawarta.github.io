@@ -4,6 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wspierają nas | Fundacja Ostatnia Warta</title>
+    <meta name="description" content="Poznaj firmy, instytucje i osoby prywatne, które wspierają Fundację Ostatnia Warta. Zobacz, kto pomaga nam nieść godność i obecność osobom terminalnie chorym.">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ostatniawarta.pl/wsparcie.html">
+    <meta property="og:title" content="Wspierają nas | Fundacja Ostatnia Warta">
+    <meta property="og:description" content="Poznaj firmy, instytucje i osoby prywatne, które wspierają Fundację Ostatnia Warta. Zobacz, kto pomaga nam nieść godność i obecność osobom terminalnie chorym.">
+    <meta property="og:image" content="https://ostatniawarta.pl/logo.png">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://ostatniawarta.pl/wsparcie.html">
+    <meta name="twitter:title" content="Wspierają nas | Fundacja Ostatnia Warta">
+    <meta name="twitter:description" content="Poznaj firmy, instytucje i osoby prywatne, które wspierają Fundację Ostatnia Warta. Zobacz, kto pomaga nam nieść godność i obecność osobom terminalnie chorym.">
+    <meta name="twitter:image" content="https://ostatniawarta.pl/logo.png">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3VQ06C7HQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z3VQ06C7HQ');
+    </script>
     
     <link rel="canonical" href="https://ostatniawarta.pl/wsparcie.html" />
     <link rel="icon" type="image/png" href="logo.png">
@@ -41,25 +63,40 @@
         nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
         nav ul li a:hover { color: #D4AF37; }
 
-        .content-section { background: #fff; padding: 60px 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; border-top: 4px solid #1a5f4a; text-align: center; }
+        .content-section { background: #fff; padding: 40px 60px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; border-top: 4px solid #1a5f4a; }
         
-        .construction-img { max-width: 100%; max-height: 280px; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 30px; object-fit: cover; }
+        .content-section p { font-family: 'Arial', sans-serif; font-size: 1.05em; color: #555; text-align: justify; line-height: 1.8; }
+        .content-section h2 { border-bottom: 2px solid #e2f0ea; padding-bottom: 10px; margin-top: 10px; margin-bottom: 15px; color: #1a5f4a; font-family: 'Georgia', serif; font-size: 1.8em; font-weight: normal; }
         
-        .content-section h2 { font-size: 2em; color: #1a5f4a; margin-top: 0; margin-bottom: 15px; font-family: 'Georgia', serif; font-weight: normal; border-bottom: none; }
-        .content-section p { font-family: 'Georgia', serif; font-size: 1.15em; color: #555; text-align: center; line-height: 1.8; max-width: 800px; margin: 0 auto 20px auto; }
+        /* Styl dla siatki sponsorów */
+        .sponsor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
         
-        .btn-outline { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; border: 2px solid #D4AF37; color: #133a2d; transition: all 0.3s ease; margin-top: 30px; }
-        .btn-outline:hover { background: #D4AF37; color: #fff; }
+        .sponsor-card { background: #fdfdfd; border: 1px solid #eaeaea; border-radius: 8px; padding: 40px 30px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: space-between;}
+        .sponsor-card:hover { transform: translateY(-5px); border-color: #D4AF37; box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+        
+        .sponsor-logo { max-width: 100%; height: auto; max-height: 100px; margin-bottom: 25px; object-fit: contain; }
+        .sponsor-name { font-family: 'Georgia', serif; font-size: 1.4em; color: #133a2d; margin-bottom: 15px; font-weight: bold; }
+        .sponsor-desc { font-family: 'Arial', sans-serif; color: #555; font-size: 0.95em; line-height: 1.6; margin-bottom: 25px; text-align: center; }
+        
+        .sponsor-link { display: inline-block; color: #1a5f4a; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; border-bottom: 2px solid transparent; transition: border-color 0.3s, color 0.3s; padding-bottom: 2px; }
+        .sponsor-link:hover { border-bottom-color: #D4AF37; color: #D4AF37; }
+
+        .cta-box { background: #f4f8f6; border-left: 4px solid #1a5f4a; padding: 30px; margin-top: 50px; text-align: center; border-radius: 0 8px 8px 0; }
+        .cta-box h3 { margin-top: 0; color: #133a2d; font-family: 'Georgia', serif; font-size: 1.4em; }
+        .cta-box p { text-align: center; margin-bottom: 20px; }
+        .btn-solid { display: inline-block; padding: 12px 25px; background: #1a5f4a; color: #fff; text-decoration: none; font-weight: bold; font-family: 'Arial', sans-serif; border-radius: 4px; transition: background 0.3s; }
+        .btn-solid:hover { background: #D4AF37; color: #133a2d; }
 
         footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; }
         footer a { color: #D4AF37; text-decoration: none; }
         footer a:hover { color: #fff; text-decoration: underline; }
         
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 30px; padding-top: 20px; font-size: 0.9em; }
+        
         @media (max-width: 768px) { 
             .content-section { padding: 30px 20px; }
             .header-titles h1 { font-size: 1.8em; }
             .content-section h2 { font-size: 1.6em; }
-            .content-section p { font-size: 1.05em; text-align: justify; }
         }
     </style>
 </head>
@@ -81,7 +118,7 @@
         
         <div class="header-titles">
             <h1>Wspierają nas</h1>
-            <h2>Poznaj ludzi o wielkich sercach</h2>
+            <h2>Poznaj firmy i instytucje o wielkich sercach</h2>
         </div>
 
         <nav>
@@ -99,27 +136,58 @@
 <section class="container">
     <div class="content-section">
         
-        <img src="wbudowie.jpg" alt="Strona w przygotowaniu" class="construction-img">
-        
-        <h2>Strona w przygotowaniu</h2>
-        
+        <h2>Razem możemy więcej</h2>
         <p>
-            Już wkrótce będziemy mieli ogromny zaszczyt uhonorować w tym miejscu osoby, firmy oraz instytucje, które swoją hojnością i zaufaniem wspierają misję Fundacji „Ostatnia Warta”. Każdy przekazany dar to dla nas bezcenna pomoc, a dla naszych Podopiecznych – gwarancja realnej obecności drugiego człowieka w najtrudniejszych chwilach.
+            Fundacja „Ostatnia Warta” rozpoczęła swoją działalność <strong>25 lutego 2026 roku</strong>. Od samego początku przyświeca nam cel, aby nikt nie musiał odchodzić w samotności. Rozwój naszej misji, szkolenie wolontariuszy i organizacja opieki nie byłyby możliwe bez zaufania i realnego wsparcia ze strony zewnętrznych partnerów. 
         </p>
-        
-        <p style="font-style: italic; color: #777; font-size: 1.05em;">
-            Aktualnie trwają prace nad przygotowaniem odpowiedniej i godnej oprawy wizualnej dla tej sekcji. Prosimy o odrobinę cierpliwości.
+        <p>
+            Poniżej pragniemy z całego serca podziękować tym, którzy uwierzyli w naszą wizję już na samym starcie i dołożyli swoją cegiełkę do budowy godniejszego świata.
         </p>
 
-        <a href="index.html" class="btn-outline">&larr; Wróć na Stronę Główną</a>
+        <div class="sponsor-grid">
+            
+            <div class="sponsor-card">
+                <div>
+                    <img src="logo.webp" alt="Logo Drukarni Witograf" class="sponsor-logo">
+                    <div class="sponsor-name">Drukarnia Witograf</div>
+                    <div class="sponsor-desc">
+                        Otrzymaliśmy wspaniały rabat na profesjonalny wydruk naszych pierwszych wizytówek dla Wolontariuszy i Zarządu. Taka pomoc na samym początku działalności Fundacji jest dla nas nieoceniona i pozwala nam z dumą reprezentować naszą misję w terenie. Dziękujemy za zaufanie!
+                    </div>
+                </div>
+                <a href="https://witograf.pl/" target="_blank" rel="noopener noreferrer" class="sponsor-link">Odwiedź stronę partnera &rarr;</a>
+            </div>
+
+        </div>
+
+        <div class="cta-box">
+            <h3>Dołącz do grona naszych Partnerów</h3>
+            <p>Prowadzisz firmę i bliska jest Ci społeczna odpowiedzialność biznesu (CSR)? Chcesz realnie wpłynąć na to, jak w naszym społeczeństwie wygląda opieka nad osobami terminalnie chorymi i samotnymi?</p>
+            <a href="pbic.html" class="btn-solid">Poznaj ofertę dla biznesu</a>
+        </div>
         
     </div>
 </section>
 
 <footer>
     <div class="container">
-        <p>&copy; 2026 Fundacja „Ostatnia Warta”. Wszelkie prawa zastrzeżone.</p>
-        <p><a href="index.html">Powrót do Strony Głównej</a></p>
+        
+        <div class="copyright">
+            <p style="font-size: 0.85em; margin-bottom: 15px; color: #a3c2b5; line-height: 1.4; text-align: justify;">
+                <strong>Zastrzeżenie:</strong> Fundacja „Ostatnia Warta” i jej wolontariusze świadczą wyłącznie wsparcie niemedyczne. Nie udzielamy świadczeń zdrowotnych, nie stawiamy diagnoz ani nie podejmujemy decyzji terapeutycznych. Nasza działalność uzupełnia, a nie zastępuje opiekę medyczną i hospicyjną.
+            </p>
+
+            <p style="font-size: 0.85em; margin-bottom: 15px; color: #a3c2b5; line-height: 1.4; text-align: justify;">Operatorem kart płatniczych oraz płatności online jest PayPro SA Agent Rozliczeniowy, ul. Pastelowa 8, 60-198 Poznań, wpisany do Rejestru Przedsiębiorców KRS pod numerem 0000347935, NIP 7792369887, REGON 301345068.</p>
+            
+            <p>&copy; 2026 FUNDACJA "OSTATNIA WARTA". Wszelkie prawa zastrzeżone.</p>
+            <p style="margin-top: 10px;">
+                <a href="index.html" style="text-decoration: none; margin-right: 15px;">Strona Główna</a>
+                <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px;">Polityka Prywatności i RODO</a>
+                <a href="regulamin-darowizn.html" style="text-decoration: none; margin-right: 15px;">Regulamin Darowizn</a>
+                <a href="regulamin-pomocy.html" style="text-decoration: none; margin-right: 15px;">Regulamin Świadczenia Pomocy</a>
+                <a href="warunki-korzystania.html" style="text-decoration: none;">Warunki Korzystania</a>
+            </p>
+        </div>
+
     </div>
 </footer>
 
