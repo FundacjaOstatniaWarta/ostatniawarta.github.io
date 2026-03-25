@@ -100,7 +100,39 @@
         #cookie-banner p { margin: 0; font-size: 0.9em; display: inline-block; vertical-align: middle; max-width: 800px; line-height: 1.5;}
         #cookie-banner button { margin-left: 20px; background-color: #D4AF37; color: #133a2d; border: none; padding: 10px 20px; font-weight: bold; border-radius: 4px; cursor: pointer; vertical-align: middle; transition: 0.3s;}
         #cookie-banner button:hover { background-color: #fff; }
-        
+
+        /* Style dla przycisku pływającego WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            left: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        .whatsapp-icon {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
         @media (max-width: 768px) { 
             #cookie-banner button { margin-top: 15px; margin-left: 0; display: block; width: 100%; } 
             section { padding: 40px 10px; }
@@ -108,6 +140,18 @@
             .header-titles h1 { font-size: 1.8em; }
             .mission-grid { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; }
+
+            /* Responsive dla WhatsApp Float */
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                left: 20px;
+            }
+            .whatsapp-icon {
+                width: 28px;
+                height: 28px;
+            }
         }
     </style>
 </head>
@@ -306,6 +350,16 @@
                 <br>
                 <p><strong>E-mail:</strong> <a href="mailto:kontakt@ostatniawarta.pl" style="text-decoration: underline;">kontakt@ostatniawarta.pl</a></p>
                 <br>
+
+                <p><strong>Napisz do nas:</strong></p>
+                <a href="https://wa.me/message/6LODD5FN5BPTN1" target="_blank" style="display: inline-flex; align-items: center; background-color: #25d366; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold; font-family: 'Arial', sans-serif; margin-bottom: 15px;">
+                    <svg style="width: 20px; height: 20px; margin-right: 8px; fill: white;" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.126.549 4.195 1.594 6.015L.141 24l6.094-1.602c1.781.984 3.797 1.503 5.796 1.503 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zm0 21.906c-1.802 0-3.578-.483-5.123-1.406l-.366-.216-3.804.998.984-3.708-.234-.375C2.457 15.688 1.969 13.886 1.969 12.031c0-5.555 4.507-10.062 10.062-10.062 5.555 0 10.062 4.507 10.062 10.062s-4.507 10.062-10.062 10.062zm5.526-7.53c-.303-.15-1.785-.88-2.062-.984-.277-.103-.483-.15-.684.15-.202.3-.778.984-.954 1.185-.176.202-.352.227-.655.077-1.543-.762-2.583-1.391-3.56-2.618-.258-.323-.028-.497.124-.649.136-.136.303-.352.455-.527.15-.176.202-.303.303-.504.103-.202.052-.377-.024-.527-.077-.15-.684-1.649-.938-2.257-.246-.595-.497-.514-.684-.524-.176-.009-.377-.009-.578-.009-.202 0-.527.077-.804.377-.277.303-1.055 1.031-1.055 2.514 0 1.483 1.08 2.917 1.231 3.118.15.202 2.126 3.243 5.148 4.545 1.83.788 2.541.854 3.442.716.711-.108 2.219-.906 2.533-1.781.314-.875.314-1.625.22-1.781-.094-.156-.346-.248-.649-.398z"/></svg>
+                    Czat z Fundacją
+                </a><br>
+                <p>LUB</p>
+                <p><strong>Zeskanuj kod QR (WhatsApp Business):</strong></p>
+                <img src="Obrazek PNG.png" alt="Kod QR WhatsApp Fundacja Ostatnia Warta" style="width: 150px; height: auto; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                <br>
                 <p><strong>Znajdź nas w sieci:</strong><br>
                 <a href="https://www.facebook.com/profile.php?id=61583555455246" target="_blank" style="text-decoration: underline;">Nasz profil na Facebooku</a><br>
                 <a href="https://x.com/ostatniawarta" target="_blank" style="text-decoration: underline;">Nasz profil na X.com</a></p>
@@ -363,6 +417,9 @@
     <button onclick="acceptCookies()">Rozumiem i akceptuję</button>
 </div>
 
+<a href="https://wa.me/message/6LODD5FN5BPTN1" class="whatsapp-float" target="_blank" title="Skontaktuj się z nami na WhatsApp">
+    <svg class="whatsapp-icon" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.126.549 4.195 1.594 6.015L.141 24l6.094-1.602c1.781.984 3.797 1.503 5.796 1.503 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zm0 21.906c-1.802 0-3.578-.483-5.123-1.406l-.366-.216-3.804.998.984-3.708-.234-.375C2.457 15.688 1.969 13.886 1.969 12.031c0-5.555 4.507-10.062 10.062-10.062 5.555 0 10.062 4.507 10.062 10.062s-4.507 10.062-10.062 10.062zm5.526-7.53c-.303-.15-1.785-.88-2.062-.984-.277-.103-.483-.15-.684.15-.202.3-.778.984-.954 1.185-.176.202-.352.227-.655.077-1.543-.762-2.583-1.391-3.56-2.618-.258-.323-.028-.497.124-.649.136-.136.303-.352.455-.527.15-.176.202-.303.303-.504.103-.202.052-.377-.024-.527-.077-.15-.684-1.649-.938-2.257-.246-.595-.497-.514-.684-.524-.176-.009-.377-.009-.578-.009-.202 0-.527.077-.804.377-.277.303-1.055 1.031-1.055 2.514 0 1.483 1.08 2.917 1.231 3.118.15.202 2.126 3.243 5.148 4.545 1.83.788 2.541.854 3.442.716.711-.108 2.219-.906 2.533-1.781.314-.875.314-1.625.22-1.781-.094-.156-.346-.248-.649-.398z"/></svg>
+</a>
 <script>
     // Zegar
     function updateClock() {
