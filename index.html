@@ -40,8 +40,19 @@
         
         .container { width: 90%; max-width: 1200px; margin: auto; padding: 0; }
         
-        /* Ciemna, elegancka góra z wycentrowanym logo */
-        header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
+        /* Ciemna, elegancka góra z wycentrowanym logo - ZMIENIONE TŁO */
+        header { 
+            background-color: #133a2d; 
+            background-image: url('tlo_strony.jpg'); 
+            background-position: center top; 
+            background-repeat: no-repeat; 
+            background-size: 100% auto; 
+            color: #fff; 
+            padding-top: 30vw; 
+            padding-bottom: 0;
+            text-align: center; 
+            border-bottom: 4px solid #D4AF37; 
+        }
         
         .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
         .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
@@ -134,6 +145,7 @@
         }
 
         @media (max-width: 768px) { 
+            header { padding-top: 45vw; } /* DODANO MARGINES DLA TELEFONÓW */
             #cookie-banner button { margin-top: 15px; margin-left: 0; display: block; width: 100%; } 
             section { padding: 40px 10px; }
             .section-desc, .mission-item p { text-align: left; font-size: 1.05em; }
