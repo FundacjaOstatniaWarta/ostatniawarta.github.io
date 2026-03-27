@@ -76,6 +76,9 @@
         .sponsor-card:hover { transform: translateY(-5px); border-color: #D4AF37; box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
         
         .sponsor-logo { max-width: 100%; height: auto; max-height: 100px; margin-bottom: 25px; object-fit: contain; }
+        /* Dodatkowy styl, by link na logo nie dodawał niepotrzebnych marginesów */
+        .sponsor-logo-link { display: inline-block; }
+        
         .sponsor-name { font-family: 'Georgia', serif; font-size: 1.4em; color: #133a2d; margin-bottom: 15px; font-weight: bold; }
         .sponsor-desc { font-family: 'Arial', sans-serif; color: #555; font-size: 0.95em; line-height: 1.6; margin-bottom: 25px; text-align: center; }
         
@@ -150,7 +153,9 @@
 
             <div class="sponsor-card">
                 <div>
-                    <img src="logo.webp" alt="Logo Drukarni Witograf" class="sponsor-logo">
+                    <a href="https://witograf.pl/" target="_blank" rel="noopener noreferrer" class="sponsor-logo-link">
+                        <img src="logo.webp" alt="Logo Drukarni Witograf" class="sponsor-logo">
+                    </a>
                     <div class="sponsor-name">Drukarnia Witograf</div>
                     <div class="sponsor-desc">
                         Otrzymaliśmy wspaniały rabat na pieczątki w tym naszą okrągłą pieczęć nagłówkową oraz profesjonalne wydruki pierwszych serii wizytówek dla Wolontariuszy i Zarządu. Taka pomoc na samym początku działalności Fundacji jest dla nas nieoceniona i pozwala nam z dumą reprezentować naszą misję w terenie. Dziękujemy za zaufanie!
@@ -161,7 +166,9 @@
 
             <div class="sponsor-card">
                 <div>
-                    <img src="microsoft_logo.png" alt="Microsoft Logo" class="sponsor-logo">
+                    <a href="https://www.microsoft.com/en-us/nonprofits" target="_blank" rel="noopener noreferrer" class="sponsor-logo-link">
+                        <img src="microsoft_logo.png" alt="Microsoft Logo" class="sponsor-logo">
+                    </a>
                     <div class="sponsor-name">Microsoft</div>
                     <div class="sponsor-desc">
                         Dzięki programowi wsparcia dla organizacji pozarządowych uzyskaliśmy dostęp do nowoczesnych narzędzi biurowych i chmurowych, które na co dzień usprawniają organizację i pracę naszej Fundacji.
@@ -172,7 +179,9 @@
             
             <div class="sponsor-card">
                 <div>
-                    <img src="Benevity-Logo.webp" alt="Benevity Logo" class="sponsor-logo">
+                    <a href="https://benevity.com/nonprofits" target="_blank" rel="noopener noreferrer" class="sponsor-logo-link">
+                        <img src="Benevity-Logo.webp" alt="Benevity Logo" class="sponsor-logo">
+                    </a>
                     <div class="sponsor-name">Benevity</div>
                     <div class="sponsor-desc">
                         Dzięki pozytywnej weryfikacji w globalnej sieci Benevity, nasza Fundacja jest otwarta na wsparcie ze strony największych firm i korporacji z całego świata w ramach programów CSR (Społecznej Odpowiedzialności Biznesu) oraz zbiórek pracowniczych.
@@ -183,7 +192,9 @@
 
             <div class="sponsor-card">
                 <div>
-                    <img src="google-for-non-profits.png" alt="Google for Nonprofits Logo" class="sponsor-logo">
+                    <a href="https://www.google.com/nonprofits/" target="_blank" rel="noopener noreferrer" class="sponsor-logo-link">
+                        <img src="google-for-non-profits.png" alt="Google for Nonprofits Logo" class="sponsor-logo">
+                    </a>
                     <div class="sponsor-name">Google dla NGO</div>
                     <div class="sponsor-desc">
                         Jesteśmy dumnym uczestnikiem programu Google dla Organizacji Non-Profit. Dzięki temu korzystamy z zaawansowanych, bezpiecznych narzędzi do współpracy, profesjonalnej poczty oraz wsparcia w kampaniach zasięgowych – całkowicie bezpłatnie.
@@ -194,7 +205,9 @@
 
             <div class="sponsor-card">
                 <div>
-                    <img src="github.png" alt="GitHub Logo" class="sponsor-logo" style="max-height: 80px;">
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="sponsor-logo-link">
+                        <img src="github.png" alt="GitHub Logo" class="sponsor-logo" style="max-height: 80px;">
+                    </a>
                     <div class="sponsor-name">GitHub</div>
                     <div class="sponsor-desc">
                         Szanujemy każdą powierzoną nam złotówkę, dlatego optymalizujemy koszty IT. Kod naszej strony internetowej jest bezpiecznie utrzymywany i rozwijany dzięki darmowej przestrzeni hostingowej i narzędziom udostępnianym przez platformę GitHub.
@@ -205,7 +218,9 @@
 
             <div class="sponsor-card">
                 <div>
-                    <img src="techsoup.png" alt="TechSoup Logo" class="sponsor-logo">
+                    <a href="https://www.techsoup.pl/" target="_blank" rel="noopener noreferrer" class="sponsor-logo-link">
+                        <img src="techsoup.png" alt="TechSoup Logo" class="sponsor-logo">
+                    </a>
                     <div class="sponsor-name">TechSoup Polska</div>
                     <div class="sponsor-desc">
                         Nasza Fundacja przeszła rygorystyczny proces weryfikacji i dołączyła do programu TechSoup. Otwiera to przed nami drzwi do kluczowego oprogramowania i nowoczesnych technologii na preferencyjnych, dedykowanych dla sektora NGO warunkach.
@@ -216,7 +231,9 @@
 
             <div class="sponsor-card">
                 <div>
-                    <img src="domena.png" alt="Domena.pl Logo" class="sponsor-logo">
+                    <a href="https://www.domena.pl/" target="_blank" rel="noopener noreferrer" class="sponsor-logo-link">
+                        <img src="domena.png" alt="Domena.pl Logo" class="sponsor-logo">
+                    </a>
                     <div class="sponsor-name">Domena.pl</div>
                     <div class="sponsor-desc">
                         Nasz partner na start! To właśnie tu zabezpieczyliśmy nasz adres internetowy za symboliczną kwotę, a w prezencie otrzymaliśmy od firmy solidne 3000 MB darmowego hostingu na nasze pliki oraz fundacyjną pocztę e-mail.
@@ -227,7 +244,9 @@
 
             <div class="sponsor-card">
                 <div>
-                    <img src="ngopl.png" alt="NGO.pl Logo" class="sponsor-logo">
+                    <a href="https://spis.ngo.pl/529071-fundacja-ostatnia-warta-529071" target="_blank" rel="noopener noreferrer" class="sponsor-logo-link">
+                        <img src="ngopl.png" alt="NGO.pl Logo" class="sponsor-logo">
+                    </a>
                     <div class="sponsor-name">Portal NGO.pl</div>
                     <div class="sponsor-desc">
                         Jesteśmy aktywną częścią trzeciego sektora. Posiadamy naszą oficjalną, zweryfikowaną wizytówkę w największym polskim portalu organizacji pozarządowych ngo.pl, co gwarantuje pełną przejrzystość naszych działań i ułatwia kontakt z nami.
