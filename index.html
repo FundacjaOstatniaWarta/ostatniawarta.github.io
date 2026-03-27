@@ -56,11 +56,15 @@
         
         .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
         .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
-        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
+        
+        /* Zmieniony styl dla ciemnego logo */
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #133a2d; border: 2px solid #D4AF37; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
         
         .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
         .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
-        .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
+        
+        /* Wskazówka godzinowa zmieniona na białą, by była widoczna na ciemnym tle */
+        .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #fff; border: 1px solid #133a2d; }
         .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
         .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
 
@@ -144,8 +148,11 @@
             fill: white;
         }
 
+        /* ----- POPRAWKI WIDOKU MOBILNEGO ----- */
         @media (max-width: 768px) { 
-            header { padding-top: 45vw; } /* DODANO MARGINES DLA TELEFONÓW */
+            header { padding-top: 32vw; } /* Zmniejszony margines, by zegar wjechał wyżej na krawędź */
+            .clock-wrapper { transform: scale(0.85); margin-top: -10px; } /* Delikatne pomniejszenie zegara */
+            
             #cookie-banner button { margin-top: 15px; margin-left: 0; display: block; width: 100%; } 
             section { padding: 40px 10px; }
             .section-desc, .mission-item p { text-align: left; font-size: 1.05em; }
@@ -177,7 +184,7 @@
                 <div class="hand hour-hand" id="hourHand"></div>
                 <div class="hand minute-hand" id="minuteHand"></div>
                 <div class="hand second-hand" id="secondHand"></div>
-                <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img"> 
+                <img src="dark_Logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img"> 
             </div>
         </div>
         
