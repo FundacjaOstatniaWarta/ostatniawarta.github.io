@@ -144,7 +144,7 @@
 
         <h3>III. Partnerzy i usługi stron trzecich (Płatności i Zbiórki)</h3>
         <ul>
-            <li>W ramach sekcji wsparcia, Witryna korzysta z zewnętrznych operatorów płatności (np. PayPro SA / Przelewy24) oraz platform zbiórkowych (m.in. Zrzutka.pl, Patronite, PayPal, FaniMani, BuyCoffee).</li>
+            <li>W ramach sekcji wsparcia, Witryna korzysta z zewnętrznych operatorów płatności oraz platform zbiórkowych (m.in. Zrzutka.pl, Patronite, PayPal, FaniMani, BuyCoffee).</li>
             <li>Witryna pełni w tym procesie wyłącznie rolę informacyjną i przekierowującą. Po kliknięciu w link wsparcia, Użytkownik opuszcza naszą stronę i przechodzi do szyfrowanego środowiska operatora, gdzie obowiązują <strong>odrębne regulaminy i polityki prywatności</strong>.</li>
             <li>Fundacja nie gromadzi i nie ma dostępu do danych kart płatniczych ani danych logowania do bankowości internetowej.</li>
             <li>Wszelkie reklamacje techniczne dotyczące transakcji finansowych należy w pierwszej kolejności zgłaszać bezpośrednio do Biura Obsługi Klienta danego operatora płatności (zgodnie z naszym <a href="regulamin-darowizn.html" style="color: #1a5f4a; text-decoration: underline; font-weight: bold;">Regulaminem Darowizn</a>).</li>
@@ -178,8 +178,6 @@
                 <strong>Zastrzeżenie:</strong> Fundacja „Ostatnia Warta” i jej wolontariusze świadczą wyłącznie wsparcie niemedyczne. Nie udzielamy świadczeń zdrowotnych, nie stawiamy diagnoz ani nie podejmujemy decyzji terapeutycznych. Nasza działalność uzupełnia, a nie zastępuje opiekę medyczną i hospicyjną.
             </p>
 
-            <p style="font-size: 0.85em; margin-bottom: 15px; color: #a3c2b5; line-height: 1.4; text-align: justify;">Operatorem kart płatniczych oraz płatności online jest PayPro SA Agent Rozliczeniowy, ul. Pastelowa 8, 60-198 Poznań, wpisany do Rejestru Przedsiębiorców KRS pod numerem 0000347935, NIP 7792369887, REGON 301345068.</p>
-            
             <p>&copy; 2026 FUNDACJA "OSTATNIA WARTA". <a href="ksiega_znaku.pdf" target="_blank" class="ksiega-link">Wszelkie prawa zastrzeżone.</a></p>
             <p style="margin-top: 10px;">
                 <a href="index.html" style="text-decoration: none; margin-right: 15px;">Strona Główna</a>
@@ -207,15 +205,3 @@
 
         const secHand = document.getElementById('secondHand');
         const minHand = document.getElementById('minuteHand');
-        const hrHand = document.getElementById('hourHand');
-
-        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
-        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
-        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
-    }
-    setInterval(updateClock, 1000);
-    updateClock();
-</script>
-
-</body>
-</html>
