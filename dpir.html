@@ -16,6 +16,7 @@
     
     <meta name="description" content="Procedura objęcia opieką przez Fundację Ostatnia Warta. Dowiedz się, jak pomagamy osobom chorym i ich rodzinom oraz złóż wniosek o wsparcie online.">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#133a2d">
 
     <meta property="og:title" content="Dla Podopiecznych i ich Rodzin – wsparcie w chorobie" />
     <meta property="og:description" content="Dowiedz się, jak uzyskać wsparcie niemedyczne w chorobie dla siebie lub swoich bliskich. Zobacz procedurę objęcia opieką przez Fundację Ostatnia Warta." />
@@ -25,6 +26,7 @@
 
     <link rel="canonical" href="https://ostatniawarta.pl/dpir.html" />
     <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
 
     <style>
         body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
@@ -115,7 +117,7 @@
                     <div class="hand hour-hand" id="hourHand"></div>
                     <div class="hand minute-hand" id="minuteHand"></div>
                     <div class="hand second-hand" id="secondHand"></div>
-                    <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img"> 
+                    <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img" width="100" height="100"> 
                 </div>
             </a>
         </div>
@@ -164,7 +166,7 @@
             <h3>Wniosek o objęcie opieką (Online)</h3>
             <p class="desc">Wypełnij poniższe dane, abyśmy mogli jak najszybciej przeanalizować Twoją sytuację i zaproponować odpowiednie wsparcie.</p>
             
-            <form action="https://formspree.io/f/xjgppjkq" method="POST">
+            <form action="https://formspree.io/f/xjgppjkq" method="POST" id="dpirForm">
                 <div class="dpir-form-grid">
                     
                     <div class="dpir-form-group full-width">
@@ -178,7 +180,8 @@
                     
                     <div class="dpir-form-group">
                         <label for="pacjent_pesel">PESEL pacjenta</label>
-                        <input type="text" id="pacjent_pesel" name="Pacjent: PESEL" required>
+                        <input type="text" id="pacjent_pesel" name="Pacjent: PESEL" required minlength="11" maxlength="11" pattern="\d{11}" title="Wprowadź 11 cyfr numeru PESEL">
+                        <div id="pesel_error" style="color: #a83232; font-size: 0.85em; margin-top: 5px; display: none; font-weight: bold;">Wprowadzony numer PESEL jest nieprawidłowy (błędna suma kontrolna).</div>
                     </div>
 
                     <div class="dpir-form-group full-width">
@@ -324,6 +327,50 @@
     }
     setInterval(updateClock, 1000);
     updateClock();
+
+    // Walidacja PESEL
+    function isValidPesel(pesel) {
+        if (typeof pesel !== 'string' || pesel.length !== 11 || !/^\d+$/.test(pesel)) return false;
+        
+        let weight = [1, 3, 7, 9, 1, 3, 7, 9, 1, 3];
+        let sum = 0;
+        let controlNumber = parseInt(pesel.substring(10, 11));
+        
+        for (let i = 0; i < 10; i++) {
+            sum += parseInt(pesel.substring(i, i + 1)) * weight[i];
+        }
+        sum = sum % 10;
+        return (10 - sum) % 10 === controlNumber;
+    }
+
+    document.getElementById('dpirForm').addEventListener('submit', function(e) {
+        const peselInput = document.getElementById('pacjent_pesel');
+        const peselError = document.getElementById('pesel_error');
+        
+        if (!isValidPesel(peselInput.value)) {
+            e.preventDefault(); // Zatrzymuje wysłanie formularza
+            
+            // Pokazuje wizualny błąd
+            peselError.style.display = 'block';
+            peselInput.style.borderColor = '#a83232';
+            
+            // Wyświetla komunikat
+            alert('Formularz zawiera błędnie wprowadzone dane. Proszę sprawdzić poprawność numeru PESEL.');
+            
+            // Przewija płynnie do pola i ustawia na nim kursor
+            peselInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            peselInput.focus();
+        } else {
+            peselError.style.display = 'none';
+            peselInput.style.borderColor = '#ccc';
+        }
+    });
+
+    // Ukrywanie błędu gdy użytkownik zaczyna poprawiać dane
+    document.getElementById('pacjent_pesel').addEventListener('input', function() {
+        document.getElementById('pesel_error').style.display = 'none';
+        this.style.borderColor = '#ccc';
+    });
 </script>
 
 </body>
