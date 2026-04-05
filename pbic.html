@@ -106,6 +106,11 @@
         .csr-form-group input, .csr-form-group select, .csr-form-group textarea { padding: 12px 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; font-family: 'Arial', sans-serif; transition: border-color 0.3s; box-sizing: border-box; width: 100%; max-width: 100%; }
         .csr-form-group input:focus, .csr-form-group select:focus, .csr-form-group textarea:focus { border-color: #1a5f4a; outline: none; box-shadow: 0 0 5px rgba(26, 95, 74, 0.2); }
         .csr-form-group textarea { resize: vertical; min-height: 120px; }
+        
+        .csr-form-group.checkbox-group { flex-direction: row; gap: 15px; align-items: flex-start; margin-top: 10px; }
+        .csr-form-group.checkbox-group input[type="checkbox"] { width: auto; padding: 0; margin-top: 5px; cursor: pointer; transform: scale(1.2); }
+        .csr-form-group.checkbox-group label { font-weight: normal; font-size: 0.85em; color: #555; text-align: justify; line-height: 1.5; margin-bottom: 0; cursor: pointer; }
+
         .csr-submit-btn { background: #133a2d; color: #fff; border: none; padding: 15px 30px; font-size: 1.1em; border-radius: 4px; cursor: pointer; transition: background 0.3s; font-weight: bold; width: 100%; margin-top: 10px; text-transform: uppercase; letter-spacing: 1px; box-sizing: border-box; }
         .csr-submit-btn:hover { background: #D4AF37; color: #133a2d; }
 
@@ -224,7 +229,7 @@
     <div class="support-grid" style="grid-template-columns: 1fr; margin-top: 40px;">
         <div class="support-card" style="border-top: 4px solid #133a2d; background: #f4f8f6; align-items: center; text-align: center;">
             <h3 style="text-align: center; width: 100%; border-bottom: 2px solid #d1e8df; padding-bottom: 10px; margin-bottom: 20px;">Dokumenty dla Zarządów i Działów Księgowości</h3>
-            <p style="text-align: center; width: 100%; margin-bottom: 25px; max-width: 800px;">Chcesz przedstawić naszą organizację Zarządowi lub potrzebujesz tradycyjnej umowy dla Księgowości? Wszystkie dedykowane materiały (w tym prezentację One-Pager oraz Wzór Umowy Darowizny) przenieśliśmy do naszej centralnej bazy dokumentów.</p>
+            <p style="text-align: center; width: 100%; margin-bottom: 25px; max-width: 800px;">Chcesz przedstawić naszą organizację Zarządowi lub potrzebujesz tradycyjnej umowy dla Księgowości? Wszystkie dedykowane materiały (w tym prezentację One-Page oraz Wzór Umowy Darowizny) przenieśliśmy do naszej centralnej bazy dokumentów.</p>
             <a href="dokumenty.html" class="btn-solid-dark">Przejdź do bazy dokumentów</a>
         </div>
     </div>
@@ -253,7 +258,7 @@
                 
                 <div class="csr-form-group">
                     <label for="phone">Numer telefonu</label>
-                    <input type="tel" id="phone" name="Telefon" placeholder="+48 000 000 000">
+                    <input type="tel" id="phone" name="Telefon" minlength="9" placeholder="+48 000 000 000" title="Wprowadź minimum 9 znaków numeru telefonu">
                 </div>
                 
                 <div class="csr-form-group full-width">
@@ -261,7 +266,7 @@
                     <select id="interest" name="Obszar zainteresowania" required>
                         <option value="" disabled selected>Wybierz z listy...</option>
                         <option value="Darowizna finansowa / Sponsoring">Darowizna finansowa / Sponsoring strategiczny</option>
-                        <option value="Darowizna rzeczowa / Sprzęt">Darowizna rzeczowa (sprzęt medyczny, środki higieniczne)</option>
+                        <option value="Darowizna rzeczowa / Usługowa">Darowizna rzeczowa lub usługowa (sprzęt, usługi pro bono)</option>
                         <option value="Wolontariat pracowniczy">Wolontariat pracowniczy (zaangażowanie zespołu)</option>
                         <option value="Cause Related Marketing">Cause Related Marketing (% ze sprzedaży produktów)</option>
                         <option value="Inny pomysł">Inny pomysł na współpracę</option>
@@ -271,6 +276,16 @@
                 <div class="csr-form-group full-width">
                     <label for="message">Dodatkowe informacje / Wiadomość</label>
                     <textarea id="message" name="Wiadomość" placeholder="Opisz krótko, jak widzisz naszą współpracę, zadaj pytanie lub pozostaw pole puste..."></textarea>
+                </div>
+
+                <div class="csr-form-group full-width checkbox-group">
+                    <input type="checkbox" id="zgoda_rodo" name="Zgoda RODO" required>
+                    <label for="zgoda_rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych przez Fundację "Ostatnia Warta" z siedzibą w Gdańsku (KRS: 0001224367) w celu obsługi zapytania o współpracę biznesową.</label>
+                </div>
+
+                <div class="csr-form-group full-width checkbox-group">
+                    <input type="checkbox" id="zgoda_dokumenty" name="Akceptacja dokumentów" required>
+                    <label for="zgoda_dokumenty">Oświadczam, że zapoznałem/am się z <a href="polityka-prywatnosci.html" target="_blank" style="color: #1a5f4a; text-decoration: underline;">Polityką Prywatności i RODO</a>, <a href="warunki-korzystania.html" target="_blank" style="color: #1a5f4a; text-decoration: underline;">Warunkami korzystania z serwisu</a> oraz <a href="regulamin-pomocy.html" target="_blank" style="color: #1a5f4a; text-decoration: underline;">Regulaminem świadczenia pomocy</a> i akceptuję ich treść.</label>
                 </div>
                 
                 <div class="csr-form-group full-width">
