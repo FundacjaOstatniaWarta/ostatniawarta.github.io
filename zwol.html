@@ -29,7 +29,7 @@
     <link rel="apple-touch-icon" href="logo.png">
 
     <style>
-        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; overflow-x: hidden; }
         a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
         h1, h2, h3 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
         .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
@@ -53,7 +53,7 @@
         nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
         nav ul li a:hover { color: #D4AF37; }
 
-        .content-section { background: #fff; padding: 50px 60px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; border-top: 4px solid #1a5f4a; max-width: 900px; margin: 0 auto; }
+        .content-section { background: #fff; padding: 50px 60px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; border-top: 4px solid #1a5f4a; max-width: 900px; margin: 0 auto; box-sizing: border-box; }
         
         .content-section p { font-size: 1.15em; color: #444; text-align: justify; line-height: 1.8; margin-bottom: 20px; }
         .content-section ul { font-size: 1.15em; color: #444; line-height: 1.8; list-style: none; padding: 0; margin-top: 15px; margin-bottom: 25px; }
@@ -62,36 +62,41 @@
 
         .content-section h3 { margin-top: 40px; margin-bottom: 20px; font-size: 1.3em; color: #1a5f4a; border-bottom: 2px solid #e2f0ea; padding-bottom: 10px; }
 
-        /* STYLE FORMULARZA WOLONTARIATU */
-        .vol-form-container { background: #f4f8f6; padding: 40px; border-radius: 8px; border-left: 5px solid #D4AF37; margin-top: 40px; font-family: 'Arial', sans-serif; text-align: left; }
+        /* STYLE FORMULARZA WOLONTARIATU - NAPRAWA RWD */
+        .vol-form-container { background: #f4f8f6; padding: 40px; border-radius: 8px; border-left: 5px solid #D4AF37; margin-top: 40px; font-family: 'Arial', sans-serif; text-align: left; box-sizing: border-box; width: 100%; max-width: 100%; }
         .vol-form-container h3 { color: #133a2d; margin-top: 0; margin-bottom: 15px; border-bottom: none; padding-bottom: 0; font-size: 1.6em; }
         .vol-form-container p.desc { color: #555; margin-bottom: 25px; font-size: 1em; text-align: left; }
         
         .vol-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .vol-form-group { display: flex; flex-direction: column; }
+        .vol-form-group { display: flex; flex-direction: column; width: 100%; box-sizing: border-box; }
         .vol-form-group.full-width { grid-column: 1 / -1; }
         .vol-form-group label { font-size: 0.9em; color: #333; margin-bottom: 5px; font-weight: bold; }
-        .vol-form-group input, .vol-form-group select, .vol-form-group textarea { padding: 12px 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; font-family: 'Arial', sans-serif; transition: border-color 0.3s; }
+        
+        /* Box-sizing dla inputów */
+        .vol-form-group input, .vol-form-group select, .vol-form-group textarea { padding: 12px 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; font-family: 'Arial', sans-serif; transition: border-color 0.3s; box-sizing: border-box; width: 100%; max-width: 100%; }
         .vol-form-group input:focus, .vol-form-group select:focus, .vol-form-group textarea:focus { border-color: #1a5f4a; outline: none; box-shadow: 0 0 5px rgba(26, 95, 74, 0.2); }
         .vol-form-group textarea { resize: vertical; min-height: 100px; }
+        
+        /* Reset szerokości dla radio i checkbox */
+        .vol-form-group input[type="radio"], .vol-form-group input[type="checkbox"] { width: auto; padding: 0; transform: scale(1.2); margin-right: 5px; }
+        
         .vol-form-group.radio-group { flex-direction: row; gap: 20px; align-items: center; margin-top: 5px; }
         .vol-form-group.radio-group label { font-weight: normal; margin-bottom: 0; display: flex; align-items: center; gap: 5px; cursor: pointer; }
         
         .vol-form-group.checkbox-group { flex-direction: row; gap: 15px; align-items: flex-start; margin-top: 10px; }
-        .vol-form-group.checkbox-group input { margin-top: 5px; cursor: pointer; }
+        .vol-form-group.checkbox-group input { margin-top: 5px; cursor: pointer; width: auto; transform: scale(1.2); }
         .vol-form-group.checkbox-group label { font-weight: normal; font-size: 0.85em; color: #555; text-align: justify; line-height: 1.5; margin-bottom: 0; cursor: pointer; }
         
-        .alert-box { background: #fff3f3; border-left: 4px solid #a83232; padding: 15px; margin: 20px 0; border-radius: 0 4px 4px 0; }
+        .alert-box { background: #fff3f3; border-left: 4px solid #a83232; padding: 15px; margin: 20px 0; border-radius: 0 4px 4px 0; box-sizing: border-box; }
         .alert-box p { font-size: 0.95em; color: #a83232; margin: 0; text-align: left; }
 
-        .submit-btn { background: #133a2d; color: #fff; border: none; padding: 15px 30px; font-size: 1.1em; border-radius: 4px; cursor: pointer; transition: background 0.3s; font-weight: bold; width: 100%; margin-top: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .submit-btn { background: #133a2d; color: #fff; border: none; padding: 15px 30px; font-size: 1.1em; border-radius: 4px; cursor: pointer; transition: background 0.3s; font-weight: bold; width: 100%; margin-top: 15px; text-transform: uppercase; letter-spacing: 1px; box-sizing: border-box; }
         .submit-btn:hover { background: #D4AF37; color: #133a2d; }
 
-        .btn-outline { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; border: 2px solid #D4AF37; color: #133a2d; transition: all 0.3s ease; }
+        .btn-outline { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; border: 2px solid #D4AF37; color: #133a2d; transition: all 0.3s ease; box-sizing: border-box; }
         .btn-outline:hover { background: #D4AF37; color: #fff; }
         
-        /* Dodatkowy styl dla przycisku dokumentów */
-        .btn-solid-dark { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #133a2d; color: #fff; border: 2px solid #133a2d; transition: all 0.3s ease; }
+        .btn-solid-dark { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #133a2d; color: #fff; border: 2px solid #133a2d; transition: all 0.3s ease; box-sizing: border-box; }
         .btn-solid-dark:hover { background: #D4AF37; border-color: #D4AF37; color: #133a2d; }
 
         footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; margin-top: 50px; }
@@ -99,11 +104,11 @@
         footer a:hover { color: #fff; text-decoration: underline; }
         
         @media (max-width: 768px) { 
-            .content-section { padding: 30px 20px; }
+            .content-section { padding: 30px 20px; width: 100%; }
             .content-section p, .content-section ul li { text-align: left; font-size: 1.05em; }
             .header-titles h1 { font-size: 1.8em; }
             .vol-form-grid { grid-template-columns: 1fr; }
-            .vol-form-container { padding: 25px 20px; }
+            .vol-form-container { padding: 25px 20px; width: 100%; }
         }
     </style>
 </head>

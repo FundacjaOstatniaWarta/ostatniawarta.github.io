@@ -29,7 +29,7 @@
     <link rel="apple-touch-icon" href="logo.png">
 
     <style>
-        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; overflow-x: hidden; }
         a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
         h1, h2, h3 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
         .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
@@ -53,7 +53,7 @@
         nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
         nav ul li a:hover { color: #D4AF37; }
 
-        .content-section { background: #fff; padding: 50px 60px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; border-top: 4px solid #1a5f4a; max-width: 900px; margin: 0 auto; }
+        .content-section { background: #fff; padding: 50px 60px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; border-top: 4px solid #1a5f4a; max-width: 900px; margin: 0 auto; box-sizing: border-box; }
         
         .content-section p { font-size: 1.15em; color: #444; text-align: justify; line-height: 1.8; margin-bottom: 20px; }
         .content-section ul { font-size: 1.15em; color: #444; line-height: 1.8; list-style: none; padding: 0; margin-top: 15px; margin-bottom: 25px; }
@@ -62,36 +62,41 @@
         
         .content-section h3 { margin-top: 40px; margin-bottom: 20px; font-size: 1.3em; color: #1a5f4a; border-bottom: 2px solid #e2f0ea; padding-bottom: 10px; }
 
-        .disclaimer-box { background: #fdf2f2; border-left: 4px solid #a83232; padding: 25px; margin-top: 40px; margin-bottom: 40px; font-family: 'Arial', sans-serif; color: #333; }
+        .disclaimer-box { background: #fdf2f2; border-left: 4px solid #a83232; padding: 25px; margin-top: 40px; margin-bottom: 40px; font-family: 'Arial', sans-serif; color: #333; box-sizing: border-box; }
         .disclaimer-box p { font-size: 1.05em; text-align: left; color: #333; margin-bottom: 0; }
 
-        /* STYLE FORMULARZA WNIOSKU */
-        .dpir-form-container { background: #f4f8f6; padding: 40px; border-radius: 8px; border-left: 5px solid #D4AF37; margin-top: 50px; font-family: 'Arial', sans-serif; text-align: left; }
+        /* STYLE FORMULARZA WNIOSKU - NAPRAWA RWD */
+        .dpir-form-container { background: #f4f8f6; padding: 40px; border-radius: 8px; border-left: 5px solid #D4AF37; margin-top: 50px; font-family: 'Arial', sans-serif; text-align: left; box-sizing: border-box; width: 100%; max-width: 100%; }
         .dpir-form-container h3 { color: #133a2d; margin-top: 0; margin-bottom: 15px; border-bottom: none; padding-bottom: 0; font-size: 1.6em; }
         .dpir-form-container p.desc { color: #555; margin-bottom: 25px; font-size: 1em; text-align: left; }
         .dpir-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .dpir-form-group { display: flex; flex-direction: column; }
+        .dpir-form-group { display: flex; flex-direction: column; width: 100%; box-sizing: border-box; }
         .dpir-form-group.full-width { grid-column: 1 / -1; }
         .dpir-form-group label { font-size: 0.9em; color: #333; margin-bottom: 5px; font-weight: bold; }
-        .dpir-form-group input, .dpir-form-group select, .dpir-form-group textarea { padding: 12px 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; font-family: 'Arial', sans-serif; transition: border-color 0.3s; }
+        
+        /* Dodano box-sizing dla inputów */
+        .dpir-form-group input, .dpir-form-group select, .dpir-form-group textarea { padding: 12px 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; font-family: 'Arial', sans-serif; transition: border-color 0.3s; box-sizing: border-box; width: 100%; max-width: 100%; }
         .dpir-form-group input:focus, .dpir-form-group select:focus, .dpir-form-group textarea:focus { border-color: #1a5f4a; outline: none; box-shadow: 0 0 5px rgba(26, 95, 74, 0.2); }
         .dpir-form-group textarea { resize: vertical; min-height: 100px; }
         
+        /* Reset szerokości dla radio i checkbox */
+        .dpir-form-group input[type="radio"], .dpir-form-group input[type="checkbox"] { width: auto; padding: 0; }
+        
         .dpir-form-group.checkbox-group { flex-direction: row; gap: 15px; align-items: flex-start; margin-top: 10px; }
-        .dpir-form-group.checkbox-group input { margin-top: 5px; cursor: pointer; }
+        .dpir-form-group.checkbox-group input { margin-top: 5px; cursor: pointer; width: auto; transform: scale(1.2); }
         .dpir-form-group.checkbox-group label { font-weight: normal; font-size: 0.85em; color: #555; text-align: justify; line-height: 1.5; margin-bottom: 0; cursor: pointer; }
         
-        .submit-btn { background: #133a2d; color: #fff; border: none; padding: 15px 30px; font-size: 1.1em; border-radius: 4px; cursor: pointer; transition: background 0.3s; font-weight: bold; width: 100%; margin-top: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .submit-btn { background: #133a2d; color: #fff; border: none; padding: 15px 30px; font-size: 1.1em; border-radius: 4px; cursor: pointer; transition: background 0.3s; font-weight: bold; width: 100%; margin-top: 15px; text-transform: uppercase; letter-spacing: 1px; box-sizing: border-box; }
         .submit-btn:hover { background: #D4AF37; color: #133a2d; }
 
         /* KLAWISZE */
-        .btn-outline { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; border: 2px solid #D4AF37; color: #133a2d; transition: all 0.3s ease; }
+        .btn-outline { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; border: 2px solid #D4AF37; color: #133a2d; transition: all 0.3s ease; box-sizing: border-box; }
         .btn-outline:hover { background: #D4AF37; color: #fff; }
         
-        .btn-primary { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #D4AF37; color: #133a2d; transition: background 0.3s ease, color 0.3s ease; }
+        .btn-primary { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #D4AF37; color: #133a2d; transition: background 0.3s ease, color 0.3s ease; box-sizing: border-box; }
         .btn-primary:hover { background: #b5952f; color: #fff; }
         
-        .btn-solid-dark { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #133a2d; color: #fff; border: 2px solid #133a2d; transition: all 0.3s ease; }
+        .btn-solid-dark { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #133a2d; color: #fff; border: 2px solid #133a2d; transition: all 0.3s ease; box-sizing: border-box; }
         .btn-solid-dark:hover { background: #D4AF37; border-color: #D4AF37; color: #133a2d; }
 
         footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; margin-top: 50px; }
@@ -99,11 +104,11 @@
         footer a:hover { color: #fff; text-decoration: underline; }
         
         @media (max-width: 768px) { 
-            .content-section { padding: 30px 20px; }
+            .content-section { padding: 30px 20px; width: 100%; }
             .content-section p, .content-section ul li { text-align: left; font-size: 1.05em; }
             .header-titles h1 { font-size: 1.8em; }
             .dpir-form-grid { grid-template-columns: 1fr; }
-            .dpir-form-container { padding: 25px 20px; }
+            .dpir-form-container { padding: 25px 20px; width: 100%; }
         }
     </style>
 </head>
@@ -221,10 +226,10 @@
                         <label style="margin-bottom: 10px;">Kto wypełnia ten wniosek?</label>
                         <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin-top: 0; margin-bottom: 10px;">
                             <label style="font-weight: normal; cursor: pointer; display: flex; align-items: center; gap: 8px;">
-                                <input type="radio" name="Kto zgłasza" value="Podopieczny" id="zglasza_sam" required style="margin: 0; transform: scale(1.2);"> Zgłaszam wniosek dla siebie (jestem Podopiecznym)
+                                <input type="radio" name="Kto zgłasza" value="Podopieczny" id="zglasza_sam" required style="margin: 0; transform: scale(1.2); width: auto;"> Zgłaszam wniosek dla siebie (jestem Podopiecznym)
                             </label>
                             <label style="font-weight: normal; cursor: pointer; display: flex; align-items: center; gap: 8px;">
-                                <input type="radio" name="Kto zgłasza" value="Inna osoba" id="zglasza_inna" required style="margin: 0; transform: scale(1.2);"> Zgłaszam wniosek w imieniu innej osoby
+                                <input type="radio" name="Kto zgłasza" value="Inna osoba" id="zglasza_inna" required style="margin: 0; transform: scale(1.2); width: auto;"> Zgłaszam wniosek w imieniu innej osoby
                             </label>
                         </div>
                     </div>
@@ -283,7 +288,7 @@
 
         <div style="display: flex; gap: 30px; margin-top: 50px; flex-wrap: wrap;">
             
-            <div style="flex: 1; min-width: 280px; background: #f4f8f6; padding: 35px 25px; border-radius: 8px; border-top: 4px solid #D4AF37; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div style="flex: 1; min-width: 280px; background: #f4f8f6; padding: 35px 25px; border-radius: 8px; border-top: 4px solid #D4AF37; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: center; align-items: center; box-sizing: border-box;">
                 <h3 style="margin-top: 0; margin-bottom: 15px; border-bottom: none; padding-bottom: 0;">Masz pytania?</h3>
                 <p style="font-size: 1.05em; color: #555; margin-bottom: 25px; line-height: 1.5; text-align: center;">
                     Skontaktuj się z nami przed złożeniem wniosku. Chętnie odpowiemy na wszystkie pytania i rozwiejemy wątpliwości.
@@ -291,7 +296,7 @@
                 <a href="mailto:kontakt@ostatniawarta.pl" class="btn-primary" style="margin-top: auto;">Napisz do nas</a>
             </div>
 
-            <div style="flex: 1; min-width: 280px; background: #fff; padding: 35px 25px; border-radius: 8px; border-top: 4px solid #1a5f4a; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+            <div style="flex: 1; min-width: 280px; background: #fff; padding: 35px 25px; border-radius: 8px; border-top: 4px solid #1a5f4a; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; box-sizing: border-box;">
                 <h3 style="margin-top: 0; margin-bottom: 15px; border-bottom: none; color: #1a5f4a; padding-bottom: 0;">Wypożyczalnia sprzętu (Wkrótce)</h3>
                 <p style="font-size: 0.95em; color: #555; margin-bottom: 0; line-height: 1.6; text-align: justify; font-family: 'Arial', sans-serif;">
                     Niebawem ruszamy z nowatorską wypożyczalnią sprzętu rehabilitacyjnego! Odchodzimy od standardowych rozwiązań na rzecz innowacji. Pracujemy nad pozyskaniem funduszy na wdrożenie m.in. lekkich egzoszkieletów medycznych wspomagających chód po udarach, systemów wirtualnej rzeczywistości (VR) oraz inteligentnych sensorów ruchu. Przenosimy domową neurorehabilitację w XXI wiek!
