@@ -14,11 +14,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zostań wolontariuszem – dołącz do naszej warty | Fundacja Ostatnia Warta</title>
     
-    <meta name="description" content="Zostań wolontariuszem Fundacji Ostatnia Warta. Pomagaj osobom samotnym, chorym i umierającym poprzez swoją obecność. Pobierz niezbędne dokumenty rekrutacyjne.">
+    <meta name="description" content="Zostań wolontariuszem Fundacji Ostatnia Warta. Pomagaj osobom samotnym, chorym, seniorom i osobom z niepełnosprawnościami poprzez swoją obecność. Wypełnij prosty formularz online.">
     <meta name="robots" content="index, follow">
 
     <meta property="og:title" content="Zostań Wolontariuszem | Fundacja Ostatnia Warta" />
-    <meta property="og:description" content="Naszym zadaniem nie jest leczenie. Naszym zadaniem jest być. Dołącz do wolontariatu obecności i wspieraj osoby u kresu życia." />
+    <meta property="og:description" content="Naszym zadaniem nie jest leczenie. Naszym zadaniem jest być. Dołącz do wolontariatu obecności i wspieraj potrzebujących." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ostatniawarta.pl/zwol.html" />
     <meta property="og:image" content="https://ostatniawarta.pl/logo.png" />
@@ -57,19 +57,36 @@
         .content-section ul { font-size: 1.15em; color: #444; line-height: 1.8; list-style: none; padding: 0; margin-top: 15px; margin-bottom: 25px; }
         .content-section ul li { margin-bottom: 12px; padding-left: 25px; position: relative; text-align: justify; }
         .content-section ul li::before { content: "•"; color: #D4AF37; font-weight: bold; position: absolute; left: 0; top: 0; font-size: 1.2em;}
-        
-        /* Lista dokumentów */
-        .docs-list li::before { content: "📄" !important; font-size: 1em !important; }
-        .docs-list a { font-weight: bold; text-decoration: underline; transition: color 0.3s; }
-        .docs-list a:hover { color: #D4AF37; }
 
         .content-section h3 { margin-top: 40px; margin-bottom: 20px; font-size: 1.3em; color: #1a5f4a; border-bottom: 2px solid #e2f0ea; padding-bottom: 10px; }
+
+        /* STYLE FORMULARZA WOLONTARIATU */
+        .vol-form-container { background: #f4f8f6; padding: 40px; border-radius: 8px; border-left: 5px solid #D4AF37; margin-top: 40px; font-family: 'Arial', sans-serif; text-align: left; }
+        .vol-form-container h3 { color: #133a2d; margin-top: 0; margin-bottom: 15px; border-bottom: none; padding-bottom: 0; font-size: 1.6em; }
+        .vol-form-container p.desc { color: #555; margin-bottom: 25px; font-size: 1em; text-align: left; }
+        
+        .vol-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .vol-form-group { display: flex; flex-direction: column; }
+        .vol-form-group.full-width { grid-column: 1 / -1; }
+        .vol-form-group label { font-size: 0.9em; color: #333; margin-bottom: 5px; font-weight: bold; }
+        .vol-form-group input, .vol-form-group select, .vol-form-group textarea { padding: 12px 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; font-family: 'Arial', sans-serif; transition: border-color 0.3s; }
+        .vol-form-group input:focus, .vol-form-group select:focus, .vol-form-group textarea:focus { border-color: #1a5f4a; outline: none; box-shadow: 0 0 5px rgba(26, 95, 74, 0.2); }
+        .vol-form-group textarea { resize: vertical; min-height: 100px; }
+        .vol-form-group.radio-group { flex-direction: row; gap: 20px; align-items: center; margin-top: 5px; }
+        .vol-form-group.radio-group label { font-weight: normal; margin-bottom: 0; display: flex; align-items: center; gap: 5px; cursor: pointer; }
+        
+        .alert-box { background: #fff3f3; border-left: 4px solid #a83232; padding: 15px; margin: 20px 0; border-radius: 0 4px 4px 0; }
+        .alert-box p { font-size: 0.95em; color: #a83232; margin: 0; text-align: left; }
+
+        .submit-btn { background: #133a2d; color: #fff; border: none; padding: 15px 30px; font-size: 1.1em; border-radius: 4px; cursor: pointer; transition: background 0.3s; font-weight: bold; width: 100%; margin-top: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .submit-btn:hover { background: #D4AF37; color: #133a2d; }
 
         .btn-outline { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; border: 2px solid #D4AF37; color: #133a2d; transition: all 0.3s ease; }
         .btn-outline:hover { background: #D4AF37; color: #fff; }
         
-        .btn-primary { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #D4AF37; color: #133a2d; transition: background 0.3s ease, color 0.3s ease; }
-        .btn-primary:hover { background: #b5952f; color: #fff; }
+        /* Dodatkowy styl dla przycisku dokumentów */
+        .btn-solid-dark { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #133a2d; color: #fff; border: 2px solid #133a2d; transition: all 0.3s ease; }
+        .btn-solid-dark:hover { background: #D4AF37; border-color: #D4AF37; color: #133a2d; }
 
         footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; margin-top: 50px; }
         footer a { color: #D4AF37; text-decoration: none; }
@@ -79,6 +96,8 @@
             .content-section { padding: 30px 20px; }
             .content-section p, .content-section ul li { text-align: left; font-size: 1.05em; }
             .header-titles h1 { font-size: 1.8em; }
+            .vol-form-grid { grid-template-columns: 1fr; }
+            .vol-form-container { padding: 25px 20px; }
         }
     </style>
 </head>
@@ -118,37 +137,94 @@
 <section class="container">
     <div class="content-section">
         
-        <p>Misją Fundacji Ostatnia Warta jest obecność przy drugim człowieku w najtrudniejszych chwilach życia – w samotności, terminalnej chorobie i w procesie odchodzenia. To szlachetne wyzwanie możemy realizować wyłącznie dzięki wsparciu ludzi o wielkich sercach. Fundacja „Ostatnia Warta” tworzy w Polsce unikalny wolontariat obecności przy osobach samotnych, chorych i umierających.</p>
-        <p>Naszym zadaniem nie jest leczenie.<br><strong>Naszym zadaniem jest być.</strong></p>
-        <p>Czasem oznacza to rozmowę. Czasem ciszę. Czasem kilka godzin spokojnego czuwania przy łóżku chorego.</p>
+        <p>Misją Fundacji Ostatnia Warta jest obecność przy drugim człowieku w najtrudniejszych chwilach życia. Wspieramy nie tylko osoby przewlekle i terminalnie chore, ale także samotnych seniorów oraz osoby zmagające się z niepełnosprawnościami. To szlachetne wyzwanie możemy realizować wyłącznie dzięki wsparciu ludzi o wielkich sercach.</p>
+        <p>Naszym zadaniem nie jest leczenie medyczne.<br><strong>Naszym zadaniem jest być.</strong></p>
+        <p>Czasem oznacza to rozmowę i wspólne spędzenie czasu. Czasem pomoc w organizacji codziennych spraw lub rehabilitacji społecznej. A czasem to po prostu ciche czuwanie przy łóżku chorego.</p>
 
-        <h3>Kogo szukamy</h3>
+        <h3>Kogo szukamy?</h3>
         <p>Zapraszamy osoby, które:</p>
         <ul>
-            <li>chcą pomagać w sposób odpowiedzialny i spokojny</li>
-            <li>potrafią okazać empatię i szacunek drugiemu człowiekowi</li>
-            <li>są gotowe poświęcić część swojego wolnego czasu na wolontariat</li>
+            <li>chcą pomagać w sposób odpowiedzialny, zrównoważony i spokojny,</li>
+            <li>potrafią okazać empatię i głęboki szacunek drugiemu człowiekowi,</li>
+            <li>są gotowe poświęcić ułamek swojego wolnego czasu na regularny wolontariat.</li>
         </ul>
-        <p><strong>Nie wymagamy wykształcenia medycznego.</strong> Każdy wolontariusz przechodzi przygotowanie do swojej nowej roli w ramach programu edukacyjnego Fundacji.</p>
+        <p><strong>Nie wymagamy wykształcenia medycznego.</strong> Każdy wolontariusz przechodzi odpowiednie przygotowanie do swojej nowej roli w ramach darmowych programów edukacyjnych Fundacji.</p>
 
-        <h3>Jak zostać wolontariuszem</h3>
-        <p>Proces dołączenia do naszej Warty obejmuje zapoznanie się z kluczowymi zasadami działania fundacji oraz wypełnienie podstawowych dokumentów rekrutacyjnych.</p>
+        <h3>Jak dołączyć do Warty?</h3>
+        <p>Aby ułatwić proces, zrezygnowaliśmy z papierowych formularzy na pierwszym etapie rekrutacji. <strong>Wystarczy, że wypełnisz poniższy krótki kwestionariusz online.</strong> Skontaktujemy się z Tobą, aby umówić się na luźną rozmowę. Wszelkie formalności i dokumenty prawne (Porozumienie, Zasady Poufności) podpiszemy dopiero po obustronnej decyzji o rozpoczęciu współpracy.</p>
 
-        <h3>Dokumenty rekrutacyjne</h3>
-        <ul class="docs-list">
-            <li><a href="02_01_Kwestionariusz_Wolontariusza.pdf" target="_blank">Kwestionariusz Wolontariusza</a></li>
-            <li><a href="02_02_Porozumienie_Wolontariat.pdf" target="_blank">Wzór Porozumienia o Wolontariacie</a></li>
-            <li><a href="02_03_Zasady_Swiadczenia_Pomocy.pdf" target="_blank">Zasady Świadczenia Pomocy</a></li>
-            <li><a href="02_04_Zasady_Zachowania_Poufnosci.pdf" target="_blank">Zasady Zachowania Poufności</a></li>
-            <li><a href="02_05_Klauzula_RODO_Wolontariusze.pdf" target="_blank">Klauzula RODO Wolontariusza</a></li>
-        </ul>
+        <div class="vol-form-container">
+            <h3>Kwestionariusz Kandydata</h3>
+            <p class="desc">Wypełnij poniższe dane, abyśmy mogli lepiej Cię poznać.</p>
+            
+            <form action="https://formspree.io/f/mjgpppzb" method="POST">
+                <div class="vol-form-grid">
+                    
+                    <div class="vol-form-group">
+                        <label for="name">Imię i nazwisko</label>
+                        <input type="text" id="name" name="Imię i nazwisko" required placeholder="Jan Kowalski">
+                    </div>
+                    
+                    <div class="vol-form-group">
+                        <label for="age">Rok urodzenia</label>
+                        <input type="number" id="age" name="Rok urodzenia" required placeholder="np. 1990">
+                    </div>
+                    
+                    <div class="vol-form-group">
+                        <label for="email">Adres e-mail</label>
+                        <input type="email" id="email" name="E-mail" required placeholder="twoj@email.pl">
+                    </div>
+                    
+                    <div class="vol-form-group">
+                        <label for="phone">Numer telefonu</label>
+                        <input type="tel" id="phone" name="Telefon" required placeholder="+48 000 000 000">
+                    </div>
 
-        <div style="background: #f4f8f6; padding: 35px 25px; border-radius: 8px; border-top: 4px solid #D4AF37; margin-top: 50px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-            <h3 style="margin-top: 0; margin-bottom: 15px; border-bottom: none;">Masz pytania?</h3>
-            <p style="font-size: 1.05em; color: #555; margin-bottom: 25px; line-height: 1.5;">
-                Chcesz dowiedzieć się więcej, zanim wypełnisz dokumenty? Skontaktuj się z nami.
-            </p>
-            <a href="mailto:kontakt@ostatniawarta.pl" class="btn-primary">kontakt@ostatniawarta.pl</a>
+                    <div class="vol-form-group full-width">
+                        <label for="profession">Obecny zawód / Kierunek studiów (lub szkoła)</label>
+                        <input type="text" id="profession" name="Zawód/Studia" required placeholder="np. Księgowa, Student psychologii">
+                    </div>
+
+                    <div class="vol-form-group full-width">
+                        <label for="motivation">Dlaczego chcesz zostać wolontariuszem? (Krótka motywacja)</label>
+                        <textarea id="motivation" name="Motywacja" required placeholder="Napisz kilka słów o tym, co skłoniło Cię do kontaktu z nami..."></textarea>
+                    </div>
+
+                    <div class="vol-form-group full-width">
+                        <label for="experience">Czy masz wcześniejsze doświadczenie w opiece lub wolontariacie?</label>
+                        <textarea id="experience" name="Doświadczenie" placeholder="Brak doświadczenia nie jest przeszkodą! Jeśli jednak jakieś masz, napisz o nim krótko..."></textarea>
+                    </div>
+
+                    <div class="vol-form-group full-width">
+                        <label>Mobilność i transport (Często dojeżdżamy do podopiecznych)</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="Prawo jazdy i auto" value="TAK" required> Posiadam prawo jazdy kat. B i dostęp do auta</label>
+                            <label><input type="radio" name="Prawo jazdy i auto" value="NIE"> Korzystam tylko z komunikacji miejskiej</label>
+                        </div>
+                    </div>
+
+                    <div class="vol-form-group full-width">
+                        <label for="time">Jaką ilością czasu dysponujesz?</label>
+                        <input type="text" id="time" name="Dyspozycyjność" required placeholder="np. 2-3 godziny w tygodniu popołudniami, tylko weekendy itp.">
+                    </div>
+
+                    <div class="vol-form-group full-width">
+                        <div class="alert-box">
+                            <p><strong>Ważne pytanie dotyczące bezpieczeństwa emocjonalnego:</strong><br> Praca fundacji niesie duży ładunek emocjonalny. Z troski o Twoje zdrowie psychiczne musimy zapytać: <em>Czy w ciągu ostatnich 12 miesięcy doświadczyłeś/aś straty kogoś bliskiego i przeżywasz żałobę?</em></p>
+                            <div class="radio-group" style="margin-top: 10px;">
+                                <label><input type="radio" name="Żałoba w ostatnich 12 miesiącach" value="TAK" required> TAK</label>
+                                <label><input type="radio" name="Żałoba w ostatnich 12 miesiącach" value="NIE"> NIE</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="vol-form-group full-width">
+                        <p style="font-size: 0.85em; color: #777; line-height: 1.4; margin-bottom: 0;">Wysyłając formularz, wyrażasz zgodę na przetwarzanie danych osobowych przez Fundację "Ostatnia Warta" na potrzeby rekrutacji wolontariuszy.</p>
+                        <button type="submit" class="submit-btn">Wyślij Zgłoszenie</button>
+                    </div>
+                    
+                </div>
+            </form>
         </div>
 
         <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #eee; text-align: center;">
@@ -158,6 +234,7 @@
                 <a href="sservice.html" class="btn-outline" style="margin-top: 10px;">Sitting Service</a>
                 <a href="sic.html" class="btn-outline" style="margin-top: 10px;">Samotność i Choroba</a>
                 <a href="gst.html" class="btn-outline" style="margin-top: 10px;">Gdańska Szkoła Towarzyszenia</a>
+                <a href="dokumenty.html" class="btn-solid-dark" style="margin-top: 10px;">📄 Dokumenty do pobrania</a>
             </div>
         </div>
 

@@ -3,10 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z pamiętnika wolontariusza | Fundacja Ostatnia Warta</title>
+    <title>Dokumenty do pobrania | Fundacja Ostatnia Warta</title>
     
-    <link rel="canonical" href="https://ostatniawarta.pl/blog.html" />
+    <meta name="description" content="Centralna baza dokumentów Fundacji Ostatnia Warta. Pobierz wnioski o objęcie opieką, regulaminy, kwestionariusze dla wolontariuszy oraz oferty CSR.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Dokumenty do pobrania | Fundacja Ostatnia Warta" />
+    <meta property="og:description" content="Wszystkie formularze, regulaminy i wnioski Fundacji Ostatnia Warta w jednym miejscu." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ostatniawarta.pl/dokumenty.html" />
+    <meta property="og:image" content="https://ostatniawarta.pl/logo.png" />
+    
+    <link rel="canonical" href="https://ostatniawarta.pl/dokumenty.html" />
     <link rel="icon" type="image/png" href="logo.png">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3VQ06C7HQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z3VQ06C7HQ');
+    </script>
 
     <style>
         /* Podstawowe style i reset */
@@ -41,20 +59,24 @@
         nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
         nav ul li a:hover { color: #D4AF37; }
 
-        /* BLOG GRID I KAFELKI */
-        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 20px; }
+        /* SEKCJE DOKUMENTÓW */
+        .docs-intro { text-align: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto; font-size: 1.1em; color: #555; line-height: 1.6; }
         
-        .blog-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1a5f4a; padding: 30px; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; box-sizing: border-box; height: 100%; }
-        .blog-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .doc-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1a5f4a; padding: 40px; margin-bottom: 30px; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .doc-card:nth-child(even) { border-top-color: #D4AF37; } /* Złoty border dla co drugiego bloku */
         
-        .blog-card h3 { margin-top: 0; font-size: 1.4em; line-height: 1.3; font-family: 'Georgia', serif; margin-bottom: 15px; color: #133a2d; }
-        .blog-card p.excerpt { font-family: 'Arial', sans-serif; font-size: 0.95em; color: #666; line-height: 1.6; flex-grow: 1; margin-bottom: 25px; text-align: left; }
-        
-        .read-more { display: inline-block; padding: 10px 20px; background: #e2f0ea; color: #1a5f4a; font-family: 'Arial', sans-serif; font-weight: bold; border-radius: 4px; text-align: center; transition: 0.3s; width: fit-content; align-self: flex-start; }
-        .read-more:hover { background: #1a5f4a; color: #fff; }
+        .doc-card h3 { margin-top: 0; font-size: 1.6em; font-family: 'Georgia', serif; margin-bottom: 20px; color: #133a2d; border-bottom: 2px solid #e2f0ea; padding-bottom: 10px; }
+        .doc-card p { font-family: 'Arial', sans-serif; font-size: 1em; color: #555; margin-bottom: 20px; }
 
-        .btn-dark { border-color: #fff; color: #fff; background: transparent; display: inline-block; padding: 10px 20px; margin-top: 20px; border: 2px solid #D4AF37; color: #D4AF37; font-weight: bold; border-radius: 4px; font-family: 'Arial', sans-serif; transition: 0.3s; }
-        .btn-dark:hover { background: #D4AF37; color: #133a2d; }
+        /* LISTA PLIKÓW */
+        .docs-list { list-style: none; padding: 0; margin: 0; font-family: 'Arial', sans-serif; font-size: 1.05em; line-height: 1.8; }
+        .docs-list li { margin-bottom: 15px; padding-left: 30px; position: relative; }
+        .docs-list li::before { content: "📄"; position: absolute; left: 0; top: 0; }
+        .docs-list a { font-weight: bold; text-decoration: underline; color: #1a5f4a; transition: color 0.3s; }
+        .docs-list a:hover { color: #D4AF37; }
+
+        .btn-dark { border-color: #fff; color: #fff; background: transparent; display: inline-block; padding: 10px 20px; margin-top: 20px; border: 2px solid #ccc; color: #555; font-weight: bold; border-radius: 4px; font-family: 'Arial', sans-serif; transition: 0.3s; }
+        .btn-dark:hover { background: #eee; color: #333; border-color: #ccc; }
 
         footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; margin-top: 40px; }
         footer a { color: #D4AF37; text-decoration: none; }
@@ -62,7 +84,7 @@
         
         @media (max-width: 768px) { 
             .header-titles h1 { font-size: 1.8em; }
-            .blog-card { padding: 20px; }
+            .doc-card { padding: 25px 20px; }
         }
     </style>
 </head>
@@ -83,8 +105,8 @@
         </div>
         
         <div class="header-titles">
-            <h1>Z pamiętnika wolontariusza</h1>
-            <h2>Historie, które napisało życie</h2>
+            <h1>Dokumenty do pobrania</h1>
+            <h2>Wszystkie formularze, regulaminy i wnioski w jednym miejscu</h2>
         </div>
 
         <nav>
@@ -101,50 +123,43 @@
 
 <section class="container">
     
-    <div style="text-align: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
-        <p style="font-size: 1.1em; color: #555; line-height: 1.6; font-style: italic;">
-            Za każdą darowizną i każdym dyżurem kryje się prawdziwy człowiek. Poznaj wstrząsające, piękne i skłaniające do refleksji historie z naszej codziennej posługi przy łóżkach chorych i samotnych. 
+    <div class="docs-intro">
+        <p>
+            Cenimy Twój czas i stawiamy na pełną transparentność. Poniżej znajdziesz wszystkie obowiązujące dokumenty Fundacji „Ostatnia Warta”, podzielone na kategorie. Większość spraw (takich jak zgłoszenia wolontariackie czy wnioski o pomoc) możesz zainicjować poprzez formularze online na dedykowanych podstronach, ale jeśli wolisz formę tradycyjną (drukowaną) lub potrzebujesz dokumentów do księgowości – wszystkie aktualne pliki PDF znajdują się tutaj.
         </p>
     </div>
 
-    <div class="blog-grid">
-        
-        <div class="blog-card">
-            <h3>Spowiedź wolontariusza o worku kamieni, który każdy z nas niesie przez życie</h3>
-            <p class="excerpt">Niektóre decyzje w życiu nie rodzą się z planu. Nie pojawiają się przy biurku, w kalendarzu ani w arkuszu Excela. Rodzą się w ciszy. W tej szczególnej ciszy, która zostaje po kimś bliskim. Czasem myślę, że każdy człowiek idzie przez życie z workiem przerzuconym przez ramię...</p>
-            <a href="blog1.html" class="read-more">Czytaj dalej &rarr;</a>
-        </div>
+    <div class="doc-card">
+        <h3>Dla Podopiecznych i ich Rodzin</h3>
+        <p>Dokumenty wymagane w procesie wnioskowania o wsparcie niemedyczne (wolontaryjne) lub rzeczowo-finansowe.</p>
+        <ul class="docs-list">
+            <li><a href="01_01_Wniosek_o_objecie_opieka.pdf" target="_blank">[PDF] Wniosek o objęcie opieką (Wersja papierowa)</a></li>
+            <li><a href="01_03_Zasady_wspolpracy.pdf" target="_blank">[PDF] Zasady współpracy z Fundacją</a></li>
+            <li><a href="01_02A_Upowaznienie_szpitalne.pdf" target="_blank">[PDF] Upoważnienie – Placówka Medyczna</a></li>
+            <li><a href="01_02B_Upowaznienie_Opiekun.pdf" target="_blank">[PDF] Upoważnienie – Opiekun Faktyczny</a></li>
+            <li><a href="01_04_Klauzula_RODO_Podopieczni.pdf" target="_blank">[PDF] Klauzula informacyjna RODO (Podopieczni)</a></li>
+        </ul>
+    </div>
 
-        <div class="blog-card">
-            <h3>Gdy człowiek jeszcze żyje, a już ogląda się jego mieszkanie</h3>
-            <p class="excerpt">W chwili, gdy pan Jan leżał w swoim łóżku, ktoś na korytarzu przez telefon ustalał szczegóły sprzedaży jego mieszkania. Nie była to rozmowa o przyszłości. To była rozmowa o czasie po nim. W pokoju pachniało lekami i starym papierem...</p>
-            <a href="blog2.html" class="read-more">Czytaj dalej &rarr;</a>
-        </div>
+    <div class="doc-card">
+        <h3>Zostań Wolontariuszem</h3>
+        <p>Dokumenty rekrutacyjne i prawne określające zasady pełnienia warty przez wolontariuszy Fundacji.</p>
+        <ul class="docs-list">
+            <li><a href="02_01_Kwestionariusz_Wolontariusza.pdf" target="_blank">[PDF] Kwestionariusz Kandydata na Wolontariusza</a></li>
+            <li><a href="02_02_Porozumienie_Wolontariat.pdf" target="_blank">[PDF] Wzór Porozumienia o Wolontariacie</a></li>
+            <li><a href="02_03_Zasady_Swiadczenia_Pomocy.pdf" target="_blank">[PDF] Zasady Świadczenia Pomocy przez Wolontariuszy</a></li>
+            <li><a href="02_04_Zasady_Zachowania_Poufnosci.pdf" target="_blank">[PDF] Oświadczenie – Zasady Zachowania Poufności</a></li>
+            <li><a href="02_05_Klauzula_RODO_Wolontariusze.pdf" target="_blank">[PDF] Klauzula informacyjna RODO (Wolontariusze)</a></li>
+        </ul>
+    </div>
 
-        <div class="blog-card">
-            <h3>„Wy mnie tam tylko zawieźcie”. O epidemii samotności i wolontariuszce, która leczy ją herbatą</h3>
-            <p class="excerpt">– Wy mnie tam tylko zawieźcie i odbierzcie. Powiedziała to z takim spokojem, jakby chodziło o podwiezienie do sklepu po bułki. Ma siedemdziesiąt lat, chore biodro i ogromną potrzebę rozmowy z drugim człowiekiem...</p>
-            <a href="blog3.html" class="read-more">Czytaj dalej &rarr;</a>
-        </div>
-
-        <div class="blog-card">
-            <h3>„Nie podajemy leków. Podajemy dłoń.” Dlaczego czasem zamykają nam drzwi przed nosem?</h3>
-            <p class="excerpt">Czasem pomoc wygląda bardzo zwyczajnie. Nie ma w niej aparatury medycznej, karetek ani białych fartuchów. Jest tylko krzesło przy łóżku. Cicha rozmowa. I czyjaś dłoń, którą można ścisnąć, kiedy robi się naprawdę trudno...</p>
-            <a href="blog4.html" class="read-more">Czytaj dalej &rarr;</a>
-        </div>
-
-        <div class="blog-card">
-            <h3>W Wielkanoc zdejmujemy drzwi z zawiasów, żeby zrobić większy stół</h3>
-            <p class="excerpt">Wielkanoc to czas stołów. Dużych, małych, rodzinnych, czasem trochę chaotycznych. Z talerzami, których zawsze jest za dużo, z jajkami dzielonymi na pół, z rozmowami, które przeciągają się do późnego popołudnia. Ale jest też inny świat świąt...</p>
-            <a href="blog5.html" class="read-more">Czytaj dalej &rarr;</a>
-        </div>
-
-        <div class="blog-card">
-            <h3>Cisza przed świtem</h3>
-            <p class="excerpt">Czasem największą pomocą, jaką można komuś dać, jest po prostu czuwać. Nie lekarstwo. Nie skomplikowana aparatura. Nie wielkie słowa. Po prostu obecność. Są takie dyżury, które zostają z człowiekiem na długo...</p>
-            <a href="blog6.html" class="read-more">Czytaj dalej &rarr;</a>
-        </div>
-
+    <div class="doc-card">
+        <h3>Partnerstwo Biznesowe i CSR</h3>
+        <p>Pliki ułatwiające przedstawienie naszej misji Zarządom Firm oraz wzory umów dla działów księgowości.</p>
+        <ul class="docs-list">
+            <li><a href="03_02_Oferta_Wspolpracy_CSR.pdf" target="_blank">[PDF] Oferta Współpracy dla Firm (Prezentacja Zarządcza)</a></li>
+            <li><a href="03_01_Wzor_Umowy_Darowizny.pdf" target="_blank">[PDF] Wzór Umowy Darowizny</a></li>
+        </ul>
     </div>
 
     <div style="text-align: center; margin-top: 50px;">

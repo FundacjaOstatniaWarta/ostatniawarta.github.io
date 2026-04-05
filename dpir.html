@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dla Podopiecznych i ich Rodzin – jak pomagamy? | Fundacja Ostatnia Warta</title>
     
-    <meta name="description" content="Procedura objęcia opieką przez Fundację Ostatnia Warta. Dowiedz się, jak pomagamy osobom chorym i ich rodzinom oraz pobierz niezbędne dokumenty do wniosku.">
+    <meta name="description" content="Procedura objęcia opieką przez Fundację Ostatnia Warta. Dowiedz się, jak pomagamy osobom chorym i ich rodzinom oraz złóż wniosek o wsparcie online.">
     <meta name="robots" content="index, follow">
 
     <meta property="og:title" content="Dla Podopiecznych i ich Rodzin – wsparcie w chorobie" />
@@ -58,21 +58,38 @@
         .content-section ul li { margin-bottom: 12px; padding-left: 25px; position: relative; text-align: justify; }
         .content-section ul li::before { content: "•"; color: #D4AF37; font-weight: bold; position: absolute; left: 0; top: 0; font-size: 1.2em;}
         
-        /* Lista dokumentów */
-        .docs-list li::before { content: "📄" !important; font-size: 1em !important; }
-        .docs-list a { font-weight: bold; text-decoration: underline; transition: color 0.3s; }
-        .docs-list a:hover { color: #D4AF37; }
-
         .content-section h3 { margin-top: 40px; margin-bottom: 20px; font-size: 1.3em; color: #1a5f4a; border-bottom: 2px solid #e2f0ea; padding-bottom: 10px; }
 
         .disclaimer-box { background: #fdf2f2; border-left: 4px solid #a83232; padding: 25px; margin-top: 40px; margin-bottom: 40px; font-family: 'Arial', sans-serif; color: #333; }
         .disclaimer-box p { font-size: 1.05em; text-align: left; color: #333; margin-bottom: 0; }
 
+        /* STYLE FORMULARZA WNIOSKU */
+        .dpir-form-container { background: #f4f8f6; padding: 40px; border-radius: 8px; border-left: 5px solid #D4AF37; margin-top: 50px; font-family: 'Arial', sans-serif; text-align: left; }
+        .dpir-form-container h3 { color: #133a2d; margin-top: 0; margin-bottom: 15px; border-bottom: none; padding-bottom: 0; font-size: 1.6em; }
+        .dpir-form-container p.desc { color: #555; margin-bottom: 25px; font-size: 1em; text-align: left; }
+        .dpir-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .dpir-form-group { display: flex; flex-direction: column; }
+        .dpir-form-group.full-width { grid-column: 1 / -1; }
+        .dpir-form-group label { font-size: 0.9em; color: #333; margin-bottom: 5px; font-weight: bold; }
+        .dpir-form-group input, .dpir-form-group select, .dpir-form-group textarea { padding: 12px 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; font-family: 'Arial', sans-serif; transition: border-color 0.3s; }
+        .dpir-form-group input:focus, .dpir-form-group select:focus, .dpir-form-group textarea:focus { border-color: #1a5f4a; outline: none; box-shadow: 0 0 5px rgba(26, 95, 74, 0.2); }
+        .dpir-form-group textarea { resize: vertical; min-height: 100px; }
+        .dpir-form-group.checkbox-group { flex-direction: row; gap: 15px; align-items: flex-start; margin-top: 10px; }
+        .dpir-form-group.checkbox-group input { margin-top: 5px; cursor: pointer; }
+        .dpir-form-group.checkbox-group label { font-weight: normal; font-size: 0.85em; color: #555; text-align: justify; line-height: 1.5; margin-bottom: 0; cursor: pointer; }
+        
+        .submit-btn { background: #133a2d; color: #fff; border: none; padding: 15px 30px; font-size: 1.1em; border-radius: 4px; cursor: pointer; transition: background 0.3s; font-weight: bold; width: 100%; margin-top: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .submit-btn:hover { background: #D4AF37; color: #133a2d; }
+
+        /* KLAWISZE */
         .btn-outline { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; border: 2px solid #D4AF37; color: #133a2d; transition: all 0.3s ease; }
         .btn-outline:hover { background: #D4AF37; color: #fff; }
         
         .btn-primary { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #D4AF37; color: #133a2d; transition: background 0.3s ease, color 0.3s ease; }
         .btn-primary:hover { background: #b5952f; color: #fff; }
+        
+        .btn-solid-dark { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #133a2d; color: #fff; border: 2px solid #133a2d; transition: all 0.3s ease; }
+        .btn-solid-dark:hover { background: #D4AF37; border-color: #D4AF37; color: #133a2d; }
 
         footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; margin-top: 50px; }
         footer a { color: #D4AF37; text-decoration: none; }
@@ -82,6 +99,8 @@
             .content-section { padding: 30px 20px; }
             .content-section p, .content-section ul li { text-align: left; font-size: 1.05em; }
             .header-titles h1 { font-size: 1.8em; }
+            .dpir-form-grid { grid-template-columns: 1fr; }
+            .dpir-form-container { padding: 25px 20px; }
         }
     </style>
 </head>
@@ -121,34 +140,112 @@
 <section class="container">
     <div class="content-section">
         
-        <p>Choroba zmienia codzienność całej rodziny.<br>Przynosi niepewność, zmęczenie i wiele trudnych decyzji.</p>
+        <p>Choroba i trudności zdrowotne zmieniają codzienność całej rodziny.<br>Przynoszą niepewność, zmęczenie i wiele trudnych decyzji.</p>
         <p>Fundacja „Ostatnia Warta” powstała po to, aby w takich chwilach nikt nie pozostawał sam.</p>
-        <p>Naszą misją jest obecność tam, gdzie człowiek najbardziej potrzebuje drugiego człowieka — w chorobie, samotności i w ostatnich chwilach życia.</p>
+        <p>Naszą misją jest obecność tam, gdzie człowiek najbardziej potrzebuje drugiego człowieka — w chorobie przewlekłej i terminalnej, zmaganiach z niepełnosprawnością, samotności seniorów oraz w ostatnich chwilach życia.</p>
 
         <h3>Jak pomagamy</h3>
         <p>W zależności od zdiagnozowanej sytuacji i potrzeb oferujemy:</p>
         <ul>
-            <li>obecność wolontariuszy przy osobie chorej</li>
-            <li>czuwanie przy łóżku chorego (<em>sitting service</em>)</li>
-            <li>wsparcie dla osób samotnych i zapomnianych</li>
-            <li>pomoc organizacyjną w trudnym czasie choroby</li>
+            <li>obecność wolontariuszy przy osobie chorej i starszej,</li>
+            <li>czuwanie przy łóżku chorego (<em>sitting service</em>),</li>
+            <li>wsparcie w rehabilitacji społecznej i aktywizacji osób z niepełnosprawnościami,</li>
+            <li>pomoc organizacyjną, a także rzeczowo-finansową (np. dofinansowanie sprzętu medycznego, rehabilitacji).</li>
         </ul>
 
         <div class="disclaimer-box">
-            <p><strong>Nasza pomoc ma charakter wyłącznie niemedyczny i zawsze tylko uzupełnia opiekę sprawowaną przez lekarzy oraz wykwalifikowany personel medyczny.</strong></p>
+            <p><strong>Nasza pomoc ma charakter wyłącznie niemedyczny i społeczny. Zawsze jedynie uzupełnia opiekę sprawowaną przez lekarzy oraz wykwalifikowany personel medyczny, nie zastępując jej.</strong></p>
         </div>
 
-        <h3>Jak zgłosić potrzebę wsparcia</h3>
-        <p>Aby umożliwić objęcie opieką przez wolontariuszy Fundacji, prosimy o zapoznanie się z wymaganymi dokumentami oraz zasadami współpracy. Stanowią one podstawę bezpiecznego, przejrzystego i odpowiedzialnego świadczenia pomocy.</p>
+        <h3>Jak zgłosić potrzebę wsparcia?</h3>
+        <p>Aby umożliwić Fundacji analizę Państwa potrzeb i szybkie udzielenie pomocy, uruchomiliśmy uproszczony formularz online. Wypełnienie go zajmie tylko kilka minut. Dokumenty formalne (takie jak Upoważnienia) będziemy podpisywać na kolejnym etapie współpracy.</p>
 
-        <h3>Dokumenty dla Podopiecznych</h3>
-        <ul class="docs-list">
-            <li><a href="01_ 1_Wniosek_o_objecie_opieka.pdf" target="_blank">Wniosek o objęcie opieką</a></li>
-            <li><a href="01_03_Zasady_wspolpracy.pdf" target="_blank">Zasady współpracy z Fundacją</a></li>
-            <li><a href="01_2A_Upowaznienie_szpitalne.pdf" target="_blank">Upoważnienie – Placówka Medyczna</a></li>
-            <li><a href="01_2B_Upowaznienie_Opiekun.pdf" target="_blank">Upoważnienie – Opiekun Faktyczny</a></li>
-            <li><a href="01_04_Klauzula_RODO_Podopieczni.pdf" target="_blank">Klauzula informacyjna RODO</a></li>
-        </ul>
+        <div class="dpir-form-container">
+            <h3>Wniosek o objęcie opieką (Online)</h3>
+            <p class="desc">Wypełnij poniższe dane, abyśmy mogli jak najszybciej przeanalizować Twoją sytuację i zaproponować odpowiednie wsparcie.</p>
+            
+            <form action="https://formspree.io/f/xjgppjkq" method="POST">
+                <div class="dpir-form-grid">
+                    
+                    <div class="dpir-form-group full-width">
+                        <h4 style="margin: 10px 0 5px 0; color: #1a5f4a;">1. Dane Pacjenta (Podopiecznego)</h4>
+                    </div>
+                    
+                    <div class="dpir-form-group">
+                        <label for="pacjent_nazwisko">Imię i nazwisko pacjenta</label>
+                        <input type="text" id="pacjent_nazwisko" name="Pacjent: Imię i nazwisko" required>
+                    </div>
+                    
+                    <div class="dpir-form-group">
+                        <label for="pacjent_pesel">PESEL pacjenta</label>
+                        <input type="text" id="pacjent_pesel" name="Pacjent: PESEL" required>
+                    </div>
+
+                    <div class="dpir-form-group full-width">
+                        <label for="pacjent_diagnoza">Rozpoznana choroba / Diagnoza / Orzeczenie o niepełnosprawności</label>
+                        <input type="text" id="pacjent_diagnoza" name="Pacjent: Diagnoza" required>
+                    </div>
+
+                    <div class="dpir-form-group">
+                        <label for="pacjent_miejsce">Miejsce przebywania (adres / szpital / hospicjum)</label>
+                        <input type="text" id="pacjent_miejsce" name="Pacjent: Miejsce przebywania" required>
+                    </div>
+
+                    <div class="dpir-form-group">
+                        <label for="pacjent_sala">Sala/pokój (jeśli dotyczy)</label>
+                        <input type="text" id="pacjent_sala" name="Pacjent: Sala/pokój">
+                    </div>
+
+                    <div class="dpir-form-group full-width">
+                        <h4 style="margin: 20px 0 5px 0; color: #1a5f4a; border-top: 1px solid #d4e2dc; padding-top: 20px;">2. Dane osoby zgłaszającej (jeśli inna niż Pacjent)</h4>
+                    </div>
+
+                    <div class="dpir-form-group">
+                        <label for="zglaszajacy_nazwisko">Imię i nazwisko zgłaszającego</label>
+                        <input type="text" id="zglaszajacy_nazwisko" name="Zgłaszający: Imię i nazwisko">
+                    </div>
+
+                    <div class="dpir-form-group">
+                        <label for="zglaszajacy_pokrewienstwo">Stopień pokrewieństwa</label>
+                        <input type="text" id="zglaszajacy_pokrewienstwo" name="Zgłaszający: Pokrewieństwo">
+                    </div>
+
+                    <div class="dpir-form-group">
+                        <label for="zglaszajacy_telefon">Numer telefonu</label>
+                        <input type="tel" id="zglaszajacy_telefon" name="Zgłaszający: Telefon" required>
+                    </div>
+
+                    <div class="dpir-form-group">
+                        <label for="zglaszajacy_email">Adres e-mail</label>
+                        <input type="email" id="zglaszajacy_email" name="Zgłaszający: E-mail" required>
+                    </div>
+
+                    <div class="dpir-form-group full-width">
+                        <h4 style="margin: 20px 0 5px 0; color: #1a5f4a; border-top: 1px solid #d4e2dc; padding-top: 20px;">3. Rodzaj oczekiwanej pomocy</h4>
+                    </div>
+
+                    <div class="dpir-form-group full-width">
+                        <label for="oczekiwana_pomoc">Krótki opis potrzeb</label>
+                        <textarea id="oczekiwana_pomoc" name="Oczekiwana pomoc" required placeholder="Napisz, jakiego wsparcia oczekujesz (obecność wolontariusza, dofinansowanie sprzętu/leków, preferowane godziny wizyt itp.)..."></textarea>
+                    </div>
+
+                    <div class="dpir-form-group full-width">
+                        <label for="uwagi">Uwagi i inne ważne informacje (Opcjonalnie)</label>
+                        <textarea id="uwagi" name="Uwagi" placeholder="Dodatkowe informacje, które mogą pomóc w lepszej organizacji wsparcia..."></textarea>
+                    </div>
+
+                    <div class="dpir-form-group full-width checkbox-group">
+                        <input type="checkbox" id="zgoda_rodo" name="Zgoda RODO" required>
+                        <label for="zgoda_rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych oraz danych dotyczących stanu zdrowia (dane wrażliwe) przez Fundację "Ostatnia Warta" z siedzibą w Gdańsku (KRS: 0001224367), w celu rozpatrzenia wniosku, organizacji oraz świadczenia pomocy statutowej. Zostałem/am poinformowany/a o prawie wglądu do swoich danych oraz prawie do wycofania zgody w dowolnym momencie.</label>
+                    </div>
+                    
+                    <div class="dpir-form-group full-width">
+                        <button type="submit" class="submit-btn">Wyślij Wniosek do Fundacji</button>
+                    </div>
+                    
+                </div>
+            </form>
+        </div>
 
         <div style="display: flex; gap: 30px; margin-top: 50px; flex-wrap: wrap;">
             
@@ -157,17 +254,18 @@
                 <p style="font-size: 1.05em; color: #555; margin-bottom: 25px; line-height: 1.5; text-align: center;">
                     Skontaktuj się z nami przed złożeniem wniosku. Chętnie odpowiemy na wszystkie pytania i rozwiejemy wątpliwości.
                 </p>
-                <a href="mailto:kontakt@ostatniawarta.pl" class="btn-primary" style="margin-top: auto;">kontakt@ostatniawarta.pl</a>
+                <a href="mailto:kontakt@ostatniawarta.pl" class="btn-primary" style="margin-top: auto;">Napisz do nas</a>
             </div>
 
             <div style="flex: 1; min-width: 280px; background: #fff; padding: 35px 25px; border-radius: 8px; border-top: 4px solid #1a5f4a; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
-                <h3 style="margin-top: 0; margin-bottom: 15px; border-bottom: none; color: #1a5f4a; padding-bottom: 0;">Wypożyczalnia sprzętu Hi-Tech (Wkrótce)</h3>
+                <h3 style="margin-top: 0; margin-bottom: 15px; border-bottom: none; color: #1a5f4a; padding-bottom: 0;">Wypożyczalnia sprzętu (Wkrótce)</h3>
                 <p style="font-size: 0.95em; color: #555; margin-bottom: 0; line-height: 1.6; text-align: justify; font-family: 'Arial', sans-serif;">
                     Niebawem ruszamy z nowatorską wypożyczalnią sprzętu rehabilitacyjnego! Odchodzimy od standardowych rozwiązań na rzecz innowacji. Pracujemy nad pozyskaniem funduszy na wdrożenie m.in. lekkich egzoszkieletów medycznych wspomagających chód po udarach, systemów wirtualnej rzeczywistości (VR) oraz inteligentnych sensorów ruchu. Przenosimy domową neurorehabilitację w XXI wiek!
                 </p>
             </div>
 
         </div>
+
         <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #eee; text-align: center;">
             <h3 style="margin-top: 0; margin-bottom: 15px; font-family: 'Georgia', serif; color: #133a2d; font-size: 1.4em; border-bottom: none;">Poznaj pozostałe obszary naszej działalności:</h3>
             <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
@@ -175,6 +273,7 @@
                 <a href="sservice.html" class="btn-outline" style="margin-top: 10px;">Sitting Service</a>
                 <a href="sic.html" class="btn-outline" style="margin-top: 10px;">Samotność i Choroba</a>
                 <a href="gst.html" class="btn-outline" style="margin-top: 10px;">Gdańska Szkoła Towarzyszenia</a>
+                <a href="dokumenty.html" class="btn-solid-dark" style="margin-top: 10px;">📄 Dokumenty do pobrania</a>
             </div>
         </div>
 
