@@ -95,6 +95,20 @@
         footer a { color: #D4AF37; text-decoration: none; }
         footer a:hover { color: #fff; text-decoration: underline; }
         
+        /* STYLE FORMULARZA CSR */
+        .csr-form-container { background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #D4AF37; max-width: 800px; margin: 50px auto; font-family: 'Arial', sans-serif; text-align: left;}
+        .csr-form-container h3 { color: #133a2d; margin-top: 0; margin-bottom: 15px; text-align: center; font-family: 'Georgia', serif; font-size: 1.8em; }
+        .csr-form-container .form-desc { text-align: center; color: #555; margin-bottom: 30px; line-height: 1.6; }
+        .csr-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .csr-form-group { display: flex; flex-direction: column; }
+        .csr-form-group.full-width { grid-column: 1 / -1; }
+        .csr-form-group label { font-size: 0.9em; color: #555; margin-bottom: 5px; font-weight: bold; }
+        .csr-form-group input, .csr-form-group select, .csr-form-group textarea { padding: 12px 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; font-family: 'Arial', sans-serif; transition: border-color 0.3s; }
+        .csr-form-group input:focus, .csr-form-group select:focus, .csr-form-group textarea:focus { border-color: #1a5f4a; outline: none; box-shadow: 0 0 5px rgba(26, 95, 74, 0.2); }
+        .csr-form-group textarea { resize: vertical; min-height: 120px; }
+        .csr-submit-btn { background: #133a2d; color: #fff; border: none; padding: 15px 30px; font-size: 1.1em; border-radius: 4px; cursor: pointer; transition: background 0.3s; font-weight: bold; width: 100%; margin-top: 10px; text-transform: uppercase; letter-spacing: 1px; }
+        .csr-submit-btn:hover { background: #D4AF37; color: #133a2d; }
+
         @media (min-width: 768px) { 
             .support-grid { grid-template-columns: 1fr 1fr; }
         }
@@ -103,6 +117,8 @@
             .header-titles h1 { font-size: 1.5em; }
             .support-card { padding: 20px; }
             .intro-text { text-align: left; }
+            .csr-form-grid { grid-template-columns: 1fr; }
+            .csr-form-container { padding: 25px 20px; }
         }
     </style>
 </head>
@@ -144,7 +160,7 @@
     
     <div class="intro-text">
         <p>W Fundacji „Ostatnia Warta” wierzymy, że prawdziwa siła biznesu nie tkwi wyłącznie w jego wynikach finansowych, ale w realnym wpływie na otoczenie. Społeczna Odpowiedzialność Biznesu (CSR) to dla nas nie tylko modne hasło – to mądre partnerstwo, które przynosi korzyści obu stronom.</p>
-        <p>Zapraszamy Twoją firmę do wsparcia naszej misji. Twoje zaangażowanie pozwoli nam docierać tam, gdzie gaśnie nadzieja – do osób terminalnie chorych, samotnych i wykluczonych, zapewniając im godność na ostatniej warcie.</p>
+        <p>Zapraszamy Twoją firmę do wsparcia naszej misji. Twoje zaangażowanie pozwoli nam docierać tam, gdzie wsparcie jest najbardziej potrzebne – niosąc ulgę osobom przewlekle i terminalnie chorym, wspierając osoby z niepełnosprawnościami oraz dając siłę do życia samotnym seniorom.</p>
     </div>
 
     <div class="heading-wrapper" style="margin-top: 40px;">
@@ -189,7 +205,7 @@
         </div>
         <div class="support-card">
             <h3 style="color: #a83232;">Wolontariat pracowniczy</h3>
-            <p>Zaangażowanie Twojego zespołu w nasze bieżące działania pomocowe, czuwania przy chorych lub wsparcie organizacyjne wydarzeń.</p>
+            <p>Zaangażowanie Twojego zespołu w nasze bieżące działania pomocowe, wsparcie logistyczne, czy pomoc w organizacji wydarzeń społecznych.</p>
         </div>
         <div class="support-card">
             <h3 style="color: #a83232;">Cause Related Marketing</h3>
@@ -207,25 +223,66 @@
 
     <div class="support-grid" style="grid-template-columns: 1fr; margin-top: 40px;">
         <div class="support-card" style="border-top: 4px solid #133a2d; background: #f4f8f6;">
-            <h3 style="text-align: center; width: 100%; border-bottom: 2px solid #d1e8df; padding-bottom: 10px; margin-bottom: 20px;">Pliki do pobrania (Dla firm)</h3>
-            <p style="text-align: center; width: 100%; margin-bottom: 25px;">Cenimy Twój czas i stawiamy na pełną transparentność. Pobierz niezbędne dokumenty, aby poznać szczegóły:</p>
+            <h3 style="text-align: center; width: 100%; border-bottom: 2px solid #d1e8df; padding-bottom: 10px; margin-bottom: 20px;">Pliki do pobrania (Dla Zarządów i Działów Księgowości)</h3>
+            <p style="text-align: center; width: 100%; margin-bottom: 25px;">Chcesz przedstawić naszą organizację Zarządowi lub potrzebujesz tradycyjnej umowy dla Księgowości? Przygotowaliśmy odpowiednie dokumenty:</p>
             
             <ul class="docs-list" style="max-width: 800px; margin: 0 auto;">
-                <li><a href="03_02_Oferta_Wspolpracy_CSR.pdf" target="_blank">[PDF] Oferta Współpracy dla Firm</a> – Szczegółowa prezentacja naszych celów, pakietów partnerskich i możliwości wspólnych działań.</li>
-                <li><a href="03_01_Wzor_Umowy_Darowizny.pdf" target="_blank">[PDF] Wzór Umowy Darowizny</a> – Przejrzysty i bezpieczny pod kątem księgowo-prawnym wzór umowy dla Twojej firmy.</li>
+                <li><a href="03_02_Oferta_Wspolpracy_CSR.pdf" target="_blank">[PDF] Oferta Współpracy dla Firm (Prezentacja One-Pager)</a> – Krótki i treściwy materiał w formacie PDF, idealny do przesłania przełożonym lub współpracownikom decyzyjnym.</li>
+                <li><a href="03_01_Wzor_Umowy_Darowizny.pdf" target="_blank">[PDF] Wzór Umowy Darowizny</a> – Ważne: do przekazania darowizny wystarczy standardowy przelew. Jeśli jednak Twoja polityka rachunkowości wymaga formy papierowej, pobierz ten szablon.</li>
             </ul>
         </div>
     </div>
 
-    <div style="background: #fff; padding: 40px 25px; border-radius: 8px; border-top: 4px solid #D4AF37; margin-top: 50px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-        <h3 style="margin-top: 0; margin-bottom: 15px; font-family: 'Georgia', serif; font-size: 1.6em; color: #133a2d;">Skontaktujmy się</h3>
-        <p style="font-size: 1.1em; color: #555; margin-bottom: 25px; line-height: 1.5; max-width: 800px; margin-left: auto; margin-right: auto;">
-            Masz pomysł na niestandardową akcję? Chcesz porozmawiać o szczegółach mecenatu? Napisz do nas – wspólnie znajdziemy najlepsze rozwiązanie dla Twojej marki.
-        </p>
-        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-            <a href="mailto:kontakt@ostatniawarta.pl" class="btn-primary">Napisz: kontakt@ostatniawarta.pl</a>
-            <a href="wsparcie.html" class="btn-outline">Zobacz, kto już nas wspiera</a>
-        </div>
+    <div class="csr-form-container">
+        <h3>Porozmawiajmy o współpracy</h3>
+        <p class="form-desc">Masz pomysł na niestandardową akcję? Chcesz porozmawiać o szczegółach mecenatu? Wypełnij krótki formularz, a my skontaktujemy się z Tobą najszybciej jak to możliwe.</p>
+        
+        <form action="https://formspree.io/f/maqpngoy" method="POST">
+            <div class="csr-form-grid">
+                
+                <div class="csr-form-group">
+                    <label for="name">Imię i nazwisko</label>
+                    <input type="text" id="name" name="Imię i nazwisko" required placeholder="Jan Kowalski">
+                </div>
+                
+                <div class="csr-form-group">
+                    <label for="company">Nazwa firmy</label>
+                    <input type="text" id="company" name="Nazwa firmy" required placeholder="Twoja Firma Sp. z o.o.">
+                </div>
+                
+                <div class="csr-form-group">
+                    <label for="email">Adres e-mail</label>
+                    <input type="email" id="email" name="E-mail" required placeholder="jan.kowalski@firma.pl">
+                </div>
+                
+                <div class="csr-form-group">
+                    <label for="phone">Numer telefonu</label>
+                    <input type="tel" id="phone" name="Telefon" placeholder="+48 000 000 000">
+                </div>
+                
+                <div class="csr-form-group full-width">
+                    <label for="interest">Jaką formą wsparcia jesteście zainteresowani?</label>
+                    <select id="interest" name="Obszar zainteresowania" required>
+                        <option value="" disabled selected>Wybierz z listy...</option>
+                        <option value="Darowizna finansowa / Sponsoring">Darowizna finansowa / Sponsoring strategiczny</option>
+                        <option value="Darowizna rzeczowa / Sprzęt">Darowizna rzeczowa (sprzęt medyczny, środki higieniczne)</option>
+                        <option value="Wolontariat pracowniczy">Wolontariat pracowniczy (zaangażowanie zespołu)</option>
+                        <option value="Cause Related Marketing">Cause Related Marketing (% ze sprzedaży produktów)</option>
+                        <option value="Inny pomysł">Inny pomysł na współpracę</option>
+                    </select>
+                </div>
+                
+                <div class="csr-form-group full-width">
+                    <label for="message">Dodatkowe informacje / Wiadomość</label>
+                    <textarea id="message" name="Wiadomość" placeholder="Opisz krótko, jak widzisz naszą współpracę, zadaj pytanie lub pozostaw pole puste..."></textarea>
+                </div>
+                
+                <div class="csr-form-group full-width">
+                    <button type="submit" class="csr-submit-btn">Wyślij zapytanie do Zarządu Fundacji</button>
+                </div>
+                
+            </div>
+        </form>
     </div>
 
     <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #eee; text-align: center;">
