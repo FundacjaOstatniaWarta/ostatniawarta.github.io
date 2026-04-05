@@ -12,51 +12,38 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zostań wolontariuszem – dołącz do naszej warty | Fundacja Ostatnia Warta</title>
     
-    <meta name="theme-color" content="#133a2d">
-    <link rel="apple-touch-icon" href="logo.png">
-    
-    <title>Partnerstwo Biznesowe i CSR – Współpraca z Fundacją Ostatnia Warta</title>
-    <meta name="description" content="Dołącz do grona partnerów Fundacji Ostatnia Warta. Oferujemy elastyczne formy współpracy biznesowej (CSR), sponsoring, wolontariat pracowniczy i korzyści podatkowe.">
-    <meta name="keywords" content="CSR fundacja, współpraca biznesowa fundacja, sponsoring fundacja, marketing zaangażowany społecznie, wolontariat pracowniczy, darowizny od firm, odliczenie darowizny CIT">
+    <meta name="description" content="Zostań wolontariuszem Fundacji Ostatnia Warta. Pomagaj osobom samotnym, chorym, seniorom i osobom z niepełnosprawnościami poprzez swoją obecność. Wypełnij prosty formularz online.">
     <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Zostań Wolontariuszem | Fundacja Ostatnia Warta" />
+    <meta property="og:description" content="Naszym zadaniem nie jest leczenie. Naszym zadaniem jest być. Dołącz do wolontariatu obecności i wspieraj potrzebujących." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ostatniawarta.pl/zwol.html" />
+    <meta property="og:image" content="https://ostatniawarta.pl/logo.png" />
     
-    <meta property="og:title" content="Partnerstwo Biznesowe i CSR – Fundacja Ostatnia Warta">
-    <meta property="og:description" content="Zbuduj odpowiedzialny społecznie wizerunek swojej firmy. Zapraszamy do współpracy biznesowej i wsparcia naszej misji.">
-    <meta property="og:url" content="https://ostatniawarta.pl/pbic.html">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://ostatniawarta.pl/logo.png">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <link rel="canonical" href="https://ostatniawarta.pl/pbic.html" />
+    <link rel="canonical" href="https://ostatniawarta.pl/zwol.html" />
     <link rel="icon" type="image/png" href="logo.png">
 
     <style>
-        /* Podstawowe style i reset */
         body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
         a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
-        h1, h2, h3, h4 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
+        h1, h2, h3 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
         .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
         
-        /* Ciemna, elegancka góra z wycentrowanym logo */
         header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
-        
-        /* ZEGAR ZAMIAST PIERŚCIENIA */
         .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
         .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
         .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
-        
-        /* Środek wskazówek */
         .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
-        
-        /* Wskazówki zegara */
         .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
         .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
         .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
         .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
 
-        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; line-height: 1.3; }
-        .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.4em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; }
+        .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.6em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
 
         nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
         nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
@@ -64,61 +51,53 @@
         nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
         nav ul li a:hover { color: #D4AF37; }
 
-        /* WSTĘP */
-        .intro-text { font-size: 1.15em; color: #444; text-align: justify; max-width: 900px; margin: 0 auto 40px auto; line-height: 1.8; }
+        .content-section { background: #fff; padding: 50px 60px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; border-top: 4px solid #1a5f4a; max-width: 900px; margin: 0 auto; }
         
-        .section-heading { font-family: 'Georgia', serif; font-size: 1.8em; color: #1a5f4a; border-bottom: 2px solid #D4AF37; padding-bottom: 10px; margin: 0 0 25px 0; display: inline-block; font-weight: normal; }
-        .heading-wrapper { text-align: center; width: 100%; margin-bottom: 15px; }
+        .content-section p { font-size: 1.15em; color: #444; text-align: justify; line-height: 1.8; margin-bottom: 20px; }
+        .content-section ul { font-size: 1.15em; color: #444; line-height: 1.8; list-style: none; padding: 0; margin-top: 15px; margin-bottom: 25px; }
+        .content-section ul li { margin-bottom: 12px; padding-left: 25px; position: relative; text-align: justify; }
+        .content-section ul li::before { content: "•"; color: #D4AF37; font-weight: bold; position: absolute; left: 0; top: 0; font-size: 1.2em;}
 
-        /* GRID CSR */
-        .support-grid { display: grid; grid-template-columns: 1fr; gap: 30px; margin-top: 20px; align-items: stretch; }
-        
-        .support-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1a5f4a; padding: 30px; display: flex; flex-direction: column; justify-content: flex-start; text-align: left; box-sizing: border-box; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .support-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
-        
-        .support-card h3 { margin-top: 0; font-size: 1.4em; font-family: 'Georgia', serif; margin-bottom: 15px; color: #133a2d; }
-        .support-card p { font-family: 'Arial', sans-serif; font-size: 1em; color: #555; line-height: 1.6; margin-bottom: 0; }
+        .content-section h3 { margin-top: 40px; margin-bottom: 20px; font-size: 1.3em; color: #1a5f4a; border-bottom: 2px solid #e2f0ea; padding-bottom: 10px; }
 
-        .btn-outline { border-color: #1a5f4a; color: #1a5f4a; background: transparent; display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; border: 2px solid #D4AF37; transition: all 0.3s ease; }
+        /* STYLE FORMULARZA WOLONTARIATU */
+        .vol-form-container { background: #f4f8f6; padding: 40px; border-radius: 8px; border-left: 5px solid #D4AF37; margin-top: 40px; font-family: 'Arial', sans-serif; text-align: left; }
+        .vol-form-container h3 { color: #133a2d; margin-top: 0; margin-bottom: 15px; border-bottom: none; padding-bottom: 0; font-size: 1.6em; }
+        .vol-form-container p.desc { color: #555; margin-bottom: 25px; font-size: 1em; text-align: left; }
+        
+        .vol-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .vol-form-group { display: flex; flex-direction: column; }
+        .vol-form-group.full-width { grid-column: 1 / -1; }
+        .vol-form-group label { font-size: 0.9em; color: #333; margin-bottom: 5px; font-weight: bold; }
+        .vol-form-group input, .vol-form-group select, .vol-form-group textarea { padding: 12px 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; font-family: 'Arial', sans-serif; transition: border-color 0.3s; }
+        .vol-form-group input:focus, .vol-form-group select:focus, .vol-form-group textarea:focus { border-color: #1a5f4a; outline: none; box-shadow: 0 0 5px rgba(26, 95, 74, 0.2); }
+        .vol-form-group textarea { resize: vertical; min-height: 100px; }
+        .vol-form-group.radio-group { flex-direction: row; gap: 20px; align-items: center; margin-top: 5px; }
+        .vol-form-group.radio-group label { font-weight: normal; margin-bottom: 0; display: flex; align-items: center; gap: 5px; cursor: pointer; }
+        
+        .alert-box { background: #fff3f3; border-left: 4px solid #a83232; padding: 15px; margin: 20px 0; border-radius: 0 4px 4px 0; }
+        .alert-box p { font-size: 0.95em; color: #a83232; margin: 0; text-align: left; }
+
+        .submit-btn { background: #133a2d; color: #fff; border: none; padding: 15px 30px; font-size: 1.1em; border-radius: 4px; cursor: pointer; transition: background 0.3s; font-weight: bold; width: 100%; margin-top: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .submit-btn:hover { background: #D4AF37; color: #133a2d; }
+
+        .btn-outline { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; border: 2px solid #D4AF37; color: #133a2d; transition: all 0.3s ease; }
         .btn-outline:hover { background: #D4AF37; color: #fff; }
         
-        .btn-primary { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #D4AF37; color: #133a2d; border: 2px solid #D4AF37; transition: background 0.3s ease, color 0.3s ease; }
-        .btn-primary:hover { background: #b5952f; border-color: #b5952f; color: #fff; }
-
-        .btn-dark { border-color: #ccc; color: #555; background: transparent; display: inline-block; padding: 10px 20px; margin-top: 20px; border: 2px solid #ccc; font-weight: bold; border-radius: 4px; font-family: 'Arial', sans-serif; transition: 0.3s; }
-        .btn-dark:hover { background: #eee; color: #333; }
-        
+        /* Dodatkowy styl dla przycisku dokumentów */
         .btn-solid-dark { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #133a2d; color: #fff; border: 2px solid #133a2d; transition: all 0.3s ease; }
         .btn-solid-dark:hover { background: #D4AF37; border-color: #D4AF37; color: #133a2d; }
 
-        footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; margin-top: 40px; }
+        footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; margin-top: 50px; }
         footer a { color: #D4AF37; text-decoration: none; }
         footer a:hover { color: #fff; text-decoration: underline; }
         
-        /* STYLE FORMULARZA CSR - Zoptymalizowane pod Mobile */
-        .csr-form-container { background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #D4AF37; max-width: 800px; margin: 50px auto; font-family: 'Arial', sans-serif; text-align: left; box-sizing: border-box; width: 100%;}
-        .csr-form-container h3 { color: #133a2d; margin-top: 0; margin-bottom: 15px; text-align: center; font-family: 'Georgia', serif; font-size: 1.8em; }
-        .csr-form-container .form-desc { text-align: center; color: #555; margin-bottom: 30px; line-height: 1.6; }
-        .csr-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .csr-form-group { display: flex; flex-direction: column; }
-        .csr-form-group.full-width { grid-column: 1 / -1; }
-        .csr-form-group label { font-size: 0.9em; color: #555; margin-bottom: 5px; font-weight: bold; }
-        .csr-form-group input, .csr-form-group select, .csr-form-group textarea { padding: 12px 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; font-family: 'Arial', sans-serif; transition: border-color 0.3s; box-sizing: border-box; width: 100%; max-width: 100%; }
-        .csr-form-group input:focus, .csr-form-group select:focus, .csr-form-group textarea:focus { border-color: #1a5f4a; outline: none; box-shadow: 0 0 5px rgba(26, 95, 74, 0.2); }
-        .csr-form-group textarea { resize: vertical; min-height: 120px; }
-        .csr-submit-btn { background: #133a2d; color: #fff; border: none; padding: 15px 30px; font-size: 1.1em; border-radius: 4px; cursor: pointer; transition: background 0.3s; font-weight: bold; width: 100%; margin-top: 10px; text-transform: uppercase; letter-spacing: 1px; box-sizing: border-box; }
-        .csr-submit-btn:hover { background: #D4AF37; color: #133a2d; }
-
-        @media (min-width: 768px) { 
-            .support-grid { grid-template-columns: 1fr 1fr; }
-        }
-
         @media (max-width: 768px) { 
-            .header-titles h1 { font-size: 1.5em; }
-            .support-card { padding: 20px; }
-            .intro-text { text-align: left; }
-            .csr-form-grid { grid-template-columns: 1fr; }
-            .csr-form-container { padding: 25px 20px; margin-top: 30px; }
+            .content-section { padding: 30px 20px; }
+            .content-section p, .content-section ul li { text-align: left; font-size: 1.05em; }
+            .header-titles h1 { font-size: 1.8em; }
+            .vol-form-grid { grid-template-columns: 1fr; }
+            .vol-form-container { padding: 25px 20px; }
         }
     </style>
 </head>
@@ -133,14 +112,14 @@
                     <div class="hand hour-hand" id="hourHand"></div>
                     <div class="hand minute-hand" id="minuteHand"></div>
                     <div class="hand second-hand" id="secondHand"></div>
-                    <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img" width="100" height="100"> 
+                    <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img"> 
                 </div>
             </a>
         </div>
         
         <div class="header-titles">
-            <h1>Partnerstwo Biznesowe i CSR</h1>
-            <h2>Biznes, który niesie pomoc. Zbudujmy razem dobro.</h2>
+            <h1>Zostań Wolontariuszem</h1>
+            <h2>Pełnij Wartę tam, gdzie brakuje nadziei</h2>
         </div>
 
         <nav>
@@ -148,7 +127,6 @@
                 <li><a href="index.html#o-nas">O Fundacji</a></li>
                 <li><a href="index.html#podopieczni">Podopieczni</a></li>
                 <li><a href="index.html#wolontariat">Wolontariat</a></li>
-                <li><a href="blog.html">Blog</a></li>
                 <li><a href="index.html#wesprzyj">Wesprzyj Nas</a></li>
                 <li><a href="index.html#kontakt">Kontakt</a></li>
             </ul>
@@ -157,144 +135,114 @@
 </header>
 
 <section class="container">
-    
-    <div class="intro-text">
-        <p>W Fundacji „Ostatnia Warta” wierzymy, że prawdziwa siła biznesu nie tkwi wyłącznie w jego wynikach finansowych, ale w realnym wpływie na otoczenie. Społeczna Odpowiedzialność Biznesu (CSR) to dla nas nie tylko modne hasło – to mądre partnerstwo, które przynosi korzyści obu stronom.</p>
-        <p>Zapraszamy Twoją firmę do wsparcia naszej misji. Twoje zaangażowanie pozwoli nam docierać tam, gdzie wsparcie jest najbardziej potrzebne – niosąc ulgę osobom przewlekle i terminalnie chorym, wspierając osoby z niepełnosprawnościami oraz dając siłę do życia samotnym seniorom.</p>
-    </div>
-
-    <div class="heading-wrapper" style="margin-top: 40px;">
-        <h2 class="section-heading">Dlaczego warto zostać partnerem Fundacji?</h2>
-    </div>
-
-    <div class="support-grid">
-        <div class="support-card" style="border-top-color: #D4AF37;">
-            <h3>Wizerunek marki</h3>
-            <p>Zbudujesz pozycję firmy empatycznej, odpowiedzialnej i zaangażowanej społecznie w oczach klientów, kontrahentów oraz pracowników.</p>
-        </div>
-        <div class="support-card" style="border-top-color: #D4AF37;">
-            <h3>Integracja zespołu</h3>
-            <p>Wolontariat pracowniczy i wspólne cele charytatywne to jedne z najlepszych narzędzi do budowania lojalnego i zżytego zespołu.</p>
-        </div>
-        <div class="support-card" style="border-top-color: #D4AF37;">
-            <h3>Korzyści podatkowe</h3>
-            <p>Zgodnie z polskim prawem, darowizny przekazane na cele statutowe Fundacji można odliczyć od podstawy opodatkowania (CIT/PIT).</p>
-        </div>
-        <div class="support-card" style="border-top-color: #D4AF37;">
-            <h3>Certyfikat i podziękowania</h3>
-            <p>Oficjalnie honorujemy naszych partnerów, dostarczając materiały (certyfikaty, logotypy), które możecie wykorzystać we własnej komunikacji PR.</p>
-        </div>
-    </div>
-
-    <div class="heading-wrapper" style="margin-top: 60px;">
-        <h2 class="section-heading">Formy współpracy – wybierz model dla swojej firmy</h2>
-    </div>
-    
-    <div class="intro-text" style="margin-bottom: 20px; text-align: center;">
-        <p>Nie ma dwóch takich samych firm, dlatego jesteśmy otwarci na elastyczne formy partnerstwa:</p>
-    </div>
-
-    <div class="support-grid">
-        <div class="support-card">
-            <h3 style="color: #a83232;">Sponsoring strategiczny i celowy</h3>
-            <p>Regularne wsparcie finansowe lub sfinansowanie konkretnego projektu/zakupu sprzętu pomocowego dla naszych podopiecznych.</p>
-        </div>
-        <div class="support-card">
-            <h3 style="color: #a83232;">Darowizny rzeczowe i usługowe</h3>
-            <p>Przekazanie produktów, sprzętu medycznego, środków higienicznych lub świadczenie usług (np. prawnych, informatycznych, transportowych) <em>pro publico bono</em>.</p>
-        </div>
-        <div class="support-card">
-            <h3 style="color: #a83232;">Wolontariat pracowniczy</h3>
-            <p>Zaangażowanie Twojego zespołu w nasze bieżące działania pomocowe, wsparcie logistyczne, czy pomoc w organizacji wydarzeń społecznych.</p>
-        </div>
-        <div class="support-card">
-            <h3 style="color: #a83232;">Cause Related Marketing</h3>
-            <p>Marketing Zaangażowany – przekazanie na rzecz Fundacji określonego procentu ze sprzedaży Twoich produktów lub usług.</p>
-        </div>
-    </div>
-
-    <div class="heading-wrapper" style="margin-top: 60px;">
-        <h2 class="section-heading" style="border-bottom: none; margin-bottom: 5px; color: #133a2d;">Darowizny od firm i odliczenia podatkowe</h2>
-    </div>
-    
-    <div class="intro-text" style="text-align: center; margin-bottom: 30px;">
-        <p>Wspieranie Fundacji „Ostatnia Warta” to nie tylko piękny gest, ale także konkretne korzyści finansowe. Zgodnie z przepisami prawa podatkowego, darowizny przekazane na cele statutowe fundacji podlegają odliczeniu od podstawy opodatkowania – <strong>do 10% dochodu w przypadku firm (CIT) oraz do 6% w przypadku osób fizycznych prowadzących działalność gospodarczą (PIT)</strong>. Wykorzystaj ten mechanizm, by mądrze i efektywnie realizować strategię społecznej odpowiedzialności biznesu.</p>
-    </div>
-
-    <div class="support-grid" style="grid-template-columns: 1fr; margin-top: 40px;">
-        <div class="support-card" style="border-top: 4px solid #133a2d; background: #f4f8f6; align-items: center; text-align: center;">
-            <h3 style="text-align: center; width: 100%; border-bottom: 2px solid #d1e8df; padding-bottom: 10px; margin-bottom: 20px;">Dokumenty dla Zarządów i Działów Księgowości</h3>
-            <p style="text-align: center; width: 100%; margin-bottom: 25px; max-width: 800px;">Chcesz przedstawić naszą organizację Zarządowi lub potrzebujesz tradycyjnej umowy dla Księgowości? Wszystkie dedykowane materiały (w tym prezentację One-Pager oraz Wzór Umowy Darowizny) przenieśliśmy do naszej centralnej bazy dokumentów.</p>
-            <a href="dokumenty.html" class="btn-solid-dark">Przejdź do bazy dokumentów</a>
-        </div>
-    </div>
-
-    <div class="csr-form-container">
-        <h3>Porozmawiajmy o współpracy</h3>
-        <p class="form-desc">Masz pomysł na niestandardową akcję? Chcesz porozmawiać o szczegółach mecenatu? Wypełnij krótki formularz, a my skontaktujemy się z Tobą najszybciej jak to możliwe.</p>
+    <div class="content-section">
         
-        <form action="https://formspree.io/f/maqpngoy" method="POST">
-            <div class="csr-form-grid">
-                
-                <div class="csr-form-group">
-                    <label for="name">Imię i nazwisko</label>
-                    <input type="text" id="name" name="Imię i nazwisko" required placeholder="Jan Kowalski">
-                </div>
-                
-                <div class="csr-form-group">
-                    <label for="company">Nazwa firmy</label>
-                    <input type="text" id="company" name="Nazwa firmy" required placeholder="Twoja Firma Sp. z o.o.">
-                </div>
-                
-                <div class="csr-form-group">
-                    <label for="email">Adres e-mail</label>
-                    <input type="email" id="email" name="E-mail" required placeholder="jan.kowalski@firma.pl">
-                </div>
-                
-                <div class="csr-form-group">
-                    <label for="phone">Numer telefonu</label>
-                    <input type="tel" id="phone" name="Telefon" placeholder="+48 000 000 000">
-                </div>
-                
-                <div class="csr-form-group full-width">
-                    <label for="interest">Jaką formą wsparcia jesteście zainteresowani?</label>
-                    <select id="interest" name="Obszar zainteresowania" required>
-                        <option value="" disabled selected>Wybierz z listy...</option>
-                        <option value="Darowizna finansowa / Sponsoring">Darowizna finansowa / Sponsoring strategiczny</option>
-                        <option value="Darowizna rzeczowa / Sprzęt">Darowizna rzeczowa (sprzęt medyczny, środki higieniczne)</option>
-                        <option value="Wolontariat pracowniczy">Wolontariat pracowniczy (zaangażowanie zespołu)</option>
-                        <option value="Cause Related Marketing">Cause Related Marketing (% ze sprzedaży produktów)</option>
-                        <option value="Inny pomysł">Inny pomysł na współpracę</option>
-                    </select>
-                </div>
-                
-                <div class="csr-form-group full-width">
-                    <label for="message">Dodatkowe informacje / Wiadomość</label>
-                    <textarea id="message" name="Wiadomość" placeholder="Opisz krótko, jak widzisz naszą współpracę, zadaj pytanie lub pozostaw pole puste..."></textarea>
-                </div>
-                
-                <div class="csr-form-group full-width">
-                    <button type="submit" class="csr-submit-btn">Wyślij zapytanie do Zarządu Fundacji</button>
-                </div>
-                
-            </div>
-        </form>
-    </div>
+        <p>Misją Fundacji Ostatnia Warta jest obecność przy drugim człowieku w najtrudniejszych chwilach życia. Wspieramy nie tylko osoby przewlekle i terminalnie chore, ale także samotnych seniorów oraz osoby zmagające się z niepełnosprawnościami. To szlachetne wyzwanie możemy realizować wyłącznie dzięki wsparciu ludzi o wielkich sercach.</p>
+        <p>Naszym zadaniem nie jest leczenie medyczne.<br><strong>Naszym zadaniem jest być.</strong></p>
+        <p>Czasem oznacza to rozmowę i wspólne spędzenie czasu. Czasem pomoc w organizacji codziennych spraw lub rehabilitacji społecznej. A czasem to po prostu ciche czuwanie przy łóżku chorego.</p>
 
-    <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #eee; text-align: center;">
-        <h3 style="margin-top: 0; margin-bottom: 15px; font-family: 'Georgia', serif; color: #133a2d; font-size: 1.4em; border-bottom: none;">Poznaj inne formy wsparcia Fundacji:</h3>
-        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-            <a href="zbiorki.html" class="btn-outline" style="margin-top: 10px;">Stań na Warcie (Zbiórki)</a>
-            <a href="progzad.html" class="btn-outline" style="margin-top: 10px;">Dobrowolne Zadośćuczynienie</a>
-            <a href="pracespol.html" class="btn-outline" style="margin-top: 10px;">Prace społeczne</a>
-            <a href="dokumenty.html" class="btn-solid-dark" style="margin-top: 10px;">📄 Dokumenty do pobrania</a>
+        <h3>Kogo szukamy?</h3>
+        <p>Zapraszamy osoby, które:</p>
+        <ul>
+            <li>chcą pomagać w sposób odpowiedzialny, zrównoważony i spokojny,</li>
+            <li>potrafią okazać empatię i głęboki szacunek drugiemu człowiekowi,</li>
+            <li>są gotowe poświęcić ułamek swojego wolnego czasu na regularny wolontariat.</li>
+        </ul>
+        <p><strong>Nie wymagamy wykształcenia medycznego.</strong> Każdy wolontariusz przechodzi odpowiednie przygotowanie do swojej nowej roli w ramach darmowych programów edukacyjnych Fundacji.</p>
+
+        <h3>Jak dołączyć do Warty?</h3>
+        <p>Aby ułatwić proces, zrezygnowaliśmy z papierowych formularzy na pierwszym etapie rekrutacji. <strong>Wystarczy, że wypełnisz poniższy krótki kwestionariusz online.</strong> Skontaktujemy się z Tobą, aby umówić się na luźną rozmowę. Wszelkie formalności i dokumenty prawne (Porozumienie, Zasady Poufności) podpiszemy dopiero po obustronnej decyzji o rozpoczęciu współpracy.</p>
+
+        <div class="vol-form-container">
+            <h3>Kwestionariusz Kandydata</h3>
+            <p class="desc">Wypełnij poniższe dane, abyśmy mogli lepiej Cię poznać.</p>
+            
+            <form action="https://formspree.io/f/mjgpppzb" method="POST">
+                <div class="vol-form-grid">
+                    
+                    <div class="vol-form-group">
+                        <label for="name">Imię i nazwisko</label>
+                        <input type="text" id="name" name="Imię i nazwisko" required placeholder="Jan Kowalski">
+                    </div>
+                    
+                    <div class="vol-form-group">
+                        <label for="age">Rok urodzenia</label>
+                        <input type="number" id="age" name="Rok urodzenia" required placeholder="np. 1990">
+                    </div>
+                    
+                    <div class="vol-form-group">
+                        <label for="email">Adres e-mail</label>
+                        <input type="email" id="email" name="E-mail" required placeholder="twoj@email.pl">
+                    </div>
+                    
+                    <div class="vol-form-group">
+                        <label for="phone">Numer telefonu</label>
+                        <input type="tel" id="phone" name="Telefon" required placeholder="+48 000 000 000">
+                    </div>
+
+                    <div class="vol-form-group full-width">
+                        <label for="profession">Obecny zawód / Kierunek studiów (lub szkoła)</label>
+                        <input type="text" id="profession" name="Zawód/Studia" required placeholder="np. Księgowa, Student psychologii">
+                    </div>
+
+                    <div class="vol-form-group full-width">
+                        <label for="motivation">Dlaczego chcesz zostać wolontariuszem? (Krótka motywacja)</label>
+                        <textarea id="motivation" name="Motywacja" required placeholder="Napisz kilka słów o tym, co skłoniło Cię do kontaktu z nami..."></textarea>
+                    </div>
+
+                    <div class="vol-form-group full-width">
+                        <label for="experience">Czy masz wcześniejsze doświadczenie w opiece lub wolontariacie?</label>
+                        <textarea id="experience" name="Doświadczenie" placeholder="Brak doświadczenia nie jest przeszkodą! Jeśli jednak jakieś masz, napisz o nim krótko..."></textarea>
+                    </div>
+
+                    <div class="vol-form-group full-width">
+                        <label>Mobilność i transport (Często dojeżdżamy do podopiecznych)</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="Prawo jazdy i auto" value="TAK" required> Posiadam prawo jazdy kat. B i dostęp do auta</label>
+                            <label><input type="radio" name="Prawo jazdy i auto" value="NIE"> Korzystam tylko z komunikacji miejskiej</label>
+                        </div>
+                    </div>
+
+                    <div class="vol-form-group full-width">
+                        <label for="time">Jaką ilością czasu dysponujesz?</label>
+                        <input type="text" id="time" name="Dyspozycyjność" required placeholder="np. 2-3 godziny w tygodniu popołudniami, tylko weekendy itp.">
+                    </div>
+
+                    <div class="vol-form-group full-width">
+                        <div class="alert-box">
+                            <p><strong>Ważne pytanie dotyczące bezpieczeństwa emocjonalnego:</strong><br> Praca fundacji niesie duży ładunek emocjonalny. Z troski o Twoje zdrowie psychiczne musimy zapytać: <em>Czy w ciągu ostatnich 12 miesięcy doświadczyłeś/aś straty kogoś bliskiego i przeżywasz żałobę?</em></p>
+                            <div class="radio-group" style="margin-top: 10px;">
+                                <label><input type="radio" name="Żałoba w ostatnich 12 miesiącach" value="TAK" required> TAK</label>
+                                <label><input type="radio" name="Żałoba w ostatnich 12 miesiącach" value="NIE"> NIE</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="vol-form-group full-width">
+                        <p style="font-size: 0.85em; color: #777; line-height: 1.4; margin-bottom: 0;">Wysyłając formularz, wyrażasz zgodę na przetwarzanie danych osobowych przez Fundację "Ostatnia Warta" na potrzeby rekrutacji wolontariuszy.</p>
+                        <button type="submit" class="submit-btn">Wyślij Zgłoszenie</button>
+                    </div>
+                    
+                </div>
+            </form>
         </div>
-    </div>
 
-    <div style="text-align: center; margin-top: 50px;">
-        <a href="index.html" class="btn-outline" style="border-color: #ccc; color: #777; margin-top: 0;">&larr; Wróć na Stronę Główną</a>
-    </div>
+        <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #eee; text-align: center;">
+            <h3 style="margin-top: 0; margin-bottom: 15px; font-family: 'Georgia', serif; color: #133a2d; font-size: 1.4em; border-bottom: none;">Poznaj pozostałe obszary naszej działalności:</h3>
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <a href="doula.html" class="btn-outline" style="margin-top: 10px;">Doula Umierania</a>
+                <a href="sservice.html" class="btn-outline" style="margin-top: 10px;">Sitting Service</a>
+                <a href="sic.html" class="btn-outline" style="margin-top: 10px;">Samotność i Choroba</a>
+                <a href="gst.html" class="btn-outline" style="margin-top: 10px;">Gdańska Szkoła Towarzyszenia</a>
+                <a href="dokumenty.html" class="btn-solid-dark" style="margin-top: 10px;">📄 Dokumenty do pobrania</a>
+            </div>
+        </div>
 
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="btn-outline" style="border-color: #ccc; color: #777; margin-top: 0;">&larr; Wróć na Stronę Główną</a>
+        </div>
+        
+    </div>
 </section>
 
 <footer>
