@@ -77,6 +77,10 @@
         .vol-form-group.radio-group { flex-direction: row; gap: 20px; align-items: center; margin-top: 5px; }
         .vol-form-group.radio-group label { font-weight: normal; margin-bottom: 0; display: flex; align-items: center; gap: 5px; cursor: pointer; }
         
+        .vol-form-group.checkbox-group { flex-direction: row; gap: 15px; align-items: flex-start; margin-top: 10px; }
+        .vol-form-group.checkbox-group input { margin-top: 5px; cursor: pointer; }
+        .vol-form-group.checkbox-group label { font-weight: normal; font-size: 0.85em; color: #555; text-align: justify; line-height: 1.5; margin-bottom: 0; cursor: pointer; }
+        
         .alert-box { background: #fff3f3; border-left: 4px solid #a83232; padding: 15px; margin: 20px 0; border-radius: 0 4px 4px 0; }
         .alert-box p { font-size: 0.95em; color: #a83232; margin: 0; text-align: left; }
 
@@ -179,7 +183,20 @@
                     
                     <div class="vol-form-group">
                         <label for="phone">Numer telefonu</label>
-                        <input type="tel" id="phone" name="Telefon" required placeholder="+48 000 000 000">
+                        <input type="tel" id="phone" name="Telefon" required minlength="9" placeholder="+48 000 000 000" title="Wprowadź minimum 9 znaków numeru telefonu">
+                    </div>
+
+                    <div class="vol-form-group">
+                        <label for="ulica">Ulica i numer domu/mieszkania</label>
+                        <input type="text" id="ulica" name="Ulica i numer" required placeholder="np. ul. Długa 5/12">
+                    </div>
+
+                    <div class="vol-form-group">
+                        <label for="kod">Kod pocztowy i miejscowość</label>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="text" id="kod" name="Kod pocztowy" required pattern="\d{2}-\d{3}" title="Format kodu: XX-XXX" placeholder="00-000" style="width: 100px;">
+                            <input type="text" id="miasto" name="Miejscowość" required placeholder="Miejscowość" style="flex: 1;">
+                        </div>
                     </div>
 
                     <div class="vol-form-group full-width">
@@ -220,8 +237,17 @@
                         </div>
                     </div>
                     
+                    <div class="vol-form-group full-width checkbox-group">
+                        <input type="checkbox" id="zgoda_rodo" name="Zgoda RODO" required>
+                        <label for="zgoda_rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych przez Fundację "Ostatnia Warta" z siedzibą w Gdańsku (KRS: 0001224367) na potrzeby rekrutacji wolontariuszy oraz weryfikacji kandydatury.</label>
+                    </div>
+
+                    <div class="vol-form-group full-width checkbox-group">
+                        <input type="checkbox" id="zgoda_dokumenty" name="Akceptacja dokumentów" required>
+                        <label for="zgoda_dokumenty">Oświadczam, że zapoznałem/am się z <a href="polityka-prywatnosci.html" target="_blank" style="color: #1a5f4a; text-decoration: underline;">Polityką Prywatności i RODO</a>, <a href="warunki-korzystania.html" target="_blank" style="color: #1a5f4a; text-decoration: underline;">Warunkami korzystania z serwisu</a> oraz <a href="regulamin-pomocy.html" target="_blank" style="color: #1a5f4a; text-decoration: underline;">Regulaminem świadczenia pomocy</a> i akceptuję ich treść.</label>
+                    </div>
+                    
                     <div class="vol-form-group full-width">
-                        <p style="font-size: 0.85em; color: #777; line-height: 1.4; margin-bottom: 0;">Wysyłając formularz, wyrażasz zgodę na przetwarzanie danych osobowych przez Fundację "Ostatnia Warta" na potrzeby rekrutacji wolontariuszy.</p>
                         <button type="submit" class="submit-btn">Wyślij Zgłoszenie</button>
                     </div>
                     
