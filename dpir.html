@@ -76,6 +76,7 @@
         .dpir-form-group input, .dpir-form-group select, .dpir-form-group textarea { padding: 12px 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; font-family: 'Arial', sans-serif; transition: border-color 0.3s; }
         .dpir-form-group input:focus, .dpir-form-group select:focus, .dpir-form-group textarea:focus { border-color: #1a5f4a; outline: none; box-shadow: 0 0 5px rgba(26, 95, 74, 0.2); }
         .dpir-form-group textarea { resize: vertical; min-height: 100px; }
+        
         .dpir-form-group.checkbox-group { flex-direction: row; gap: 15px; align-items: flex-start; margin-top: 10px; }
         .dpir-form-group.checkbox-group input { margin-top: 5px; cursor: pointer; }
         .dpir-form-group.checkbox-group label { font-weight: normal; font-size: 0.85em; color: #555; text-align: justify; line-height: 1.5; margin-bottom: 0; cursor: pointer; }
@@ -190,37 +191,62 @@
                     </div>
 
                     <div class="dpir-form-group">
-                        <label for="pacjent_miejsce">Miejsce przebywania (adres / szpital / hospicjum)</label>
-                        <input type="text" id="pacjent_miejsce" name="Pacjent: Miejsce przebywania" required>
+                        <label for="pacjent_ulica">Ulica i numer domu/mieszkania</label>
+                        <input type="text" id="pacjent_ulica" name="Pacjent: Ulica i numer" required>
                     </div>
 
                     <div class="dpir-form-group">
-                        <label for="pacjent_sala">Sala/pokój (jeśli dotyczy)</label>
-                        <input type="text" id="pacjent_sala" name="Pacjent: Sala/pokój">
+                        <label for="pacjent_kod">Kod pocztowy i miejscowość</label>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="text" id="pacjent_kod" name="Pacjent: Kod pocztowy" required pattern="\d{2}-\d{3}" title="Format kodu: XX-XXX" placeholder="00-000" style="width: 100px;">
+                            <input type="text" id="pacjent_miasto" name="Pacjent: Miejscowość" required placeholder="Miejscowość" style="flex: 1;">
+                        </div>
+                    </div>
+
+                    <div class="dpir-form-group">
+                        <label for="pacjent_placowka">Placówka medyczna / DPS (opcjonalnie)</label>
+                        <input type="text" id="pacjent_placowka" name="Pacjent: Placówka" placeholder="np. Szpital Wojewódzki, Hospicjum...">
+                    </div>
+
+                    <div class="dpir-form-group">
+                        <label for="pacjent_sala">Oddział / Sala / Pokój (opcjonalnie)</label>
+                        <input type="text" id="pacjent_sala" name="Pacjent: Sala/pokój" placeholder="np. Oddział Wewnętrzny, sala 12">
                     </div>
 
                     <div class="dpir-form-group full-width">
-                        <h4 style="margin: 20px 0 5px 0; color: #1a5f4a; border-top: 1px solid #d4e2dc; padding-top: 20px;">2. Dane osoby zgłaszającej (jeśli inna niż Pacjent)</h4>
+                        <h4 style="margin: 20px 0 5px 0; color: #1a5f4a; border-top: 1px solid #d4e2dc; padding-top: 20px;">2. Dane kontaktowe</h4>
                     </div>
 
-                    <div class="dpir-form-group">
+                    <div class="dpir-form-group full-width">
+                        <label style="margin-bottom: 10px;">Kto wypełnia ten wniosek?</label>
+                        <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin-top: 0; margin-bottom: 10px;">
+                            <label style="font-weight: normal; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                <input type="radio" name="Kto zgłasza" value="Podopieczny" id="zglasza_sam" required style="margin: 0; transform: scale(1.2);"> Zgłaszam wniosek dla siebie (jestem Podopiecznym)
+                            </label>
+                            <label style="font-weight: normal; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                <input type="radio" name="Kto zgłasza" value="Inna osoba" id="zglasza_inna" required style="margin: 0; transform: scale(1.2);"> Zgłaszam wniosek w imieniu innej osoby
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="dpir-form-group" id="grupa_zglaszajacy_nazwisko" style="display: none;">
                         <label for="zglaszajacy_nazwisko">Imię i nazwisko zgłaszającego</label>
                         <input type="text" id="zglaszajacy_nazwisko" name="Zgłaszający: Imię i nazwisko">
                     </div>
 
-                    <div class="dpir-form-group">
+                    <div class="dpir-form-group" id="grupa_zglaszajacy_pokrewienstwo" style="display: none;">
                         <label for="zglaszajacy_pokrewienstwo">Stopień pokrewieństwa</label>
                         <input type="text" id="zglaszajacy_pokrewienstwo" name="Zgłaszający: Pokrewieństwo">
                     </div>
 
                     <div class="dpir-form-group">
-                        <label for="zglaszajacy_telefon">Numer telefonu</label>
-                        <input type="tel" id="zglaszajacy_telefon" name="Zgłaszający: Telefon" required>
+                        <label for="zglaszajacy_telefon">Numer telefonu kontaktowego</label>
+                        <input type="tel" id="zglaszajacy_telefon" name="Kontakt: Telefon" required minlength="9" placeholder="+48 000 000 000" title="Wprowadź minimum 9 znaków numeru telefonu">
                     </div>
 
                     <div class="dpir-form-group">
-                        <label for="zglaszajacy_email">Adres e-mail</label>
-                        <input type="email" id="zglaszajacy_email" name="Zgłaszający: E-mail" required>
+                        <label for="zglaszajacy_email">Adres e-mail kontaktowy</label>
+                        <input type="email" id="zglaszajacy_email" name="Kontakt: E-mail" required placeholder="twoj@email.pl">
                     </div>
 
                     <div class="dpir-form-group full-width">
@@ -229,7 +255,7 @@
 
                     <div class="dpir-form-group full-width">
                         <label for="oczekiwana_pomoc">Krótki opis potrzeb</label>
-                        <textarea id="oczekiwana_pomoc" name="Oczekiwana pomoc" required placeholder="Napisz, jakiego wsparcia oczekujesz (obecność wolontariusza, dofinansowanie sprzętu/leków, preferowane godziny wizyt itp.)..."></textarea>
+                        <textarea id="oczekiwana_pomoc" name="Oczekiwana pomoc" required minlength="20" placeholder="Napisz, jakiego wsparcia oczekujesz (obecność wolontariusza, dofinansowanie sprzętu/leków, preferowane godziny wizyt itp.). Postaraj się podać trochę szczegółów (min. 20 znaków)..."></textarea>
                     </div>
 
                     <div class="dpir-form-group full-width">
@@ -240,6 +266,11 @@
                     <div class="dpir-form-group full-width checkbox-group">
                         <input type="checkbox" id="zgoda_rodo" name="Zgoda RODO" required>
                         <label for="zgoda_rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych oraz danych dotyczących stanu zdrowia (dane wrażliwe) przez Fundację "Ostatnia Warta" z siedzibą w Gdańsku (KRS: 0001224367), w celu rozpatrzenia wniosku, organizacji oraz świadczenia pomocy statutowej. Zostałem/am poinformowany/a o prawie wglądu do swoich danych oraz prawie do wycofania zgody w dowolnym momencie.</label>
+                    </div>
+
+                    <div class="dpir-form-group full-width checkbox-group">
+                        <input type="checkbox" id="zgoda_dokumenty" name="Akceptacja dokumentów" required>
+                        <label for="zgoda_dokumenty">Oświadczam, że zapoznałem/am się z <a href="polityka-prywatnosci.html" target="_blank" style="color: #1a5f4a; text-decoration: underline;">Polityką Prywatności i RODO</a>, <a href="warunki-korzystania.html" target="_blank" style="color: #1a5f4a; text-decoration: underline;">Warunkami korzystania z serwisu</a> oraz <a href="regulamin-pomocy.html" target="_blank" style="color: #1a5f4a; text-decoration: underline;">Regulaminem świadczenia pomocy</a> i akceptuję ich treść.</label>
                     </div>
                     
                     <div class="dpir-form-group full-width">
@@ -327,6 +358,34 @@
     }
     setInterval(updateClock, 1000);
     updateClock();
+
+    // Logika rozwijania pól osoby zgłaszającej
+    const radioSam = document.getElementById('zglasza_sam');
+    const radioInna = document.getElementById('zglasza_inna');
+    const grupaNazwisko = document.getElementById('grupa_zglaszajacy_nazwisko');
+    const grupaPokrewienstwo = document.getElementById('grupa_zglaszajacy_pokrewienstwo');
+    const inputNazwisko = document.getElementById('zglaszajacy_nazwisko');
+    const inputPokrewienstwo = document.getElementById('zglaszajacy_pokrewienstwo');
+
+    function toggleZglaszajacy() {
+        if (radioInna.checked) {
+            grupaNazwisko.style.display = 'flex';
+            grupaPokrewienstwo.style.display = 'flex';
+            inputNazwisko.required = true;
+            inputPokrewienstwo.required = true;
+        } else {
+            grupaNazwisko.style.display = 'none';
+            grupaPokrewienstwo.style.display = 'none';
+            inputNazwisko.required = false;
+            inputPokrewienstwo.required = false;
+            // Czyszczenie ukrytych pól zapobiega wysyłaniu starych danych
+            inputNazwisko.value = '';
+            inputPokrewienstwo.value = '';
+        }
+    }
+
+    radioSam.addEventListener('change', toggleZglaszajacy);
+    radioInna.addEventListener('change', toggleZglaszajacy);
 
     // Walidacja PESEL
     function isValidPesel(pesel) {
