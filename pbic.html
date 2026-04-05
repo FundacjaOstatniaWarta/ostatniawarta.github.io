@@ -84,12 +84,9 @@
 
         .btn-dark { border-color: #ccc; color: #555; background: transparent; display: inline-block; padding: 10px 20px; margin-top: 20px; border: 2px solid #ccc; font-weight: bold; border-radius: 4px; font-family: 'Arial', sans-serif; transition: 0.3s; }
         .btn-dark:hover { background: #eee; color: #333; }
-
-        .docs-list { list-style: none; padding: 0; margin: 0; font-family: 'Arial', sans-serif; font-size: 1.05em; line-height: 1.8; }
-        .docs-list li { margin-bottom: 15px; padding-left: 30px; position: relative; }
-        .docs-list li::before { content: "📄"; position: absolute; left: 0; top: 0; }
-        .docs-list a { font-weight: bold; text-decoration: underline; color: #1a5f4a; transition: color 0.3s; }
-        .docs-list a:hover { color: #D4AF37; }
+        
+        .btn-solid-dark { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #133a2d; color: #fff; border: 2px solid #133a2d; transition: all 0.3s ease; }
+        .btn-solid-dark:hover { background: #D4AF37; border-color: #D4AF37; color: #133a2d; }
 
         footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; margin-top: 40px; }
         footer a { color: #D4AF37; text-decoration: none; }
@@ -222,14 +219,10 @@
     </div>
 
     <div class="support-grid" style="grid-template-columns: 1fr; margin-top: 40px;">
-        <div class="support-card" style="border-top: 4px solid #133a2d; background: #f4f8f6;">
-            <h3 style="text-align: center; width: 100%; border-bottom: 2px solid #d1e8df; padding-bottom: 10px; margin-bottom: 20px;">Pliki do pobrania (Dla Zarządów i Działów Księgowości)</h3>
-            <p style="text-align: center; width: 100%; margin-bottom: 25px;">Chcesz przedstawić naszą organizację Zarządowi lub potrzebujesz tradycyjnej umowy dla Księgowości? Przygotowaliśmy odpowiednie dokumenty:</p>
-            
-            <ul class="docs-list" style="max-width: 800px; margin: 0 auto;">
-                <li><a href="03_02_Oferta_Wspolpracy_CSR.pdf" target="_blank">[PDF] Oferta Współpracy dla Firm (Prezentacja One-Pager)</a> – Krótki i treściwy materiał w formacie PDF, idealny do przesłania przełożonym lub współpracownikom decyzyjnym.</li>
-                <li><a href="03_01_Wzor_Umowy_Darowizny.pdf" target="_blank">[PDF] Wzór Umowy Darowizny</a> – Ważne: do przekazania darowizny wystarczy standardowy przelew. Jeśli jednak Twoja polityka rachunkowości wymaga formy papierowej, pobierz ten szablon.</li>
-            </ul>
+        <div class="support-card" style="border-top: 4px solid #133a2d; background: #f4f8f6; align-items: center; text-align: center;">
+            <h3 style="text-align: center; width: 100%; border-bottom: 2px solid #d1e8df; padding-bottom: 10px; margin-bottom: 20px;">Dokumenty dla Zarządów i Działów Księgowości</h3>
+            <p style="text-align: center; width: 100%; margin-bottom: 25px; max-width: 800px;">Chcesz przedstawić naszą organizację Zarządowi lub potrzebujesz tradycyjnej umowy dla Księgowości? Wszystkie dedykowane materiały (w tym prezentację One-Pager oraz Wzór Umowy Darowizny) przenieśliśmy do naszej centralnej bazy dokumentów.</p>
+            <a href="dokumenty.html" class="btn-solid-dark">Przejdź do bazy dokumentów</a>
         </div>
     </div>
 
@@ -291,11 +284,12 @@
             <a href="zbiorki.html" class="btn-outline" style="margin-top: 10px;">Stań na Warcie (Zbiórki)</a>
             <a href="progzad.html" class="btn-outline" style="margin-top: 10px;">Dobrowolne Zadośćuczynienie</a>
             <a href="pracespol.html" class="btn-outline" style="margin-top: 10px;">Prace społeczne</a>
+            <a href="dokumenty.html" class="btn-solid-dark" style="margin-top: 10px;">📄 Dokumenty do pobrania</a>
         </div>
     </div>
 
     <div style="text-align: center; margin-top: 50px;">
-        <a href="index.html" class="btn-dark">&larr; Wróć na Stronę Główną</a>
+        <a href="index.html" class="btn-outline" style="border-color: #ccc; color: #777; margin-top: 0;">&larr; Wróć na Stronę Główną</a>
     </div>
 
 </section>
