@@ -120,7 +120,7 @@
 <section class="container">
     <div class="content-section">
 
-        <p>Odwiedzając stronę internetową ostatniawarta.pl (zwaną dalej „Serwisem” lub „Witryną”), zgadzasz się przestrzegać niniejszych Warunków korzystania, w tym naszej <a href="polityka-prywatnosci.html" style="color: #1a5f4a; text-decoration: underline; font-weight: bold;">Polityce Prywatności</a>. Zastrzegamy sobie prawo do modyfikacji niniejszych Warunków w dowolnym momencie.</p>
+        <p>Odwiedzając stronę internetową ostatniawarta.pl (zwaną dalej „Serwisem” lub „Witryną”), zgadzasz się przestrzegać niniejszych Warunków korzystania, w tym naszej <a href="polityka-prywatnosci.html" style="color: #1a5f4a; text-decoration: underline; font-weight: bold;">Polityki Prywatności</a>. Zastrzegamy sobie prawo do modyfikacji niniejszych Warunków w dowolnym momencie.</p>
 
         <div class="disclaimer-box">
             <h3>I. WAŻNE: Wiążące stanowisko Fundacji i status informacji</h3>
@@ -134,7 +134,7 @@
         <h3>II. Dostępność serwisu, cyberbezpieczeństwo i wyłączenie odpowiedzialności</h3>
         <ul>
             <li><strong>Stan „tak jak jest”:</strong> Nasza Witryna jest udostępniana w stanie „takim, w jakim jest” („TAK JAK JEST”) i „w miarę dostępności”. Serwis może być niekompletny, częściowo aktualizowany, znajdować się w fazie prac technicznych, być okresowo niedostępny lub niekompletny merytorycznie.</li>
-            <li><strong>Kompatybilność:</strong> Pomimo tego, że Witryna opiera się na powszechnym i bezpiecznym standardzie języka HTML, Fundacja nie gwarantuje, że strona będzie w 100% kompatmoja z każdym urządzeniem Użytkownika (w tym ze starszymi modelami smartfonów, nietypowymi systemami operacyjnymi czy przestarzałymi przeglądarkami).</li>
+            <li><strong>Kompatybilność:</strong> Pomimo tego, że Witryna opiera się na powszechnym i bezpiecznym standardzie języka HTML, Fundacja nie gwarantuje, że strona będzie w 100% kompatybilna z każdym urządzeniem Użytkownika (w tym ze starszymi modelami smartfonów, nietypowymi systemami operacyjnymi czy przestarzałymi przeglądarkami).</li>
             <li><strong>Dobra wiara:</strong> Fundacja dokłada wszelkich starań, aby Serwis był stale dostępny, aktualny i nie zawierał błędów. Nasze działania prowadzimy w dobrej wierze, mając na uwadze dobro Podopiecznych i Darczyńców.</li>
             <li><strong>Uwarunkowania geopolityczne:</strong> Z uwagi na trwający konflikt zbrojny za granicami Polski oraz zaangażowanie w niego podmiotów i państw trzecich (w tym USA, gdzie często fizycznie zlokalizowana jest globalna infrastruktura domenowa i hostingowa), w cyberprzestrzeni występuje podwyższone ryzyko incydentów.</li>
             <li><strong>Wyłączenie odpowiedzialności:</strong> Fundacja nie może odpowiadać prawnie i finansowo za ewentualną niedostępność Serwisu, podmianę treści przez osoby trzecie (tzw. <em>defacement</em>), dekompilację kodu, ataki typu DDoS, zainfekowanie złośliwym oprogramowaniem oraz inne nieprzewidywalne zdarzenia i zagrożenia występujące w sieci Internet, będące poza naszą bezpośrednią kontrolą.</li>
@@ -205,3 +205,15 @@
 
         const secHand = document.getElementById('secondHand');
         const minHand = document.getElementById('minuteHand');
+        const hrHand = document.getElementById('hourHand');
+
+        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
+        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
+        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>
