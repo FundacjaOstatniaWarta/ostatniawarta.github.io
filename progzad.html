@@ -83,6 +83,10 @@
         .steps-list li { margin-bottom: 15px; padding-left: 40px; position: relative; }
         .steps-list li::before { content: "✓"; color: #D4AF37; font-weight: bold; position: absolute; left: 0; top: 0; font-size: 1.2em; }
 
+        /* STYL RAMKI Z DANYMI DO PRZELEWU (Zaimportowane ze zbiorki.html) */
+        .account-box { background: #f0f7f4; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 20px; border: 1px solid #d1e8df; overflow: hidden; width: 100%; box-sizing: border-box; }
+        .account-number { font-size: 1.25em; letter-spacing: 1px; word-spacing: 2px; color: #1a5f4a; font-family: 'Arial', sans-serif; font-weight: bold; margin: 15px 0; white-space: normal; word-break: break-word; padding-bottom: 5px; }
+
         /* NATIVE HTML5 ACCORDION DLA FAQ */
         .faq-section { max-width: 900px; margin: 0 auto; }
         details { background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); margin-bottom: 15px; border-left: 4px solid #1a5f4a; overflow: hidden; transition: all 0.3s ease; }
@@ -114,6 +118,7 @@
             .header-titles h1 { font-size: 1.5em; }
             .support-card { padding: 20px; }
             .intro-text { text-align: left; }
+            .account-number { font-size: 1.1em; letter-spacing: 0px; }
         }
     </style>
 </head>
@@ -242,7 +247,27 @@
             <h3 style="text-align: center; width: 100%; border-bottom: 2px solid #d1e8df; padding-bottom: 10px; margin-bottom: 20px;">Jak to zrobić krok po kroku?</h3>
             
             <ul class="steps-list" style="max-width: 800px; margin: 0 auto;">
-                <li><strong>KROK 1:</strong> Dokonaj przelewu bezpośrednio na rachunek bankowy Fundacji "Ostatnia Warta". Rekomendujemy ominięcie bramek szybkich płatności, aby uniknąć prowizji operatorów i aby pełna kwota widniała na zaświadczeniu. <br>👉 <a href="zbiorki.html" class="text-link">Pobierz dane do Tradycyjnego Przelewu Bankowego</a>.</li>
+                <li id="krok1"><strong>KROK 1:</strong> Dokonaj przelewu bezpośrednio na rachunek bankowy Fundacji "Ostatnia Warta". Rekomendujemy ominięcie bramek szybkich płatności, aby uniknąć prowizji operatorów i aby pełna kwota widniała na zaświadczeniu.
+                    
+                    <div class="support-card" style="border-top: 4px solid #D4AF37; margin-top: 25px; margin-bottom: 25px; padding: 25px; max-width: 600px; text-align: center; display: block; margin-left: 0;">
+                        <h3 style="margin-bottom: 5px; text-align: center;">Tradycyjny Przelew Bankowy</h3>
+                        <p style="color: #a83232; font-weight: bold; font-size: 1.1em; letter-spacing: 0.5px; margin-top: 0; margin-bottom: 20px; text-align: center;">WSPARCIE BEZ PROWIZJI</p>
+                        
+                        <div class="account-box" style="margin-bottom: 0;">
+                            <p style="margin: 0; font-size: 1.1em;"><strong>FUNDACJA "OSTATNIA WARTA"</strong></p>
+                            <div class="account-number" style="font-size: 1.3em; margin: 10px 0;">PL 61 2530 0008 2049 1089 8921 0001</div>
+                            
+                            <div style="margin: 20px 0; display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 10px;">
+                                <span style="font-size: 1.2em; font-weight: bold; color: #555;">Bank:</span> 
+                                <img src="nest1.png" alt="Nest Bank" style="height: 60px; object-fit: contain;">
+                            </div>
+                            
+                            <p style="margin: 15px 0 0 0; font-size: 1.3em; font-weight: bold; color: #1a5f4a; background: #fff; padding: 15px; border-radius: 6px; border: 2px dashed #1a5f4a;">
+                                Tytuł przelewu:<br>Darowizna na cele statutowe
+                            </p>
+                        </div>
+                    </div>
+                </li>
                 <li><strong>KROK 2:</strong> Wyślij e-mail na adres <strong>kontakt@ostatniawarta.pl</strong>, podając: Imię i nazwisko darczyńcy, datę i kwotę wpłaty oraz (opcjonalnie) adres do korespondencji i dane sądu/prokuratury, jeśli mają widnieć na zaświadczeniu.</li>
                 <li><strong>KROK 3:</strong> Gotowy, oficjalny dokument potwierdzający wpłatę darowizny dla sądu (z podpisem Zarządu) otrzymasz w formie elektronicznej (PDF) oraz – na życzenie – pocztą tradycyjną.</li>
             </ul>
@@ -364,10 +389,10 @@
     <div style="background: #fff; padding: 40px 25px; border-radius: 8px; border-top: 4px solid #D4AF37; margin-top: 50px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
         <h3 style="margin-top: 0; margin-bottom: 15px; font-family: 'Georgia', serif; font-size: 1.6em; color: #133a2d;">Podejmij działanie. Uzyskaj zaświadczenie.</h3>
         <p style="font-size: 1.1em; color: #555; margin-bottom: 25px; line-height: 1.5; max-width: 800px; margin-left: auto; margin-right: auto;">
-            Nie czekaj na decyzję sądu. <a href="zbiorki.html" class="text-link">Wesprzyj naszą misję</a> poprzez tradycyjny przelew bankowy i zdobądź oficjalny dokument, który pomoże Twojemu adwokatowi w walce o najłagodniejszy wyrok.
+            Nie czekaj na decyzję sądu. Wesprzyj naszą misję poprzez tradycyjny przelew bankowy i zdobądź oficjalny dokument, który pomoże Twojemu adwokatowi w walce o najłagodniejszy wyrok.
         </p>
         <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-            <a href="zbiorki.html" class="btn-primary">Pobierz dane do przelewu</a>
+            <a href="#krok1" class="btn-primary">Sprawdź dane do przelewu</a>
         </div>
     </div>
 
