@@ -84,9 +84,12 @@
         .steps-list li { margin-bottom: 15px; padding-left: 40px; position: relative; }
         .steps-list li::before { content: "✓"; color: #D4AF37; font-weight: bold; position: absolute; left: 0; top: 0; font-size: 1.2em; }
 
-        /* STYL RAMKI Z DANYMI DO PRZELEWU (Zaimportowane ze zbiorki.html) */
+        /* STYL RAMKI Z DANYMI DO PRZELEWU */
         .account-box { background: #f0f7f4; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 20px; border: 1px solid #d1e8df; overflow: hidden; width: 100%; box-sizing: border-box; }
         .account-number { font-size: 1.25em; letter-spacing: 1px; word-spacing: 2px; color: #1a5f4a; font-family: 'Arial', sans-serif; font-weight: bold; margin: 15px 0; white-space: normal; word-break: break-word; padding-bottom: 5px; }
+        
+        /* KLASA DLA BOXA CTA */
+        .cta-transfer { margin: 30px auto; max-width: 650px; text-align: center; display: block; }
 
         /* NATIVE HTML5 ACCORDION DLA FAQ */
         .faq-section { max-width: 900px; margin: 0 auto; }
@@ -120,6 +123,17 @@
             .support-card { padding: 20px; }
             .intro-text { text-align: left; }
             .account-number { font-size: 1.1em; letter-spacing: 0px; }
+            
+            /* Poprawki dla boxa z przelewem na mobile */
+            .steps-list li { padding-left: 30px; } /* Zmniejszony margines listy na mobile */
+            .cta-transfer {
+                margin-left: -30px; /* Kompensuje wcięcie listy, by rozszerzyć box do pełnej szerokości karty */
+                width: calc(100% + 30px);
+                padding: 20px 15px; /* Troszkę mniej paddingu wewnętrznego */
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            .account-box { padding: 15px 10px; } /* Mniejsze odstępy w samym zielonym boksie na telefony */
         }
     </style>
 </head>
@@ -250,7 +264,7 @@
             <ul class="steps-list" style="max-width: 800px; margin: 0 auto;">
                 <li id="krok1"><strong>KROK 1:</strong> Dokonaj przelewu bezpośrednio na rachunek bankowy Fundacji "Ostatnia Warta". Rekomendujemy ominięcie bramek szybkich płatności, aby uniknąć prowizji operatorów i aby pełna kwota widniała na zaświadczeniu.
                     
-                    <div class="support-card" style="border-top: 4px solid #D4AF37; margin-top: 25px; margin-bottom: 25px; padding: 25px; max-width: 600px; text-align: center; display: block; margin-left: 0;">
+                    <div class="support-card cta-transfer" style="border-top: 4px solid #D4AF37;">
                         <h3 style="margin-bottom: 5px; text-align: center;">Tradycyjny Przelew Bankowy</h3>
                         <p style="color: #a83232; font-weight: bold; font-size: 1.1em; letter-spacing: 0.5px; margin-top: 0; margin-bottom: 20px; text-align: center;">WSPARCIE BEZ PROWIZJI</p>
                         
