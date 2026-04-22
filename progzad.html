@@ -79,17 +79,14 @@
         .support-card h3 { margin-top: 0; font-size: 1.3em; font-family: 'Georgia', serif; margin-bottom: 10px; color: #133a2d; }
         .support-card p { font-family: 'Arial', sans-serif; font-size: 1em; color: #555; line-height: 1.6; margin-bottom: 0; }
 
-        /* LISTA KROKÓW */
-        .steps-list { list-style: none; padding: 0; margin: 0; font-family: 'Arial', sans-serif; font-size: 1.05em; line-height: 1.8; color: #444; }
-        .steps-list li { margin-bottom: 15px; padding-left: 40px; position: relative; }
-        .steps-list li::before { content: "✓"; color: #D4AF37; font-weight: bold; position: absolute; left: 0; top: 0; font-size: 1.2em; }
-
-        /* STYL RAMKI Z DANYMI DO PRZELEWU */
-        .account-box { background: #f0f7f4; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 20px; border: 1px solid #d1e8df; overflow: hidden; width: 100%; box-sizing: border-box; }
-        .account-number { font-size: 1.25em; letter-spacing: 1px; word-spacing: 2px; color: #1a5f4a; font-family: 'Arial', sans-serif; font-weight: bold; margin: 15px 0; white-space: normal; word-break: break-word; padding-bottom: 5px; }
-        
-        /* KLASA DLA BOXA CTA */
-        .cta-transfer { margin: 30px auto; max-width: 650px; text-align: center; display: block; }
+        /* STYL FORMULARZA (Dodane) */
+        .form-container { background: #fff; padding: 30px; border-radius: 8px; border: 1px solid #d1e8df; max-width: 600px; margin: 20px auto; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; font-weight: bold; color: #133a2d; margin-bottom: 8px; font-family: 'Arial', sans-serif; }
+        .form-group input { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-family: 'Arial', sans-serif; font-size: 1em; transition: border-color 0.3s; }
+        .form-group input:focus { outline: none; border-color: #1a5f4a; }
+        .btn-submit { background: #D4AF37; color: #133a2d; border: 2px solid #D4AF37; padding: 15px 30px; font-weight: bold; cursor: pointer; border-radius: 4px; width: 100%; font-size: 1.1em; transition: all 0.3s; font-family: 'Arial', sans-serif; text-transform: uppercase; letter-spacing: 0.5px; }
+        .btn-submit:hover { background: #b5952f; border-color: #b5952f; color: #fff; }
 
         /* NATIVE HTML5 ACCORDION DLA FAQ */
         .faq-section { max-width: 900px; margin: 0 auto; }
@@ -122,18 +119,6 @@
             .header-titles h1 { font-size: 1.5em; }
             .support-card { padding: 20px; }
             .intro-text { text-align: left; }
-            .account-number { font-size: 1.1em; letter-spacing: 0px; }
-            
-            /* Poprawki dla boxa z przelewem na mobile */
-            .steps-list li { padding-left: 30px; } /* Zmniejszony margines listy na mobile */
-            .cta-transfer {
-                margin-left: -30px; /* Kompensuje wcięcie listy, by rozszerzyć box do pełnej szerokości karty */
-                width: calc(100% + 30px);
-                padding: 20px 15px; /* Troszkę mniej paddingu wewnętrznego */
-                margin-top: 20px;
-                margin-bottom: 20px;
-            }
-            .account-box { padding: 15px 10px; } /* Mniejsze odstępy w samym zielonym boksie na telefony */
         }
     </style>
 </head>
@@ -257,35 +242,33 @@
         </div>
     </div>
 
-    <div class="support-grid" style="grid-template-columns: 1fr; margin-top: 60px;">
+    <div class="support-grid" style="grid-template-columns: 1fr; margin-top: 60px;" id="formularz">
         <div class="support-card" style="border-top: 4px solid #133a2d; background: #f4f8f6;">
-            <h3 style="text-align: center; width: 100%; border-bottom: 2px solid #d1e8df; padding-bottom: 10px; margin-bottom: 20px;">Jak to zrobić krok po kroku?</h3>
+            <h3 style="text-align: center; width: 100%; border-bottom: 2px solid #d1e8df; padding-bottom: 10px; margin-bottom: 20px;">Uzyskaj instrukcję wpłaty i zarezerwuj zaświadczenie</h3>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 20px auto;">
+                Wypełnij poniższe dane, aby natychmiast otrzymać e-mailem dane do tradycyjnego przelewu bankowego (wsparcie bez prowizji operatorów) i zarezerwować termin wystawienia oficjalnego dokumentu dla sądu.
+            </p>
             
-            <ul class="steps-list" style="max-width: 800px; margin: 0 auto;">
-                <li id="krok1"><strong>KROK 1:</strong> Dokonaj przelewu bezpośrednio na rachunek bankowy Fundacji "Ostatnia Warta". Rekomendujemy ominięcie bramek szybkich płatności, aby uniknąć prowizji operatorów i aby pełna kwota widniała na zaświadczeniu.
-                    
-                    <div class="support-card cta-transfer" style="border-top: 4px solid #D4AF37;">
-                        <h3 style="margin-bottom: 5px; text-align: center;">Tradycyjny Przelew Bankowy</h3>
-                        <p style="color: #a83232; font-weight: bold; font-size: 1.1em; letter-spacing: 0.5px; margin-top: 0; margin-bottom: 20px; text-align: center;">WSPARCIE BEZ PROWIZJI</p>
-                        
-                        <div class="account-box" style="margin-bottom: 0;">
-                            <p style="margin: 0; font-size: 1.1em;"><strong>FUNDACJA "OSTATNIA WARTA"</strong></p>
-                            <div class="account-number" style="font-size: 1.3em; margin: 10px 0;">PL 61 2530 0008 2049 1089 8921 0001</div>
-                            
-                            <div style="margin: 20px 0; display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 10px;">
-                                <span style="font-size: 1.2em; font-weight: bold; color: #555;">Bank:</span> 
-                                <img src="nest1.png" alt="Nest Bank" style="height: 60px; object-fit: contain;">
-                            </div>
-                            
-                            <p style="margin: 15px 0 0 0; font-size: 1.3em; font-weight: bold; color: #1a5f4a; background: #fff; padding: 15px; border-radius: 6px; border: 2px dashed #1a5f4a;">
-                                Tytuł przelewu:<br>Darowizna na cele statutowe
-                            </p>
-                        </div>
+            <div class="form-container">
+                <form action="https://formspree.io/f/mrerynrk" method="POST">
+                    <div class="form-group">
+                        <label>Imię i Nazwisko darczyńcy:</label>
+                        <input type="text" name="name" required placeholder="np. Jan Kowalski">
                     </div>
-                </li>
-                <li><strong>KROK 2:</strong> Wyślij e-mail na adres <strong>kontakt@ostatniawarta.pl</strong>, podając: Imię i nazwisko darczyńcy, datę i kwotę wpłaty oraz (opcjonalnie) adres do korespondencji i dane sądu/prokuratury, jeśli mają widnieć na zaświadczeniu.</li>
-                <li><strong>KROK 3:</strong> Gotowy, oficjalny dokument potwierdzający wpłatę darowizny dla sądu (z podpisem Zarządu) otrzymasz w formie elektronicznej (PDF) oraz – na życzenie – pocztą tradycyjną.</li>
-            </ul>
+                    <div class="form-group">
+                        <label>Twój adres e-mail:</label>
+                        <input type="email" name="email" required placeholder="twoj@email.pl">
+                    </div>
+                    <div class="form-group">
+                        <label>Planowana kwota darowizny (opcjonalnie):</label>
+                        <input type="text" name="amount" placeholder="np. 500 zł">
+                    </div>
+                    
+                    <input type="hidden" name="_next" value="https://ostatniawarta.pl/dziekujemy.html">
+                    <input type="hidden" name="_subject" value="Nowe zgłoszenie darowizny - Zaświadczenie Sądowe">
+                    <input type="text" name="_gotcha" style="display:none"> <button type="submit" class="btn-submit">Wyślij i odbierz numer konta</button>
+                </form>
+            </div>
         </div>
     </div>
 
@@ -294,7 +277,6 @@
     </div>
     
     <div class="faq-section">
-        
         <details>
             <summary>Wielka fundacja z telewizji czy mniejsza organizacja – co jest lepiej oceniane przez sąd?</summary>
             <p>Dla sądu nie ma znaczenia wielkość organizacji czy jej budżet reklamowy, lecz sam fakt prospołecznej postawy oskarżonego i rzetelność dokumentacji. Prawnicy często doradzają wybór mniejszych, transparentnych fundacji (takich jak "Ostatnia Warta"), ponieważ wspierają one najtrudniejsze, niedofinansowane obszary (np. opieka nad umierającymi). Dodatkowo, mniejsze organizacje działają szybciej – w naszym przypadku masz gwarancję, że kompletny, wolny od błędów dokument z pieczęciami trafi w Twoje ręce w 24 godziny, podczas gdy w wielkich fundacjach na zaświadczenie czeka się niekiedy tygodniami.</p>
@@ -312,7 +294,7 @@
 
         <details>
             <summary>Jak zdobyć zaświadczenie o wpłacie dla sądu?</summary>
-            <p>Wystarczy dokonać darowizny na konto Fundacji "Ostatnia Warta" i napisać do nas e-mail z danymi. Dokument z pieczęciami Zarządu wystawiamy w 24 godziny.</p>
+            <p>Wystarczy wypełnić powyższy formularz kontaktowy, a następnie dokonać darowizny na konto Fundacji "Ostatnia Warta". Dokument z pieczęciami Zarządu wystawiamy w 24 godziny od zaksięgowania środków.</p>
         </details>
 
         <details>
@@ -332,7 +314,7 @@
 
         <details>
             <summary>W jakim czasie otrzymam zaświadczenie od fundacji?</summary>
-            <p>Dokument elektroniczny (PDF z podpisem) wysyłamy w ciągu 24 godzin od zaksięgowania środków na naszym rachunku. Wersję papierową z fizycznymi pieczęciami nadajemy pocztą.</p>
+            <p>Dokument elektroniczny (PDF z podpisem) wysyłamy w ciągu 24 godzin od zaksięgowania środków na naszym rachunku. Wersję papierową z fizycznymi pieczęciami nadajemy pocztą na życzenie darczyńcy.</p>
         </details>
 
         <details>
@@ -404,10 +386,10 @@
     <div style="background: #fff; padding: 40px 25px; border-radius: 8px; border-top: 4px solid #D4AF37; margin-top: 50px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
         <h3 style="margin-top: 0; margin-bottom: 15px; font-family: 'Georgia', serif; font-size: 1.6em; color: #133a2d;">Podejmij działanie. Uzyskaj zaświadczenie.</h3>
         <p style="font-size: 1.1em; color: #555; margin-bottom: 25px; line-height: 1.5; max-width: 800px; margin-left: auto; margin-right: auto;">
-            Nie czekaj na decyzję sądu. Wesprzyj naszą misję poprzez tradycyjny przelew bankowy i zdobądź oficjalny dokument, który pomoże Twojemu adwokatowi w walce o najłagodniejszy wyrok.
+            Nie czekaj na decyzję sądu. Wesprzyj naszą misję i zdobądź oficjalny dokument, który pomoże Twojemu adwokatowi w walce o najłagodniejszy wyrok.
         </p>
         <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-            <a href="#krok1" class="btn-primary">Sprawdź dane do przelewu</a>
+            <a href="#formularz" class="btn-primary">Wypełnij zgłoszenie i otrzymaj dane</a>
         </div>
     </div>
 
@@ -438,35 +420,4 @@
                 <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Polityka Prywatności i RODO</a>
                 <a href="regulamin-darowizn.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Regulamin Darowizn</a>
                 <a href="regulamin-pomocy.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Regulamin Świadczenia Pomocy</a>
-                <a href="warunki-korzystania.html" style="text-decoration: none; color: #D4AF37;">Warunki Korzystania</a>
-            </p>
-        </div>
-    </div>
-</footer>
-
-<script>
-    // Zegar
-    function updateClock() {
-        const now = new Date();
-        const second = now.getSeconds();
-        const minute = now.getMinutes();
-        const hour = now.getHours();
-
-        const secondDeg = ((second / 60) * 360);
-        const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
-        const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
-
-        const secHand = document.getElementById('secondHand');
-        const minHand = document.getElementById('minuteHand');
-        const hrHand = document.getElementById('hourHand');
-
-        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
-        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
-        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
-    }
-    setInterval(updateClock, 1000);
-    updateClock();
-</script>
-
-</body>
-</html>
+                <a href="warunki-korzystania.html" style="text-decoration: none; color: #D4AF37;">Warunki
