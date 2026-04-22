@@ -17,11 +17,15 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#133a2d">
     
     <title>Dziękujemy - Instrukcja wpłaty | Fundacja Ostatnia Warta</title>
+    <meta name="description" content="Instrukcja jak opłacić i uzyskać zaświadczenie do sądu w trzech prostych krokach.">
     <meta name="robots" content="noindex, nofollow">
 
+    <link rel="canonical" href="https://ostatniawarta.pl/dziekujemy.html" />
     <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
 
     <style>
         /* Podstawowe style i reset */
@@ -58,8 +62,9 @@
         
         /* LISTA KROKÓW */
         .steps-list { list-style: none; padding: 0; margin: 0; font-family: 'Arial', sans-serif; font-size: 1.05em; line-height: 1.8; color: #444; }
-        .steps-list li { margin-bottom: 15px; padding-left: 40px; position: relative; }
+        .steps-list li { margin-bottom: 25px; padding-left: 40px; position: relative; }
         .steps-list li::before { content: "✓"; color: #D4AF37; font-weight: bold; position: absolute; left: 0; top: 0; font-size: 1.2em; }
+        .step-label { font-size: 1.2em; font-weight: bold; color: #a83232; letter-spacing: 0.5px; }
 
         /* STYL RAMKI Z DANYMI DO PRZELEWU */
         .account-box { background: #f0f7f4; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 20px; border: 1px solid #d1e8df; overflow: hidden; width: 100%; box-sizing: border-box; }
@@ -98,13 +103,13 @@
                     <div class="hand hour-hand" id="hourHand"></div>
                     <div class="hand minute-hand" id="minuteHand"></div>
                     <div class="hand second-hand" id="secondHand"></div>
-                    <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img"> 
+                    <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img" width="100" height="100"> 
                 </div>
             </a>
         </div>
         
         <div class="header-titles">
-            <h1>Fundacja Ostatnia Warta</h1>
+            <h1>Jak uzyskać zaświadczenie krok po kroku?</h1>
         </div>
 
         <nav>
@@ -122,10 +127,9 @@
     
     <div class="support-grid" style="grid-template-columns: 1fr; margin-top: 20px;">
         <div class="support-card" style="border-top: 4px solid #133a2d; background: #f4f8f6;">
-            <h3 style="text-align: center; width: 100%; border-bottom: 2px solid #d1e8df; padding-bottom: 10px; margin-bottom: 30px; font-size: 1.8em;">Dziękujemy za zainteresowanie! Jak uzyskać zaświadczenie krok po kroku?</h3>
             
             <ul class="steps-list" style="max-width: 800px; margin: 0 auto;">
-                <li id="krok1"><strong>KROK 1:</strong> Dokonaj przelewu bezpośrednio na rachunek bankowy Fundacji "Ostatnia Warta". Rekomendujemy ominięcie bramek szybkich płatności, aby uniknąć prowizji operatorów i aby pełna kwota widniała na zaświadczeniu.
+                <li id="krok1"><span class="step-label">KROK 1:</span> Dokonaj przelewu bezpośrednio na rachunek bankowy Fundacji "Ostatnia Warta". Rekomendujemy ominięcie bramek szybkich płatności, aby uniknąć prowizji operatorów i aby pełna kwota widniała na zaświadczeniu.
                     
                     <div class="support-card cta-transfer" style="border-top: 4px solid #D4AF37;">
                         <h3 style="margin-bottom: 5px; text-align: center;">Tradycyjny Przelew Bankowy</h3>
@@ -137,7 +141,7 @@
                             
                             <div style="margin: 20px 0; display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 10px;">
                                 <span style="font-size: 1.2em; font-weight: bold; color: #555;">Bank:</span> 
-                                <img src="nest1.png" alt="Nest Bank" style="height: 60px; object-fit: contain;">
+                                <img src="nest1.png" alt="Nest Bank" width="120" height="60" style="height: 60px; width: auto; object-fit: contain;">
                             </div>
                             
                             <p style="margin: 15px 0 0 0; font-size: 1.3em; font-weight: bold; color: #1a5f4a; background: #fff; padding: 15px; border-radius: 6px; border: 2px dashed #1a5f4a;">
@@ -146,8 +150,8 @@
                         </div>
                     </div>
                 </li>
-                <li><strong>KROK 2:</strong> Wyślij e-mail na adres <strong>kontakt@ostatniawarta.pl</strong>, podając: Imię i nazwisko darczyńcy, datę i kwotę wpłaty oraz (opcjonalnie) adres do korespondencji i dane sądu/prokuratury, jeśli mają widnieć na zaświadczeniu.</li>
-                <li><strong>KROK 3:</strong> Gotowy, oficjalny dokument potwierdzający wpłatę darowizny dla sądu (z podpisem Zarządu) otrzymasz w formie elektronicznej (PDF) oraz – na życzenie – pocztą tradycyjną.</li>
+                <li><span class="step-label">KROK 2:</span> Wyślij e-mail na adres <strong>kontakt@ostatniawarta.pl</strong>, podając: Imię i nazwisko darczyńcy, datę i kwotę wpłaty oraz (opcjonalnie) adres do korespondencji i dane sądu/prokuratury, jeśli mają widnieć na zaświadczeniu.</li>
+                <li><span class="step-label">KROK 3:</span> Gotowy, oficjalny dokument potwierdzający wpłatę darowizny dla sądu (z podpisem Zarządu) otrzymasz w formie elektronicznej (PDF) oraz – na życzenie – pocztą tradycyjną.</li>
             </ul>
 
             <div style="text-align: center; margin-top: 40px;">
