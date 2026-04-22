@@ -14,11 +14,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Dziękujemy | Fundacja Ostatnia Warta</title>
-    <meta name="robots" content="noindex, nofollow"> <link rel="icon" type="image/png" href="logo.png">
+    <title>Dziękujemy - Instrukcja wpłaty | Fundacja Ostatnia Warta</title>
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="icon" type="image/png" href="logo.png">
 
     <style>
-        /* Podstawowe style skopiowane z głównego pliku dla spójności */
         body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; display: flex; flex-direction: column; min-height: 100vh; }
         a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
         h1, h2, h3, h4 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
@@ -43,13 +44,16 @@
         nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
         nav ul li a:hover { color: #D4AF37; }
 
-        /* Karta z podziękowaniem */
-        .success-card { background: #fff; border-radius: 8px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); border-top: 4px solid #D4AF37; padding: 50px 30px; text-align: center; max-width: 700px; margin: 40px auto; }
-        .success-card h2 { color: #133a2d; font-family: 'Georgia', serif; font-size: 2.2em; margin-top: 0; margin-bottom: 20px; }
-        .success-card p { font-family: 'Arial', sans-serif; font-size: 1.2em; color: #555; line-height: 1.6; margin-bottom: 20px; }
-        .alert-text { color: #a83232; font-weight: bold; font-size: 1.1em; margin-bottom: 40px; }
+        /* Karta z podziękowaniem i danymi */
+        .success-card { background: #fff; border-radius: 8px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); border-top: 4px solid #D4AF37; padding: 40px 30px; text-align: center; max-width: 800px; margin: 20px auto; }
+        .success-card h2 { color: #133a2d; font-family: 'Georgia', serif; font-size: 2.2em; margin-top: 0; margin-bottom: 10px; }
+        .success-card p { font-family: 'Arial', sans-serif; font-size: 1.1em; color: #555; line-height: 1.6; margin-bottom: 20px; }
+        
+        .account-box { background: #f0f7f4; padding: 30px; border-radius: 8px; text-align: center; margin: 30px 0; border: 1px solid #d1e8df; }
+        .account-number { font-size: 1.4em; letter-spacing: 1px; word-spacing: 2px; color: #1a5f4a; font-family: 'Arial', sans-serif; font-weight: bold; margin: 15px 0; }
+        .title-box { margin: 20px auto 0 auto; font-size: 1.2em; font-weight: bold; color: #1a5f4a; background: #fff; padding: 15px; border-radius: 6px; border: 2px dashed #1a5f4a; display: inline-block; }
 
-        .btn-primary { display: inline-block; padding: 15px 30px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #D4AF37; color: #133a2d; border: 2px solid #D4AF37; transition: background 0.3s ease, color 0.3s ease; text-align: center; font-size: 1.1em; }
+        .btn-primary { display: inline-block; padding: 15px 30px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #D4AF37; color: #133a2d; border: 2px solid #D4AF37; transition: background 0.3s ease, color 0.3s ease; text-align: center; font-size: 1.1em; margin-top: 20px;}
         .btn-primary:hover { background: #b5952f; border-color: #b5952f; color: #fff; }
 
         footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; margin-top: auto; }
@@ -58,7 +62,8 @@
         
         @media (max-width: 768px) { 
             .header-titles h1 { font-size: 1.5em; }
-            .success-card { padding: 30px 20px; }
+            .success-card { padding: 30px 15px; }
+            .account-number { font-size: 1.1em; letter-spacing: 0; }
         }
     </style>
 </head>
@@ -93,8 +98,26 @@
 <section class="container" style="display: flex; align-items: center; justify-content: center;">
     <div class="success-card">
         <h2>Dziękujemy za zgłoszenie!</h2>
-        <p>Twoje dane zostały bezpiecznie przesłane. Na Twój adres e-mail wysłaliśmy właśnie wiadomość z danymi do przelewu bankowego oraz instrukcjami dotyczącymi zaświadczenia.</p>
-        <p class="alert-text">Jeśli nie widzisz naszej wiadomości w ciągu 2 minut, koniecznie sprawdź folder SPAM / Oferty.</p>
+        <p>Twoje dane zostały bezpiecznie przesłane i zarejestrowane. Poniżej znajdują się dane do wykonania przelewu. Zapisz je lub skopiuj do swojej aplikacji bankowej.</p>
+        
+        <div class="account-box">
+            <p style="margin: 0; font-size: 1.1em; color: #133a2d;"><strong>Odbiorca: FUNDACJA "OSTATNIA WARTA"</strong></p>
+            <div class="account-number">PL 61 2530 0008 2049 1089 8921 0001</div>
+            <p style="margin: 5px 0; color: #555;">Bank: Nest Bank</p>
+            
+            <div class="title-box">
+                Tytuł przelewu:<br>Darowizna na cele statutowe
+            </div>
+        </div>
+
+        <div style="text-align: left; background: #fafafa; padding: 20px; border-radius: 6px; border: 1px solid #eee; margin-bottom: 20px;">
+            <h3 style="margin-top: 0; font-size: 1.2em; color: #133a2d;">Co dalej?</h3>
+            <ol style="margin-bottom: 0; color: #555; font-family: 'Arial', sans-serif; line-height: 1.6; padding-left: 20px;">
+                <li>Po zleceniu przelewu nie musisz już nic robić. Nasz system księgowy monitoruje wpłaty.</li>
+                <li>Gdy tylko środki zostaną zaksięgowane, w ciągu 24 godzin wygenerujemy i prześlemy na Twój adres e-mail oficjalne, imienne zaświadczenie (PDF) z pieczęciami i podpisem Zarządu.</li>
+            </ol>
+        </div>
+
         <a href="index.html" class="btn-primary">Wróć na Stronę Główną</a>
     </div>
 </section>
