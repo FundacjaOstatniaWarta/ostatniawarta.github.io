@@ -79,12 +79,7 @@
         .support-card h3 { margin-top: 0; font-size: 1.3em; font-family: 'Georgia', serif; margin-bottom: 10px; color: #133a2d; }
         .support-card p { font-family: 'Arial', sans-serif; font-size: 1em; color: #555; line-height: 1.6; margin-bottom: 0; }
 
-        /* STYL FORMULARZA (Dodane) */
-        .form-container { background: #fff; padding: 30px; border-radius: 8px; border: 1px solid #d1e8df; max-width: 600px; margin: 20px auto; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
-        .form-group { margin-bottom: 20px; text-align: left; }
-        .form-group label { display: block; font-weight: bold; color: #133a2d; margin-bottom: 8px; font-family: 'Arial', sans-serif; }
-        .form-group input { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-family: 'Arial', sans-serif; font-size: 1em; transition: border-color 0.3s; }
-        .form-group input:focus { outline: none; border-color: #1a5f4a; }
+        /* STYL PRZYCISKU GŁÓWNEGO */
         .btn-submit { background: #D4AF37; color: #133a2d; border: 2px solid #D4AF37; padding: 15px 30px; font-weight: bold; cursor: pointer; border-radius: 4px; width: 100%; font-size: 1.1em; transition: all 0.3s; font-family: 'Arial', sans-serif; text-transform: uppercase; letter-spacing: 0.5px; }
         .btn-submit:hover { background: #b5952f; border-color: #b5952f; color: #fff; }
 
@@ -243,32 +238,15 @@
     </div>
 
     <div class="support-grid" style="grid-template-columns: 1fr; margin-top: 60px;" id="formularz">
-        <div class="support-card" style="border-top: 4px solid #133a2d; background: #f4f8f6;">
-            <h3 style="text-align: center; width: 100%; border-bottom: 2px solid #d1e8df; padding-bottom: 10px; margin-bottom: 20px;">Uzyskaj instrukcję wpłaty i zarezerwuj zaświadczenie</h3>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 20px auto;">
-                Wypełnij poniższe dane, aby natychmiast otrzymać e-mailem dane do tradycyjnego przelewu bankowego (wsparcie bez prowizji operatorów) i zarezerwować termin wystawienia oficjalnego dokumentu dla sądu.
+        <div class="support-card" style="border-top: 4px solid #133a2d; background: #f4f8f6; align-items: center;">
+            <h3 style="text-align: center; width: 100%; border-bottom: 2px solid #d1e8df; padding-bottom: 10px; margin-bottom: 20px;">Pobierz instrukcję wpłaty i zarezerwuj zaświadczenie</h3>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px auto; font-size: 1.1em; color: #444;">
+                Kliknij poniższy przycisk, aby natychmiast wyświetlić <strong>dane do przelewu bankowego</strong> (wsparcie bezpośrednie, bez prowizji operatorów) oraz poznać kolejne kroki do uzyskania oficjalnego dokumentu dla sądu.
             </p>
             
-            <div class="form-container">
-                <form action="https://formspree.io/f/mrerynrk" method="POST">
-                    <div class="form-group">
-                        <label>Imię i Nazwisko darczyńcy:</label>
-                        <input type="text" name="name" required placeholder="np. Jan Kowalski">
-                    </div>
-                    <div class="form-group">
-                        <label>Twój adres e-mail:</label>
-                        <input type="email" name="email" required placeholder="twoj@email.pl">
-                    </div>
-                    <div class="form-group">
-                        <label>Planowana kwota darowizny (opcjonalnie):</label>
-                        <input type="text" name="amount" placeholder="np. 500 zł">
-                    </div>
-                    
-                    <input type="hidden" name="_next" value="https://ostatniawarta.pl/dziekujemy.html">
-                    <input type="hidden" name="_subject" value="Nowe zgłoszenie darowizny - Zaświadczenie Sądowe">
-                    <input type="text" name="_gotcha" style="display:none"> <button type="submit" class="btn-submit">Wyślij i odbierz numer konta</button>
-                </form>
-            </div>
+            <a href="dziekujemy.html" class="btn-submit" style="text-align: center; display: block; max-width: 400px; margin: 0 auto; text-decoration: none; box-sizing: border-box;">
+                Pokaż dane do przelewu
+            </a>
         </div>
     </div>
 
@@ -294,7 +272,7 @@
 
         <details>
             <summary>Jak zdobyć zaświadczenie o wpłacie dla sądu?</summary>
-            <p>Wystarczy wypełnić powyższy formularz kontaktowy, a następnie dokonać darowizny na konto Fundacji "Ostatnia Warta". Dokument z pieczęciami Zarządu wystawiamy w 24 godziny od zaksięgowania środków.</p>
+            <p>Wystarczy kliknąć przycisk "Pokaż dane do przelewu" i dokonać darowizny na konto Fundacji "Ostatnia Warta". Dokument z pieczęciami Zarządu wystawiamy w 24 godziny od zaksięgowania środków.</p>
         </details>
 
         <details>
@@ -319,7 +297,7 @@
 
         <details>
             <summary>Jaki tytuł przelewu wpisać, robiąc darowiznę dla sądu?</summary>
-            <p>Najlepiej i najbezpieczniej wpisać po prostu: <em>"Darowizna na cele statutowe Fundacji Ostatnia Warta"</em>.</p>
+            <p>Najlepiej i najbezpieczniej wpisać po prostu: <em>"Darowizna na cele statutowe"</em>.</p>
         </details>
 
         <details>
@@ -389,7 +367,7 @@
             Nie czekaj na decyzję sądu. Wesprzyj naszą misję i zdobądź oficjalny dokument, który pomoże Twojemu adwokatowi w walce o najłagodniejszy wyrok.
         </p>
         <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-            <a href="#formularz" class="btn-primary">Wypełnij zgłoszenie i otrzymaj dane</a>
+            <a href="dziekujemy.html" class="btn-primary">Pokaż dane do przelewu</a>
         </div>
     </div>
 
@@ -420,4 +398,35 @@
                 <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Polityka Prywatności i RODO</a>
                 <a href="regulamin-darowizn.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Regulamin Darowizn</a>
                 <a href="regulamin-pomocy.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Regulamin Świadczenia Pomocy</a>
-                <a href="warunki-korzystania.html" style="text-decoration: none; color: #D4AF37;">Warunki
+                <a href="warunki-korzystania.html" style="text-decoration: none; color: #D4AF37;">Warunki Korzystania</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Zegar
+    function updateClock() {
+        const now = new Date();
+        const second = now.getSeconds();
+        const minute = now.getMinutes();
+        const hour = now.getHours();
+
+        const secondDeg = ((second / 60) * 360);
+        const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
+        const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
+
+        const secHand = document.getElementById('secondHand');
+        const minHand = document.getElementById('minuteHand');
+        const hrHand = document.getElementById('hourHand');
+
+        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
+        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
+        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>
