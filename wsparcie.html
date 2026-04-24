@@ -205,6 +205,21 @@
             
             <div class="sponsor-card">
                 <div>
+                    <a href="https://www.globalgiving.org/" target="_blank" rel="noopener noreferrer" class="sponsor-logo-link">
+                        <img src="vetted-large.png" alt="GlobalGiving Vetted Organization Badge" class="sponsor-logo" style="max-height: 120px;">
+                    </a>
+                    <div class="sponsor-name">GlobalGiving</div>
+                    <div class="sponsor-desc">
+                        Pomyślnie przeszliśmy rygorystyczny proces weryfikacji (due diligence) i dołączyliśmy do grona zaufanych organizacji na największej na świecie platformie crowdfundingowej dla NGO. To gwarancja pełnej transparentności i bezpieczeństwa dla naszych darczyńców z całego świata.
+                        <br><br>
+                        <img src="gg_horizontal_color_300.png" alt="GlobalGiving Logo" style="max-height: 25px; opacity: 0.9;">
+                    </div>
+                </div>
+                <a href="https://www.globalgiving.org/" target="_blank" rel="noopener noreferrer" class="sponsor-link">Odwiedź platformę &rarr;</a>
+            </div>
+
+            <div class="sponsor-card">
+                <div>
                     <a href="https://benevity.com/nonprofits" target="_blank" rel="noopener noreferrer" class="sponsor-logo-link">
                         <img src="Benevity-Logo.webp" alt="Benevity Logo" class="sponsor-logo">
                     </a>
@@ -340,11 +355,12 @@
 
         const secHand = document.getElementById('secondHand');
         const minHand = document.getElementById('minuteHand');
-        const hrHand = document.getElementById('hourHand');
+        const hrHand = document.getElementById('hrHand'); // Poprawka ID dla wskazówki godzinowej
+        const hourHand = document.getElementById('hourHand');
 
         if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
         if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
-        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
+        if(hourHand) hourHand.style.transform = `rotate(${hourDeg}deg)`;
     }
     setInterval(updateClock, 1000);
     updateClock();
