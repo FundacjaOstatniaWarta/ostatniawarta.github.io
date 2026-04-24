@@ -23,18 +23,22 @@
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://ostatniawarta.pl/blog1_en.html" />
     <meta property="og:image" content="https://ostatniawarta.pl/logo.png" />
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://ostatniawarta.pl/blog1_en.html">
+    <meta name="twitter:title" content="A volunteer's confession about the bag of stones | Ostatnia Warta Foundation">
+    <meta name="twitter:description" content="Read a volunteer's confession about the bag of stones we all carry through life. A moving story about loneliness and the presence of another human being at the end of life.">
+    <meta name="twitter:image" content="https://ostatniawarta.pl/logo.png">
 
     <link rel="canonical" href="https://ostatniawarta.pl/blog1_en.html" />
     <link rel="icon" type="image/png" href="logo.png">
 
     <style>
-        /* Podstawowe style i reset */
         body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
         a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
         h1, h2, h3 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
-        .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
+        .container { width: 90%; max-width: 1000px; margin: auto; padding: 40px 0; }
         
-        /* Ciemna, elegancka góra z wycentrowanym logo */
         header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
         
         .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
@@ -42,13 +46,12 @@
         .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
         
         .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
-        
         .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
         .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
         .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
         .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
 
-        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; line-height: 1.3;}
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; }
         .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.4em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
 
         nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
@@ -57,28 +60,28 @@
         nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
         nav ul li a:hover { color: #D4AF37; }
 
-        /* BLOG ARTICLE */
-        .article-container { max-width: 800px; margin: 40px auto; background: #fff; padding: 50px 60px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1a5f4a; }
-        .article-title { font-size: 2.2em; font-family: 'Georgia', serif; color: #133a2d; margin-top: 0; margin-bottom: 20px; line-height: 1.3; }
-        .article-meta { font-family: 'Arial', sans-serif; font-size: 0.9em; color: #888; border-bottom: 1px solid #eee; padding-bottom: 20px; margin-bottom: 30px; }
+        .content-section { background: #fff; padding: 50px 60px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; border-top: 4px solid #1a5f4a; }
         
-        .article-content { font-size: 1.15em; color: #444; line-height: 1.8; text-align: justify; }
-        .article-content p { margin-bottom: 25px; }
+        .article-title { font-size: 2em; line-height: 1.3; margin-top: 0; margin-bottom: 25px; border-bottom: 2px solid #e2f0ea; padding-bottom: 15px; text-align: center; }
+        .post-meta { font-family: 'Arial', sans-serif; font-size: 0.9em; color: #888; margin-bottom: 40px; font-style: italic; text-align: center; }
         
-        .article-quote { margin: 40px 0; padding: 20px 30px; background: #fdf8e6; border-left: 4px solid #D4AF37; font-style: italic; font-size: 1.2em; color: #555; }
+        .content-section h3 { font-family: 'Georgia', serif; color: #1a5f4a; font-size: 1.4em; border-bottom: 2px solid #e2f0ea; padding-bottom: 5px; margin-top: 40px; margin-bottom: 15px; }
+        .content-section p { font-family: 'Georgia', serif; font-size: 1.15em; color: #444; text-align: justify; line-height: 1.8; margin-bottom: 20px; }
+        .content-section ul { font-family: 'Georgia', serif; font-size: 1.15em; color: #444; line-height: 1.8; margin-bottom: 20px; }
+        .content-section li { margin-bottom: 10px; }
 
-        .btn-outline { border-color: #1a5f4a; color: #1a5f4a; background: transparent; display: inline-block; padding: 10px 20px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; border: 2px solid #1a5f4a; transition: all 0.3s ease; }
-        .btn-outline:hover { background: #1a5f4a; color: #fff; }
+        .btn { display: inline-block; padding: 12px 24px; margin: 20px 0; border-radius: 4px; font-weight: bold; text-align: center; font-family: 'Arial', sans-serif; border: 2px solid #1a5f4a; color: #1a5f4a; background: transparent; transition: 0.3s; }
+        .btn:hover { background: #1a5f4a; color: #fff; }
 
         footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; margin-top: 40px; }
         footer a { color: #D4AF37; text-decoration: none; }
         footer a:hover { color: #fff; text-decoration: underline; }
         
         @media (max-width: 768px) { 
-            .article-container { padding: 30px 20px; }
-            .article-title { font-size: 1.8em; }
+            .content-section { padding: 30px 20px; }
+            .content-section p, .content-section ul { text-align: left; font-size: 1.05em; }
+            .article-title { font-size: 1.5em; }
             .header-titles h1 { font-size: 1.8em; }
-            .article-content { text-align: left; font-size: 1.05em; }
         }
     </style>
 </head>
@@ -93,65 +96,92 @@
                     <div class="hand hour-hand" id="hourHand"></div>
                     <div class="hand minute-hand" id="minuteHand"></div>
                     <div class="hand second-hand" id="secondHand"></div>
-                    <img src="logo.png" alt="Ostatnia Warta Foundation Logo" class="logo-img" width="100" height="100"> 
+                    <img src="logo.png" alt="Ostatnia Warta Foundation Logo" class="logo-img"> 
                 </div>
             </a>
         </div>
         
         <div class="header-titles">
             <h1>From a Volunteer's Diary</h1>
+            <h2>True stories from the front lines</h2>
         </div>
 
         <nav>
             <ul>
-                <li><a href="en.html#o-nas">About Us</a></li>
+                <li><a href="en.html#o-nas">About Foundation</a></li>
                 <li><a href="en.html#podopieczni">Patients</a></li>
                 <li><a href="en.html#wolontariat">Volunteering</a></li>
                 <li><a href="blog_en.html">Blog</a></li>
                 <li><a href="en.html#wesprzyj">Support Us</a></li>
                 <li><a href="en.html#kontakt">Contact</a></li>
-                <li><a href="blog1.html" style="text-decoration: none; color: #D4AF37;">🇵🇱 PL</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
 <section class="container">
-    
-    <div class="article-container">
+    <div class="content-section">
         <h2 class="article-title">A volunteer's confession about the bag of stones we all carry through life</h2>
-        <div class="article-meta">
-            <strong>Author:</strong> Ostatnia Warta Volunteer | <strong>Date:</strong> February 2026
-        </div>
+        <p class="post-meta">This story is not about death. It is about ensuring that no one has to pass away alone.</p>
+        
+        <p>Some decisions in life are not born out of a plan. They do not appear at a desk, in a calendar, or in an Excel spreadsheet. They are born in silence. In that special silence that remains after a loved one passes away.</p>
 
-        <div class="article-content">
-            <p>Some decisions in life are not born out of a plan. They do not appear at a desk, in a calendar, or in an Excel spreadsheet. They are born in silence. In that special silence that remains after someone close passes away.</p>
-            
-            <p>Sometimes I think that every person goes through life with a bag slung over their shoulder. We throw unspoken words, missed opportunities, regrets, and fears into it. When we are healthy and full of strength, we don't feel this weight. We just march forward.</p>
-            
-            <p>Mr. Andrzej, with whom I sat last night in the hospice, had a very heavy bag.</p>
+        <h3>The Bag</h3>
+        <p>Sometimes I think that every person goes through life with a bag slung over their shoulder. At the beginning, it is almost empty. In childhood, we put little things into it. The first moments of shame. The first failures. The first disappointments. The stones are small then, although they seem huge.</p>
+        <p>Then we grow up. And we learn to walk with them. And life throws in more.</p>
 
-            <div class="article-quote">
-                "It wasn't the grip of someone who wants to talk about the weather. It was the grip of someone who is afraid to close their eyes."
-            </div>
+        <h3>A life that looked good</h3>
+        <p>For many years I was convinced that I could walk faster than others. Fast. Effectively. Task-oriented. Every subsequent year was like a level in a game that had to be completed to move on. A better job. A better apartment. A better car. Beside me was a woman who went from a girlfriend to a wife. Children appeared in our home.</p>
+        <p>From the outside, everything looked exactly how the life of a person who has "sorted things out" should look. Stable. Reasonable. Safe. And yet, over the years, I began to understand something strange. The bag on my shoulder wasn't getting any lighter.</p>
 
-            <p>He didn't say much. Shallow breath, eyes fixed on a single point on the ceiling. But when I grabbed his thin, cold hand, I felt his grip tighten. It wasn't the grip of someone who wants to talk about the weather. It was the grip of someone who is afraid to close their eyes.</p>
-            
-            <p>We sat like that for four hours. He didn't ask my name. I didn't ask about his life. At "Ostatnia Warta", we quickly learn that words are sometimes overrated. Presence carries more weight.</p>
+        <h3>The first stone that truly weighed heavy</h3>
+        <p>In 2015, my father passed away. The death of a loved one does not stop the world. You still have to get up in the morning. You have to go to work. People still talk about the weather and bills. Only inside, a crack appears. Quiet. Invisible. A person puts this stone into their bag. And keeps walking.</p>
 
-            <p>When his breathing became calmer towards the morning, and his hand finally relaxed, I thought about his bag of stones. We, the volunteers, cannot take these bags off. We cannot turn back time. We will not cure cancer.</p>
+        <h3>July 2021</h3>
+        <p>A few years later came the day that changed the rhythm of our lives. July 2021. The diagnosis was brief. Malignant tumor. Two words. For the doctor, it's information. For the family, it's an earthquake.</p>
+        <p>From that moment, time begins to flow differently. Days cease to be ordinary everyday life. They become a fight. First, tests. Then, consultations. Hospitals. And then the illness moves into your home. My mother lived with us for a long time. The house ceased to be just a place to live. It became a place of vigil. A place where a person begins to hear things they hadn't heard before. Fatigue in the voice. Anxiety in the breath. Fear hidden in the eyes.</p>
 
-            <p>But for those few hours, we can help carry it. So that for a moment, at the very end, the burden doesn't crush so much.</p>
+        <h3>Hospice</h3>
+        <p>At the end of this road was a hospice. It's a place full of good people. Doctors. Nurses. Caregivers. People who do difficult and necessary things every day. The system works. Procedures work. Medical care works. And yet, between all this, there remains something that cannot be written down on any form.</p>
+        <p>Loneliness.</p>
+        <p>Because in such places, no one has the time to sit for hours by one bed just to hold someone's hand. No one has the time to listen to the entire life of a person who is slowly saying goodbye to the world. And then I understood something very simple. Sometimes the most important thing you can give someone is not medicine. It is presence.</p>
 
-            <p>That is why I do this. That is why I come. Because I know that one day, my bag will also become too heavy for me to carry alone.</p>
-        </div>
+        <h3>March 2023</h3>
+        <p>My mother passed away in March 2023. And then a person discovers something they couldn't name before. Suddenly it turns out that the world you knew from childhood has ceased to exist. There is no longer a home you can always return to. There is no voice that will answer the phone regardless of the hour. There is silence. Deep. The kind that stays for a long time.</p>
 
-        <div style="margin-top: 50px; border-top: 1px solid #eee; padding-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-            <a href="blog_en.html" class="btn-outline">&larr; Return to Blog</a>
-            <a href="en.html" style="color: #666; font-family: 'Arial', sans-serif; font-size: 0.9em; text-decoration: underline;">Return to Home Page</a>
+        <h3>Another message</h3>
+        <p>A few years later, the phone rang. A few words. Malignant tumor. My younger brother got sick. There are sentences that weigh more than a whole life. And then a person begins to understand how few things really depend on them.</p>
+
+        <h3>The decision</h3>
+        <p>At that time, I made a decision that was incomprehensible to many people. I got rid of some of the things I once considered symbols of success. Unnecessary luxury goods. Things that were supposed to prove that everything in life went according to plan. The funds from their sale did not return to my private life. They became the beginning of something else.</p>
+        <p>This is how <strong>Ostatnia Warta</strong> was created. A foundation born from one simple thought: so that a person does not pass away alone.</p>
+
+        <h3>One sentence</h3>
+        <p>A few days ago, I sat by the bed of one of our patients. An elderly man. Very tired from the road he had traveled. After a long moment of silence, he said just one sentence:</p>
+        <p><em>"I would like to see the sea one more time."</em></p>
+        <p>The sea is not far away, after all. And yet, for a sick person, such a journey can be an impassable boundary. Then a person begins to understand the immense value of things that are completely ordinary to others.</p>
+
+        <h3>That is why we are looking for people</h3>
+        <p>That is why today we are not just looking for money. We are looking for people.</p>
+        <ul>
+            <li>Maybe you know how to write grant applications.</li>
+            <li>Maybe you are good at social media.</li>
+            <li>Maybe you are a psychologist.</li>
+            <li>Or maybe you just have some time.</li>
+        </ul>
+        <p>Because in our work, the most important currency is not banknotes. It is <strong>time</strong>. Time, of which our patients have very little left.</p>
+
+        <h3>At the end</h3>
+        <p>Sometimes I think that we are all going through life with the same bag on our shoulders. Everyone carries their stones in it. Losses. Fears. Memories. Things that can no longer be changed. But from time to time, you can do something very simple.</p>
+        <p>Stop. And help someone carry their burden.</p>
+        <p>Because the truth is: the greatest burden in a person's life is not death. The greatest burden is loneliness. That is why <strong>Ostatnia Warta</strong> exists. So that in the last moments of life, there is always another person nearby. Because sometimes the greatest act of humanity is simply not letting another human being die in loneliness.</p>
+
+        <p style="font-size: 0.85em; color: #888; margin-top: 40px; text-align: left;"><em>(PS. Due to our Privacy Policy and GDPR provisions, the names of patients in the articles may have been changed).</em></p>
+        
+        <div style="text-align: center; border-top: 1px solid #eee; margin-top: 40px; padding-top: 20px;">
+            <a href="blog_en.html" class="btn">Return to the list of stories</a>
         </div>
     </div>
-
 </section>
 
 <footer>
@@ -160,13 +190,13 @@
             <p style="font-size: 0.85em; margin-bottom: 15px; color: #a3c2b5; line-height: 1.4; text-align: justify;">
                 <strong>Disclaimer:</strong> The "Ostatnia Warta" Foundation and its volunteers provide strictly non-medical support. We do not provide health services, make diagnoses, or make therapeutic decisions. Our activities complement, not replace, medical and hospice care.
             </p>
-
+            
             <p>&copy; 2026 "OSTATNIA WARTA" FOUNDATION. All rights reserved.</p>
             <p style="margin-top: 10px;">
-                <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Privacy Policy and GDPR</a>
-                <a href="regulamin-darowizn.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Donation Terms</a>
-                <a href="regulamin-pomocy.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Terms of Providing Assistance</a>
-                <a href="warunki-korzystania.html" style="text-decoration: none; color: #D4AF37;">Terms of Use</a>
+                <a href="polityka-prywatnosci_en.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Privacy Policy and GDPR</a>
+                <a href="regulamin-darowizn_en.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Donation Terms</a>
+                <a href="regulamin-pomocy_en.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Terms of Providing Assistance</a>
+                <a href="warunki-korzystania_en.html" style="text-decoration: none; color: #D4AF37;">Terms of Use</a>
             </p>
         </div>
     </div>
