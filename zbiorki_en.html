@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3VQ06C7HQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z3VQ06C7HQ');
+      gtag('config', 'AW-18086071578');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Donations and Fundraisers | Support the Ostatnia Warta Foundation</title>
+    <meta name="description" content="Support the Ostatnia Warta Foundation. Make a donation, join our fundraiser, or pay a voluntary redress for the court. Help us be there for those who need a presence.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Support the Ostatnia Warta Foundation" />
+    <meta property="og:description" content="Stand watch with us. See how you can support our mission and help the terminally ill." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ostatniawarta.pl/zbiorki_en.html" />
+    <meta property="og:image" content="https://ostatniawarta.pl/logo.png" />
+    
+    <link rel="canonical" href="https://ostatniawarta.pl/zbiorki_en.html" />
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        /* Podstawowe style i reset */
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
+        a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
+        h1, h2, h3, h4 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
+        .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
+        
+        /* Ciemna, elegancka góra z wycentrowanym logo */
+        header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
+        
+        /* ZEGAR ZAMIAST PIERŚCIENIA */
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+        .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
+        
+        /* Środek wskazówek */
+        .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
+        
+        /* Wskazówki zegara */
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
+        .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
+        .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
+        .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
+
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; line-height: 1.3; }
+        .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.4em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
+
+        nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
+        nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
+        nav ul li a:hover { color: #D4AF37; }
+
+        .content-section { background: #fff; padding: 60px 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; border-top: 4px solid #1a5f4a; max-width: 900px; margin-left: auto; margin-right: auto; }
+        
+        .intro-text { font-size: 1.15em; color: #444; text-align: justify; margin: 0 auto 40px auto; line-height: 1.8; }
+        .intro-text p { margin-bottom: 20px; }
+        
+        .section-heading { font-family: 'Georgia', serif; font-size: 1.8em; color: #1a5f4a; border-bottom: 2px solid #D4AF37; padding-bottom: 10px; margin: 0 0 25px 0; display: inline-block; font-weight: normal; }
+        .heading-wrapper { text-align: center; width: 100%; margin-bottom: 15px; margin-top: 20px; }
+
+        /* KAFELKI OPCJI WSPARCIA */
+        .support-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .support-card { background: #fdfdfd; border: 1px solid #eaeaea; border-radius: 8px; padding: 40px 30px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
+        .support-card:hover { transform: translateY(-5px); border-color: #D4AF37; box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+        
+        .support-icon { font-size: 3em; color: #1a5f4a; margin-bottom: 20px; }
+        .support-title { font-family: 'Georgia', serif; font-size: 1.4em; color: #133a2d; margin-bottom: 15px; font-weight: bold; border-bottom: 2px solid #e2f0ea; padding-bottom: 10px; width: 100%; }
+        .support-desc { font-family: 'Arial', sans-serif; color: #555; font-size: 0.95em; line-height: 1.6; margin-bottom: 25px; text-align: center; }
+        
+        .account-box { background: #f4f8f6; border: 1px dashed #1a5f4a; padding: 15px; border-radius: 4px; font-family: 'Arial', sans-serif; font-size: 0.9em; margin-bottom: 20px; width: 100%; box-sizing: border-box;}
+        .account-number { font-weight: bold; font-size: 1.1em; color: #133a2d; letter-spacing: 1px; display: block; margin: 10px 0; }
+
+        /* PRZYCISKI */
+        .btn-primary { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #D4AF37; color: #133a2d; border: 2px solid #D4AF37; transition: background 0.3s ease, color 0.3s ease; width: 80%; }
+        .btn-primary:hover { background: #b5952f; border-color: #b5952f; color: #fff; }
+
+        .btn-outline { border-color: #1a5f4a; color: #1a5f4a; background: transparent; display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; border: 2px solid #1a5f4a; transition: all 0.3s ease; width: 80%;}
+        .btn-outline:hover { background: #1a5f4a; color: #fff; }
+
+        footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; margin-top: 40px; }
+        footer a { color: #D4AF37; text-decoration: none; }
+        footer a:hover { color: #fff; text-decoration: underline; }
+        
+        @media (max-width: 768px) { 
+            .header-titles h1 { font-size: 1.8em; }
+            .content-section { padding: 40px 20px; }
+            .intro-text { text-align: left; font-size: 1.05em; }
+            .support-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container" style="padding: 0 0 0 0;">
+        <div class="logo-wrapper">
+            <a href="en.html">
+                <div class="clock-wrapper">
+                    <div class="clock-center"></div>
+                    <div class="hand hour-hand" id="hourHand"></div>
+                    <div class="hand minute-hand" id="minuteHand"></div>
+                    <div class="hand second-hand" id="secondHand"></div>
+                    <img src="logo.png" alt="Ostatnia Warta Foundation Logo" class="logo-img"> 
+                </div>
+            </a>
+        </div>
+        
+        <div class="header-titles">
+            <h1>Stand Watch with Us</h1>
+            <h2>Support the mission of the Ostatnia Warta Foundation</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="en.html#o-nas">About Us</a></li>
+                <li><a href="en.html#podopieczni">Patients</a></li>
+                <li><a href="en.html#wolontariat">Volunteering</a></li>
+                <li><a href="en.html#wesprzyj">Support Us</a></li>
+                <li><a href="en.html#kontakt">Contact</a></li>
+                <li><a href="zbiorki.html" style="text-decoration: none; color: #D4AF37;">🇵🇱 PL</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="container">
+    <div class="content-section">
+        
+        <div class="intro-text" style="text-align: center;">
+            <p>We do not receive permanent government subsidies. Our ability to act, reach patients, provide support, and train volunteers depends entirely on people of goodwill.</p>
+            <p><strong>Thank you for choosing to help us build a space of presence for the terminally ill.</strong></p>
+        </div>
+
+        <div class="heading-wrapper">
+            <h2 class="section-heading">Choose how you want to support us:</h2>
+        </div>
+
+        <div class="support-grid">
+            
+            <div class="support-card">
+                <div>
+                    <div class="support-icon">🤝</div>
+                    <div class="support-title">Support us via Zrzutka.pl</div>
+                    <div class="support-desc">
+                        Fast and secure online payments (Blik, credit card, quick transfers). Join our official fundraiser and help us build a space of presence.
+                    </div>
+                </div>
+                <a href="https://zrzutka.pl/vhh45h" target="_blank" rel="noopener noreferrer" class="btn-primary">Go to the fundraiser &rarr;</a>
+            </div>
+
+            <div class="support-card">
+                <div>
+                    <div class="support-icon">🏦</div>
+                    <div class="support-title">Direct bank transfer</div>
+                    <div class="support-desc">
+                        If you prefer traditional methods, you can send a donation directly to our statutory account.
+                        <br><br>
+                        <div class="account-box">
+                            <strong>"OSTATNIA WARTA" FOUNDATION</strong><br>
+                            <span class="account-number">PL 61 2530 0008 2049 1089 8921 0001</span>
+                            Transfer title: <em>Donation for statutory purposes</em>
+                        </div>
+                    </div>
+                </div>
+                <a href="regulamin-darowizn.html" class="btn-outline" style="font-size: 0.85em; padding: 10px;">Terms of Donations</a>
+            </div>
+
+            <div class="support-card">
+                <div>
+                    <div class="support-icon">⚖️</div>
+                    <div class="support-title">Voluntary Redress (For the Court)</div>
+                    <div class="support-desc">
+                        Are you facing a court case? Show a pro-social attitude and willingness to make amends. Support our Foundation and receive an official confirmation for the case files (pursuant to Art. 53 § 2 of the Polish Penal Code).
+                    </div>
+                </div>
+                <a href="progzad.html" class="btn-outline">Learn more &rarr;</a>
+            </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="en.html" class="btn-outline" style="border-color: #ccc; color: #555; width: auto;">&larr; Return to Home Page</a>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="copyright" style="border-top: none; margin-top: 0; padding-top: 0;">
+            <p style="font-size: 0.85em; margin-bottom: 15px; color: #a3c2b5; line-height: 1.4; text-align: justify;">
+                <strong>Disclaimer:</strong> The "Ostatnia Warta" Foundation and its volunteers provide strictly non-medical support. We do not provide health services, make diagnoses, or make therapeutic decisions. Our activities complement, not replace, medical and hospice care.
+            </p>
+            
+            <p>&copy; 2026 "OSTATNIA WARTA" FOUNDATION. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Privacy Policy and GDPR</a>
+                <a href="regulamin-darowizn.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Donation Terms</a>
+                <a href="regulamin-pomocy.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Terms of Providing Assistance</a>
+                <a href="warunki-korzystania.html" style="text-decoration: none; color: #D4AF37;">Terms of Use</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Zegar
+    function updateClock() {
+        const now = new Date();
+        const second = now.getSeconds();
+        const minute = now.getMinutes();
+        const hour = now.getHours();
+
+        const secondDeg = ((second / 60) * 360);
+        const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
+        const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
+
+        const secHand = document.getElementById('secondHand');
+        const minHand = document.getElementById('minuteHand');
+        const hrHand = document.getElementById('hourHand');
+
+        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
+        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
+        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>
