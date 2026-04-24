@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3VQ06C7HQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z3VQ06C7HQ');
+      gtag('config', 'AW-18086071578');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From a Volunteer's Diary | Ostatnia Warta Foundation</title>
+    
+    <meta name="description" content="From a volunteer's diary of the Ostatnia Warta Foundation - Stories written by life. Discover true stories from our service to the sick and lonely.">
+    <meta name="theme-color" content="#133a2d">
+
+    <link rel="canonical" href="https://ostatniawarta.pl/blog_en.html" />
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+
+    <style>
+        /* Podstawowe style i reset */
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
+        a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
+        h1, h2, h3 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
+        .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
+        
+        /* Ciemna, elegancka góra z wycentrowanym logo */
+        header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
+        
+        /* ZEGAR ZAMIAST PIERŚCIENIA */
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+        .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
+        
+        /* Środek wskazówek */
+        .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
+        
+        /* Wskazówki zegara */
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
+        .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
+        .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
+        .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
+
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; line-height: 1.3;}
+        .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.6em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
+
+        nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
+        nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
+        nav ul li a:hover { color: #D4AF37; }
+
+        /* BLOG GRID I KAFELKI */
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 20px; }
+        
+        .blog-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1a5f4a; padding: 30px; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; box-sizing: border-box; height: 100%; }
+        .blog-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        
+        .blog-card h3 { margin-top: 0; font-size: 1.4em; line-height: 1.3; font-family: 'Georgia', serif; margin-bottom: 15px; color: #133a2d; }
+        .blog-card p.excerpt { font-family: 'Arial', sans-serif; font-size: 0.95em; color: #666; line-height: 1.6; flex-grow: 1; margin-bottom: 25px; text-align: left; }
+        
+        .read-more { display: inline-block; padding: 10px 20px; background: #e2f0ea; color: #1a5f4a; font-family: 'Arial', sans-serif; font-weight: bold; border-radius: 4px; text-align: center; transition: 0.3s; width: fit-content; align-self: flex-start; }
+        .read-more:hover { background: #1a5f4a; color: #fff; }
+
+        .btn-dark { border-color: #ccc; color: #555; background: transparent; display: inline-block; padding: 10px 20px; margin-top: 40px; border: 2px solid #ccc; font-weight: bold; border-radius: 4px; font-family: 'Arial', sans-serif; transition: 0.3s; }
+        .btn-dark:hover { background: #eee; color: #333; }
+
+        footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; margin-top: 40px; }
+        footer a { color: #D4AF37; text-decoration: none; }
+        footer a:hover { color: #fff; text-decoration: underline; }
+        
+        @media (max-width: 768px) { 
+            .header-titles h1 { font-size: 1.8em; }
+            .blog-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container" style="padding: 0 0 0 0;">
+        <div class="logo-wrapper">
+            <a href="en.html">
+                <div class="clock-wrapper">
+                    <div class="clock-center"></div>
+                    <div class="hand hour-hand" id="hourHand"></div>
+                    <div class="hand minute-hand" id="minuteHand"></div>
+                    <div class="hand second-hand" id="secondHand"></div>
+                    <img src="logo.png" alt="Ostatnia Warta Foundation Logo" class="logo-img" width="100" height="100"> 
+                </div>
+            </a>
+        </div>
+        
+        <div class="header-titles">
+            <h1>From a Volunteer's Diary</h1>
+            <h2>Stories written by life</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="en.html#o-nas">About Us</a></li>
+                <li><a href="en.html#podopieczni">Patients</a></li>
+                <li><a href="en.html#wolontariat">Volunteering</a></li>
+                <li><a href="en.html#wesprzyj">Support Us</a></li>
+                <li><a href="en.html#kontakt">Contact</a></li>
+                <li><a href="blog.html" style="text-decoration: none; color: #D4AF37;">🇵🇱 PL</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="container">
+    
+    <div style="text-align: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <p style="font-size: 1.1em; color: #555; line-height: 1.6; font-style: italic;">
+            Behind every donation and every watch, there is a real person. Discover moving, beautiful, and thought-provoking stories from our daily service at the bedsides of the sick and lonely.
+        </p>
+    </div>
+
+    <div class="blog-grid">
+        
+        <div class="blog-card">
+            <h3>A volunteer's confession about the bag of stones we all carry through life</h3>
+            <p class="excerpt">Some decisions in life are not born from a plan. They do not appear at a desk, in a calendar, or in an Excel spreadsheet. They are born in silence. In that special silence that remains after someone close passes away. Sometimes I think that every person goes through life with a bag slung over their shoulder...</p>
+            <a href="blog1.html" class="read-more">Read more &rarr;</a>
+        </div>
+
+        <div class="blog-card">
+            <h3>When a person is still alive, but their apartment is already being viewed</h3>
+            <p class="excerpt">While Mr. Jan was lying in his bed, someone in the hallway was making arrangements over the phone to sell his apartment. It wasn't a conversation about the future. It was a conversation about the time after him. The room smelled of medicine and old paper...</p>
+            <a href="blog2.html" class="read-more">Read more &rarr;</a>
+        </div>
+
+        <div class="blog-card">
+            <h3>"Just drive me there." On the epidemic of loneliness and a volunteer who cures it with tea</h3>
+            <p class="excerpt">"Just drive me there and pick me up." She said it with such calmness, as if it were about giving her a lift to the store for rolls. She is seventy years old, has a bad hip, and a huge need to talk to another human being...</p>
+            <a href="blog3.html" class="read-more">Read more &rarr;</a>
+        </div>
+
+        <div class="blog-card">
+            <h3>"We don't administer meds. We offer a hand." Why do they sometimes shut the door in our faces?</h3>
+            <p class="excerpt">Sometimes help looks very ordinary. There is no medical equipment, ambulances, or white coats. Just a chair by the bed. A quiet conversation. And someone's hand you can squeeze when things get really tough...</p>
+            <a href="blog4.html" class="read-more">Read more &rarr;</a>
+        </div>
+
+        <div class="blog-card">
+            <h3>At Easter, we take the doors off their hinges to make a bigger table</h3>
+            <p class="excerpt">Easter is a time for tables. Big, small, family ones, sometimes a bit chaotic. With plates that are always too many, with eggs shared in half, with conversations that drag on into the late afternoon. But there is also another world of holidays...</p>
+            <a href="blog5.html" class="read-more">Read more &rarr;</a>
+        </div>
+
+        <div class="blog-card">
+            <h3>The silence before dawn</h3>
+            <p class="excerpt">Sometimes the greatest help you can give someone is simply to keep watch. Not medicine. Not complicated equipment. Not grand words. Just presence. There are some watches that stay with a person for a long time...</p>
+            <a href="blog6.html" class="read-more">Read more &rarr;</a>
+        </div>
+
+    </div>
+
+    <div style="text-align: center; margin-top: 50px;">
+        <a href="en.html" class="btn-dark">&larr; Return to Home Page</a>
+    </div>
+
+</section>
+
+<footer>
+    <div class="container">
+        <div class="copyright" style="border-top: none; margin-top: 0; padding-top: 0;">
+            <p style="font-size: 0.85em; margin-bottom: 15px; color: #a3c2b5; line-height: 1.4; text-align: justify;">
+                <strong>Disclaimer:</strong> The "Ostatnia Warta" Foundation and its volunteers provide strictly non-medical support. We do not provide health services, make diagnoses, or make therapeutic decisions. Our activities complement, not replace, medical and hospice care.
+            </p>
+
+            <p>&copy; 2026 "OSTATNIA WARTA" FOUNDATION. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Privacy Policy and GDPR</a>
+                <a href="regulamin-darowizn.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Donation Terms</a>
+                <a href="regulamin-pomocy.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Terms of Providing Assistance</a>
+                <a href="warunki-korzystania.html" style="text-decoration: none; color: #D4AF37;">Terms of Use</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Zegar
+    function updateClock() {
+        const now = new Date();
+        const second = now.getSeconds();
+        const minute = now.getMinutes();
+        const hour = now.getHours();
+
+        const secondDeg = ((second / 60) * 360);
+        const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
+        const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
+
+        const secHand = document.getElementById('secondHand');
+        const minHand = document.getElementById('minuteHand');
+        const hrHand = document.getElementById('hourHand');
+
+        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
+        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
+        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>
