@@ -15,43 +15,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Donations and Fundraisers | Support the Ostatnia Warta Foundation</title>
-    <meta name="description" content="Support the Ostatnia Warta Foundation. Make a donation, join our fundraiser, or pay a voluntary redress for the court. Help us be there for those who need a presence.">
+    <meta name="description" content="Support the Ostatnia Warta Foundation. Make a donation, join our online fundraiser, or pay a voluntary redress. Help us be there for those who need presence.">
+    <meta name="keywords" content="foundation donation, support foundation, online fundraisers foundation, voluntary redress, court monetary penalty, donation certificate for court, help the sick, volunteer support, sitting service Poland">
     <meta name="robots" content="index, follow">
 
-    <meta property="og:title" content="Support the Ostatnia Warta Foundation" />
-    <meta property="og:description" content="Stand watch with us. See how you can support our mission and help the terminally ill." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ostatniawarta.pl/zbiorki_en.html" />
-    <meta property="og:image" content="https://ostatniawarta.pl/logo.png" />
+    <meta property="og:title" content="Support the Ostatnia Warta Foundation – donations and fundraisers">
+    <meta property="og:description" content="Help us be there where someone needs the presence of another human being. Make a donation and support the activities of the Ostatnia Warta Foundation.">
+    <meta property="og:url" content="https://ostatniawarta.pl/zbiorki_en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ostatniawarta.pl/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
     
     <link rel="canonical" href="https://ostatniawarta.pl/zbiorki_en.html" />
     <link rel="icon" type="image/png" href="logo.png">
 
     <style>
-        /* Podstawowe style i reset */
+        /* Base styles and reset */
         body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
         a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
         h1, h2, h3, h4 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
         .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
         
-        /* Ciemna, elegancka góra z wycentrowanym logo */
+        /* Dark, elegant header with centered logo */
         header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
         
-        /* ZEGAR ZAMIAST PIERŚCIENIA */
+        /* CLOCK WRAPPER */
         .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
         .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
         .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
         
-        /* Środek wskazówek */
+        /* Clock center */
         .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
         
-        /* Wskazówki zegara */
+        /* Clock hands */
         .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
         .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
         .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
         .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
 
-        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; line-height: 1.3; }
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 1.8em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; line-height: 1.3; }
         .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.4em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
 
         nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
@@ -60,49 +62,69 @@
         nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
         nav ul li a:hover { color: #D4AF37; }
 
-        .content-section { background: #fff; padding: 60px 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; border-top: 4px solid #1a5f4a; max-width: 900px; margin-left: auto; margin-right: auto; }
-        
-        .intro-text { font-size: 1.15em; color: #444; text-align: justify; margin: 0 auto 40px auto; line-height: 1.8; }
-        .intro-text p { margin-bottom: 20px; }
+        /* INTRO */
+        .intro-text { font-size: 1.15em; color: #444; text-align: justify; max-width: 900px; margin: 0 auto 40px auto; line-height: 1.8; }
         
         .section-heading { font-family: 'Georgia', serif; font-size: 1.8em; color: #1a5f4a; border-bottom: 2px solid #D4AF37; padding-bottom: 10px; margin: 0 0 25px 0; display: inline-block; font-weight: normal; }
-        .heading-wrapper { text-align: center; width: 100%; margin-bottom: 15px; margin-top: 20px; }
+        .heading-wrapper { text-align: center; width: 100%; margin-bottom: 15px; }
 
-        /* KAFELKI OPCJI WSPARCIA */
-        .support-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .support-card { background: #fdfdfd; border: 1px solid #eaeaea; border-radius: 8px; padding: 40px 30px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
-        .support-card:hover { transform: translateY(-5px); border-color: #D4AF37; box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+        /* GRID */
+        .support-grid { display: grid; grid-template-columns: 1fr; gap: 30px; margin-top: 20px; align-items: stretch; }
         
-        .support-icon { font-size: 3em; color: #1a5f4a; margin-bottom: 20px; }
-        .support-title { font-family: 'Georgia', serif; font-size: 1.4em; color: #133a2d; margin-bottom: 15px; font-weight: bold; border-bottom: 2px solid #e2f0ea; padding-bottom: 10px; width: 100%; }
-        .support-desc { font-family: 'Arial', sans-serif; color: #555; font-size: 0.95em; line-height: 1.6; margin-bottom: 25px; text-align: center; }
+        .support-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1a5f4a; padding: 30px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; box-sizing: border-box; transition: transform 0.3s ease, box-shadow 0.3s ease; overflow-wrap: anywhere; }
         
-        .account-box { background: #f4f8f6; border: 1px dashed #1a5f4a; padding: 15px; border-radius: 4px; font-family: 'Arial', sans-serif; font-size: 0.9em; margin-bottom: 20px; width: 100%; box-sizing: border-box;}
-        .account-number { font-weight: bold; font-size: 1.1em; color: #133a2d; letter-spacing: 1px; display: block; margin: 10px 0; }
+        .support-card h3 { margin-top: 0; font-size: 1.4em; font-family: 'Georgia', serif; margin-bottom: 15px; color: #133a2d; }
+        .support-card p { font-family: 'Arial', sans-serif; font-size: 0.95em; color: #666; line-height: 1.6; margin-bottom: 25px; }
+        
+        /* Account box */
+        .account-box { background: #f0f7f4; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 20px; border: 1px solid #d1e8df; overflow: hidden; width: 100%; box-sizing: border-box; }
+        .account-number { font-size: 1.25em; letter-spacing: 1px; word-spacing: 2px; color: #1a5f4a; font-family: 'Arial', sans-serif; font-weight: bold; margin: 15px 0; white-space: normal; word-break: break-word; padding-bottom: 5px; }
+        .qr-code { max-width: 150px; border: 1px solid #ddd; padding: 10px; background: #fff; border-radius: 8px; }
 
-        /* PRZYCISKI */
-        .btn-primary { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #D4AF37; color: #133a2d; border: 2px solid #D4AF37; transition: background 0.3s ease, color 0.3s ease; width: 80%; }
-        .btn-primary:hover { background: #b5952f; border-color: #b5952f; color: #fff; }
+        /* Button classes and widget */
+        .widget-container { width: 100%; max-width: 600px; margin: 0 auto; }
+        
+        .btn-donate { display: inline-flex; align-items: center; justify-content: center; padding: 12px 25px; border-radius: 6px; text-decoration: none; font-weight: bold; font-family: 'Arial', sans-serif; font-size: 1em; transition: all 0.3s ease; text-align: center; border: none; color: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 100%; max-width: 250px; }
+        .btn-donate:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,0,0,0.15); color: #fff; }
+        
+        /* Specific button colors */
+        .bg-p24 { background: #ffffff; border: 1px solid #ddd !important; }
+        .bg-p24:hover { border-color: #1a5f4a !important; }
+        
+        .bg-black { background: #111111; color: #ffffff !important; }
+        .bg-black:hover { background: #333333; }
 
-        .btn-outline { border-color: #1a5f4a; color: #1a5f4a; background: transparent; display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; border: 2px solid #1a5f4a; transition: all 0.3s ease; width: 80%;}
-        .btn-outline:hover { background: #1a5f4a; color: #fff; }
+        /* Interactive cards */
+        .portal-card { cursor: pointer; text-decoration: none; color: inherit; }
+        .portal-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+
+        .btn-outline { border-color: #1a5f4a; color: #1a5f4a; background: transparent; display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; border: 2px solid #D4AF37; transition: all 0.3s ease; text-align: center;}
+        .btn-outline:hover { background: #D4AF37; color: #fff; }
+
+        .btn-dark { border-color: #fff; color: #fff; background: transparent; display: inline-block; padding: 10px 20px; margin-top: 20px; border: 2px solid #D4AF37; color: #D4AF37; font-weight: bold; border-radius: 4px; font-family: 'Arial', sans-serif; transition: 0.3s; }
+        .btn-dark:hover { background: #D4AF37; color: #133a2d; }
 
         footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; margin-top: 40px; }
         footer a { color: #D4AF37; text-decoration: none; }
         footer a:hover { color: #fff; text-decoration: underline; }
         
+        @media (min-width: 768px) { 
+            .support-grid { grid-template-columns: 1fr 1fr; }
+        }
+
         @media (max-width: 768px) { 
-            .header-titles h1 { font-size: 1.8em; }
-            .content-section { padding: 40px 20px; }
-            .intro-text { text-align: left; font-size: 1.05em; }
-            .support-grid { grid-template-columns: 1fr; }
+            .header-titles h1 { font-size: 1.5em; }
+            .support-card { padding: 20px; }
+            .intro-text { text-align: left; }
+            .account-number { font-size: 1.1em; letter-spacing: 0px; }
+            .support-card iframe { max-width: 100% !important; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="container" style="padding: 0 0 0 0;">
+    <div class="container">
         <div class="logo-wrapper">
             <a href="en.html">
                 <div class="clock-wrapper">
@@ -116,15 +138,16 @@
         </div>
         
         <div class="header-titles">
-            <h1>Stand Watch with Us</h1>
-            <h2>Support the mission of the Ostatnia Warta Foundation</h2>
+            <h1>Fundraisers and Forms of Support</h1>
+            <h2>Join our watch</h2>
         </div>
 
         <nav>
             <ul>
-                <li><a href="en.html#o-nas">About Us</a></li>
+                <li><a href="en.html#o-nas">About Foundation</a></li>
                 <li><a href="en.html#podopieczni">Patients</a></li>
                 <li><a href="en.html#wolontariat">Volunteering</a></li>
+                <li><a href="blog_en.html">Blog</a></li>
                 <li><a href="en.html#wesprzyj">Support Us</a></li>
                 <li><a href="en.html#kontakt">Contact</a></li>
                 <li><a href="zbiorki.html" style="text-decoration: none; color: #D4AF37;">🇵🇱 PL</a></li>
@@ -134,65 +157,138 @@
 </header>
 
 <section class="container">
-    <div class="content-section">
+    
+    <div class="heading-wrapper">
+        <h2 class="section-heading">Donations and foundation support</h2>
+    </div>
+    
+    <div class="intro-text">
+        <p><strong>Thank you for standing on Watch with us!</strong></p>
+        <p>The mission of the Ostatnia Warta Foundation is to be present for others in the most difficult moments of life – in loneliness, terminal illness, and the dying process. We can fulfill this noble challenge only thanks to the support of people with great hearts. Every gesture of yours matters. We invite you – stand with us on this most important watch. Choose a convenient payment method or specific fundraiser.</p>
+    </div>
+
+    <div class="heading-wrapper" style="margin-top: 40px;">
+        <h2 class="section-heading" style="font-size: 1.5em; border-bottom: none; color: #133a2d; margin-bottom: 5px;">How to support the foundation</h2>
+    </div>
+
+    <div class="support-grid">
         
-        <div class="intro-text" style="text-align: center;">
-            <p>We do not receive permanent government subsidies. Our ability to act, reach patients, provide support, and train volunteers depends entirely on people of goodwill.</p>
-            <p><strong>Thank you for choosing to help us build a space of presence for the terminally ill.</strong></p>
-        </div>
-
-        <div class="heading-wrapper">
-            <h2 class="section-heading">Choose how you want to support us:</h2>
-        </div>
-
-        <div class="support-grid">
+        <div class="support-card" style="border-top: 4px solid #D4AF37; justify-content: flex-start;">
+            <h3 style="margin-bottom: 5px;">Traditional Bank Transfer</h3>
+            <p style="color: #a83232; font-weight: bold; font-size: 1.1em; letter-spacing: 0.5px; margin-top: 0; margin-bottom: 20px;">ZERO COMMISSION SUPPORT</p>
             
-            <div class="support-card">
-                <div>
-                    <div class="support-icon">🤝</div>
-                    <div class="support-title">Support us via Zrzutka.pl</div>
-                    <div class="support-desc">
-                        Fast and secure online payments (Blik, credit card, quick transfers). Join our official fundraiser and help us build a space of presence.
-                    </div>
+            <div class="account-box" style="margin-bottom: 0;">
+                <p style="margin: 0; font-size: 1.1em;"><strong>"OSTATNIA WARTA" FOUNDATION</strong></p>
+                <div class="account-number" style="font-size: 1.3em; margin: 10px 0;">PL 61 2530 0008 2049 1089 8921 0001</div>
+                
+                <div style="margin: 20px 0; display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 10px;">
+                    <span style="font-size: 1.2em; font-weight: bold; color: #555;">Bank:</span> 
+                    <img src="nest1.png" alt="Nest Bank" style="height: 60px; object-fit: contain;">
                 </div>
-                <a href="https://zrzutka.pl/vhh45h" target="_blank" rel="noopener noreferrer" class="btn-primary">Go to the fundraiser &rarr;</a>
+                
+                <p style="margin: 15px 0 0 0; font-size: 1.3em; font-weight: bold; color: #1a5f4a; background: #fff; padding: 15px; border-radius: 6px; border: 2px dashed #1a5f4a;">
+                    Transfer title:<br>Donation for statutory purposes
+                </p>
             </div>
-
-            <div class="support-card">
-                <div>
-                    <div class="support-icon">🏦</div>
-                    <div class="support-title">Direct bank transfer</div>
-                    <div class="support-desc">
-                        If you prefer traditional methods, you can send a donation directly to our statutory account.
-                        <br><br>
-                        <div class="account-box">
-                            <strong>"OSTATNIA WARTA" FOUNDATION</strong><br>
-                            <span class="account-number">PL 61 2530 0008 2049 1089 8921 0001</span>
-                            Transfer title: <em>Donation for statutory purposes</em>
-                        </div>
-                    </div>
-                </div>
-                <a href="regulamin-darowizn.html" class="btn-outline" style="font-size: 0.85em; padding: 10px;">Terms of Donations</a>
-            </div>
-
-            <div class="support-card">
-                <div>
-                    <div class="support-icon">⚖️</div>
-                    <div class="support-title">Voluntary Redress (For the Court)</div>
-                    <div class="support-desc">
-                        Are you facing a court case? Show a pro-social attitude and willingness to make amends. Support our Foundation and receive an official confirmation for the case files (pursuant to Art. 53 § 2 of the Polish Penal Code).
-                    </div>
-                </div>
-                <a href="progzad.html" class="btn-outline">Learn more &rarr;</a>
-            </div>
-
         </div>
 
-        <div style="text-align: center; margin-top: 50px;">
-            <a href="en.html" class="btn-outline" style="border-color: #ccc; color: #555; width: auto;">&larr; Return to Home Page</a>
+        <div class="support-card portal-card" style="border-top: 4px solid #1a5f4a; justify-content: flex-start;">
+            <h3>Zrzutka.pl</h3>
+            <p style="max-width: 800px;">One of the Foundation's official statutory fundraisers. Your support will go directly to funding help for the abandoned and those facing severe diagnoses.</p>
+            
+            <div class="widget-container">
+                <div style="position: relative; width: 100%; height: 500px; overflow: hidden;"><iframe style="position: absolute; top:0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;" src="https://zrzutka.pl/rf7npz/widget/23" frameborder="0" scrolling="no"></iframe></div>
+            </div>
+        </div>
+
+        <div class="support-card portal-card">
+            <h3>Phone Transfer</h3>
+            <p>Fast and secure support straight from your banking app (0% commission).</p>
+            
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; width: 100%; margin-top: 10px;">
+                <img src="blik.png" alt="BLIK" style="height: 60px; object-fit: contain;">
+                <div class="account-number" style="font-size: 1.6em; background: #e2f0ea; padding: 10px 20px; border-radius: 8px; border: 1px solid #d1e8df;">+48 502 989 818</div>
+            </div>
+        </div>
+
+        <div class="support-card portal-card" style="border-top: 4px solid #a83232;">
+            <h3>PayPal</h3>
+            <p>A fast and convenient way to support from anywhere in the world. Every contribution helps us reach abandoned people and enables volunteers to stand watch.</p>
+            
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; width: 100%;">
+                <a href="https://www.paypal.com/ncp/payment/75B5XSLBHCSFE" target="_blank" class="btn-donate bg-black">
+                    Join the Watch!
+                </a>
+                <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="Payment cards" style="height: 20px; margin-top: 5px;">
+                <div style="font-size: 0.75rem; color: #666; display: flex; align-items: center; justify-content: center; gap: 5px; font-family: Arial, sans-serif;">
+                    Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="PayPal" style="height: 14px;">
+                </div>
+            </div>
+        </div>
+        
+        <div class="support-card portal-card" style="justify-content: center;">
+            <h3>Coffee for a volunteer</h3>
+            <p>A simple way to support with a symbolic coffee. One such coffee is often equivalent to one volunteer's commute to a patient.</p>
+            <a href="https://buycoffee.to/ostatniawarta" target="_blank" style="display: inline-block; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                <img src="logo-pionowe.png" style="max-height: 100px; width: auto; object-fit: contain;" alt="Buy us a coffee">
+            </a>
+        </div>
+
+        <div class="support-card portal-card">
+            <h3>Support while shopping</h3>
+            <p>Help us for free during your everyday online shopping. It costs you nothing, and the stores donate a fraction of your purchase value to us.</p>
+            <div style="display: flex; justify-content: center; margin-top: 20px;">
+                <a href="https://fanimani.pl/zaproszenie/139507/7b9dbce0e1d84fc29adb3ee6d2d52e27" target="_blank" style="transition: transform 0.3s ease; display: inline-block;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="fanimani.png" alt="Support us through FaniMani" style="max-height: 50px; width: auto; border-radius: 4px;">
+                </a>
+            </div>
+        </div>
+        
+        <div class="support-card" style="border-top: 4px solid #a83232; padding-top: 50px; padding-bottom: 50px;">
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; width: 100%;">
+                
+                <div style="text-align: center; width: 100%;">
+                    <p style="font-weight: bold; font-family: 'Arial', sans-serif; color: #1a5f4a; margin-bottom: 5px; font-size: 0.9em;">QR code for a quick transfer in your Bank's app</p>
+                    <img src="qr_konto.png" alt="Scan the QR code in your banking app" class="qr-code">
+                    <p style="line-height: 1.3; margin-top: 5px; margin-bottom: 0;"><small>Scan in banking app</small></p>
+                </div>
+                
+                <hr style="border: 0; border-top: 1px solid #eee; width: 100%; margin: 10px 0;">
+                
+                <div style="text-align: center; width: 100%;">
+                    <p style="font-weight: bold; font-family: 'Arial', sans-serif; color: #1a5f4a; margin-bottom: 5px; font-size: 0.9em;">Download a ready-made payment slip</p>
+                    <a href="blankiet.pdf" target="_blank" style="display: inline-block; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'" title="Click to download a ready-made slip (PDF)">
+                        <img src="druczek.png" alt="Download payment slip" style="height: 120px; width: auto; max-width: 100%; border: 1px solid #ddd; padding: 5px; background: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); object-fit: contain;">
+                    </a>
+                    <p style="line-height: 1.3; margin-top: 5px; margin-bottom: 0;"><small>Download and print (PDF)</small></p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="support-card portal-card">
+            <h3>Patronite</h3>
+            <p><strong>Become a Patron of our watch.</strong> Regular support allows us to reach abandoned and severely ill people and ensure the presence of volunteers.</p>
+            <div style="width: 100%; display: flex; justify-content: center; margin-top: 10px;">
+                <iframe src="https://patronite.pl/widget/ostatniawarta.pl/1120559/small/light/colorful?description=Thank%20you%20for%20your%20support!&buttonText=Stand%20on%20Watch%20with%20us" width="360" height="330" frameborder="0" scrolling="no" style="max-width: 100%;"></iframe>
+            </div>
         </div>
 
     </div>
+
+    <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #eee; text-align: center;">
+        <h3 style="margin-top: 0; margin-bottom: 15px; font-family: 'Georgia', serif; color: #133a2d; font-size: 1.4em; border-bottom: none;">Explore other forms of Foundation support:</h3>
+        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <a href="pbic_en.html" class="btn-outline" style="margin-top: 10px;">Partnership and CSR</a>
+            <a href="progzad_en.html" class="btn-outline" style="margin-top: 10px;">Voluntary Redress</a>
+            <a href="pracespol_en.html" class="btn-outline" style="margin-top: 10px;">Community Service</a>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px;">
+        <a href="en.html" class="btn-dark" style="color: #555; border-color: #ccc;">&larr; Return to Home Page</a>
+    </div>
+
 </section>
 
 <footer>
@@ -204,17 +300,17 @@
             
             <p>&copy; 2026 "OSTATNIA WARTA" FOUNDATION. All rights reserved.</p>
             <p style="margin-top: 10px;">
-                <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Privacy Policy and GDPR</a>
-                <a href="regulamin-darowizn.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Donation Terms</a>
-                <a href="regulamin-pomocy.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Terms of Providing Assistance</a>
-                <a href="warunki-korzystania.html" style="text-decoration: none; color: #D4AF37;">Terms of Use</a>
+                <a href="polityka-prywatnosci_en.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Privacy Policy and GDPR</a>
+                <a href="regulamin-darowizn_en.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Donation Terms</a>
+                <a href="regulamin-pomocy_en.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Terms of Providing Assistance</a>
+                <a href="warunki-korzystania_en.html" style="text-decoration: none; color: #D4AF37;">Terms of Use</a>
             </p>
         </div>
     </div>
 </footer>
 
 <script>
-    // Zegar
+    // Clock
     function updateClock() {
         const now = new Date();
         const second = now.getSeconds();
