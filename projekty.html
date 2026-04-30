@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3VQ06C7HQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z3VQ06C7HQ');
+      gtag('config', 'AW-18086071578');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Patronaty i Projekty | Fundacja Ostatnia Warta</title>
+    <meta name="description" content="Poznaj realizowane projekty oraz inicjatywy objęte patronatami w ramach działalności Fundacji Ostatnia Warta.">
+    <meta name="keywords" content="fundacja ostatnia warta projekty, patronaty, wolontariat, inicjatywy społeczne">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Patronaty i Projekty – Fundacja Ostatnia Warta">
+    <meta property="og:description" content="Dowiedz się więcej o realizowanych projektach oraz działaniach wyróżnionych patronatem w naszej Fundacji.">
+    <meta property="og:url" content="https://ostatniawarta.pl/projekty.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ostatniawarta.pl/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="canonical" href="https://ostatniawarta.pl/projekty.html" />
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        /* Podstawowe style i reset */
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
+        a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
+        h1, h2, h3, h4 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
+        .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
+        
+        /* Ciemna, elegancka góra z wycentrowanym logo */
+        header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
+        
+        /* ZEGAR ZAMIAST PIERŚCIENIA */
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+        .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
+        
+        /* Środek wskazówek */
+        .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
+        
+        /* Wskazówki zegara */
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
+        .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
+        .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
+        .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
+
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; line-height: 1.3; }
+        .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.4em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
+
+        nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
+        nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
+        nav ul li a:hover { color: #D4AF37; }
+
+        /* WSTĘP */
+        .intro-text { font-size: 1.15em; color: #444; text-align: justify; max-width: 900px; margin: 0 auto 40px auto; line-height: 1.8; }
+        .intro-text .text-link { color: #1a5f4a; text-decoration: underline; font-weight: bold; transition: color 0.3s; }
+        .intro-text .text-link:hover { color: #D4AF37; }
+        
+        .section-heading { font-family: 'Georgia', serif; font-size: 1.8em; color: #1a5f4a; border-bottom: 2px solid #D4AF37; padding-bottom: 10px; margin: 0 0 25px 0; display: inline-block; font-weight: normal; }
+        .heading-wrapper { text-align: center; width: 100%; margin-bottom: 15px; }
+
+        .btn-outline { border-color: #1a5f4a; color: #1a5f4a; background: transparent; display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; border: 2px solid #D4AF37; transition: all 0.3s ease; text-align: center;}
+        .btn-outline:hover { background: #D4AF37; color: #fff; }
+        
+        .btn-primary { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #D4AF37; color: #133a2d; border: 2px solid #D4AF37; transition: background 0.3s ease, color 0.3s ease; text-align: center; }
+        .btn-primary:hover { background: #b5952f; border-color: #b5952f; color: #fff; }
+
+        .btn-dark { border-color: #ccc; color: #555; background: transparent; display: inline-block; padding: 10px 20px; margin-top: 20px; border: 2px solid #ccc; font-weight: bold; border-radius: 4px; font-family: 'Arial', sans-serif; transition: 0.3s; }
+        .btn-dark:hover { background: #eee; color: #333; }
+
+        footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; margin-top: 40px; }
+        footer a { color: #D4AF37; text-decoration: none; }
+        footer a:hover { color: #fff; text-decoration: underline; }
+
+        @media (max-width: 768px) { 
+            .header-titles h1 { font-size: 1.5em; }
+            .intro-text { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container" style="padding: 0 0 0 0;">
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <div class="clock-wrapper">
+                    <div class="clock-center"></div>
+                    <div class="hand hour-hand" id="hourHand"></div>
+                    <div class="hand minute-hand" id="minuteHand"></div>
+                    <div class="hand second-hand" id="secondHand"></div>
+                    <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img"> 
+                </div>
+            </a>
+        </div>
+        
+        <div class="header-titles">
+            <h1>Patronaty i Projekty</h1>
+            <h2>Nasze inicjatywy i wyróżnienia</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html#o-nas">O Fundacji</a></li>
+                <li><a href="index.html#podopieczni">Podopieczni</a></li>
+                <li><a href="index.html#wolontariat">Wolontariat</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#wesprzyj">Wesprzyj Nas</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="container">
+
+    <!-- SEKCJA: PATRONAT -->
+    <div class="heading-wrapper" style="margin-top: 20px;">
+        <h2 class="section-heading">Patronat</h2>
+    </div>
+
+    <div class="intro-text" style="text-align: center; margin-bottom: 20px;">
+        <p>Wyróżnienia i patronaty instytucjonalne to dla nas zaszczyt oraz potwierdzenie, że nasza misja towarzyszenia osobom u kresu życia ma ważne znaczenie społeczne.</p>
+    </div>
+
+    <!-- BLOK IVY 2026 -->
+    <div style="background: #eef7f4; padding: 30px; margin: 20px auto 60px auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; max-width: 900px;">
+        <div style="border-bottom: 2px solid #d2e8df; padding-bottom: 15px; margin-bottom: 20px;">
+            <h3 style="margin: 0; color: #1a5f4a; font-family: 'Georgia', serif; font-size: 1.4em; border-bottom: none; padding-bottom: 0;">Nasza misja doceniona! „Gdańska Szkoła Towarzyszenia” z patronatem Międzynarodowego Roku Wolontariatu 2026</h3>
+        </div>
+        
+        <p style="font-size: 1.05em; color: #444; margin-bottom: 15px; text-align: left;">
+            <strong>Gdańska Szkoła Towarzyszenia – oficjalne wydarzenie obchodów Międzynarodowego Roku Wolontariatu na rzecz Zrównoważonego Rozwoju (IVY 2026)</strong>
+        </p>
+        <p style="font-size: 1.05em; color: #444; margin-bottom: 30px; text-align: left;">
+            Mamy zaszczyt poinformować, że nasz autorski cykl szkoleń uzyskał patronat Dyrektora Narodowego Instytutu Wolności – Centrum Rozwoju Społeczeństwa Obywatelskiego (NIW-CRSO) w ramach obchodów IVY 2026. W ramach tego przedsięwzięcia, podczas 40 godzin zajęć z edukatorami i psychologami, rzetelnie przygotowujemy grupę wolontariuszy do towarzyszenia osobom u kresu życia (tzw. "doula umierania"). Wyróżnienie to potwierdza, że projekt bezpośrednio wpisuje się w realizację Celów Zrównoważonego Rozwoju, promując solidarność i profesjonalne wsparcie społeczne.
+        </p>
+
+        <div style="background: #fff; padding: 30px; border-radius: 8px; display: block; max-width: 500px; margin: 0 auto; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+            <a href="https://niw.gov.pl/ivy-2026/wlacz-sie-w-obchody/" target="_blank" rel="noopener noreferrer">
+                <img src="IVY_Logo_RGB_Horiz_PL.png" alt="Logo Międzynarodowy Rok Wolontariatu 2026" style="width: 100%; height: auto; display: block;">
+            </a>
+        </div>
+    </div>
+    <!-- KONIEC BLOKU -->
+
+    <!-- SEKCJA: PROJEKTY -->
+    <div class="heading-wrapper" style="margin-top: 60px;">
+        <h2 class="section-heading">Projekty</h2>
+    </div>
+
+    <div class="intro-text" style="text-align: center; margin-bottom: 40px;">
+        <p>Dzięki zaangażowaniu w różnorodne inicjatywy i programy dotacyjne stale rozwijamy nasze kompetencje, aby jeszcze skuteczniej wspierać naszych Podopiecznych.</p>
+    </div>
+
+    <!-- PIERWSZY PROJEKT: PROO 5 -->
+    <div style="background: #fff; margin: 0 auto 60px auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 900px; border-top: 4px solid #1a5f4a; overflow: hidden;">
+        
+        <div style="padding: 30px 40px;">
+            <h3 style="margin-top: 0; color: #133a2d; font-family: 'Georgia', serif; font-size: 1.4em; border-bottom: 2px solid #e2f0ea; padding-bottom: 15px; margin-bottom: 20px;">
+                Reprezentacja Fundacji „OSTATNIA WARTA” na ogólnopolskich wydarzeniach opieki długoterminowej i senioralnej w 2026 r.
+            </h3>
+            
+            <p style="font-size: 1.05em; color: #444; margin-bottom: 15px; text-align: justify; line-height: 1.8;">
+                W 2026 roku nasza Fundacja realizuje projekt mający na celu wymianę wiedzy i budowanie relacji z kluczowymi podmiotami z sektora medycznego i opiekuńczego. W ramach zadania przedstawiciele Zarządu wezmą udział w trzech ważnych wydarzeniach branżowych: <strong>Targach VIVA SENIORZY! w Poznaniu</strong>, <strong>III Ogólnopolskim Kongresie Opieki Długoterminowej</strong> oraz <strong>XXII Forum Rynku Zdrowia w Warszawie</strong>.
+            </p>
+            <p style="font-size: 1.05em; color: #444; margin-bottom: 0; text-align: justify; line-height: 1.8;">
+                Obecność na tych kongresach pozwala nam śledzić innowacje technologiczne ułatwiające funkcjonowanie osobom chorym, a zdobyta wiedza (np. w zakresie komunikacji z pacjentem z zaburzoną świadomością i opieki zintegrowanej) jest bezpośrednio wdrażana do naszego autorskiego programu edukacyjnego – <em>Gdańskiej Szkoły Towarzyszenia</em>. To również doskonała przestrzeń do promowania <em>Sitting Service</em> oraz <em>Douli Umierania</em> w ogólnopolskim środowisku opiekuńczym.
+            </p>
+        </div>
+
+        <!-- SEKCJA PROMOCYJNA DOTACJI - ZGODNA Z WYTYCZNYMI NIW-CRSO -->
+        <div style="background: #fdfdfd; padding: 25px 40px; border-top: 1px solid #eee;">
+            <div style="text-align: center; margin-bottom: 20px;">
+                 <img src="PROO_zestawienie_3_skrocone_plik_edytowalny_KOLOR.png" alt="Zestawienie znaków: Komitet ds. Pożytku Publicznego, NIW-CRSO, PROO" style="max-width: 100%; height: auto; max-height: 80px;">
+            </div>
+            
+            <p style="font-size: 0.9em; color: #333; text-align: center; margin-bottom: 20px; font-family: 'Arial', sans-serif; font-weight: bold; line-height: 1.5;">
+                Sfinansowano ze środków Narodowego Instytutu Wolności - Centrum Rozwoju Społeczeństwa Obywatelskiego w ramach Rządowego Programu Rozwoju Organizacji Obywatelskich na lata 2018-2030 PROO.
+            </p>
+
+            <!-- OBOWIĄZEK INFORMACYJNY NA WWW -->
+            <div style="background: #fff; border: 1px solid #e2f0ea; border-radius: 4px; padding: 20px; font-family: 'Arial', sans-serif; font-size: 0.9em; color: #444;">
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 8px;"><strong>Nazwa zadania:</strong> Reprezentacja Fundacji „OSTATNIA WARTA” na ogólnopolskich wydarzeniach opieki długoterminowej i senioralnej w 2026 r.</li>
+                    <li style="margin-bottom: 8px;"><strong>Wartość dofinansowania:</strong> 10 000,00 zł</li>
+                    <li style="margin-bottom: 8px;"><strong>Całkowita wartość zadania:</strong> 10 000,00 zł</li>
+                    <li style="margin-bottom: 0;"><strong>Data podpisania umowy:</strong> 28 kwietnia 2026 r.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- KONIEC PIERWSZY PROJEKT -->
+
+    <!-- SEKCJA KONTAKTOWA -->
+    <div style="background: #fff; padding: 40px 25px; border-radius: 8px; border-top: 4px solid #D4AF37; margin-top: 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 900px; margin-left: auto; margin-right: auto;">
+        <h3 style="margin-top: 0; margin-bottom: 15px; font-family: 'Georgia', serif; font-size: 1.6em; color: #133a2d;">Masz pytania dotyczące programu?</h3>
+        <p style="font-size: 1.1em; color: #555; margin-bottom: 25px; line-height: 1.5; max-width: 800px; margin-left: auto; margin-right: auto;">
+            Jeśli chcesz dowiedzieć się więcej o realizowanych projektach lub uzyskać informacje na temat patronatu w naszej Fundacji, skontaktuj się z nami.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <a href="mailto:kontakt@ostatniawarta.pl" class="btn-outline">Napisz: kontakt@ostatniawarta.pl</a>
+        </div>
+    </div>
+
+    <!-- POZOSTAŁE FORMY ZAANGAŻOWANIA -->
+    <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #eee; text-align: center;">
+        <h3 style="margin-top: 0; margin-bottom: 15px; font-family: 'Georgia', serif; color: #133a2d; font-size: 1.4em; border-bottom: none;">Poznaj inne formy zaangażowania:</h3>
+        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <a href="zbiorki.html" class="btn-outline" style="margin-top: 10px;">Stań na Warcie (Zbiórki)</a>
+            <a href="pbic.html" class="btn-outline" style="margin-top: 10px;">Partnerstwo i CSR</a>
+            <a href="zwol.html" class="btn-outline" style="margin-top: 10px;">Zostań wolontariuszem</a>
+        </div>
+    </div>
+
+    <!-- POWRÓT -->
+    <div style="text-align: center; margin-top: 50px;">
+        <a href="index.html" class="btn-dark">&larr; Wróć na Stronę Główną</a>
+    </div>
+
+</section>
+
+<footer>
+    <div class="container">
+        <div class="copyright" style="border-top: none; margin-top: 0; padding-top: 0;">
+            <p style="font-size: 0.85em; margin-bottom: 15px; color: #a3c2b5; line-height: 1.4; text-align: justify;">
+                <strong>Zastrzeżenie:</strong> Fundacja „Ostatnia Warta” i jej wolontariusze świadczą wyłącznie wsparcie niemedyczne. Nie udzielamy świadczeń zdrowotnych, nie stawiamy diagnoz ani nie podejmujemy decyzji terapeutycznych. Nasza działalność uzupełnia, a nie zastępuje opiekę medyczną i hospicyjną.
+            </p>
+            
+            <p>&copy; 2026 FUNDACJA "OSTATNIA WARTA". Wszelkie prawa zastrzeżone.</p>
+            <p style="margin-top: 10px;">
+                <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Polityka Prywatności i RODO</a>
+                <a href="regulamin-darowizn.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Regulamin Darowizn</a>
+                <a href="regulamin-pomocy.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Regulamin Świadczenia Pomocy</a>
+                <a href="warunki-korzystania.html" style="text-decoration: none; color: #D4AF37;">Warunki Korzystania</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Zegar
+    function updateClock() {
+        const now = new Date();
+        const second = now.getSeconds();
+        const minute = now.getMinutes();
+        const hour = now.getHours();
+
+        const secondDeg = ((second / 60) * 360);
+        const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
+        const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
+
+        const secHand = document.getElementById('secondHand');
+        const minHand = document.getElementById('minuteHand');
+        const hrHand = document.getElementById('hourHand');
+
+        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
+        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
+        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>
