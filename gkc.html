@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3VQ06C7HQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z3VQ06C7HQ');
+      gtag('config', 'AW-18086071578');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Gdańska Kapsuła Czasu – cyfrowe archiwum historii seniorów | Fundacja Ostatnia Warta</title>
+    <meta name="description" content="Projekt Gdańska Kapsuła Czasu. Archiwizujemy wspomnienia i tworzymy cyfrowe &quot;listy w przyszłość&quot; najstarszych mieszkańców Gdańska.">
+    <meta name="keywords" content="gdańska kapsuła czasu, archiwum historii mówionej, wspomnienia seniorów gdańsk, listy w przyszłość, wolontariat międzypokoleniowy, fundacja ostatnia warta">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Gdańska Kapsuła Czasu – Fundacja Ostatnia Warta">
+    <meta property="og:description" content="Projekt Gdańska Kapsuła Czasu. Archiwizujemy wspomnienia i tworzymy cyfrowe &quot;listy w przyszłość&quot; najstarszych mieszkańców Gdańska.">
+    <meta property="og:url" content="https://ostatniawarta.pl/gkc.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ostatniawarta.pl/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="canonical" href="https://ostatniawarta.pl/gkc.html" />
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        /* Podstawowe style i reset */
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
+        a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
+        h1, h2, h3, h4 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
+        .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
+        
+        /* Ciemna, elegancka góra z wycentrowanym logo */
+        header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
+        
+        /* ZEGAR ZAMIAST PIERŚCIENIA */
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+        .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
+        
+        /* Środek wskazówek */
+        .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
+        
+        /* Wskazówki zegara */
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
+        .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
+        .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
+        .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
+
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; line-height: 1.3; }
+        .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.4em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
+
+        nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
+        nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
+        nav ul li a:hover { color: #D4AF37; }
+
+        /* WSTĘP */
+        .intro-text { font-size: 1.15em; color: #444; text-align: justify; max-width: 900px; margin: 0 auto 40px auto; line-height: 1.8; }
+        .intro-text .text-link { color: #1a5f4a; text-decoration: underline; font-weight: bold; transition: color 0.3s; }
+        .intro-text .text-link:hover { color: #D4AF37; }
+        
+        .section-heading { font-family: 'Georgia', serif; font-size: 1.8em; color: #1a5f4a; border-bottom: 2px solid #D4AF37; padding-bottom: 10px; margin: 0 0 25px 0; display: inline-block; font-weight: normal; }
+        .heading-wrapper { text-align: center; width: 100%; margin-bottom: 15px; }
+
+        /* GRID INFO */
+        .support-grid { display: grid; grid-template-columns: 1fr; gap: 30px; margin-top: 20px; align-items: stretch; }
+        
+        .support-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1a5f4a; padding: 30px; display: flex; flex-direction: column; justify-content: flex-start; text-align: left; box-sizing: border-box; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .support-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        
+        .support-card h3 { margin-top: 0; font-size: 1.3em; font-family: 'Georgia', serif; margin-bottom: 10px; color: #133a2d; }
+        .support-card p { font-family: 'Arial', sans-serif; font-size: 1em; color: #555; line-height: 1.6; margin-bottom: 0; }
+
+        .disclaimer-box { background: #fdf8e6; border-left: 4px solid #D4AF37; padding: 25px; margin-top: 20px; margin-bottom: 40px; font-family: 'Arial', sans-serif; color: #333; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.03);}
+        .disclaimer-box h3 { margin-top: 0; color: #b5952f; border-bottom: none; padding-bottom: 0; font-family: 'Georgia', serif; font-size: 1.4em;}
+        .disclaimer-box p { font-size: 1.05em; text-align: left; color: #444; margin-bottom: 0; line-height: 1.6;}
+
+        /* NATIVE HTML5 ACCORDION DLA FAQ */
+        .faq-section { max-width: 900px; margin: 0 auto; }
+        details { background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); margin-bottom: 15px; border-left: 4px solid #1a5f4a; overflow: hidden; transition: all 0.3s ease; }
+        details:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        summary { font-family: 'Georgia', serif; font-size: 1.1em; font-weight: normal; color: #133a2d; padding: 18px 25px; cursor: pointer; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; background: #fff; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; color: #D4AF37; font-size: 1.5em; font-weight: bold; line-height: 1; transition: transform 0.3s ease; }
+        details[open] summary::after { content: '-'; transform: rotate(180deg); }
+        details p { padding: 0 25px 20px 25px; margin: 0; color: #555; font-family: 'Arial', sans-serif; font-size: 0.95em; line-height: 1.6; text-align: left; }
+
+        .btn-outline { border-color: #1a5f4a; color: #1a5f4a; background: transparent; display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; border: 2px solid #D4AF37; transition: all 0.3s ease; text-align: center;}
+        .btn-outline:hover { background: #D4AF37; color: #fff; }
+        
+        .btn-primary { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #D4AF37; color: #133a2d; border: 2px solid #D4AF37; transition: background 0.3s ease, color 0.3s ease; text-align: center; }
+        .btn-primary:hover { background: #b5952f; border-color: #b5952f; color: #fff; }
+
+        .btn-dark { border-color: #ccc; color: #555; background: transparent; display: inline-block; padding: 10px 20px; margin-top: 20px; border: 2px solid #ccc; font-weight: bold; border-radius: 4px; font-family: 'Arial', sans-serif; transition: 0.3s; }
+        .btn-dark:hover { background: #eee; color: #333; }
+
+        footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; margin-top: 40px; }
+        footer a { color: #D4AF37; text-decoration: none; }
+        footer a:hover { color: #fff; text-decoration: underline; }
+        
+        @media (min-width: 768px) { 
+            .support-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) { 
+            .header-titles h1 { font-size: 1.5em; }
+            .support-card { padding: 20px; }
+            .intro-text { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container" style="padding: 0 0 0 0;">
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <div class="clock-wrapper">
+                    <div class="clock-center"></div>
+                    <div class="hand hour-hand" id="hourHand"></div>
+                    <div class="hand minute-hand" id="minuteHand"></div>
+                    <div class="hand second-hand" id="secondHand"></div>
+                    <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img"> 
+                </div>
+            </a>
+        </div>
+        
+        <div class="header-titles">
+            <h1>Gdańska Kapsuła Czasu</h1>
+            <h2>[W PRZYGOTOWANIU] Cyfrowe archiwum historii seniorów</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html#o-nas">O Fundacji</a></li>
+                <li><a href="index.html#podopieczni">Podopieczni</a></li>
+                <li><a href="index.html#wolontariat">Wolontariat</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#wesprzyj">Wesprzyj Nas</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="container">
+    
+    <div class="disclaimer-box" style="max-width: 900px; margin: 0 auto 40px auto;">
+        <h3>[STATUS: W PRZYGOTOWANIU]</h3>
+        <p>Projekt "Gdańska Kapsuła Czasu" znajduje się obecnie w fazie przygotowań organizacyjnych i technicznych. Zbieramy siły i kompletujemy sprzęt, aby wkrótce móc bezpłatnie rejestrować bezcenne wspomnienia gdańskich seniorów.</p>
+    </div>
+
+    <div style="text-align: center; margin-bottom: 40px;">
+        <img src="wbudowie.jpg" alt="Projekt w budowie" style="max-width: 100%; height: auto; max-height: 400px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    </div>
+
+    <div class="intro-text">
+        <p>Żyjemy w epoce bezprecedensowych przemian. Nasi seniorzy to naoczni świadkowie transformacji ustrojowych, społecznych i technologicznych, jakich świat wcześniej nie widział. Wobec tak gwałtownych zmian fundamentalne staje się zabezpieczenie unikalnych historii, mądrości i tożsamości tego pokolenia w autentycznej formie.</p>
+        <p>Nasz projekt to mobilny system archiwizacji wspomnień. Wolontariusze Fundacji odwiedzą gdańskich seniorów w ich domach oraz podczas miejskich wydarzeń, aby bezpłatnie nagrać i zmontować wideo z przesłaniem dla bliskich – swoisty "list w przyszłość".</p>
+    </div>
+
+    <div class="heading-wrapper" style="margin-top: 60px;">
+        <h2 class="section-heading">Jak to działa w praktyce?</h2>
+    </div>
+
+    <div class="support-grid">
+        <div class="support-card" style="border-top-color: #D4AF37;">
+            <h3 style="color: #133a2d;">Mobilne Studio Nagraniowe</h3>
+            <p>Aby zniwelować wykluczenie cyfrowe i problem ograniczonej mobilności, docieramy z profesjonalnym sprzętem bezpośrednio do domów seniorów, a także na popularne festyny dzielnicowe.</p>
+        </div>
+        <div class="support-card" style="border-top-color: #D4AF37;">
+            <h3 style="color: #133a2d;">Listy w Przyszłość</h3>
+            <p>Wywiady i wspomnienia są odpowiednio archiwizowane. Tworzymy cyfrowe pamiątki wideo, które staną się międzypokoleniowym mostem i cennym dziedzictwem dla wnuków i prawnuków.</p>
+        </div>
+        <div class="support-card" style="border-top-color: #D4AF37; grid-column: 1 / -1;">
+            <h3 style="color: #133a2d; text-align: center;">Ochrona Dziedzictwa i Walka z Samotnością</h3>
+            <p style="text-align: center;">Rejestracja wspomnień to nie tylko dokumentacja – to również okazja do głębokiej rozmowy, uważnego bycia z drugim człowiekiem i oswajania samotności. Nasi przeszkoleni wolontariusze potrafią słuchać z pełną empatią i szacunkiem.</p>
+        </div>
+    </div>
+
+    <div class="heading-wrapper" style="margin-top: 60px;">
+        <h2 class="section-heading">Najczęściej Zadawane Pytania (FAQ)</h2>
+    </div>
+    
+    <div class="faq-section">
+        <details>
+            <summary>Dla kogo przeznaczony jest projekt?</summary>
+            <p>Odbiorcami działań są gdańscy seniorzy (osoby w wieku 60+), którzy odczuwają potrzebę podsumowania swojego życia, opowiedzenia o dawnych czasach lub po prostu zarchiwizowania swoich wspomnień i myśli dla rodziny.</p>
+        </details>
+        
+        <details>
+            <summary>Czy nagranie wiąże się z jakimiś kosztami?</summary>
+            <p>Nie. Cała usługa – dojazd, rejestracja, profesjonalny montaż oraz archiwizacja materiału – jest realizowana przez wolontariuszy Fundacji w 100% bezpłatnie, w ramach naszej działalności pożytku publicznego.</p>
+        </details>
+
+        <details>
+            <summary>Gdzie publikowane będą zmontowane materiały?</summary>
+            <p>Zebrane relacje i "listy w przyszłość" – oczywiście wyłącznie po uzyskaniu zgody od seniora – będą trafiać na ogólnodostępną platformę, w tym na nasz <a href="https://www.youtube.com/@FundacjaOstatniaWarta" target="_blank" class="text-link">oficjalny kanał YouTube</a>, stanowiąc wirtualne muzeum historii mówionej.</p>
+        </details>
+
+        <details>
+            <summary>Kiedy ruszą zapisy i nagrania?</summary>
+            <p>Aktualnie dopinamy kwestie sprzętowe i szkoleniowe. Kiedy projekt oficjalnie wystartuje, uruchomimy dedykowany numer telefonu oraz prosty formularz, przez który będzie można zgłosić siebie lub bliską osobę. Obserwuj nasze profile w mediach społecznościowych!</p>
+        </details>
+    </div>
+
+    <div class="heading-wrapper" style="margin-top: 60px;">
+        <h2 class="section-heading" style="border-bottom: none; margin-bottom: 5px; color: #133a2d;">Śledź nasze działania na YouTube</h2>
+    </div>
+    
+    <div style="background: #fff; padding: 40px 25px; border-radius: 8px; border-top: 4px solid #D4AF37; margin-top: 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+        <h3 style="margin-top: 0; margin-bottom: 15px; font-family: 'Georgia', serif; font-size: 1.6em; color: #133a2d;">Odkryj historie naszych podopiecznych</h3>
+        <p style="font-size: 1.1em; color: #555; margin-bottom: 25px; line-height: 1.5; max-width: 800px; margin-left: auto; margin-right: auto;">
+            Docelowo to właśnie tam będziemy publikować wszystkie zarejestrowane, zmontowane i autoryzowane "listy w przyszłość". Zasubskrybuj kanał już dziś, aby nie przegapić premiery naszych materiałów.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <a href="https://www.youtube.com/@FundacjaOstatniaWarta" target="_blank" class="btn-primary" style="display: flex; align-items: center; gap: 10px;">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                Odwiedź nasz kanał YouTube
+            </a>
+        </div>
+    </div>
+
+    <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #eee; text-align: center;">
+        <h3 style="margin-top: 0; margin-bottom: 15px; font-family: 'Georgia', serif; color: #133a2d; font-size: 1.4em; border-bottom: none;">Poznaj inne formy zaangażowania:</h3>
+        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <a href="zbiorki.html" class="btn-outline" style="margin-top: 10px;">Stań na Warcie (Zbiórki)</a>
+            <a href="pbic.html" class="btn-outline" style="margin-top: 10px;">Partnerstwo i CSR</a>
+            <a href="zwol.html" class="btn-outline" style="margin-top: 10px;">Zostań wolontariuszem</a>
+            <a href="progzad.html" class="btn-outline" style="margin-top: 10px;">Dobrowolne zadośćuczynienie</a>
+            <a href="wsparcie.html" class="btn-outline" style="margin-top: 10px;">Wspierają nas</a>
+            <a href="projekty.html" class="btn-outline" style="margin-top: 10px;">Projekty i Patronaty</a>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px;">
+        <a href="index.html" class="btn-dark">&larr; Wróć na Stronę Główną</a>
+    </div>
+
+</section>
+
+<footer>
+    <div class="container">
+        <div class="copyright" style="border-top: none; margin-top: 0; padding-top: 0;">
+            <p style="font-size: 0.85em; margin-bottom: 15px; color: #a3c2b5; line-height: 1.4; text-align: justify;">
+                <strong>Zastrzeżenie:</strong> Fundacja „Ostatnia Warta” i jej wolontariusze świadczą wyłącznie wsparcie niemedyczne. Nie udzielamy świadczeń zdrowotnych, nie stawiamy diagnoz ani nie podejmujemy decyzji terapeutycznych. Nasza działalność uzupełnia, a nie zastępuje opiekę medyczną i hospicyjną.
+            </p>
+            
+            <p>&copy; 2026 FUNDACJA "OSTATNIA WARTA". Wszelkie prawa zastrzeżone.</p>
+            <p style="margin-top: 10px;">
+                <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Polityka Prywatności i RODO</a>
+                <a href="regulamin-darowizn.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Regulamin Darowizn</a>
+                <a href="regulamin-pomocy.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Regulamin Świadczenia Pomocy</a>
+                <a href="warunki-korzystania.html" style="text-decoration: none; color: #D4AF37;">Warunki Korzystania</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Zegar
+    function updateClock() {
+        const now = new Date();
+        const second = now.getSeconds();
+        const minute = now.getMinutes();
+        const hour = now.getHours();
+
+        const secondDeg = ((second / 60) * 360);
+        const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
+        const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
+
+        const secHand = document.getElementById('secondHand');
+        const minHand = document.getElementById('minuteHand');
+        const hrHand = document.getElementById('hourHand');
+
+        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
+        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
+        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>
