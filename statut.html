@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3VQ06C7HQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z3VQ06C7HQ');
+      gtag('config', 'AW-18086071578');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Statut | Fundacja Ostatnia Warta</title>
+    <meta name="description" content="Statut Fundacji Ostatnia Warta. Poznaj oficjalne cele, zasady działania i strukturę naszej organizacji.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Statut Fundacji Ostatnia Warta" />
+    <meta property="og:description" content="Oficjalny statut Fundacji Ostatnia Warta określający cele i zasady naszego działania." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ostatniawarta.pl/statut.html" />
+    <meta property="og:image" content="https://ostatniawarta.pl/logo.png" />
+    
+    <link rel="canonical" href="https://ostatniawarta.pl/statut.html" />
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        /* Podstawowe style i reset */
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
+        a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
+        h1, h2, h3, h4 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
+        .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
+        
+        /* Ciemna, elegancka góra z wycentrowanym logo */
+        header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
+        
+        /* ZEGAR ZAMIAST PIERŚCIENIA */
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+        .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
+        
+        /* Środek wskazówek */
+        .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
+        
+        /* Wskazówki zegara */
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
+        .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
+        .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
+        .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
+
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; line-height: 1.3; }
+        .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.4em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
+
+        nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
+        nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
+        nav ul li a:hover { color: #D4AF37; }
+
+        /* WSTĘP i TREŚĆ */
+        .content-section { background: #fff; padding: 60px 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px; border-top: 4px solid #1a5f4a; max-width: 900px; margin-left: auto; margin-right: auto; }
+        
+        .intro-text { font-size: 1.15em; color: #444; text-align: justify; margin: 0 auto 40px auto; line-height: 1.8; }
+        .intro-text p { margin-bottom: 20px; }
+        .intro-text ol, .intro-text ul { margin-bottom: 20px; padding-left: 20px; }
+        .intro-text li { margin-bottom: 10px; }
+        
+        .section-heading { font-family: 'Georgia', serif; font-size: 1.8em; color: #1a5f4a; border-bottom: 2px solid #D4AF37; padding-bottom: 10px; margin: 0 0 25px 0; display: inline-block; font-weight: normal; text-align: center; }
+        .heading-wrapper { text-align: center; width: 100%; margin-bottom: 15px; margin-top: 50px; }
+
+        /* PRZYCISKI */
+        .btn-outline { border-color: #1a5f4a; color: #1a5f4a; background: transparent; display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; border: 2px solid #1a5f4a; transition: all 0.3s ease; }
+        .btn-outline:hover { background: #1a5f4a; color: #fff; }
+        
+        .btn-primary { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #D4AF37; color: #133a2d; border: 2px solid #D4AF37; transition: background 0.3s ease, color 0.3s ease; }
+        .btn-primary:hover { background: #b5952f; border-color: #b5952f; color: #fff; }
+
+        .btn-dark { border-color: #ccc; color: #555; background: transparent; display: inline-block; padding: 10px 20px; margin-top: 40px; border: 2px solid #ccc; font-weight: bold; border-radius: 4px; font-family: 'Arial', sans-serif; transition: 0.3s; }
+        .btn-dark:hover { background: #eee; color: #333; }
+
+        footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; margin-top: 40px; }
+        footer a { color: #D4AF37; text-decoration: none; }
+        footer a:hover { color: #fff; text-decoration: underline; }
+        
+        @media (max-width: 768px) { 
+            .header-titles h1 { font-size: 1.8em; }
+            .content-section { padding: 40px 20px; }
+            .intro-text { text-align: left; font-size: 1.05em; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container" style="padding: 0 0 0 0;">
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <div class="clock-wrapper">
+                    <div class="clock-center"></div>
+                    <div class="hand hour-hand" id="hourHand"></div>
+                    <div class="hand minute-hand" id="minuteHand"></div>
+                    <div class="hand second-hand" id="secondHand"></div>
+                    <img src="logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img"> 
+                </div>
+            </a>
+        </div>
+        
+        <div class="header-titles">
+            <h1>Statut Fundacji</h1>
+            <h2>„Ostatnia Warta”</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html#o-nas">O Fundacji</a></li>
+                <li><a href="index.html#podopieczni">Podopieczni</a></li>
+                <li><a href="index.html#wolontariat">Wolontariat</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#wesprzyj">Wesprzyj Nas</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="container">
+    <div class="content-section">
+
+        <h1 style="text-align: center; color: #1a5f4a; margin-bottom: 40px; font-family: 'Georgia', serif; font-weight: normal;">STATUT FUNDACJI "OSTATNIA WARTA"</h1>
+
+        <div class="heading-wrapper" style="margin-top: 0;">
+            <h2 class="section-heading">Rozdział 1. Postanowienia ogólne</h2>
+        </div>
+        <div class="intro-text">
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 1</strong></p>
+            <p>Fundacja pod nazwą Fundacja „Ostatnia Warta", zwana dalej Fundacją, ustanowiona przez Przemysława Belchnerowskiego, zwanego dalej Fundatorem, aktem notarialnym sporządzonym w dniu 11.02.2026 r., przed notariuszem Karolem Aleksandrowiczem Repertorium A nr 926/2026, działa na podstawie przepisów prawa polskiego oraz niniejszego Statutu.</p>
+            
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 2</strong></p>
+            <p>Fundacja w swojej działalności kieruje się poszanowaniem przyrodzonej i niezbywalnej godności człowieka, solidarnością oraz uniwersalnymi wartościami humanistycznymi, a dla osób wierzących także wartościami płynącymi z chrześcijańskiego etosu miłosierdzia, niosąc pomoc każdemu człowiekowi bez względu na jego wyznanie czy światopogląd.</p>
+
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 3</strong></p>
+            <p>Mottem Fundacji są słowa: „Zostańcie tu i czuwajcie ze Mną!" (Ewangelia wg św. Mateusza 26, 38).</p>
+
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 4</strong></p>
+            <ol>
+                <li>Siedzibą Fundacji jest miasto Gdańsk.</li>
+                <li>Terenem działania Fundacji jest obszar Rzeczypospolitej Polskiej. Dla właściwego realizowania celów Fundacja może prowadzić działalność także poza granicami Rzeczypospolitej Polskiej.</li>
+                <li>Czas trwania Fundacji jest nieoznaczony.</li>
+                <li>Fundacja może używać wyróżniającego ją znaku graficznego oraz odpowiedników swojej nazwy w językach obcych.</li>
+                <li>Skarb Państwa, jednostki samorządu terytorialnego, państwowe ani samorządowe osoby prawne nie posiadają nad Fundacją kontroli w rozumieniu art. 4 pkt 4 ustawy z dnia 16 lutego 2007 r., o ochronie konkurencji i konsumentów.</li>
+            </ol>
+
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 5</strong></p>
+            <p>Nadzór nad Fundacją sprawuje Minister właściwy ds. Zdrowia.</p>
+        </div>
+
+        <div class="heading-wrapper">
+            <h2 class="section-heading">Rozdział II. Cele i zasady działania Fundacji</h2>
+        </div>
+        <div class="intro-text">
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 6</strong></p>
+            <p>Celem Fundacji jest wszechstronna ochrona zdrowia i pomoc społeczna, a w szczególności:</p>
+            <ol>
+                <li>Niesienie wszechstronnej pomocy osobom przewlekle chorym, w stanie terminalnym oraz umierającym, w szczególności poprzez zapewnienie im towarzyszenia i obecności w ostatnich chwilach życia.</li>
+                <li>Działania na rzecz poprawy jakości życia, dobrostanu psychicznego oraz poszanowania godności osób w stanie terminalnym.</li>
+                <li>Przeciwdziałanie samotności osób umierających w placówkach medycznych, opiekuńczych oraz w domach prywatnych.</li>
+                <li>Wsparcie rodzin i opiekunów osób terminalnie chorych w procesie opieki oraz w okresie żałoby.</li>
+                <li>Propagowanie idei towarzyszenia przy umieraniu (,,sitting service") oraz oswajania tematyki śmierci.</li>
+                <li>Edukacja społeczna w zakresie opieki paliatywnej i tanatologii.</li>
+                <li>Jednoczenie ludzi dobrej woli gotowych nieść pomoc potrzebującym.</li>
+                <li>Działalność na rzecz osób z niepełnosprawnościami oraz osób ciężko i przewlekle chorych (w tym onkologicznie), obejmująca wsparcie w rehabilitacji społecznej oraz organizację zajęć terapeutycznych, warsztatowych i aktywizujących.</li>
+                <li>Wspieranie aktywności, samodzielności oraz integracji społecznej osób starszych, w tym osób zmagających się ze schorzeniami wieku podeszłego i schorzeniami demencyjnymi.</li>
+                <li>Prowadzenie działalności edukacyjnej i profilaktycznej w zakresie zdrowia publicznego, w tym profilaktyki uzależnień oraz chorób zakaźnych (m.in. HIV/AIDS) i nieuleczalnych.</li>
+                <li>Finansowe i rzeczowe wspieranie osób znajdujących się w szczególnie trudnej sytuacji życiowej, zdrowotnej lub materialnej.</li>
+                <li>Działalność na rzecz reintegracji społecznej i zawodowej osób zagrożonych wykluczeniem społecznym, w szczególności poprzez tworzenie miejsc pracy w ramach Przedsiębiorstwa Społecznego.</li>
+            </ol>
+
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 7</strong></p>
+            <ol>
+                <li>Fundacja realizuje swoje cele statutowe poprzez prowadzenie nieodpłatnej działalności pożytku publicznego oraz odpłatnej działalności pożytku publicznego.</li>
+                <li>Przychody z odpłatnej działalności pożytku publicznego służą wyłącznie realizacji celów statutowych.</li>
+                <li>Działalność Fundacji ma charakter wyłącznie wspierający, społeczny i edukacyjny. Fundacja nie jest podmiotem leczniczym w rozumieniu przepisów o działalności leczniczej, nie udziela świadczeń zdrowotnych, nie stawia diagnoz medycznych ani nie podejmuje decyzji terapeutycznych.</li>
+                <li>Działania Fundacji uzupełniają, a nie zastępują profesjonalną opiekę medyczną.</li>
+            </ol>
+
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 7a</strong></p>
+            <p>Przedmiotem nieodpłatnej działalności pożytku publicznego jest:</p>
+            <ol>
+                <li>Organizowanie i koordynowanie bezpłatnego wolontariatu opiekuńczego w szpitalach, hospicjach, domach opieki i domach prywatnych.</li>
+                <li>Świadczenie pomocy rzeczowej i finansowej dla podopiecznych, w tym w szczególności finansowanie lub dofinansowanie kosztów leczenia (także zagranicznego), zabiegów medycznych, rehabilitacji, zakupu leków, środków higienicznych, sprzętu medycznego oraz specjalistycznego transportu, a także finansowe wsparcie w zaspokajaniu podstawowych potrzeb bytowych i życiowych podopiecznych.</li>
+                <li>Organizowanie oraz finansowanie kosztów przejazdów i dojazdów wolontariuszy oraz personelu do miejsc przebywania podopiecznych, w tym w formie zwrotu kosztów użycia pojazdów prywatnych (kilometrówki).</li>
+                <li>Organizowanie bezpłatnych akcji społecznych, kampanii informacyjnych oraz zbiórek publicznych i imprez charytatywnych.</li>
+                <li>Współpraca z organami administracji publicznej oraz innymi podmiotami poprzez realizację projektów społecznych oraz udział w otwartych konkursach ofert na realizację zadań publicznych (granty).</li>
+                <li>Organizowanie miejsc wykonywania prac społecznie użytecznych dla osób skierowanych przez wymiar sprawiedliwości w ramach procesu ich reintegracji społecznej.</li>
+                <li>Wspieranie działalności innych osób i instytucji o zbieżnych celach.</li>
+            </ol>
+
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 7b</strong></p>
+            <p>Przedmiotem odpłatnej działalności pożytku publicznego jest:</p>
+            <ol>
+                <li>Organizowanie i koordynowanie wolontariatu opiekuńczego i opieki wytchnieniowej w formie towarzyszenia (Sitting Service) oraz opieki osób towarzyszących w procesie umierania (Doula Umierania).</li>
+                <li>Prowadzenie specjalistycznych szkoleń i warsztatów, w tym w szczególności szkoleń dla Doul Umierania oraz w zakresie opieki paliatywnej i tanatologii.</li>
+                <li>Prowadzenie wypożyczalni sprzętu medycznego, rehabilitacyjnego oraz urządzeń ułatwiających opiekę nad chorym.</li>
+                <li>Realizacja odpłatnych zadań publicznych zlecanych przez organy administracji państwowej i samorządowej oraz współpraca z podmiotami leczniczymi i gospodarczymi w zakresie celów Fundacji.</li>
+                <li>Organizowanie i prowadzenie specjalistycznych szkoleń i programów profilaktyczno-edukacyjnych, w tym w zakresie profilaktyki uzależnień i bezpieczeństwa.</li>
+            </ol>
+        </div>
+
+        <div class="heading-wrapper">
+            <h2 class="section-heading">Rozdział III. Majątek i dochody Fundacji</h2>
+        </div>
+        <div class="intro-text">
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 8</strong></p>
+            <p>Majątek Fundacji stanowi fundusz założycielski w kwocie 1000 zł (słownie: jeden tysiąc złotych) oraz inne mienie nabyte przez Fundację w toku działania.</p>
+
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 9</strong></p>
+            <ol>
+                <li>Dochody Fundacji mogą pochodzić z:
+                    <ul style="list-style-type: lower-alpha;">
+                        <li>darowizn, spadków, zapisów,</li>
+                        <li>dotacji, subwencji i grantów (krajowych i zagranicznych),</li>
+                        <li>zbiórek publicznych i imprez charytatywnych,</li>
+                        <li>majątku ruchomego i nieruchomego Fundacji,</li>
+                        <li>odsetek i lokat bankowych,</li>
+                        <li>odpłatnej działalności pożytku publicznego,</li>
+                        <li>z dywidend i zysków z udziałów w spółkach prawa handlowego.</li>
+                    </ul>
+                </li>
+                <li>Fundacja może w celu pomnażania majątku tworzyć spółki prawa handlowego, przystępować do nich oraz obejmować w nich udziały lub akcje.</li>
+                <li>Fundacja nie prowadzi działalności gospodarczej.</li>
+                <li>Cały dochód Fundacji przeznaczany jest na działalność statutową.</li>
+                <li>Nadwyżka przychodów nad kosztami (zysk/nadwyżka bilansowa) uzyskana z prowadzonej działalności nie może być przeznaczona do podziału między Fundatora, członków władz oraz osoby zatrudnione w Fundacji, lecz musi być przeznaczona w całości na realizację celów statutowych (działalność pożytku publicznego).</li>
+                <li>W przypadku nadania Fundacji statusu Przedsiębiorstwa Społecznego, nadwyżka przychodów nad kosztami przeznaczana jest w co najmniej 30% na fundusz reintegracji społecznej i zawodowej pracowników.</li>
+            </ol>
+
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 10</strong></p>
+            <p>Fundacja pokrywa wszelkie koszty niezbędne do realizacji celów statutowych oraz bieżącego funkcjonowania organizacyjnego i administracyjnego Fundacji.</p>
+
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 11</strong></p>
+            <p>Zabrania się:</p>
+            <ol>
+                <li>Udzielania pożyczek lub zabezpieczania zobowiązań majątkiem Fundacji w stosunku do Fundatora, władz fundacji lub pracowników oraz osób im bliskich.</li>
+                <li>Przekazywania majątku Fundacji na rzecz Fundatora, władz fundacji lub pracowników oraz ich osób bliskich na zasadach innych niż w stosunku do osób trzecich.</li>
+                <li>Wykorzystywania majątku na rzecz Fundatora, władz fundacji lub pracowników oraz ich osób bliskich na zasadach innych niż w stosunku do osób trzecich, chyba że to wykorzystanie bezpośrednio wynika z celu statutowego.</li>
+                <li>Dokonywania zakupu towarów lub usług od osób prawnych organizacyjnie z Fundacją powiązanych lub podmiotów, w których uczestniczą osoby wymienione w § 12 niniejszego statutu, na zasadach innych niż w przypadku osób trzecich lub po cenach wyższych niż rynkowe.</li>
+            </ol>
+        </div>
+
+        <div class="heading-wrapper">
+            <h2 class="section-heading">Rozdział IV. Władze Fundacji</h2>
+        </div>
+        <div class="intro-text">
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 12</strong></p>
+            <p>Władzami Fundacji są:</p>
+            <ul style="list-style-type: upper-alpha; font-weight: bold;">
+                <li>Rada Fundacji.</li>
+                <li>Zarząd Fundacji.</li>
+                <li>Rada Honorowa (jako organ doradczy).</li>
+                <li>Zebranie Pracowników.</li>
+            </ul>
+
+            <h3 style="color: #D4AF37; margin-top: 40px;">A. RADA FUNDACJI</h3>
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 13</strong></p>
+            <ol>
+                <li>Rada Fundacji jest organem stanowiącym, kontrolnym i opiniującym Fundacji.</li>
+                <li>Rada Fundacji składa się z 2 do 7 członków.</li>
+                <li>Członków pierwszego i kolejnych składów Rady powołuje oraz odwołuje Fundator. W przypadku śmierci Fundatora, kolejnych członków Rady powołuje swą decyzją Rada Fundacji.</li>
+                <li>Kadencja Rady Fundacji trwa 5 lat.</li>
+                <li>Członkostwo w Radzie ustaje na skutek: śmierci, pisemnej rezygnacji lub odwołania przez uprawniony organ.</li>
+                <li>Każdy członek Rady Fundacji może być wybierany po raz kolejny do Rady Fundacji, chyba że naruszałoby to obowiązujące przepisy prawa.</li>
+            </ol>
+
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 14</strong></p>
+            <p>Do kompetencji Rady Fundacji należy:</p>
+            <ol>
+                <li>Wytyczanie głównych kierunków działania Fundacji.</li>
+                <li>Nadzór nad działalnością Zarządu.</li>
+                <li>Rozpatrywanie i zatwierdzanie rocznych sprawozdań Zarządu (finansowych i merytorycznych) oraz udzielanie Zarządowi absolutorium.</li>
+                <li>Powoływanie i odwoływanie członków Zarządu (z zastrzeżeniem § 16 ust. 3).</li>
+                <li>Powoływanie w drodze uchwały zewnętrznego Pełnomocnika Organu Nadzoru ds. Pracowniczych, uprawnionego do samodzielnego reprezentowania Fundacji w umowach o pracę oraz umowach cywilnoprawnych z członkami Zarządu i Rady Fundacji.</li>
+            </ol>
+
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 15</strong></p>
+            <ol>
+                <li>Rada Fundacji wybiera ze swego grona Przewodniczącego Rady.</li>
+                <li>Rada Fundacji zbiera się co najmniej raz w roku.</li>
+                <li>Uchwały Rady zapadają zwykłą większością głosów. W razie równej liczby głosów decyduje głos Przewodniczącego.</li>
+                <li>Posiedzenia Rady oraz głosowania mogą odbywać się przy wykorzystaniu środków komunikacji elektronicznej na odległość.</li>
+                <li>Członkowie Rady Fundacji mogą pełnić swoje funkcje społecznie lub za wynagrodzeniem ustalanym przez Fundatora na podstawie umów cywilnoprawnych lub umów o pracę.</li>
+            </ol>
+
+            <h3 style="color: #D4AF37; margin-top: 40px;">B. ZARZĄD FUNDACJI</h3>
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 16</strong></p>
+            <ol>
+                <li>Zarząd Fundacji kieruje działalnością Fundacji i reprezentuje ją na zewnątrz.</li>
+                <li>Zarząd składa się z 1 do 3 osób, w tym Prezesa.</li>
+                <li>Pierwszy skład Zarządu (w tym Prezesa) powołuje Fundator. Kolejne składy Zarządu powołuje Rada Fundacji.</li>
+                <li>Kadencja Zarządu trwa 5 lat. Członkowie Zarządu mogą być powoływani na kolejne kadencje wielokrotnie.</li>
+                <li>Członkowie Zarządu mogą pełnić swoje funkcje społecznie lub za wynagrodzeniem.</li>
+                <li>Prezes Zarządu Fundacji jest dla pracowników Fundacji kierownikiem Zakładu Pracy w rozumieniu przepisów prawa pracy.</li>
+            </ol>
+
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 17</strong></p>
+            <p>Do kompetencji Zarządu Fundacji należy podejmowanie decyzji we wszystkich sprawach niezastrzeżonych do kompetencji innych organów, a w szczególności:</p>
+            <ol>
+                <li>Kierowanie bieżącą działalnością Fundacji oraz reprezentowanie jej na zewnątrz.</li>
+                <li>Sprawowanie zarządu majątkiem Fundacji i kierowanie jej gospodarką finansową.</li>
+                <li>Decydowanie o nabywaniu, zbywaniu i obciążaniu nieruchomości oraz innych środków trwałych.</li>
+                <li>Zaciąganie zobowiązań majątkowych, w tym kredytów, pożyczek i leasingów.</li>
+                <li>Przyjmowanie darowizn, spadków i zapisów.</li>
+                <li>Zatrudnianie pracowników i ustalanie wysokości ich wynagrodzenia.</li>
+                <li>Obsługa administracyjno-techniczna Rady Fundacji.</li>
+            </ol>
+
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 18</strong></p>
+            <p>Do składania oświadczeń woli w imieniu Fundacji, w tym w sprawach majątkowych, uprawniony jest każdy członek Zarządu samodzielnie.</p>
+
+            <h3 style="color: #D4AF37; margin-top: 40px;">C. RADA HONOROWA</h3>
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 19</strong></p>
+            <ol>
+                <li>Zarząd Fundacji może powoływać w skład Rady Honorowej osoby fizyczne i prawne szczególnie zasłużone dla celów Fundacji lub życia społecznego.</li>
+                <li>Rada Honorowa jest organem doradczym. Członkostwo w niej jest funkcją honorową.</li>
+            </ol>
+
+            <h3 style="color: #D4AF37; margin-top: 40px;">D. ZEBRANIE PRACOWNIKÓW</h3>
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 19a</strong></p>
+            <ol>
+                <li>Zebranie Pracowników jest organem doradczo - konsultacyjnym Fundacji, w skład którego wchodzą wszyscy jej pracownicy.</li>
+                <li>Do kompetencji Zebrania Pracowników należy w szczególności:
+                    <ul style="list-style-type: lower-alpha;">
+                        <li>zapoznawanie się nie rzadziej niż raz w roku z wynikami działalności Fundacji oraz wyrażanie opinii w tym zakresie;</li>
+                        <li>opiniowanie regulaminu pracy lub zasad organizacji pracy i wynagrodzeń ustalanych przez Fundację oraz proponowanych zmian w tym zakresie;</li>
+                        <li>opiniowanie planowanych działań Fundacji na rzecz reintegracji społecznej i zawodowej pracowników.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="heading-wrapper">
+            <h2 class="section-heading">Rozdział V. Zmiana Statutu i Likwidacja</h2>
+        </div>
+        <div class="intro-text">
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 20</strong></p>
+            <ol>
+                <li>Zmiany Statutu, w tym zmiany lub rozszerzenia celów Fundacji, dokonuje Fundator w drodze oświadczenia woli w formie uchwały.</li>
+                <li>Po śmierci Fundatora uprawnienie to przechodzi na Radę Fundacji, która podejmuje uchwałę większością 2/3 głosów, chyba że Fundator wskazał w drodze uchwały inną osobę fizyczną jako swojego następcę w takim przypadku ogół uprawnień Fundatora przechodzi na wskazaną osobę.</li>
+            </ol>
+
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 21</strong></p>
+            <ol>
+                <li>Fundacja ulega likwidacji w razie osiągnięcia celów, dla których została ustanowiona, lub w razie wyczerpania się jej środków finansowych i majątku.</li>
+                <li>Decyzję o likwidacji Fundacji podejmuje Fundator.</li>
+                <li>Likwidatora wyznacza Fundator (lub Zarząd, jeśli Fundator tak zdecyduje).</li>
+                <li>Majątek Fundacji pozostały po likwidacji Przedsiębiorstwa Społecznego musi zostać przekazany na rzecz działającego w regionie innego Przedsiębiorstwa Społecznego lub na Fundusz Pracy.</li>
+            </ol>
+
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 22</strong></p>
+            <p>Sukcesja uprawnień Fundatora:</p>
+            <ol>
+                <li>Status Fundatora jako historycznego twórcy Fundacji jest stanem niezmiennym, osobistym i niezbywalnym.</li>
+                <li>Fundator może, w drodze uchwały, wskazać osobę fizyczną, która przejmie ogół jego uprawnień i obowiązków przewidzianych w niniejszym Statucie w przypadku jego śmierci, trwałej utraty zdolności do czynności prawnych lub innej trwałej niemożności wykonywania tych uprawnień.</li>
+                <li>Za trwałą niemożność wykonywania uprawnień, o której mowa w ust. 2, uznaje się w szczególności złożenie przez Fundatora Zarządowi Fundacji pisemnego oświadczenia o trwałym i ostatecznym powstrzymaniu się od wykonywania wszelkich praw statutowych. Złożenie takiego oświadczenia stanowi wyłącznie rezygnację z kompetencji władczych i w żaden sposób nie niweczy historycznego statusu Fundatora, o którym mowa w ust. 1.</li>
+                <li>W przypadku braku wskazania osoby, o której mowa w ust. 2, po śmierci Fundatora ogół jego uprawnień i obowiązków przechodzi na jego spadkobierców ustawowych. Jeżeli jest ich kilku, wykonują oni uprawnienia Fundatora wspólnie, poprzez wyznaczonego spośród nich pełnomocnika.</li>
+            </ol>
+        </div>
+
+        <div class="heading-wrapper">
+            <h2 class="section-heading">Rozdział VI. Postanowienia końcowe</h2>
+        </div>
+        <div class="intro-text">
+            <p style="text-align: center; color: #1a5f4a;"><strong>§ 23</strong></p>
+            <ol>
+                <li>Fundacja używa pieczęci nagłówkowej, w tym pieczęci okrągłej w kolorze czerwonym, zawierającej herb, nazwę i siedzibę Fundacji, a także może używać wyróżniającego ją znaku graficznego (logo).</li>
+                <li>Fundacja może ustanawiać odznaki, medale honorowe i przyznawać je wraz z innymi nagrodami i wyróżnieniami osobom fizycznym i prawnym zasłużonym dla Fundacji.</li>
+                <li>W sprawach nieuregulowanych niniejszym Statutem mają zastosowanie przepisy kodeksu cywilnego, ustawy o fundacjach, ustawy o ekonomii społecznej oraz ustawy o działalności pożytku publicznego i o wolontariacie.</li>
+                <li>Statut w brzmieniu nadanym niniejszym tekstem jednolitym wchodzi w życie z dniem wpisania zmian do Krajowego Rejestru Sądowego.</li>
+            </ol>
+            
+            <div style="text-align: right; margin-top: 40px; font-size: 0.9em; color: #777;">
+                <p><em>Dokument podpisany elektronicznie podpisem zaufanym<br>
+                PRZEMYSŁAW BELCHNEROWSKI<br>
+                05.05.2026 13:13:14 GMT+0200</em></p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="index.html" class="btn-dark">&larr; Wróć na Stronę Główną</a>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="copyright" style="border-top: none; margin-top: 0; padding-top: 0;">
+            <p style="font-size: 0.85em; margin-bottom: 15px; color: #a3c2b5; line-height: 1.4; text-align: justify;">
+                <strong>Zastrzeżenie:</strong> Fundacja „Ostatnia Warta” i jej wolontariusze świadczą wyłącznie wsparcie niemedyczne. Nie udzielamy świadczeń zdrowotnych, nie stawiamy diagnoz ani nie podejmujemy decyzji terapeutycznych. Nasza działalność uzupełnia, a nie zastępuje opiekę medyczną i hospicyjną.
+            </p>
+            
+            <p>&copy; 2026 FUNDACJA "OSTATNIA WARTA". Wszelkie prawa zastrzeżone.</p>
+            <p style="margin-top: 10px;">
+                <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Polityka Prywatności i RODO</a>
+                <a href="regulamin-darowizn.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Regulamin Darowizn</a>
+                <a href="regulamin-pomocy.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Regulamin Świadczenia Pomocy</a>
+                <a href="warunki-korzystania.html" style="text-decoration: none; color: #D4AF37;">Warunki Korzystania</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Zegar
+    function updateClock() {
+        const now = new Date();
+        const second = now.getSeconds();
+        const minute = now.getMinutes();
+        const hour = now.getHours();
+
+        const secondDeg = ((second / 60) * 360);
+        const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
+        const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
+
+        const secHand = document.getElementById('secondHand');
+        const minHand = document.getElementById('minuteHand');
+        const hrHand = document.getElementById('hourHand');
+
+        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
+        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
+        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>
