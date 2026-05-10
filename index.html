@@ -42,21 +42,21 @@
         
         .container { width: 90%; max-width: 1200px; margin: auto; padding: 0; }
         
-        /* Ciemna, elegancka góra z wycentrowanym logo - ZMIENIONE TŁO */
+        /* Ciemna, elegancka góra z wycentrowanym logo - ZMIENIONE TŁO, ZMIENIONY PADDING */
         header { 
             background-color: #133a2d; 
-            background-image: url('tlo_strony.jpg'); 
+            background-image: linear-gradient(to bottom, rgba(19, 58, 45, 0) 65%, #133a2d 98%), url('tlo_strony.jpg'); 
             background-position: center top; 
             background-repeat: no-repeat; 
             background-size: 100% auto; 
             color: #fff; 
-            padding-top: 30vw; 
+            padding-top: 40px; 
             padding-bottom: 0;
             text-align: center; 
             border-bottom: 4px solid #D4AF37; 
         }
         
-        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 24vw; /* Zostawia miejsce na dłonie z tła */ }
         .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
         .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
         
@@ -66,11 +66,12 @@
         .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
         .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
 
+        .header-titles { background-color: transparent; padding-top: 10px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); }
         .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; letter-spacing: 1px; }
         .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.6em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
         .header-titles p { font-size: 1.1em; max-width: 600px; margin: 0 auto 30px auto; color: #eef7f4; line-height: 1.5; }
 
-        nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
+        nav { background: rgba(0,0,0,0.2); padding: 15px 0; background-color: #133a2d; }
         nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
         nav ul li { margin: 0 15px; }
         nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
@@ -147,7 +148,8 @@
         }
 
         @media (max-width: 768px) { 
-            header { padding-top: 45vw; }
+            header { padding-top: 20px; }
+            .logo-wrapper { margin-bottom: 25vw; }
             #cookie-banner button { margin-top: 15px; margin-left: 0; display: block; width: 100%; } 
             section { padding: 40px 10px; }
             .section-desc, .mission-item p { text-align: left; font-size: 1.05em; }
