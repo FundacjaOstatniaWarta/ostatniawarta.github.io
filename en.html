@@ -42,21 +42,21 @@
         
         .container { width: 90%; max-width: 1200px; margin: auto; padding: 0; }
         
-        /* Ciemna, elegancka góra z wycentrowanym logo - ZMIENIONE TŁO */
+        /* Ciemna, elegancka góra z wycentrowanym logo */
         header { 
             background-color: #133a2d; 
-            background-image: url('tlo_strony.jpg'); 
+            background-image: linear-gradient(to bottom, rgba(19, 58, 45, 0) 65%, #133a2d 98%), url('tlo_strony.jpg'); 
             background-position: center top; 
             background-repeat: no-repeat; 
             background-size: 100% auto; 
             color: #fff; 
-            padding-top: 30vw; 
+            padding-top: 40px; 
             padding-bottom: 0;
             text-align: center; 
             border-bottom: 4px solid #D4AF37; 
         }
         
-        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 24vw; }
         .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
         .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
         
@@ -66,11 +66,12 @@
         .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
         .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
 
+        .header-titles { background-color: transparent; padding-top: 10px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); }
         .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; letter-spacing: 1px; }
         .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.6em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
         .header-titles p { font-size: 1.1em; max-width: 600px; margin: 0 auto 30px auto; color: #eef7f4; line-height: 1.5; }
 
-        nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
+        nav { background: rgba(0,0,0,0.2); padding: 15px 0; background-color: #133a2d; }
         nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
         nav ul li { margin: 0 15px; }
         nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
@@ -147,7 +148,14 @@
         }
 
         @media (max-width: 768px) { 
-            header { padding-top: 45vw; }
+            header { 
+                padding-top: 20px; 
+                background-size: cover; 
+                background-position: center 25%; 
+            }
+            .logo-wrapper { 
+                margin-bottom: 200px; 
+            }
             #cookie-banner button { margin-top: 15px; margin-left: 0; display: block; width: 100%; } 
             section { padding: 40px 10px; }
             .section-desc, .mission-item p { text-align: left; font-size: 1.05em; }
@@ -194,11 +202,10 @@
         <nav>
             <ul>
                 <li><a href="#o-nas" style="text-decoration: none;">About Us</a></li>
-                <li><a href="blog.html" style="text-decoration: none;">Blog</a></li>
-                <li><a href="#dolacz" style="text-decoration: none;">Join Us</a></li>
+                <li><a href="blog_en.html" style="text-decoration: none;">Blog</a></li>
                 <li><a href="#misja" style="text-decoration: none;">Mission</a></li>
                 <li><a href="#wesprzyj" style="text-decoration: none;">Support Us</a></li>
-                <li><a href="projekty.html" style="text-decoration: none;">Projects</a></li>
+                <li><a href="projekty_en.html" style="text-decoration: none;">Projects</a></li>
                 <li><a href="#kontakt" style="text-decoration: none;">Contact</a></li>
                 <li><a href="index.html" style="text-decoration: none; color: #D4AF37;">🇵🇱 PL</a></li>
             </ul>
@@ -217,25 +224,43 @@
         </p>
         
         <div class="mission-grid">
-            <a href="o_fundacji.html" class="mission-item">
+            <a href="o_fundacji_en.html" class="mission-item">
                 <h4>About the Foundation</h4>
                 <p><strong>Get to know Ostatnia Warta.</strong><br>Who we are and why the Foundation was created. Discover our history and the true meaning of what we do.</p>
                 <span>Get to know us &rarr;</span>
             </a>
-            <a href="manifest.html" class="mission-item">
+            <a href="manifest_en.html" class="mission-item">
                 <h4>Manifesto</h4>
                 <p><strong>The Manifesto of Ostatnia Warta.</strong><br>A few words about what we believe in. Why presence matters and why no one should pass away alone.</p>
                 <span>Read the manifesto &rarr;</span>
             </a>
-            <a href="zbiorki.html" class="mission-item">
-                <h4>Support / Fundraisers</h4>
-                <p><strong>Support our mission.</strong><br>Your support turns into a real presence at the bedside of a sick person.</p>
-                <span>Support the Watch &rarr;</span>
-            </a>
+            
+            <div class="mission-item" style="position: relative;">
+                <a href="https://niw.gov.pl/ivy-2026/wlacz-sie-w-obchody/" target="_blank" rel="noopener noreferrer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></a>
+                
+                <h4 style="position: relative; z-index: 2; pointer-events: none;">International Year of Volunteers</h4>
+                <p style="position: relative; z-index: 2; pointer-events: none;">As part of the IVY 2026 celebrations, we have received the patronage of the Director of NIW-CRSO for the innovative training of our volunteers for the noble service of end-of-life doula within the <a href="gst.html" class="text-link" style="pointer-events: auto; position: relative; z-index: 3;">"Gdańsk School of Accompanying"</a> project.</p>
+                <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; pointer-events: none; margin-top: 15px;">
+                    <img src="IVY_Logo_RGB_Horiz_PL.png" alt="International Year of Volunteers 2026 Logo" style="max-width: 100%; height: auto; max-height: 70px;">
+                </div>
+                <span style="position: relative; z-index: 2; pointer-events: none;">Join the celebrations &rarr;</span>
+            </div>
+            
             <a href="wsparcie.html" class="mission-item">
-                <h4>Community / Partners</h4>
-                <p><strong>Those who are already with us.</strong><br>See who supports Ostatnia Warta and how together we create a space of presence.</p>
+                <h4>Cooperation and Support</h4>
+                <p><strong>Those who are already with us.</strong><br>Meet the institutions, organizations, and companies we cooperate with, and those who support the development of our mission on a daily basis.</p>
                 <span>See more &rarr;</span>
+            </a>
+            
+            <a href="projekty_en.html" class="mission-item">
+                <h4>Patronages and Projects</h4>
+                <p>Thanks to our involvement in grant programs, we are constantly developing our competencies, and the institutional patronages we have received are an honor for us and proof that our mission is of great social importance.</p>
+                <span>Discover our initiatives &rarr;</span>
+            </a>
+            <a href="dpir.html" class="mission-item">
+                <h4>For Patients and their Families</h4>
+                <p>Help for people struggling with severe illness and their loved ones. If you need the presence of a volunteer or support during a difficult time, we invite you to read the rules of care provided by the Foundation.</p>
+                <span>Documents for Patients &rarr;</span>
             </a>
         </div>
         
@@ -263,18 +288,31 @@
                 <p>An educational program of the Ostatnia Warta Foundation dedicated to the art of presence with the sick and dying. We create a space for learning, reflection, and the formation of volunteers who want to accompany others with empathy, peace, and respect for human dignity.</p>
                 <span>Join the School &rarr;</span>
             </a>
+            
             <a href="sservice.html" class="mission-item">
                 <h4>Sitting Service</h4>
                 <p>The "Ostatnia Warta" Foundation is developing the idea of a Sitting Service in Poland, which means volunteering to be present with the sick and dying.</p>
                 <span>Discover Sitting Service &rarr;</span>
+            </a>
+            <a href="gkc.html" class="mission-item">
+                <h4>Gdańsk Time Capsule</h4>
+                <p>A digital archive of 20th-century eyewitnesses. We archive the individual fates and memories of Gdańsk residents, turning them into intergenerational "letters to the future".</p>
+                <span>Check details &rarr;</span>
+            </a>
+            
+            <a href="pracespol.html" class="mission-item">
+                <h4>Community Service</h4>
+                <p>Has the court sentenced you to a restriction of liberty in the form of community service? Fulfill this obligation in a place where your work will take on deep meaning. Help us with organizational and logistical activities.</p>
+                <span>Check the rules &rarr;</span>
             </a>
             <a href="sic.html" class="mission-item">
                 <h4>Loneliness and Illness</h4>
                 <p>Support for people struggling with severe illness and their loved ones. We help with everyday difficulties, organize material and social aid, and above all, try to ensure that no one is left alone during their illness.</p>
                 <span>See how we help &rarr;</span>
             </a>
+            
             <a href="seniorzy.html" class="mission-item">
-                <h4>Empowering Seniors</h4>
+                <h4>Empowering and Supporting Seniors</h4>
                 <p>A space dedicated to the elderly. We focus on supporting the independence and social integration of seniors. Special attention is paid to wise companionship for people struggling with diseases of old age and dementia.</p>
                 <span>Discover support for seniors &rarr;</span>
             </a>
@@ -288,28 +326,7 @@
     </div>
 </section>
 
-<section id="dolacz" class="bg-white">
-    <div class="container">
-        <div class="heading-wrapper">
-            <h2 class="section-heading">Join us or get help</h2>
-        </div>
-        
-        <div class="mission-grid">
-            <a href="dpir.html" class="mission-item">
-                <h4>For Patients and their Families</h4>
-                <p>Help for people struggling with severe illness and their loved ones. If you need the presence of a volunteer or support during a difficult time, we invite you to read the rules of care provided by the Foundation.</p>
-                <span>Documents for Patients &rarr;</span>
-            </a>
-            <a href="zwol.html" class="mission-item">
-                <h4>Become a Volunteer</h4>
-                <p>We are looking for people ready to "stand watch" by another human being. We do not require medical education — empathy, responsibility, and readiness to be present with the sick are the most important.</p>
-                <span>Join the Volunteering &rarr;</span>
-            </a>
-        </div>
-    </div>
-</section>
-
-<section id="wesprzyj" class="bg-gray">
+<section id="wesprzyj" class="bg-white">
     <div class="container">
         <div class="heading-wrapper">
             <h2 class="section-heading">Support our mission</h2>
@@ -317,7 +334,7 @@
         
         <p style="text-align: center; font-family: 'Georgia', serif; font-size: 1.15em; color: #555; max-width: 900px; margin: 0 auto 40px auto; line-height: 1.8;">
             We exist to accompany, support, and bring dignity where loneliness, illness, and the end of life appear. Everyone can help in a different way: you can be with another person, support the foundation's activities, or help us develop the idea.<br>
-            <a href="zbiorki.html" class="text-link">See how you can support our mission</a> and <a href="progzad.html" class="text-link">learn more about certificates for the court</a>.
+            <a href="zbiorki.html" class="text-link">See how you can support our mission</a> and <a href="progzad_en.html" class="text-link">learn more about certificates for the court</a>.
         </p>
         
         <div class="mission-grid">
@@ -331,32 +348,18 @@
                 <p>Build a socially responsible image for your company. We invite enterprises that want to have a real impact on the fate of lonely and terminally ill people to cooperate with us. Together we can create something great.</p>
                 <span>See the offer for companies &rarr;</span>
             </a>
-            <a href="progzad.html" class="mission-item">
+            
+            <a href="progzad_en.html" class="mission-item">
                 <h4>Voluntary Redress</h4>
                 <p>Have you found yourself in a difficult legal situation? Show the court your pro-social attitude and willingness to make amends. Support our mission and get an official donation certificate for the case files (pursuant to Art. 53 § 2 of the Polish Penal Code).</p>
                 <span>Learn more &rarr;</span>
             </a>
-            <a href="pracespol.html" class="mission-item">
-                <h4>[COMING SOON] Community Service</h4>
-                <p>Has the court sentenced you to a restriction of liberty in the form of community service? Fulfill this obligation in a place where your work will take on deep meaning. Help us with organizational and logistical activities.</p>
-                <span>Check the rules &rarr;</span>
-            </a>
-            
-            <a href="projekty.html" class="mission-item">
-                <h4>Patronages and Projects</h4>
-                <p>Thanks to our involvement in grant programs, we are constantly developing our competencies, and the institutional patronages we have received are an honor for us and proof that our mission is of great social importance.</p>
-                <span>Discover our initiatives &rarr;</span>
-            </a>
-            
-            <a href="https://niw.gov.pl/ivy-2026/wlacz-sie-w-obchody/" target="_blank" rel="noopener noreferrer" class="mission-item" style="display: flex; flex-direction: column; justify-content: center; text-align: center;">
-                <h4 style="border-bottom: none; padding-bottom: 0;">International Year of Volunteers</h4>
-                <p style="font-size: 0.9em; margin-bottom: 15px;">We have the patronage of the Director of the National Institute of Freedom – Center for the Development of Civil Society (NIW-CRSO) as part of the IVY 2026 celebrations.</p>
-                <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center;">
-                    <img src="IVY_Logo_RGB_Horiz_PL.png" alt="International Year of Volunteers 2026 Logo" style="max-width: 100%; height: auto; max-height: 100px;">
-                </div>
+            <a href="zwol.html" class="mission-item">
+                <h4>Become a Volunteer</h4>
+                <p>We are looking for people ready to "stand watch" by another human being. We do not require medical education — empathy, responsibility, and readiness to be present with the sick are the most important.</p>
+                <span>Join the Volunteering &rarr;</span>
             </a>
         </div>
-        
     </div>
 </section>
 
@@ -365,6 +368,7 @@
         <h2 style="font-family: 'Georgia', serif; font-weight: normal; margin-bottom: 40px;">Contact and Registration Details</h2>
         
         <div class="contact-grid">
+            
             <div class="contact-info">
                 <h3 style="color: #fff; font-family: 'Georgia', serif; font-weight: normal; margin-top: 0;">Registration Details</h3>
                 <p><strong>"OSTATNIA WARTA" FOUNDATION</strong></p>
@@ -400,24 +404,29 @@
                 <p><strong>Find us online:</strong><br>
                 <a href="https://www.facebook.com/profile.php?id=61583555455246" target="_blank" style="text-decoration: underline;">Our Facebook profile</a><br>
                 <a href="https://x.com/ostatniawarta" target="_blank" style="text-decoration: underline;">Our X.com profile</a><br>
-                <a href="https://www.linkedin.com/company/fundacja-ostatnia-warta/" target="_blank" style="text-decoration: underline;">Our Linkedin profile</a></p>
-                <br>
-                <p><strong>Area of operation:</strong><br>Pomeranian Voivodeship<br>Tricity<br>Gdańsk</p>
+                <a href="https://www.linkedin.com/company/fundacja-ostatnia-warta/" target="_blank" style="text-decoration: underline;">Our Linkedin profile</a><br>
+                <a href="https://www.youtube.com/@FundacjaOstatniaWarta" target="_blank" style="text-decoration: underline;">Our YouTube profile</a></p>
+
+                <h3 style="color: #fff; font-family: 'Georgia', serif; font-weight: normal; margin-top: 30px; margin-bottom: 15px;">Download Materials</h3>
+                <ul style="list-style: none; padding: 0; margin: 0; font-family: 'Arial', sans-serif; font-size: 0.95em; line-height: 1.6;">
+                    <li style="margin-bottom: 8px;"><a href="ksiega_znaku.html" style="text-decoration: underline;">Brand Book and Identification</a></li>
+                </ul>
             </div>
             
             <div class="contact-info">
                 <h3 style="color: #fff; font-family: 'Georgia', serif; font-weight: normal; margin-top: 0;">Statutory Documents</h3>
                 <ul style="list-style: none; padding: 0; margin: 0; font-family: 'Arial', sans-serif; font-size: 0.95em; line-height: 1.6;">
                     <li style="margin-bottom: 8px;"><a href="krs.pdf" target="_blank" style="text-decoration: underline;">KRS Extract (PDF)</a></li>
-                    <li style="margin-bottom: 8px;"><a href="statut.pdf" target="_blank" style="text-decoration: underline;">Foundation Statute (PDF)</a></li>
+                    <li style="margin-bottom: 8px;"><a href="statut.html" style="text-decoration: underline;">Foundation Statute</a></li>
                 </ul>
                 
-                <h3 style="color: #fff; font-family: 'Georgia', serif; font-weight: normal; margin-top: 30px; margin-bottom: 15px;">Download Materials</h3>
-                <ul style="list-style: none; padding: 0; margin: 0; font-family: 'Arial', sans-serif; font-size: 0.95em; line-height: 1.6;">
-                    <li style="margin-bottom: 8px;"><a href="ksiega_znaku.html" style="text-decoration: underline;">Brand Book and Identification</a></li>
-                    <li style="margin-bottom: 8px;"><a href="logo.png" target="_blank" style="text-decoration: underline;">Foundation Logo - Light Version (PNG)</a></li>
-                    <li><a href="dark_Logo.png" target="_blank" style="text-decoration: underline;">Foundation Logo - Dark Version (PNG)</a></li>
-                </ul>
+                <h3 style="color: #fff; font-family: 'Georgia', serif; font-weight: normal; margin-top: 30px; margin-bottom: 15px;">Area of operation</h3>
+                <p style="line-height: 1.8;">
+                    <a href="https://www.gdansk.pl/" target="_blank" style="text-decoration: underline;">Gdańsk</a><br>
+                    <a href="https://www.trojmiasto.pl/" target="_blank" style="text-decoration: underline;">Tricity</a><br>
+                    <a href="https://www.gov.pl/web/uw-pomorski" target="_blank" style="text-decoration: underline;">Pomeranian Voivodeship</a><br>
+                    <a href="https://www.gov.pl/" target="_blank" style="text-decoration: underline;">Republic of Poland</a> <img src="flaga_polski.png" alt="Flag of Poland" style="height: 1.4em; vertical-align: middle; margin-left: 6px;">
+                </p>
 
                 <h3 style="color: #fff; font-family: 'Georgia', serif; font-weight: normal; margin-top: 30px; margin-bottom: 15px;">Write to us</h3>
                 <form action="https://formspree.io/f/maqpngoy" method="POST" style="display: flex; flex-direction: column; gap: 10px;">
