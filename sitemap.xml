@@ -7,7 +7,7 @@
 </url>
 <url>
   <loc>https://ostatniawarta.pl/o_fundacji.html</loc>
-  <lastmod>2026-04-04T21:16:44+00:00</lastmod>
+  <lastmod>2026-05-11T21:16:44+00:00</lastmod>
   <priority>0.90</priority>
 </url>
   <url>
@@ -17,7 +17,7 @@
 </url>
 <url>
   <loc>https://ostatniawarta.pl/manifest.html</loc>
-  <lastmod>2026-04-04T21:16:45+00:00</lastmod>
+  <lastmod>2026-05-11T21:16:44+00:00</lastmod>
   <priority>0.90</priority>
 </url>
   <url>
@@ -30,14 +30,19 @@
   <lastmod>2026-05-11T21:16:44+00:00</lastmod>
   <priority>0.90</priority>
 </url>
+  <url>
+  <loc>https://ostatniawarta.pl/zbiorki_en.html</loc>
+  <lastmod>2026-05-11T21:16:44+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
 <url>
   <loc>https://ostatniawarta.pl/doula.html</loc>
-  <lastmod>2026-04-04T21:16:44+00:00</lastmod>
+  <lastmod>2026-05-11T21:16:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ostatniawarta.pl/seniorzy.html</loc>
-  <lastmod>2026-04-04T21:16:44+00:00</lastmod>
+  <lastmod>2026-05-11T21:16:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -47,52 +52,52 @@
 </url>
 <url>
   <loc>https://ostatniawarta.pl/gkc.html</loc>
-  <lastmod>2026-05-09T18:16:44+00:00</lastmod>
+  <lastmod>2026-05-11T21:16:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>  
 <url>
   <loc>https://ostatniawarta.pl/niepelnosprawnosc.html</loc>
-  <lastmod>2026-04-04T21:16:44+00:00</lastmod>
+  <lastmod>2026-05-11T21:16:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ostatniawarta.pl/gst.html</loc>
-  <lastmod>2026-04-04T21:16:44+00:00</lastmod>
+  <lastmod>2026-05-11T21:16:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ostatniawarta.pl/sservice.html</loc>
-  <lastmod>2026-04-04T21:16:44+00:00</lastmod>
+  <lastmod>2026-05-11T21:16:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ostatniawarta.pl/sic.html</loc>
-  <lastmod>2026-04-04T21:16:45+00:00</lastmod>
+  <lastmod>2026-05-11T21:16:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ostatniawarta.pl/dpir.html</loc>
-  <lastmod>2026-04-04T21:16:44+00:00</lastmod>
+  <lastmod>2026-05-11T21:16:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ostatniawarta.pl/zwol.html</loc>
-  <lastmod>2026-04-04T21:16:44+00:00</lastmod>
+  <lastmod>2026-05-11T21:16:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ostatniawarta.pl/progzad.html</loc>
-  <lastmod>2026-04-04T21:16:44+00:00</lastmod>
+  <lastmod>2026-05-11T21:16:44+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
   <loc>https://ostatniawarta.pl/pbic.html</loc>
-  <lastmod>2026-04-04T21:16:44+00:00</lastmod>
+  <lastmod>2026-05-11T21:16:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ostatniawarta.pl/pracespol.html</loc>
-  <lastmod>2026-04-04T21:16:44+00:00</lastmod>
+  <lastmod>2026-05-11T21:16:44+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
@@ -161,6 +166,11 @@
   <priority>0.64</priority>
 </url>
   <url>
+  <loc>https://ostatniawarta.pl/statut.html</loc>
+  <lastmod>2026-05-13T10:16:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+  <url>
   <loc>https://ostatniawarta.pl/projekty_en.html</loc>
   <lastmod>2026-05-11T21:16:44+00:00</lastmod>
   <priority>0.72</priority>
@@ -172,7 +182,7 @@
 </url>
 <url>
   <loc>https://ostatniawarta.pl/wsparcie.html</loc>
-  <lastmod>2026-04-04T21:16:44+00:00</lastmod>
+  <lastmod>2026-05-11T21:16:44+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 </urlset>
