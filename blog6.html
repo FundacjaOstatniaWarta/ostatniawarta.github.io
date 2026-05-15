@@ -40,9 +40,21 @@
         h1, h2, h3 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
         .container { width: 90%; max-width: 1000px; margin: auto; padding: 40px 0; }
         
-        header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
+        /* Ciemna, elegancka góra z wycentrowanym logo */
+        header { 
+            background-color: #133a2d; 
+            background-image: linear-gradient(to bottom, rgba(19, 58, 45, 0) 65%, #133a2d 98%), url('tlo_strony.jpg'); 
+            background-position: center top; 
+            background-repeat: no-repeat; 
+            background-size: 100% auto; 
+            color: #fff; 
+            padding-top: 40px; 
+            padding-bottom: 0;
+            text-align: center; 
+            border-bottom: 4px solid #D4AF37; 
+        }
         
-        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 24vw; }
         .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
         .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
         
@@ -71,11 +83,32 @@
         .btn { display: inline-block; padding: 12px 24px; margin: 20px 0; border-radius: 4px; font-weight: bold; text-align: center; font-family: 'Arial', sans-serif; border: 2px solid #1a5f4a; color: #1a5f4a; background: transparent; transition: 0.3s; }
         .btn:hover { background: #1a5f4a; color: #fff; }
 
-        footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; margin-top: 40px; }
-        footer a { color: #D4AF37; text-decoration: none; }
+        footer { 
+            background-color: #133a2d;
+            background-image: linear-gradient(rgba(19, 58, 45, 0.60), rgba(10, 20, 15, 0.90)), url('secondary_www_logo.jpg');
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            color: #eef7f4; 
+            padding: 60px 20px 20px; 
+            text-align: center; 
+            margin-top: 40px;
+            border-top: 4px solid #D4AF37;
+        }
+        /* Przywrócone złote kolory i lepsze cienie dla czytelności */
+        footer a { color: #D4AF37; text-decoration: none; transition: 0.3s; font-weight: bold; text-shadow: 1px 1px 4px rgba(0,0,0,0.9); }
         footer a:hover { color: #fff; text-decoration: underline; }
+        footer p { text-shadow: 1px 1px 4px rgba(0,0,0,0.9); }
         
         @media (max-width: 768px) { 
+            header { 
+                padding-top: 20px; 
+                background-size: cover; 
+                background-position: center 25%; 
+            }
+            .logo-wrapper { 
+                margin-bottom: 200px; 
+            }
             .content-section { padding: 30px 20px; }
             .content-section p { text-align: left; font-size: 1.05em; }
             .article-title { font-size: 1.5em; }
@@ -159,10 +192,6 @@
 <footer>
     <div class="container">
         <div class="copyright" style="border-top: none; margin-top: 0; padding-top: 0;">
-            <p style="font-size: 0.85em; margin-bottom: 15px; color: #a3c2b5; line-height: 1.4; text-align: justify;">
-                <strong>Zastrzeżenie:</strong> Fundacja „Ostatnia Warta” i jej wolontariusze świadczą wyłącznie wsparcie niemedyczne. Nie udzielamy świadczeń zdrowotnych, nie stawiamy diagnoz ani nie podejmujemy decyzji terapeutycznych. Nasza działalność uzupełnia, a nie zastępuje opiekę medyczną i hospicyjną.
-            </p>
-            
             <p>&copy; 2026 FUNDACJA "OSTATNIA WARTA". Wszelkie prawa zastrzeżone.</p>
             <p style="margin-top: 10px;">
                 <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Polityka Prywatności i RODO</a>
