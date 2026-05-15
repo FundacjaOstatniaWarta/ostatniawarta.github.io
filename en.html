@@ -101,9 +101,21 @@
         .mission-item span { display: inline-block; margin-top: 15px; color: #a83232; font-weight: bold; font-family: 'Arial', sans-serif; font-size: 0.95em; transition: 0.3s; }
         .mission-item:hover span { color: #1a5f4a; }
 
-        footer { background: #133a2d; color: #eef7f4; padding: 50px 20px 20px; text-align: center; }
-        footer h2 { color: #D4AF37; }
-        footer a { color: #D4AF37; text-decoration: none; transition: 0.3s; }
+        footer { 
+            background-color: #133a2d;
+            background-image: linear-gradient(rgba(19, 58, 45, 0.60), rgba(10, 20, 15, 0.90)), url('secondary_www_logo.jpg');
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            color: #eef7f4; 
+            padding: 60px 20px 20px; 
+            text-align: center; 
+            border-top: 4px solid #D4AF37;
+        }
+        /* Przywrócone złote kolory i lepsze cienie dla czytelności */
+        footer h2 { color: #D4AF37; text-shadow: 1px 1px 4px rgba(0,0,0,0.9); }
+        footer h3 { text-shadow: 1px 1px 4px rgba(0,0,0,0.9); }
+        footer a { color: #D4AF37; text-decoration: none; transition: 0.3s; font-weight: bold; text-shadow: 1px 1px 4px rgba(0,0,0,0.9); }
         footer a:hover { color: #fff; }
         
         .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto 30px auto; text-align: left; align-items: start; }
@@ -439,10 +451,6 @@
         </div>
 
         <div class="copyright">
-            <p style="font-size: 0.85em; margin-bottom: 15px; color: #a3c2b5; line-height: 1.4; text-align: justify;">
-                <strong>Disclaimer:</strong> The "Ostatnia Warta" Foundation and its volunteers provide strictly non-medical support. We do not provide health services, make diagnoses, or make therapeutic decisions. Our activities complement, not replace, medical and hospice care.
-            </p>
-            
             <p>&copy; 2026 "OSTATNIA WARTA" FOUNDATION. All rights reserved.</p>
             <p style="margin-top: 10px;">
                 <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px; transition: 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#D4AF37'">Privacy Policy and GDPR</a>

@@ -36,10 +36,21 @@
         .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
         
         /* Ciemna, elegancka góra z wycentrowanym logo */
-        header { background: #133a2d; color: #fff; padding: 40px 0 0 0; text-align: center; border-bottom: 4px solid #D4AF37; }
+        header { 
+            background-color: #133a2d; 
+            background-image: linear-gradient(to bottom, rgba(19, 58, 45, 0) 65%, #133a2d 98%), url('tlo_strony.jpg'); 
+            background-position: center top; 
+            background-repeat: no-repeat; 
+            background-size: 100% auto; 
+            color: #fff; 
+            padding-top: 40px; 
+            padding-bottom: 0;
+            text-align: center; 
+            border-bottom: 4px solid #D4AF37; 
+        }
         
         /* ZEGAR ZAMIAST PIERŚCIENIA */
-        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 24vw; }
         .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
         .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
         
@@ -80,11 +91,34 @@
         .btn-dark { border-color: #ccc; color: #555; background: transparent; display: inline-block; padding: 10px 20px; margin-top: 40px; border: 2px solid #ccc; font-weight: bold; border-radius: 4px; font-family: 'Arial', sans-serif; transition: 0.3s; }
         .btn-dark:hover { background: #eee; color: #333; }
 
-        footer { background: #133a2d; color: #eef7f4; padding: 30px 20px; text-align: center; margin-top: 40px; }
-        footer a { color: #D4AF37; text-decoration: none; }
+        footer { 
+            background-color: #133a2d;
+            background-image: linear-gradient(rgba(19, 58, 45, 0.60), rgba(10, 20, 15, 0.90)), url('secondary_www_logo.jpg');
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            color: #eef7f4; 
+            padding: 60px 20px 20px; 
+            text-align: center; 
+            margin-top: 50px;
+            border-top: 4px solid #D4AF37;
+        }
+        /* Przywrócone złote kolory i lepsze cienie dla czytelności */
+        footer a { color: #D4AF37; text-decoration: none; transition: 0.3s; font-weight: bold; text-shadow: 1px 1px 4px rgba(0,0,0,0.9); }
         footer a:hover { color: #fff; text-decoration: underline; }
+        footer p { text-shadow: 1px 1px 4px rgba(0,0,0,0.9); }
         
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 10px; padding-top: 20px; font-size: 0.9em; }
+
         @media (max-width: 768px) { 
+            header { 
+                padding-top: 20px; 
+                background-size: cover; 
+                background-position: center 25%; 
+            }
+            .logo-wrapper { 
+                margin-bottom: 200px; 
+            }
             .header-titles h1 { font-size: 1.8em; }
             .content-section { padding: 40px 20px; }
             .intro-text { text-align: left; font-size: 1.05em; }
@@ -198,9 +232,6 @@
 <footer>
     <div class="container">
         <div class="copyright" style="border-top: none; margin-top: 0; padding-top: 0;">
-            <p style="font-size: 0.85em; margin-bottom: 15px; color: #a3c2b5; line-height: 1.4; text-align: justify;">
-                <strong>Disclaimer:</strong> The "Ostatnia Warta" Foundation and its volunteers provide strictly non-medical support. We do not provide health services, make diagnoses, or make therapeutic decisions. Our activities complement, not replace, medical and hospice care.
-            </p>
             
             <p>&copy; 2026 "OSTATNIA WARTA" FOUNDATION. All rights reserved.</p>
             <p style="margin-top: 10px;">
