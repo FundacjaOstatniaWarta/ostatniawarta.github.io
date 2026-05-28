@@ -137,6 +137,9 @@
         .ksiega-link { color: inherit; text-decoration: none; border-bottom: 1px dashed rgba(255,255,255,0.3); transition: border-color 0.3s; }
         .ksiega-link:hover { border-bottom-color: #D4AF37; color: #fff; text-decoration: none; }
         
+        /* Modyfikator dla szerokich kafelków */
+        .wide-card { grid-column: 1 / -1; }
+        
         @media (min-width: 768px) { 
             .support-grid { grid-template-columns: 1fr 1fr; }
         }
@@ -153,7 +156,6 @@
             .header-titles h1 { font-size: 1.5em; }
             .support-card { padding: 20px; }
             .intro-text { text-align: left; }
-            /* Na telefonie zwężamy wielki numer konta, by się nie wylewał z kart */
             .account-number { font-size: 1.1em; letter-spacing: 0px; }
             .support-card iframe { max-width: 100% !important; }
         }
@@ -210,12 +212,27 @@
 
     <div class="support-grid">
         
-        <div class="support-card" style="border-top: 4px solid #D4AF37; justify-content: flex-start;">
+        <div class="support-card wide-card" style="border-top: 4px solid #D4AF37; background-color: #fcfcfc;">
+            <h3 style="color: #a83232;">Oficjalna Zbiórka Publiczna</h3>
+            <p style="font-size: 1.2em; font-weight: bold; color: #133a2d; margin-bottom: 5px;">Ogólnopolska zbiórka na rzecz podopiecznych Fundacji Ostatnia Warta</p>
+            <p style="font-size: 1.1em; color: #444;">Numer zbiórki: <strong>2026/2297/OR</strong></p>
+            
+            <div style="display: flex; gap: 30px; margin: 20px 0; justify-content: center; align-items: center; flex-wrap: wrap;">
+                <img src="mswia.png" alt="Ministerstwo Spraw Wewnętrznych i Administracji" style="max-height: 70px; object-fit: contain;">
+                <img src="portal.png" alt="Portal Zbiórek Publicznych" style="max-height: 70px; object-fit: contain;">
+            </div>
+            
+            <a href="https://zbiorki.gov.pl/zbiorki/zbiorki/szczegoly-zbiorki.xhtml?zbiorka_nazwa=Og%C3%B3lnopolska+zbi%C3%B3rka+na+rzecz+podopiecznych+Fundacji+%22Ostatnia+Warta%22&v=623630415316161016972285094233933948501698281488" target="_blank" class="btn-outline" style="margin-top: 15px;">
+                Zweryfikuj na portalu gov.pl
+            </a>
+        </div>
+
+        <div class="support-card" style="border-top: 4px solid #1a5f4a; justify-content: flex-start;">
             <h3 style="margin-bottom: 5px;">Tradycyjny Przelew Bankowy</h3>
             <p style="color: #a83232; font-weight: bold; font-size: 1.1em; letter-spacing: 0.5px; margin-top: 0; margin-bottom: 20px;">WSPARCIE BEZ PROWIZJI</p>
             
             <div class="account-box" style="margin-bottom: 0;">
-                <p style="margin: 0; font-size: 1.1em;"><strong>FUNDACJA "OSTATNIA WARTA"</strong></p>
+                <p style="margin: 0; font-size: 1.1em;"><strong>FUNDACJA OSTATNIA WARTA</strong></p>
                 <div class="account-number" style="font-size: 1.3em; margin: 10px 0;">PL 61 2530 0008 2049 1089 8921 0001</div>
                 
                 <div style="margin: 20px 0; display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 10px;">
@@ -229,18 +246,7 @@
             </div>
         </div>
 
-        <div class="support-card portal-card" style="border-top: 4px solid #1a5f4a; justify-content: flex-start;">
-            <h3>Zrzutka.pl</h3>
-            <p style="max-width: 800px;">Jedna z oficjalnych zbiórek statutowych Fundacji. Twoje wsparcie przeznaczymy bezpośrednio na finansowanie pomocy osobom opuszczonym i zmagającym się z ciężką diagnozą.</p>
-            
-            <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px; width: 100%;">
-                <a href="https://zrzutka.pl/z/ostatniawarta" target="_blank" style="transition: transform 0.3s ease; display: inline-block;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                    <img src="zrzutka.png" alt="Wspieraj nas na Zrzutka.pl" style="max-height: 80px; width: auto; object-fit: contain;">
-                </a>
-            </div>
-        </div>
-
-        <div class="support-card portal-card">
+        <div class="support-card portal-card" style="border-top: 4px solid #1a5f4a;">
             <h3>Przelew na telefon</h3>
             <p>Szybkie i bezpieczne wsparcie prosto z aplikacji Twojego banku (0% prowizji).</p>
             
@@ -250,18 +256,14 @@
             </div>
         </div>
 
-        <div class="support-card portal-card" style="border-top: 4px solid #a83232;">
-            <h3>PayPal</h3>
-            <p>Szybki i wygodny sposób wsparcia z dowolnego miejsca na świecie. Każde wsparcie pomaga nam docierać do osób opuszczonych i umożlwia wolontariuszom pełnienie warty.</p>
+        <div class="support-card portal-card" style="justify-content: flex-start;">
+            <h3>Zrzutka.pl</h3>
+            <p style="max-width: 800px;">Jedna z oficjalnych zbiórek statutowych Fundacji. Twoje wsparcie przeznaczymy bezpośrednio na finansowanie pomocy osobom opuszczonym i zmagającym się z ciężką diagnozą.</p>
             
-            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; width: 100%;">
-                <a href="https://www.paypal.com/ncp/payment/75B5XSLBHCSFE" target="_blank" class="btn-donate bg-black">
-                    Dołącz do Warty!
+            <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px; width: 100%;">
+                <a href="https://zrzutka.pl/z/ostatniawarta" target="_blank" style="transition: transform 0.3s ease; display: inline-block;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="zrzutka.png" alt="Wspieraj nas na Zrzutka.pl" style="max-height: 80px; width: auto; object-fit: contain;">
                 </a>
-                <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="Karty płatnicze" style="height: 20px; margin-top: 5px;">
-                <div style="font-size: 0.75rem; color: #666; display: flex; align-items: center; justify-content: center; gap: 5px; font-family: Arial, sans-serif;">
-                    Obsługiwane przez <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="PayPal" style="height: 14px;">
-                </div>
             </div>
         </div>
         
@@ -283,11 +285,11 @@
             </div>
         </div>
         
-        <div class="support-card" style="border-top: 4px solid #a83232; padding-top: 50px; padding-bottom: 50px;">
+        <div class="support-card" style="padding-top: 50px; padding-bottom: 50px;">
             <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; width: 100%;">
                 
                 <div style="text-align: center; width: 100%;">
-                    <p style="font-weight: bold; font-family: 'Arial', sans-serif; color: #1a5f4a; margin-bottom: 5px; font-size: 0.9em;">Kod QR do szybkiego przelewu w aplikacji Twojego Banku</p>
+                    <p style="font-weight: bold; font-family: 'Arial', sans-serif; color: #1a5f4a; margin-bottom: 5px; font-size: 0.9em;">Kod QR do szybkiego przelewu w aplikacji</p>
                     <img src="qr_konto.png" alt="Zeskanuj kod QR w aplikacji bankowej" class="qr-code">
                     <p style="line-height: 1.3; margin-top: 5px; margin-bottom: 0;"><small>Zeskanuj w aplikacji bankowej</small></p>
                 </div>
@@ -310,6 +312,21 @@
             <p><strong>Zostań Patronem naszej warty.</strong> Regularne wsparcie pozwala nam docierać do osób opuszczonych i ciężko chorych oraz zapewniać obecność wolontariuszy.</p>
             <div style="width: 100%; display: flex; justify-content: center; margin-top: 10px;">
                 <iframe src="https://patronite.pl/widget/ostatniawarta.pl/1120559/small/light/colorful?description=Dzi%C4%99kuj%C4%99%20za%20Twoje%20wsparcie!&buttonText=Sta%C5%84%20z%20nami%20na%20Warcie" width="360" height="330" frameborder="0" scrolling="no" style="max-width: 100%;"></iframe>
+            </div>
+        </div>
+        
+        <div class="support-card portal-card" style="border-top: 4px solid #a83232;">
+            <h3>PayPal</h3>
+            <p>Szybki i wygodny sposób wsparcia z dowolnego miejsca na świecie (uwaga: usługa nalicza prowizje operacyjne).</p>
+            
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; width: 100%;">
+                <a href="https://www.paypal.com/ncp/payment/75B5XSLBHCSFE" target="_blank" class="btn-donate bg-black">
+                    Dołącz do Warty!
+                </a>
+                <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="Karty płatnicze" style="height: 20px; margin-top: 5px;">
+                <div style="font-size: 0.75rem; color: #666; display: flex; align-items: center; justify-content: center; gap: 5px; font-family: Arial, sans-serif;">
+                    Obsługiwane przez <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="PayPal" style="height: 14px;">
+                </div>
             </div>
         </div>
 
@@ -337,7 +354,7 @@
 <footer>
     <div class="container">
         <div class="copyright">
-            <p>&copy; 2026 FUNDACJA "OSTATNIA WARTA". <a href="ksiega_znaku.pdf" target="_blank" class="ksiega-link" style="color: #D4AF37; text-decoration: none;">Wszelkie prawa zastrzeżone.</a></p>
+            <p>&copy; 2026 FUNDACJA OSTATNIA WARTA. <a href="ksiega_znaku.pdf" target="_blank" class="ksiega-link" style="color: #D4AF37; text-decoration: none;">Wszelkie prawa zastrzeżone.</a></p>
             <p style="margin-top: 10px;">
                 <a href="index.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Strona Główna</a>
                 <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Polityka Prywatności i RODO</a>
