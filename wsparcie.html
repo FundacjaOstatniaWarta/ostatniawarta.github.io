@@ -89,7 +89,6 @@
         .sponsor-card:hover { transform: translateY(-5px); border-color: #D4AF37; box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
         
         .sponsor-logo { max-width: 100%; height: auto; max-height: 100px; margin-bottom: 25px; object-fit: contain; }
-        /* Dodatkowy styl, by link na logo nie dodawał niepotrzebnych marginesów */
         .sponsor-logo-link { display: inline-block; }
         
         .sponsor-name { font-family: 'Georgia', serif; font-size: 1.4em; color: #133a2d; margin-bottom: 15px; font-weight: bold; }
@@ -166,7 +165,7 @@
                 <li><a href="index.html#podopieczni">Podopieczni</a></li>
                 <li><a href="index.html#wolontariat">Wolontariat</a></li>
                 <li><a href="index.html#wesprzyj">Wesprzyj Nas</a></li>
-                <li><a href="index.html#kontakt">Kontakt</a></li>
+                <li><a href="index.html#kontakt">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -288,7 +287,7 @@
                     </a>
                     <div class="sponsor-name">Wsparcie OWES</div>
                     <div class="sponsor-desc">
-                        Nasz akces został przyjęty i jesteśmy na ścieżce animacyjno-szkoleniowo-doradczej w ramach Ośrodka Wsparcia Ekonomii Społecznej (OWES), którego rolę dla naszego obszaru pełni Fundacja RC.
+                        Nasz akces został przyjęty i jesteśmy na ścieżce animacyjno-szkoleniowo-doradczej w ramach Ośrodka WSpacer Ekonomii Społecznej (OWES), którego rolę dla naszego obszaru pełni Fundacja RC.
                         <br><br>
                         <img src="fundacjaRC.png" alt="Fundacja RC Logo" style="max-height: 25px; opacity: 0.9;">
                     </div>
@@ -432,8 +431,12 @@
 
         <div class="cta-box">
             <h3>Dołącz do grona naszych Partnerów</h3>
-            <p>Prowadzisz firmę i bliska jest Ci społeczna odpowiedzialność biznesu (CSR)? Chcesz realnie wpłynąć na to, jak w naszym społeczeństwie wygląda opieka nad osobami terminalnie chorymi i samotnymi?</p>
+            <p>Prowadzisz firmę i bliska jest Ci społeczna जिम्मेदारी odpowiedzialność biznesu (CSR)? Chcesz realnie wpłynąć na to, jak w naszym społeczeństwie wygląda opieka nad osobami terminalnie chorymi i samotnymi?</p>
             <a href="pbic.html" class="btn-solid">Poznaj ofertę dla biznesu</a>
+        </div>
+        
+        <div style="width: 100%; text-align: center; margin-top: 40px; margin-bottom: 10px;">
+            <img src="PROO_zestawienie_2_plik_edytowalny_KOLOR.jpg" alt="Sfinansowano ze środków Narodowego Instytutu Wolności w ramach PROO" style="width: 100%; max-width: 900px; height: auto;">
         </div>
         
     </div>
@@ -470,7 +473,6 @@
 
         const secHand = document.getElementById('secondHand');
         const minHand = document.getElementById('minuteHand');
-        const hrHand = document.getElementById('hrHand'); // Poprawka ID dla wskazówki godzinowej
         const hourHand = document.getElementById('hourHand');
 
         if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
