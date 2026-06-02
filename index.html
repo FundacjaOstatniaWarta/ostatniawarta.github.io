@@ -123,6 +123,8 @@
         .mission-item span { display: inline-block; margin-top: 15px; color: #a83232; font-weight: bold; font-family: 'Arial', sans-serif; font-size: 0.95em; transition: 0.3s; }
         .mission-item:hover span { color: #1a5f4a; }
 
+        /* Nowa klasa do obsługi dużego kafla AGE */
+        .span-2-row { grid-row: span 2; }
         
         footer { 
             background-color: #133a2d;
@@ -199,6 +201,9 @@
             .header-titles h1 { font-size: 1.8em; }
             .mission-grid { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; }
+            
+            /* Na telefonie wyłączamy łączenie rzędów żeby kafel się nie rozjechał */
+            .span-2-row { grid-row: auto; }
 
             /* Responsive dla WhatsApp Float */
             .whatsapp-float {
@@ -216,7 +221,6 @@
 </head>
 <body>
 
-<!-- Pasek z widżetem tłumacza na samej górze -->
 <div class="top-bar">
     <div class="container">
         <div id="google_translate_element"></div>
@@ -272,12 +276,24 @@
                 <p><strong>Poznaj Ostatnią Wartę.</strong><br>Kim jesteśmy i dlaczego powstała Ostatnia Warta. Poznaj naszą historię i sens tego, co robimy.</p>
                 <span>Poznaj nas &rarr;</span>
             </a>
-            <a href="manifest.html" class="mission-item">
-                <h4>Manifest</h4>
-                <p><strong>Manifest Ostatniej Warty.</strong><br>Kilka słów o tym, w co wierzymy. Dlaczego obecność ma znaczenie i dlaczego nikt nie powinien odchodzić samotnie.</p>
-                <span>Przeczytaj manifest &rarr;</span>
-            </a>
             
+            <div class="mission-item span-2-row" style="position: relative;">
+                <a href="https://www.age-platform.eu/" target="_blank" rel="noopener noreferrer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></a>
+                <h4 style="position: relative; z-index: 2; pointer-events: none;">AGE Platform Europe</h4>
+                
+                <div style="display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; pointer-events: none; margin: 15px 0;">
+                    <img src="logo-age-plateform.svg" alt="Logo AGE Platform Europe" style="max-width: 100%; height: auto; max-height: 110px;">
+                </div>
+                
+                <p style="position: relative; z-index: 2; pointer-events: none; margin-bottom: 15px;">Członkostwo w najbardziej prestiżowej sieci eksperckiej w Europie potwierdza najwyższą jakość naszych działań. Wspólnie z unijnymi partnerami bezpośrednio kształtujemy i wdrażamy nowoczesne standardy opieki długoterminowej.</p>
+                
+                <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; pointer-events: none; margin-bottom: 15px;">
+                    <img src="PROO_zestawienie_2_plik_edytowalny_KOLOR.jpg" alt="Sfinansowano ze środków PROO" style="max-width: 100%; height: auto; max-height: 140px;">
+                </div>
+                
+                <span style="position: relative; z-index: 2; pointer-events: none;">Odwiedź stronę AGE &rarr;</span>
+            </div>
+
             <div class="mission-item" style="position: relative;">
                 <a href="https://niw.gov.pl/ivy-2026/wlacz-sie-w-obchody/" target="_blank" rel="noopener noreferrer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></a>
                 
@@ -287,16 +303,6 @@
                     <img src="IVY_Logo_RGB_Horiz_PL.png" alt="Logo Międzynarodowy Rok Wolontariatu 2026" style="max-width: 100%; height: auto; max-height: 100px;">
                 </div>
                 <span style="position: relative; z-index: 2; pointer-events: none;">Włącz się w obchody &rarr;</span>
-            </div>
-            
-            <div class="mission-item" style="position: relative;">
-                <a href="https://www.age-platform.eu/" target="_blank" rel="noopener noreferrer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></a>
-                <h4 style="position: relative; z-index: 2; pointer-events: none;">AGE Platform Europe</h4>
-                <p style="position: relative; z-index: 2; pointer-events: none;">Członkostwo w najbardziej prestiżowej sieci eksperckiej w Europie potwierdza najwyższą jakość naszych działań. Wspólnie z unijnymi partnerami bezpośrednio kształtujemy i wdrażamy nowoczesne standardy opieki długoterminowej.</p>
-                <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; pointer-events: none; margin-top: 15px;">
-                    <img src="logo-age-plateform.svg" alt="Logo AGE Platform Europe" style="max-width: 100%; height: auto; max-height: 110px;">
-                </div>
-                <span style="position: relative; z-index: 2; pointer-events: none;">Odwiedź stronę AGE &rarr;</span>
             </div>
             
             <a href="projekty.html" class="mission-item">
@@ -368,6 +374,18 @@
                 <h4>Życie z Niepełnosprawnością</h4>
                 <p>Poznaj działania Fundacji Ostatnia Warta na rzecz osób z niepełnosprawnościami. Towarzyszymy, wspieramy i przypominamy, że godność człowieka nie zależy od sprawności.</p>
                 <span>Zobacz nasze działania &rarr;</span>
+            </a>
+
+            <a href="manifest.html" class="mission-item">
+                <h4>Manifest</h4>
+                <p><strong>Manifest Ostatniej Warty.</strong><br>Kilka słów o tym, w co wierzymy. Dlaczego obecność ma znaczenie i dlaczego nikt nie powinien odchodzić samotnie.</p>
+                <span>Przeczytaj manifest &rarr;</span>
+            </a>
+
+            <a href="pracespol.html" class="mission-item">
+                <h4>Prace na cele społeczne</h4>
+                <p>Sąd orzekł wobec Ciebie karę ograniczenia wolności w formie prac społecznych? Zrealizuj ten obowiązek w miejscu, gdzie Twoja praca nabierze głębokiego sensu. Pomóż nam w działaniach organizacyjnych i logistycznych.</p>
+                <span>Sprawdź zasady &rarr;</span>
             </a>
         </div>
         
@@ -510,7 +528,6 @@
     <button onclick="acceptCookies()">Rozumiem i akceptuję</button>
 </div>
 
-<!-- Skrypt dodany do tłumacza Google -->
 <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
