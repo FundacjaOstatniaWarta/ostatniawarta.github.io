@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3VQ06C7HQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z3VQ06C7HQ');
+      gtag('config', 'AW-18086071578');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Gdańsk Time Capsule – a digital archive of seniors' history | Ostatnia Warta Foundation</title>
+    <meta name="description" content="The Gdańsk Time Capsule project. We archive memories and create digital 'letters to the future' from the oldest residents of Gdańsk.">
+    <meta name="keywords" content="gdańsk time capsule, oral history archive, seniors memories gdańsk, letters to the future, intergenerational volunteering, ostatnia warta foundation">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Gdańsk Time Capsule – Ostatnia Warta Foundation">
+    <meta property="og:description" content="The Gdańsk Time Capsule project. We archive memories and create digital 'letters to the future' from the oldest residents of Gdańsk.">
+    <meta property="og:url" content="https://ostatniawarta.pl/gkc_en.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ostatniawarta.pl/white_logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="canonical" href="https://ostatniawarta.pl/gkc_en.html" />
+    <link rel="icon" type="image/png" href="white_logo.png">
+    <link rel="apple-touch-icon" href="white_logo.png">
+
+    <style>
+        /* Base styles and reset */
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
+        a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
+        h1, h2, h3, h4 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
+        .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
+        
+        /* Dark, elegant top with centered logo */
+        header { 
+            background-color: #133a2d; 
+            background-image: linear-gradient(to bottom, rgba(19, 58, 45, 0) 65%, #133a2d 98%), url('tlo_strony.jpg'); 
+            background-position: center top; 
+            background-repeat: no-repeat; 
+            background-size: 100% auto; 
+            color: #fff; 
+            padding-top: 40px; 
+            padding-bottom: 0;
+            text-align: center; 
+            border-bottom: 4px solid #D4AF37; 
+        }
+        
+        /* CLOCK INSTEAD OF RING */
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 24vw; }
+        .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
+        
+        /* Center of hands */
+        .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
+        
+        /* Clock hands */
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
+        .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
+        .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
+        .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
+
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; line-height: 1.3; }
+        .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.4em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
+
+        nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
+        nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
+        nav ul li a:hover { color: #D4AF37; }
+
+        /* INTRO */
+        .intro-text { font-size: 1.15em; color: #444; text-align: justify; max-width: 900px; margin: 0 auto 40px auto; line-height: 1.8; }
+        .intro-text .text-link { color: #1a5f4a; text-decoration: underline; font-weight: bold; transition: color 0.3s; }
+        .intro-text .text-link:hover { color: #D4AF37; }
+        
+        .section-heading { font-family: 'Georgia', serif; font-size: 1.8em; color: #1a5f4a; border-bottom: 2px solid #D4AF37; padding-bottom: 10px; margin: 0 0 25px 0; display: inline-block; font-weight: normal; }
+        .heading-wrapper { text-align: center; width: 100%; margin-bottom: 15px; }
+
+        /* GRID INFO */
+        .support-grid { display: grid; grid-template-columns: 1fr; gap: 30px; margin-top: 20px; align-items: stretch; }
+        
+        .support-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1a5f4a; padding: 30px; display: flex; flex-direction: column; justify-content: flex-start; text-align: left; box-sizing: border-box; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .support-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        
+        .support-card h3 { margin-top: 0; font-size: 1.3em; font-family: 'Georgia', serif; margin-bottom: 10px; color: #133a2d; }
+        .support-card p { font-family: 'Arial', sans-serif; font-size: 1em; color: #555; line-height: 1.6; margin-bottom: 0; }
+
+        .disclaimer-box { background: #fdf8e6; border-left: 4px solid #D4AF37; padding: 25px; margin-top: 20px; margin-bottom: 40px; font-family: 'Arial', sans-serif; color: #333; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.03);}
+        .disclaimer-box h3 { margin-top: 0; color: #b5952f; border-bottom: none; padding-bottom: 0; font-family: 'Georgia', serif; font-size: 1.4em;}
+        .disclaimer-box p { font-size: 1.05em; text-align: left; color: #444; margin-bottom: 0; line-height: 1.6;}
+
+        /* NATIVE HTML5 ACCORDION FOR FAQ */
+        .faq-section { max-width: 900px; margin: 0 auto; }
+        details { background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); margin-bottom: 15px; border-left: 4px solid #1a5f4a; overflow: hidden; transition: all 0.3s ease; }
+        details:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        summary { font-family: 'Georgia', serif; font-size: 1.1em; font-weight: normal; color: #133a2d; padding: 18px 25px; cursor: pointer; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; background: #fff; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; color: #D4AF37; font-size: 1.5em; font-weight: bold; line-height: 1; transition: transform 0.3s ease; }
+        details[open] summary::after { content: '-'; transform: rotate(180deg); }
+        details p { padding: 0 25px 20px 25px; margin: 0; color: #555; font-family: 'Arial', sans-serif; font-size: 0.95em; line-height: 1.6; text-align: left; }
+
+        .btn-outline { border-color: #1a5f4a; color: #1a5f4a; background: transparent; display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; border: 2px solid #D4AF37; transition: all 0.3s ease; text-align: center;}
+        .btn-outline:hover { background: #D4AF37; color: #fff; }
+        
+        .btn-primary { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #D4AF37; color: #133a2d; border: 2px solid #D4AF37; transition: background 0.3s ease, color 0.3s ease; text-align: center; }
+        .btn-primary:hover { background: #b5952f; border-color: #b5952f; color: #fff; }
+
+        .btn-dark { border-color: #ccc; color: #555; background: transparent; display: inline-block; padding: 10px 20px; margin-top: 20px; border: 2px solid #ccc; font-weight: bold; border-radius: 4px; font-family: 'Arial', sans-serif; transition: 0.3s; }
+        .btn-dark:hover { background: #eee; color: #333; }
+
+        footer { 
+            background-color: #133a2d;
+            background-image: linear-gradient(rgba(19, 58, 45, 0.60), rgba(10, 20, 15, 0.90)), url('secondary_www_logo.jpg');
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            color: #eef7f4; 
+            padding: 60px 20px 20px; 
+            text-align: center; 
+            margin-top: 40px;
+            border-top: 4px solid #D4AF37;
+        }
+        footer a { color: #D4AF37; text-decoration: none; transition: 0.3s; font-weight: bold; text-shadow: 1px 1px 4px rgba(0,0,0,0.9); }
+        footer a:hover { color: #fff; text-decoration: underline; }
+        footer p { text-shadow: 1px 1px 4px rgba(0,0,0,0.9); }
+        
+        @media (min-width: 768px) { 
+            .support-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) { 
+            header { 
+                padding-top: 20px; 
+                background-size: cover; 
+                background-position: center 25%; 
+            }
+            .logo-wrapper { 
+                margin-bottom: 200px; 
+            }
+            .header-titles h1 { font-size: 1.5em; }
+            .support-card { padding: 20px; }
+            .intro-text { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container" style="padding: 0 0 0 0;">
+        <div class="logo-wrapper">
+            <a href="en.html">
+                <div class="clock-wrapper">
+                    <div class="clock-center"></div>
+                    <div class="hand hour-hand" id="hourHand"></div>
+                    <div class="hand minute-hand" id="minuteHand"></div>
+                    <div class="hand second-hand" id="secondHand"></div>
+                    <img src="white_logo.png" alt="Ostatnia Warta Foundation Logo" class="logo-img"> 
+                </div>
+            </a>
+        </div>
+        
+        <div class="header-titles">
+            <h1>Gdańsk Time Capsule</h1>
+            <h2>A digital archive of history</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="en.html#o-nas">About Us</a></li>
+                <li><a href="en.html#podopieczni">For Patients</a></li>
+                <li><a href="en.html#wolontariat">Volunteering</a></li>
+                <li><a href="blog_en.html">Blog</a></li>
+                <li><a href="en.html#wesprzyj">Support Us</a></li>
+                <li><a href="en.html#kontakt">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="container">
+    
+    <div class="disclaimer-box" style="max-width: 900px; margin: 0 auto 40px auto;">
+        <h3>[STATUS: IN PREPARATION]</h3>
+        <p>The "Gdańsk Time Capsule" project is currently in the organizational and technical preparation phase. We are gathering funds and assembling equipment so that we will soon be able to record the priceless memories of Gdańsk seniors free of charge.</p>
+    </div>
+
+    <div style="text-align: center; margin-bottom: 40px;">
+        <img src="wbudowie.jpg" alt="Project under construction" style="max-width: 100%; height: auto; max-height: 400px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    </div>
+
+    <div class="intro-text">
+        <p>We live in an era of unprecedented change. Our patients are eyewitnesses to political, social, and technological transformations that the world has never seen before. In the face of such rapid changes, securing the unique stories, wisdom, and identity of this generation in an authentic form becomes fundamental.</p>
+        <p>Our project is a mobile system for archiving memories. Upon invitation, Foundation volunteers will visit Gdańsk seniors in their homes, neighborhood houses, community clubs, and during city events, to record and edit videos featuring a message for their loved ones completely free of charge—a kind of "letter to the future".</p>
+    </div>
+
+    <div class="heading-wrapper" style="margin-top: 60px;">
+        <h2 class="section-heading">How does it work in practice?</h2>
+    </div>
+
+    <div class="support-grid">
+        <div class="support-card" style="border-top-color: #D4AF37;">
+            <h3 style="color: #133a2d;">Mobile Recording Studio</h3>
+            <p>To eliminate digital exclusion and the issue of limited mobility, we travel with professional equipment directly to the indicated recording location, and we will also be present at popular district festivals.</p>
+        </div>
+        <div class="support-card" style="border-top-color: #D4AF37;">
+            <h3 style="color: #133a2d;">Letters to the Future</h3>
+            <p>Interviews and memories are properly archived. We create digital video keepsakes that will become an intergenerational bridge and a valuable heritage for grandchildren and great-grandchildren.</p>
+        </div>
+        <div class="support-card" style="border-top-color: #D4AF37; grid-column: 1 / -1;">
+            <h3 style="color: #133a2d; text-align: center;">Preserving Heritage and Combating Loneliness</h3>
+            <p style="text-align: center;">Recording memories is not just documentation—it is also an opportunity for a deep conversation, an attentive presence with another human being, and easing loneliness. Our trained volunteers know how to listen with full empathy and respect.</p>
+        </div>
+    </div>
+
+    <div class="heading-wrapper" style="margin-top: 60px;">
+        <h2 class="section-heading">Frequently Asked Questions (FAQ)</h2>
+    </div>
+    
+    <div class="faq-section">
+        <details>
+            <summary>Who is the project for, and what content makes up the Capsule?</summary>
+            <p>We extend our invitation to residents of Gdańsk (generation 60+) who, as eyewitnesses to the turbulent 20th century, want to save their unique fates, personal experiences, and life wisdom from oblivion. The Gdańsk Time Capsule is an apolitical and ideologically neutral space. Our mission is to build intergenerational bridges, which is why all recordings are subject to strict moderation based on applicable law, linguistic culture, and principles of social coexistence. The Foundation categorically refrains from publishing materials containing hate speech, profanity, personal attacks, or party and religious agitation. We focus on what is enduring and valuable in a person for future generations, leaving current disputes outside the scope of this archive.</p>
+        </details>
+        
+        <details>
+            <summary>Are there any costs associated with the recording?</summary>
+            <p>No. The entire service—travel, recording, professional editing, and archiving of the material—is carried out by Foundation volunteers 100% free of charge, as part of our public benefit activities.</p>
+        </details>
+
+        <details>
+            <summary>Where will the edited materials be published?</summary>
+            <p>The collected accounts and "letters to the future" – of course, only after obtaining the senior's consent – will be placed on a publicly accessible platform, including our <a href="https://www.youtube.com/@FundacjaOstatniaWarta" target="_blank" class="text-link">official YouTube channel</a>, serving as a virtual museum of oral history.</p>
+        </details>
+
+        <details>
+            <summary>When will registrations and recordings start?</summary>
+            <p>We are currently finalizing financial, equipment, and formal/training matters. When the project officially launches, we will activate a dedicated phone number and a simple form through which you can register yourself or a loved one. Follow our profiles on social media!</p>
+        </details>
+    </div>
+
+    <div class="heading-wrapper" style="margin-top: 60px;">
+        <h2 class="section-heading" style="border-bottom: none; margin-bottom: 5px; color: #133a2d;">Follow our activities on YouTube</h2>
+    </div>
+    
+    <div style="background: #fff; padding: 40px 25px; border-radius: 8px; border-top: 4px solid #D4AF37; margin-top: 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+        <h3 style="margin-top: 0; margin-bottom: 15px; font-family: 'Georgia', serif; font-size: 1.6em; color: #133a2d;">Discover the stories of our patients</h3>
+        <p style="font-size: 1.1em; color: #555; margin-bottom: 25px; line-height: 1.5; max-width: 800px; margin-left: auto; margin-right: auto;">
+            Ultimately, that is where we will publish all recorded, edited, and authorized "letters to the future." Subscribe to the channel today so you don't miss the premiere of our materials.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <a href="https://www.youtube.com/@FundacjaOstatniaWarta" target="_blank" class="btn-primary" style="display: flex; align-items: center; gap: 10px;">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                Visit our YouTube channel
+            </a>
+        </div>
+    </div>
+
+    <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #eee; text-align: center;">
+        <h3 style="margin-top: 0; margin-bottom: 15px; font-family: 'Georgia', serif; color: #133a2d; font-size: 1.4em; border-bottom: none;">Explore other ways to get involved:</h3>
+        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <a href="zbiorki.html" class="btn-outline" style="margin-top: 10px;">Stand Watch (Fundraisers)</a>
+            <a href="pbic.html" class="btn-outline" style="margin-top: 10px;">Partnership and CSR</a>
+            <a href="zwol_en.html" class="btn-outline" style="margin-top: 10px;">Become a volunteer</a>
+            <a href="progzad.html" class="btn-outline" style="margin-top: 10px;">Voluntary Restitution</a>
+            <a href="wsparcie_en.html" class="btn-outline" style="margin-top: 10px;">Our Supporters</a>
+            <a href="projekty.html" class="btn-outline" style="margin-top: 10px;">Projects and Patronages</a>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px;">
+        <a href="en.html" class="btn-dark">&larr; Return to Homepage</a>
+    </div>
+
+</section>
+
+<footer>
+    <div class="container">
+        <div class="copyright" style="border-top: none; margin-top: 0; padding-top: 0;">
+            <p>&copy; 2026 "OSTATNIA WARTA" FOUNDATION. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Privacy Policy and GDPR</a>
+                <a href="regulamin-darowizn.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Donation Terms</a>
+                <a href="regulamin-pomocy.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Terms of Providing Assistance</a>
+                <a href="warunki-korzystania.html" style="text-decoration: none; color: #D4AF37;">Terms of Use</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Clock
+    function updateClock() {
+        const now = new Date();
+        const second = now.getSeconds();
+        const minute = now.getMinutes();
+        const hour = now.getHours();
+
+        const secondDeg = ((second / 60) * 360);
+        const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
+        const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
+
+        const secHand = document.getElementById('secondHand');
+        const minHand = document.getElementById('minuteHand');
+        const hrHand = document.getElementById('hourHand');
+
+        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
+        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
+        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>
