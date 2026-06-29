@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3VQ06C7HQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z3VQ06C7HQ');
+      gtag('config', 'AW-18086071578');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Brand Book and Visual Identity | Ostatnia Warta Foundation</title>
+    <meta name="description" content="Brand Book and Visual Identity of the Ostatnia Warta Foundation. Discover the rules for using the logotype, color scheme, typography, and our communication standards.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <meta property="og:title" content="Brand Book | Ostatnia Warta Foundation" />
+    <meta property="og:description" content="Official visual identity guidelines: logotype, colors, typography, and communication standards of the Ostatnia Warta Foundation." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ostatniawarta.pl/ksiega_znaku.html" />
+    <meta property="og:image" content="https://ostatniawarta.pl/white_logo.png" />
+
+    <link rel="canonical" href="https://ostatniawarta.pl/ksiega_znaku.html" />
+    <link rel="icon" type="image/png" href="white_logo.png">
+    <link rel="apple-touch-icon" href="white_logo.png">
+
+    <style>
+        /* Podstawowe style i reset */
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
+        a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
+        h1, h2, h3, h4 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
+        .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
+        
+        /* Ciemna, elegancka góra z wycentrowanym logo */
+        header { 
+            background-color: #133a2d; 
+            background-image: linear-gradient(to bottom, rgba(19, 58, 45, 0) 65%, #133a2d 98%), url('tlo_strony.jpg'); 
+            background-position: center top; 
+            background-repeat: no-repeat; 
+            background-size: 100% auto; 
+            color: #fff; 
+            padding-top: 40px; 
+            padding-bottom: 0;
+            text-align: center; 
+            border-bottom: 4px solid #D4AF37; 
+        }
+        
+        /* ZEGAR ZAMIAST PIERŚCIENIA */
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 24vw; }
+        .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
+        
+        /* Środek wskazówek */
+        .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
+        
+        /* Wskazówki zegara */
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
+        .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
+        .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
+        .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
+
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; line-height: 1.3; }
+        .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.4em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
+
+        nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
+        nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
+        nav ul li a:hover { color: #D4AF37; }
+
+        /* WSTĘP i TREŚĆ */
+        .intro-text { font-size: 1.15em; color: #444; text-align: justify; max-width: 900px; margin: 0 auto 40px auto; line-height: 1.8; }
+        .section-heading { font-family: 'Georgia', serif; font-size: 1.8em; color: #1a5f4a; border-bottom: 2px solid #D4AF37; padding-bottom: 10px; margin: 0 0 25px 0; display: inline-block; font-weight: normal; }
+        .heading-wrapper { text-align: center; width: 100%; margin-bottom: 15px; margin-top: 50px; }
+
+        /* GRIDY */
+        .support-grid { display: grid; grid-template-columns: 1fr; gap: 30px; margin-top: 20px; align-items: stretch; }
+        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        
+        .support-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1a5f4a; padding: 30px; display: flex; flex-direction: column; justify-content: flex-start; text-align: left; box-sizing: border-box; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .support-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .support-card h3 { margin-top: 0; font-size: 1.4em; font-family: 'Georgia', serif; margin-bottom: 15px; color: #133a2d; }
+        .support-card p { font-family: 'Arial', sans-serif; font-size: 1em; color: #555; line-height: 1.6; margin-bottom: 0; }
+
+        /* SPECJALNE ELEMENTY KSIĘGI ZNAKU */
+        .logo-showcase-img { width: 100%; max-width: 250px; height: auto; margin: 0 auto 20px auto; display: block; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        
+        .color-swatch { display: flex; align-items: center; margin-bottom: 15px; }
+        .color-circle { width: 50px; height: 50px; border-radius: 50%; margin-right: 20px; flex-shrink: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        .color-info p { margin: 0; font-family: 'Arial', sans-serif; font-size: 0.95em; color: #555; line-height: 1.4; }
+        .color-info strong { color: #133a2d; font-size: 1.1em; }
+
+        .email-signature { background: #f4f8f6; border-left: 4px solid #1a5f4a; padding: 25px; font-family: 'Arial', sans-serif; font-size: 0.95em; line-height: 1.6; color: #333; margin-top: 20px; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
+        .email-signature span.gold { color: #D4AF37; font-weight: bold; }
+        .email-signature span.green { color: #1a5f4a; font-weight: bold; }
+        .email-signature small { color: #777; font-size: 0.85em; display: block; margin-top: 15px; border-top: 1px solid #ddd; padding-top: 10px; }
+
+        .btn-dark { border-color: #ccc; color: #555; background: transparent; display: inline-block; padding: 10px 20px; margin-top: 40px; border: 2px solid #ccc; font-weight: bold; border-radius: 4px; font-family: 'Arial', sans-serif; transition: 0.3s; }
+        .btn-dark:hover { background: #eee; color: #333; }
+
+        footer { 
+            background-color: #133a2d;
+            background-image: linear-gradient(rgba(19, 58, 45, 0.60), rgba(10, 20, 15, 0.90)), url('secondary_www_logo.jpg');
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            color: #eef7f4; 
+            padding: 60px 20px 20px; 
+            text-align: center; 
+            margin-top: 40px;
+            border-top: 4px solid #D4AF37;
+        }
+        /* Przywrócone złote kolory i lepsze cienie dla czytelności */
+        footer a { color: #D4AF37; text-decoration: none; transition: 0.3s; font-weight: bold; text-shadow: 1px 1px 4px rgba(0,0,0,0.9); }
+        footer a:hover { color: #fff; text-decoration: underline; }
+        footer p { text-shadow: 1px 1px 4px rgba(0,0,0,0.9); }
+        
+        @media (min-width: 768px) { 
+            .support-grid { grid-template-columns: 1fr 1fr; }
+            .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (max-width: 768px) { 
+            header { 
+                padding-top: 20px; 
+                background-size: cover; 
+                background-position: center 25%; 
+            }
+            .logo-wrapper { 
+                margin-bottom: 200px; 
+            }
+            .header-titles h1 { font-size: 1.5em; }
+            .support-card { padding: 20px; }
+            .intro-text { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container" style="padding: 0 0 0 0;">
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <div class="clock-wrapper">
+                    <div class="clock-center"></div>
+                    <div class="hand hour-hand" id="hourHand"></div>
+                    <div class="hand minute-hand" id="minuteHand"></div>
+                    <div class="hand second-hand" id="secondHand"></div>
+                    <img src="white_logo.png" alt="Ostatnia Warta Foundation Logo" class="logo-img"> 
+                </div>
+            </a>
+        </div>
+        
+        <div class="header-titles">
+            <h1>Brand Book and Visual Identity</h1>
+            <h2>"Ostatnia Warta" Foundation in Gdańsk</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html#o-nas">About Us</a></li>
+                <li><a href="index.html#podopieczni">Beneficiaries</a></li>
+                <li><a href="index.html#wolontariat">Volunteering</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#wesprzyj">Support Us</a></li>
+                <li><a href="index.html#kontakt">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="container">
+    
+    <div class="heading-wrapper" style="margin-top: 20px;">
+        <h2 class="section-heading">1. Introduction</h2>
+    </div>
+    <div class="intro-text">
+        <p>This Brand Book sets out the rules for using the logotype, corporate colors, typography, and elements of visual and official identity of the "Ostatnia Warta" Foundation. Adherence to the following guidelines is mandatory in all promotional, official, and digital materials, ensuring consistency and a professional image of the organization.</p>
+    </div>
+
+    <div class="heading-wrapper">
+        <h2 class="section-heading">2. Logo Structure and Symbolism</h2>
+    </div>
+    <div class="intro-text">
+        <p>The Foundation's logotype constitutes a visual manifesto of our mission: bringing relief, care, and steadfast accompaniment to another human being. This mark, in its simple and legible form, departs from literal heraldry in favor of universal symbols of empathy. It embodies calm, support, and readiness to perform social service for individuals in the most difficult moments of life.</p>
+    </div>
+
+    <div class="support-grid grid-3">
+        <div class="support-card" style="border-top-color: #D4AF37;">
+            <h3 style="color: #133a2d;">Base Shape and Rim</h3>
+            <p>A circular seal with the Foundation's name and location (Gdańsk) displayed on the rim. The closed, circular form symbolizes community, the cycle of life, and the continuity of our work and dedication to beneficiaries.</p>
+        </div>
+        <div class="support-card" style="border-top-color: #D4AF37;">
+            <h3 style="color: #133a2d;">Caring Hands</h3>
+            <p>The central motif features two horizontally arranged hands. The lower one symbolizes stable support and readiness to help, while the upper one - protection, safety, and care. They directly refer to the service of accompaniment and the concept of the "End-of-Life Doula".</p>
+        </div>
+        <div class="support-card" style="border-top-color: #D4AF37;">
+            <h3 style="color: #133a2d;">Burning Candles</h3>
+            <p>Three candles placed in the center, protected by hands, are a universal symbol of life, hope, and light. They literally reflect the idea of "keeping watch," keeping vigil by the sick, and cultivating the memory of those who have passed away.</p>
+        </div>
+    </div>
+
+    <div class="heading-wrapper">
+        <h2 class="section-heading">3. Acceptable Logotype Variants</h2>
+    </div>
+    
+    <div class="support-grid grid-3">
+        <div class="support-card">
+            <img src="white_logo.png" alt="Logo - Basic Light Version" class="logo-showcase-img">
+            <h3 style="text-align: center;">Basic Version (Light)</h3>
+            <p style="text-align: center;">Dark green logotype elements on a white background, enriched with Deep Red accents (e.g., the second hand) and Gold. The basic mark for documents and websites.</p>
+        </div>
+        <div class="support-card" style="background: #112a21;">
+            <img src="dark_logo.png" alt="Logo - Inverted Dark Version" class="logo-showcase-img">
+            <h3 style="text-align: center; color: #fff;">Inverted Version (Dark)</h3>
+            <p style="text-align: center; color: #ccc;">Dedicated to premium materials. On a dark green background, the logotype contours take on the color of Pure White (#FFFFFF), and internal details remain Gold (#D4AF37).</p>
+        </div>
+        <div class="support-card">
+            <img src="logo-czerwone.png" alt="Logo - Red Version" class="logo-showcase-img">
+            <h3 style="text-align: center;">Red Version (Alternative)</h3>
+            <p style="text-align: center;">An acceptable logotype variant using the complementary color palette (Deep Red). Used in specific promotional materials or special campaigns.</p>
+        </div>
+    </div>
+
+    <div class="heading-wrapper">
+        <h2 class="section-heading">4. Corporate Colors</h2>
+    </div>
+    <div class="intro-text" style="margin-bottom: 20px;">
+        <p>The Foundation's image is based on a balanced, elegant color palette that inspires trust, seriousness, and calm.</p>
+    </div>
+
+    <div class="support-grid">
+        <div class="support-card" style="border-top-color: #1a5f4a;">
+            <h3>Primary Colors</h3>
+            <div class="color-swatch">
+                <div class="color-circle" style="background: #133a2d;"></div>
+                <div class="color-info">
+                    <strong>Dark Green (Background / Dominant)</strong>
+                    <p>HEX: #133a2d | RGB: 19, 58, 45</p>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-circle" style="background: #D4AF37;"></div>
+                <div class="color-info">
+                    <strong>Gold (Details / Rims / Accents)</strong>
+                    <p>HEX: #D4AF37 | RGB: 212, 175, 55 | CMYK: 15, 25, 85, 5</p>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-circle" style="background: #a83232;"></div>
+                <div class="color-info">
+                    <strong>Deep Red (Accents)</strong>
+                    <p>HEX: #a83232 | RGB: 168, 50, 50</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="support-card" style="border-top-color: #1a5f4a;">
+            <h3>Complementary Colors (Web Colors)</h3>
+            <div class="color-swatch">
+                <div class="color-circle" style="background: #1a5f4a;"></div>
+                <div class="color-info">
+                    <strong>Header Green (Links and Titles)</strong>
+                    <p>HEX: #1a5f4a | RGB: 26, 95, 74</p>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-circle" style="background: #333333;"></div>
+                <div class="color-info">
+                    <strong>Matte Black (Typography)</strong>
+                    <p>HEX: #333333 | RGB: 51, 51, 51</p>
+                </div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-circle" style="background: #FCFCFC; border: 1px solid #ddd;"></div>
+                <div class="color-info">
+                    <strong>Off-White (Web section backgrounds)</strong>
+                    <p>HEX: #FCFCFC | Pure White: #FFFFFF</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="heading-wrapper">
+        <h2 class="section-heading">5. Technical Rules and Typography</h2>
+    </div>
+
+    <div class="support-grid">
+        <div class="support-card">
+            <h3 style="color: #a83232;">Prohibited Modifications and Clear Space</h3>
+            <ul style="font-family: 'Arial', sans-serif; color: #555; padding-left: 20px; line-height: 1.6;">
+                <li>An empty space must be maintained around the logo. This distance is equal to the height of the letter "G" from the word "GDAŃSK" placed in the bottom rim of the logo.</li>
+                <li>The minimum diameter of the logo in print is 25 mm, and in digital applications 80 px.</li>
+                <li><strong>It is strictly forbidden to:</strong> distort or flatten the proportions of the mark, rotate it, remove elements (e.g., hands or candles), or use colors other than those defined.</li>
+            </ul>
+        </div>
+        <div class="support-card">
+            <h3 style="color: #133a2d;">Typography (Corporate Fonts)</h3>
+            <ul style="font-family: 'Arial', sans-serif; color: #555; padding-left: 20px; line-height: 1.6;">
+                <li><strong>Official and formal documents (Resolutions, contracts, cover letters):</strong><br>Font: <em>Century Gothic</em>. Base size: 10.5 pt.</li>
+                <li style="margin-top: 15px;"><strong>Everyday communication (E-mails, presentations, notes, website):</strong><br>Font: <em>Helvetica</em> (or <em>Arial</em> as a system equivalent) and <em>Georgia</em> for header accents. Base size: 12 pt for body text, 10 pt for footnotes and footers.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="heading-wrapper">
+        <h2 class="section-heading">6. Official Identity and Communication</h2>
+    </div>
+    
+    <div class="support-grid" style="grid-template-columns: 1fr;">
+        <div class="support-card" style="border-top-color: #D4AF37;">
+            <h3>Foundation Seals</h3>
+            <p>Pursuant to Management Board Resolution No. 4/2026, the Foundation uses strictly defined patterns of official seals. <strong>All approved seals appear exclusively in red.</strong></p>
+            <ul style="font-family: 'Arial', sans-serif; color: #555; padding-left: 20px; line-height: 1.6; margin-top: 10px;">
+                <li><strong>Round Seal:</strong> Diameter 50 mm, containing the full logotype with the rim, hands, and candles. The right to use it belongs to the Management Board, the Foundation Council, and authorized persons.</li>
+                <li><strong>Company Seal (Oblong):</strong> Contains the full name of the Foundation, NIP (Tax ID) (9571199614), REGON (Statistical ID) (544069163), KRS (National Court Register number) (0001224367), registered office address, website address, and e-mail.</li>
+                <li><strong>Name Seals:</strong> Intended for exclusive personal use. Used by the President, Vice-President, and Members of the Foundation Council.</li>
+            </ul>
+
+            <h3 style="margin-top: 30px;">Digital Communication Standard (E-mail Signature)</h3>
+            <p>Official e-mail correspondence must include a consistent informational and legal signature. Below is the official layout template:</p>
+            
+            <div class="email-signature">
+                <strong>[ First and Last Name ]</strong><br>
+                [ Position ]<br><br>
+                <strong>"OSTATNIA WARTA" FOUNDATION</strong><br>
+                <em>"Stay here and keep watch with me!" [Mt 26:38 motto of the "Ostatnia Warta" Foundation]</em><br><br>
+                <strong>T:</strong> [ Phone number ] | <strong>E:</strong> [ E-mail address ]<br>
+                <strong>W:</strong> <span class="green">ostatniawarta.pl</span> – Discover our mission and see how we work<br>
+                <strong>A:</strong> [postal mailing address]<br><br>
+                💙 <span class="gold">Support our mission:</span> [IBAN account number]<br>
+                <strong>NIP (Tax ID):</strong> [nip no.] | <strong>REGON:</strong> [regon no.] | <strong>KRS:</strong> [krs no.]<br>
+                District Court [Court designation], [Court division designation] | <strong>Supervision:</strong> Minister of Health<br>
+                
+                <small><strong>Legal notice:</strong> This message is intended solely for its addressee and may contain confidential information. It is forbidden to view, forward, or otherwise use it by unauthorized persons. If you have received it by mistake, please contact the sender and delete it from your system. The Foundation informs that the processing of personal data is carried out in accordance with the GDPR (EU Regulation 2016/679 of April 27, 2016).</small>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px;">
+        <a href="index.html" class="btn-dark">&larr; Back to Homepage</a>
+    </div>
+
+</section>
+
+<footer>
+    <div class="container">
+        <div class="copyright" style="border-top: none; margin-top: 0; padding-top: 0;">
+            <p>&copy; 2026 "OSTATNIA WARTA" FOUNDATION. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Privacy Policy & GDPR</a>
+                <a href="regulamin-darowizn.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Donation Terms</a>
+                <a href="regulamin-pomocy.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Assistance Terms</a>
+                <a href="warunki-korzystania.html" style="text-decoration: none; color: #D4AF37;">Terms of Use</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Zegar
+    function updateClock() {
+        const now = new Date();
+        const second = now.getSeconds();
+        const minute = now.getMinutes();
+        const hour = now.getHours();
+
+        const secondDeg = ((second / 60) * 360);
+        const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
+        const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
+
+        const secHand = document.getElementById('secondHand');
+        const minHand = document.getElementById('minuteHand');
+        const hrHand = document.getElementById('hourHand');
+
+        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
+        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
+        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>
