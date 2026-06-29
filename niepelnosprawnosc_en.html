@@ -29,13 +29,11 @@
     <link rel="apple-touch-icon" href="white_logo.png">
 
     <style>
-        /* Base styles and reset */
         body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
         a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
         h1, h2, h3 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
         .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
         
-        /* Dark, elegant top with centered logo */
         header { 
             background-color: #133a2d; 
             background-image: linear-gradient(to bottom, rgba(19, 58, 45, 0) 65%, #133a2d 98%), url('tlo_strony.jpg'); 
@@ -136,7 +134,7 @@
                     <div class="hand hour-hand" id="hourHand"></div>
                     <div class="hand minute-hand" id="minuteHand"></div>
                     <div class="hand second-hand" id="secondHand"></div>
-                    <img src="white_logo.png" alt="Ostatnia Warta Foundation Logo"> 
+                    <img src="white_logo.png" alt="Ostatnia Warta Foundation Logo" class="logo-img"> 
                 </div>
             </a>
         </div>
@@ -279,7 +277,6 @@
 </footer>
 
 <script>
-    // Clock
     function updateClock() {
         const now = new Date();
         const second = now.getSeconds();

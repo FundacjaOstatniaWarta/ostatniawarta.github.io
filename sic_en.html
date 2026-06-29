@@ -30,13 +30,11 @@
     <link rel="apple-touch-icon" href="white_logo.png">
 
     <style>
-        /* Basic styles and reset */
         body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
         a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
         h1, h2, h3, h4 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
         .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
         
-        /* Dark, elegant top with centered logo */
         header { 
             background-color: #133a2d; 
             background-image: linear-gradient(to bottom, rgba(19, 58, 45, 0) 65%, #133a2d 98%), url('tlo_strony.jpg'); 
@@ -50,15 +48,12 @@
             border-bottom: 4px solid #D4AF37; 
         }
         
-        /* CLOCK WRAPPER */
         .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 24vw; }
         .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
         .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
         
-        /* Center of the clock hands */
         .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
         
-        /* Clock hands */
         .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
         .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
         .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
@@ -80,15 +75,12 @@
         .content-section ul li { margin-bottom: 12px; padding-left: 25px; position: relative; text-align: justify; }
         .content-section ul li::before { content: "📄"; position: absolute; left: 0; top: 0; }
         
-        /* Headers inside content section */
         .content-section h3 { margin-top: 40px; margin-bottom: 20px; font-size: 1.4em; color: #1a5f4a; border-bottom: 2px solid #e2f0ea; padding-bottom: 10px; line-height: 1.4; }
         .content-section h3 span { display: block; font-size: 0.75em; color: #777; font-family: 'Georgia', serif; font-weight: normal; font-style: italic; margin-top: 5px; }
 
-        /* Highlight Box */
         .highlight-box { background: #fdf8eb; border: 2px solid #D4AF37; padding: 35px 40px; margin: 50px auto; text-align: center; font-size: 1.25em; color: #133a2d; font-style: italic; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); }
         .highlight-box p { text-align: center; margin: 0; line-height: 1.6; }
 
-        /* CTA Box */
         .cta-box { background: #f4f8f6; padding: 35px 25px; border-radius: 8px; border-top: 4px solid #D4AF37; margin-top: 50px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
         .cta-box h3 { margin-top: 0; margin-bottom: 15px; border-bottom: none; color: #133a2d; }
 
@@ -143,7 +135,7 @@
                     <div class="hand hour-hand" id="hourHand"></div>
                     <div class="hand minute-hand" id="minuteHand"></div>
                     <div class="hand second-hand" id="secondHand"></div>
-                    <img src="white_logo.png" alt="Ostatnia Warta Foundation Logo"> 
+                    <img src="white_logo.png" alt="Ostatnia Warta Foundation Logo" class="logo-img"> 
                 </div>
             </a>
         </div>
@@ -275,11 +267,11 @@
         <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #eee; text-align: center;">
             <h3 style="margin-top: 0; margin-bottom: 15px; font-family: 'Georgia', serif; color: #133a2d; font-size: 1.4em; border-bottom: none;">Discover other areas of our activity:</h3>
             <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                <a href="doula.html" class="btn-outline" style="margin-top: 10px;">End-of-life Doula</a>
-                <a href="sservice.html" class="btn-outline" style="margin-top: 10px;">Sitting Service</a>
-                <a href="gst.html" class="btn-outline" style="margin-top: 10px;">Gdańsk School of Accompanying</a>
-                <a href="seniorzy.html" class="btn-outline" style="margin-top: 10px;">Seniors</a>
-                <a href="niepelnosprawnosc.html" class="btn-outline" style="margin-top: 10px;">Disability</a>
+                <a href="doula_en.html" class="btn-outline" style="margin-top: 10px;">End-of-life Doula</a>
+                <a href="sservice_en.html" class="btn-outline" style="margin-top: 10px;">Sitting Service</a>
+                <a href="gst_en.html" class="btn-outline" style="margin-top: 10px;">Gdańsk School of Accompanying</a>
+                <a href="seniorzy_en.html" class="btn-outline" style="margin-top: 10px;">Seniors</a>
+                <a href="niepelnosprawnosc_en.html" class="btn-outline" style="margin-top: 10px;">Disability</a>
             </div>
         </div>
 
@@ -305,7 +297,6 @@
 </footer>
 
 <script>
-    // Clock
     function updateClock() {
         const now = new Date();
         const second = now.getSeconds();
