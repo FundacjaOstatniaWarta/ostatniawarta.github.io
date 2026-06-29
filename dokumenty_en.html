@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloadable Documents | Ostatnia Warta Foundation</title>
+    
+    <meta name="description" content="Central document database of the Ostatnia Warta Foundation. Download applications for care, regulations, volunteer questionnaires, and CSR offers.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Downloadable Documents | Ostatnia Warta Foundation" />
+    <meta property="og:description" content="All forms, regulations, and applications of the Ostatnia Warta Foundation in one place." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ostatniawarta.pl/dokumenty.html" />
+    <meta property="og:image" content="https://ostatniawarta.pl/white_logo.png" />
+    
+    <link rel="canonical" href="https://ostatniawarta.pl/dokumenty.html" />
+    <link rel="icon" type="image/png" href="white_logo.png">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3VQ06C7HQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z3VQ06C7HQ');
+      gtag('config', 'AW-18086071578');
+    </script>
+
+    <style>
+        /* Podstawowe style i reset */
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
+        a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
+        h1, h2, h3 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
+        .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
+        
+        /* Ciemna, elegancka góra z wycentrowanym logo */
+        header { 
+            background-color: #133a2d; 
+            background-image: linear-gradient(to bottom, rgba(19, 58, 45, 0) 65%, #133a2d 98%), url('tlo_strony.jpg'); 
+            background-position: center top; 
+            background-repeat: no-repeat; 
+            background-size: 100% auto; 
+            color: #fff; 
+            padding-top: 40px; 
+            padding-bottom: 0;
+            text-align: center; 
+            border-bottom: 4px solid #D4AF37; 
+        }
+        
+        /* ZEGAR ZAMIAST PIERŚCIENIA */
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 24vw; }
+        .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
+        
+        /* Środek wskazówek */
+        .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
+        
+        /* Wskazówki zegara */
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
+        .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
+        .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
+        .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
+
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 2.2em; margin: 10px 0 5px 0; font-weight: normal; color: #fff; }
+        .header-titles h2 { font-family: 'Georgia', serif; font-size: 1.6em; color: #D4AF37; font-style: italic; margin: 0 0 15px 0; font-weight: normal; }
+
+        nav { background: rgba(0,0,0,0.2); padding: 15px 0; }
+        nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
+        nav ul li a:hover { color: #D4AF37; }
+
+        /* SEKCJE DOKUMENTÓW */
+        .docs-intro { text-align: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto; font-size: 1.1em; color: #555; line-height: 1.6; }
+        
+        .doc-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1a5f4a; padding: 40px; margin-bottom: 30px; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .doc-card:nth-child(even) { border-top-color: #D4AF37; } /* Złoty border dla co drugiego bloku */
+        
+        .doc-card h3 { margin-top: 0; font-size: 1.6em; font-family: 'Georgia', serif; margin-bottom: 20px; color: #133a2d; border-bottom: 2px solid #e2f0ea; padding-bottom: 10px; }
+        .doc-card p { font-family: 'Arial', sans-serif; font-size: 1em; color: #555; margin-bottom: 20px; }
+
+        /* LISTA PLIKÓW */
+        .docs-list { list-style: none; padding: 0; margin: 0; font-family: 'Arial', sans-serif; font-size: 1.05em; line-height: 1.8; }
+        .docs-list li { margin-bottom: 15px; padding-left: 30px; position: relative; }
+        .docs-list li::before { content: "📄"; position: absolute; left: 0; top: 0; }
+        .docs-list a { font-weight: bold; text-decoration: underline; color: #1a5f4a; transition: color 0.3s; }
+        .docs-list a:hover { color: #D4AF37; }
+
+        .btn-dark { border-color: #fff; color: #fff; background: transparent; display: inline-block; padding: 10px 20px; margin-top: 20px; border: 2px solid #ccc; color: #555; font-weight: bold; border-radius: 4px; font-family: 'Arial', sans-serif; transition: 0.3s; }
+        .btn-dark:hover { background: #eee; color: #333; border-color: #ccc; }
+
+        footer { 
+            background-color: #133a2d;
+            background-image: linear-gradient(rgba(19, 58, 45, 0.60), rgba(10, 20, 15, 0.90)), url('secondary_www_logo.jpg');
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            color: #eef7f4; 
+            padding: 60px 20px 20px; 
+            text-align: center; 
+            margin-top: 40px;
+            border-top: 4px solid #D4AF37;
+        }
+        /* Przywrócone złote kolory i lepsze cienie dla czytelności */
+        footer a { color: #D4AF37; text-decoration: none; transition: 0.3s; font-weight: bold; text-shadow: 1px 1px 4px rgba(0,0,0,0.9); }
+        footer a:hover { color: #fff; text-decoration: underline; }
+        footer p { text-shadow: 1px 1px 4px rgba(0,0,0,0.9); }
+        
+        @media (max-width: 768px) { 
+            header { 
+                padding-top: 20px; 
+                background-size: cover; 
+                background-position: center 25%; 
+            }
+            .logo-wrapper { 
+                margin-bottom: 200px; 
+            }
+            .header-titles h1 { font-size: 1.8em; }
+            .doc-card { padding: 25px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container" style="padding: 0 0 0 0;">
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <div class="clock-wrapper">
+                    <div class="clock-center"></div>
+                    <div class="hand hour-hand" id="hourHand"></div>
+                    <div class="hand minute-hand" id="minuteHand"></div>
+                    <div class="hand second-hand" id="secondHand"></div>
+                    <img src="white_logo.png" alt="Ostatnia Warta Foundation Logo" class="logo-img"> 
+                </div>
+            </a>
+        </div>
+        
+        <div class="header-titles">
+            <h1>Downloadable Documents</h1>
+            <h2>All forms, regulations, and applications in one place</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html#o-nas">About Us</a></li>
+                <li><a href="index.html#podopieczni">Beneficiaries</a></li>
+                <li><a href="index.html#wolontariat">Volunteering</a></li>
+                <li><a href="index.html#wesprzyj">Support Us</a></li>
+                <li><a href="index.html#kontakt">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="container">
+    
+    <div class="docs-intro">
+        <p>
+            We value your time and focus on full transparency. Below you will find all the binding documents of the "Ostatnia Warta" Foundation, divided into categories. You can initiate most matters (such as volunteer applications or requests for assistance) via online forms on dedicated subpages, but if you prefer the traditional (printed) form or need documents for accounting – all current PDF files are located here.
+        </p>
+    </div>
+
+    <div class="doc-card">
+        <h3>For Beneficiaries and Their Families</h3>
+        <p>Documents required in the process of applying for non-medical (volunteer) or material-financial support.</p>
+        <ul class="docs-list">
+            <li><a href="01_01_Wniosek_o_objecie_opieka.pdf" target="_blank">[PDF] Application for care (Paper version)</a></li>
+            <li><a href="01_03_Zasady_wspolpracy.pdf" target="_blank">[PDF] Rules of cooperation with the Foundation</a></li>
+            <li><a href="01_02A_Upowaznienie_szpitalne.pdf" target="_blank">[PDF] Authorization – Medical Facility</a></li>
+            <li><a href="01_02B_Upowaznienie_Opiekun.pdf" target="_blank">[PDF] Authorization – Actual Caregiver</a></li>
+            <li><a href="01_04_Klauzula_RODO_Podopieczni.pdf" target="_blank">[PDF] GDPR Information Clause (Beneficiaries)</a></li>
+        </ul>
+    </div>
+
+    <div class="doc-card">
+        <h3>Become a Volunteer</h3>
+        <p>Recruitment and legal documents defining the rules for keeping watch by the Foundation's volunteers.</p>
+        <ul class="docs-list">
+            <li><a href="02_01_Kwestionariusz_Wolontariusza.pdf" target="_blank">[PDF] Volunteer Candidate Questionnaire</a></li>
+            <li><a href="02_02_Porozumienie_Wolontariat.pdf" target="_blank">[PDF] Volunteer Agreement Template</a></li>
+            <li><a href="02_03_Zasady_Swiadczenia_Pomocy.pdf" target="_blank">[PDF] Rules for Providing Assistance by Volunteers</a></li>
+            <li><a href="02_04_Zasady_Zachowania_Poufnosci.pdf" target="_blank">[PDF] Declaration – Confidentiality Rules</a></li>
+            <li><a href="02_05_Klauzula_RODO_Wolontariusze.pdf" target="_blank">[PDF] GDPR Information Clause (Volunteers)</a></li>
+            <li><a href="02_06_Regulamin_wolontariatu.pdf" target="_blank">[PDF] Volunteering Regulations of the "Ostatnia Warta" Foundation</a></li>
+            <li><a href="02_07_Zaswiadczenie_o_wykonywaniu_swiadczen_wolontariackich.pdf" target="_blank">[PDF] Certificate of performing volunteer services Template</a></li>
+        </ul>
+    </div>
+
+    <div class="doc-card">
+        <h3>Business Partnership and CSR</h3>
+        <p>Files facilitating the presentation of our mission to Company Management Boards and contract templates for accounting departments.</p>
+        <ul class="docs-list">
+            <li><a href="03_02_Oferta_Wspolpracy_CSR.pdf" target="_blank">[PDF] Cooperation Offer for Companies (Management Presentation)</a></li>
+            <li><a href="03_01_Wzor_Umowy_Darowizny.pdf" target="_blank">[PDF] Donation Agreement Template</a></li>
+        </ul>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px;">
+        <a href="index.html" class="btn-dark">&larr; Back to Homepage</a>
+    </div>
+
+</section>
+
+<footer>
+    <div class="container">
+        <div class="copyright" style="border-top: none; margin-top: 0; padding-top: 0;">
+            <p>&copy; 2026 "OSTATNIA WARTA" FOUNDATION. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Privacy Policy & GDPR</a>
+                <a href="regulamin-darowizn.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Donation Terms</a>
+                <a href="regulamin-pomocy.html" style="text-decoration: none; margin-right: 15px; color: #D4AF37;">Assistance Terms</a>
+                <a href="warunki-korzystania.html" style="text-decoration: none; color: #D4AF37;">Terms of Use</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Zegar
+    function updateClock() {
+        const now = new Date();
+        const second = now.getSeconds();
+        const minute = now.getMinutes();
+        const hour = now.getHours();
+
+        const secondDeg = ((second / 60) * 360);
+        const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
+        const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
+
+        const secHand = document.getElementById('secondHand');
+        const minHand = document.getElementById('minuteHand');
+        const hrHand = document.getElementById('hourHand');
+
+        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
+        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
+        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>
