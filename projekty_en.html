@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3VQ06C7HQ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -348,7 +349,7 @@
         <h3 style="margin-top: 0; margin-bottom: 15px; font-family: 'Georgia', serif; color: #133a2d; font-size: 1.4em; border-bottom: none;">Discover other forms of involvement:</h3>
         <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
             <a href="zbiorki_en.html" class="btn-outline" style="margin-top: 10px;">Stand Watch (Fundraisers)</a>
-            <a href="pbic_en.html" class="btn-outline" style="margin-top: 10px;">Partnership & CSR</a>
+            <a href="pbic_en.html" class="btn-outline" style="margin-top: 10px;">Partnership &amp; CSR</a>
             <a href="zwol_en.html" class="btn-outline" style="margin-top: 10px;">Become a volunteer</a>
             <a href="progzad_en.html" class="btn-outline" style="margin-top: 10px;">Voluntary redress</a>
             <a href="pracespol_en.html" class="btn-outline" style="margin-top: 10px;">Community service</a>
@@ -393,10 +394,10 @@
         const minHand = document.getElementById('minuteHand');
         const hrHand = document.getElementById('hourHand');
 
-        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
-        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
-        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
-    }
+        if(secHand) secHand.style.transform = "rotate(" + secondDeg + "deg)";
+        if(minHand) minHand.style.transform = "rotate(" + minuteDeg + "deg)";
+        if(hrHand) hrHand.style.transform = "rotate(" + hourDeg + "deg)";
+        }
     setInterval(updateClock, 1000);
     updateClock();
 </script>
