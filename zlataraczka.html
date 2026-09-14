@@ -1,0 +1,219 @@
+HTML
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3VQ06C7HQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z3VQ06C7HQ');
+      gtag('config', 'AW-18086071578');
+    </script>
+
+    <script>
+      gtag('event', 'conversion', {'send_to': 'AW-18086071578/KSzMCLGb5qAcEJqajrBD'});
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#133a2d">
+    
+    <title>Złota Rączka - Gotowość Operacyjna | Fundacja Ostatnia Warta</title>
+    <meta name="description" content="Projekt Mobilna Warta: Drobne naprawy złotej rączki i przeciwdziałanie samotności gdańskich seniorów - oczekiwanie na rozstrzygnięcie.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="canonical" href="https://ostatniawarta.pl/zlotaraczka.html" />
+    <link rel="icon" type="image/png" href="white_logo.png">
+    <link rel="apple-touch-icon" href="white_logo.png">
+
+    <style>
+        /* Podstawowe style i reset */
+        body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; display: flex; flex-direction: column; min-height: 100vh; }
+        a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
+        h1, h2, h3, h4 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
+        .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; flex-grow: 1; }
+        
+        /* Ciemna, elegancka góra z wycentrowanym logo */
+        header { 
+            background-color: #133a2d; 
+            background-image: linear-gradient(to bottom, rgba(19, 58, 45, 0) 65%, #133a2d 98%), url('tlo_strony.jpg'); 
+            background-position: center top; 
+            background-repeat: no-repeat; 
+            background-size: 100% auto; 
+            color: #fff; 
+            padding-top: 40px; 
+            padding-bottom: 0;
+            text-align: center; 
+            border-bottom: 4px solid #D4AF37; 
+        }
+        
+        /* ZEGAR ZAMIAST PIERŚCIENIA */
+        .logo-wrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 24vw; }
+        .clock-wrapper { position: relative; width: 140px; height: 140px; display: flex; justify-content: center; align-items: center; }
+        .logo-img { width: 100px; height: auto; z-index: 2; border-radius: 50%; background: #fff; padding: 5px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); position: relative; }
+        .clock-center { position: absolute; width: 12px; height: 12px; background: #D4AF37; border: 2px solid #133a2d; border-radius: 50%; z-index: 5; }
+        
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; z-index: 4; border-radius: 4px; transition: transform 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.44); }
+        .hour-hand { width: 6px; height: 40px; margin-left: -3px; background: #133a2d; border: 1px solid #fff; }
+        .minute-hand { width: 4px; height: 65px; margin-left: -2px; background: #D4AF37; }
+        .second-hand { width: 2px; height: 75px; margin-left: -1px; background: #a83232; z-index: 3; }
+
+        .header-titles h1 { font-family: 'Georgia', serif; font-size: 1.8em; margin: 10px 15px 5px 15px; font-weight: normal; color: #fff; line-height: 1.4; }
+
+        nav { background: rgba(0,0,0,0.2); padding: 15px 0; margin-top: 15px; }
+        nav ul { padding: 0; list-style: none; display: flex; justify-content: center; flex-wrap: wrap; margin: 0; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: #eef7f4; font-weight: bold; text-transform: uppercase; font-family: 'Arial', sans-serif; letter-spacing: 1px; font-size: 0.9em; }
+        nav ul li a:hover { color: #D4AF37; }
+
+        /* Style karty głównej */
+        .support-grid { display: grid; grid-template-columns: 1fr; gap: 30px; margin-top: 20px; align-items: stretch; }
+        .support-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1a5f4a; padding: 40px 30px; display: flex; flex-direction: column; align-items: center; text-align: center; box-sizing: border-box; }
+        
+        /* STYL RAMKI Z DANYMI / INFOLINIĄ */
+        .phone-box { background: #f0f7f4; padding: 25px 20px; border-radius: 8px; text-align: center; margin: 30px auto; border: 1px solid #d1e8df; width: 100%; max-width: 600px; box-sizing: border-box; }
+        .phone-number { font-size: 2.2em; letter-spacing: 2px; color: #1a5f4a; font-family: 'Arial', sans-serif; font-weight: bold; margin: 15px 0; }
+
+        .btn-primary { display: inline-block; padding: 12px 25px; border-radius: 4px; font-weight: bold; font-family: 'Arial', sans-serif; text-decoration: none; background: #D4AF37; color: #133a2d; border: 2px solid #D4AF37; transition: background 0.3s ease, color 0.3s ease; text-align: center; margin-top: 20px; }
+        .btn-primary:hover { background: #b5952f; border-color: #b5952f; color: #fff; }
+
+        /* STOPKA ZE STRONY WARUNKI KORZYSTANIA */
+        footer { 
+            background-color: #133a2d;
+            background-image: linear-gradient(rgba(19, 58, 45, 0.60), rgba(10, 20, 15, 0.90)), url('secondary_www_logo.jpg');
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            color: #eef7f4; 
+            padding: 60px 20px 20px; 
+            text-align: center; 
+            margin-top: auto;
+            border-top: 4px solid #D4AF37;
+        }
+        footer a { color: #D4AF37; text-decoration: none; transition: 0.3s; font-weight: bold; text-shadow: 1px 1px 4px rgba(0,0,0,0.9); }
+        footer a:hover { color: #fff; text-decoration: underline; }
+        footer p { text-shadow: 1px 1px 4px rgba(0,0,0,0.9); }
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 30px; padding-top: 20px; font-size: 0.9em; }
+        .ksiega-link { color: inherit; text-decoration: none; border-bottom: 1px dashed rgba(255,255,255,0.3); transition: border-color 0.3s; text-shadow: 1px 1px 4px rgba(0,0,0,0.9); }
+        .ksiega-link:hover { border-bottom-color: #D4AF37; color: #fff; text-decoration: none; }
+        
+        @media (max-width: 768px) { 
+            header { 
+                padding-top: 20px; 
+                background-size: cover; 
+                background-position: center 25%; 
+            }
+            .logo-wrapper { 
+                margin-bottom: 200px; 
+            }
+            .header-titles h1 { font-size: 1.4em; }
+            .support-card { padding: 30px 15px; }
+            .phone-number { font-size: 1.6em; }
+            .phone-box { padding: 20px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container" style="padding: 0 0 0 0;">
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <div class="clock-wrapper">
+                    <div class="clock-center"></div>
+                    <div class="hand hour-hand" id="hourHand"></div>
+                    <div class="hand minute-hand" id="minuteHand"></div>
+                    <div class="hand second-hand" id="secondHand"></div>
+                    <img src="white_logo.png" alt="Logo Fundacji Ostatnia Warta" class="logo-img" width="100" height="100"> 
+                </div>
+            </a>
+        </div>
+        
+        <div class="header-titles">
+            <h1>Mobilna Warta: Drobne naprawy złotej rączki i przeciwdziałanie samotności gdańskich seniorów</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html#o-nas">O Fundacji</a></li>
+                <li><a href="index.html#podopieczni">Podopieczni</a></li>
+                <li><a href="index.html#wesprzyj">Wesprzyj Nas</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="container">
+    
+    <div class="support-grid">
+        <div class="support-card" style="border-top: 4px solid #133a2d; background: #f4f8f6;">
+            
+            <h2 style="color: #1a5f4a; font-size: 2.2em; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 0;">STRONA W BUDOWIE</h2>
+            
+            <p style="font-size: 1.15em; font-family: 'Arial', sans-serif; max-width: 800px; margin: 10px auto 30px; color: #444;">
+                STATUS: Oczekiwanie na rozstrzygnięcie konkursu ofert przez Miejski Ośrodek Pomocy Rodzinie w Gdańsku.
+            </p>
+
+            <img src="wbudowie.jpg" alt="Projekt w budowie" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 30px;">
+            
+            <div class="phone-box" style="border-top: 4px solid #D4AF37;">
+                <p style="margin: 0; font-size: 1.1em; color: #a83232; font-weight: bold; letter-spacing: 0.5px;">INFOLINIA PROJEKTU</p>
+                <div class="phone-number">TU POJAWI SIĘ NUMER INFOLINII</div>
+                <p style="margin: 0; font-size: 0.95em; color: #555; font-family: 'Arial', sans-serif;">(Czynna w dni robocze w godzinach 8:00 - 18:00)</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="index.html" class="btn-primary">Wróć na Stronę Główną</a>
+            </div>
+            
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    <div class="container">
+        
+        <div class="copyright" style="border-top: none; margin-top: 0; padding-top: 0;">
+            <p>&copy; 2026 FUNDACJA "OSTATNIA WARTA". <a href="ksiega_znaku.pdf" target="_blank" class="ksiega-link">Wszelkie prawa zastrzeżone.</a></p>
+            <p style="margin-top: 10px;">
+                <a href="index.html" style="text-decoration: none; margin-right: 15px;">Strona Główna</a>
+                <a href="polityka-prywatnosci.html" style="text-decoration: none; margin-right: 15px;">Polityka Prywatności i RODO</a>
+                <a href="regulamin-darowizn.html" style="text-decoration: none; margin-right: 15px;">Regulamin Darowizn</a>
+                <a href="regulamin-pomocy.html" style="text-decoration: none; margin-right: 15px;">Regulamin Świadczenia Pomocy</a>
+                <a href="warunki-korzystania.html" style="text-decoration: none;">Warunki Korzystania</a>
+            </p>
+        </div>
+
+    </div>
+</footer>
+
+<script>
+    // Zegar
+    function updateClock() {
+        const now = new Date();
+        const second = now.getSeconds();
+        const minute = now.getMinutes();
+        const hour = now.getHours();
+
+        const secondDeg = ((second / 60) * 360);
+        const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
+        const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
+
+        const secHand = document.getElementById('secondHand');
+        const minHand = document.getElementById('minuteHand');
+        const hrHand = document.getElementById('hourHand');
+
+        if(secHand) secHand.style.transform = `rotate(${secondDeg}deg)`;
+        if(minHand) minHand.style.transform = `rotate(${minuteDeg}deg)`;
+        if(hrHand) hrHand.style.transform = `rotate(${hourDeg}deg)`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>
