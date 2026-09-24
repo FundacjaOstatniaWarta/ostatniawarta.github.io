@@ -35,14 +35,12 @@
     </script>
 
     <style>
-        /* Podstawowe style i reset */
         body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
         a { text-decoration: none; color: #1a5f4a; transition: color 0.3s ease; }
         h1, h2, h3, h4 { color: #1a5f4a; font-family: 'Arial', sans-serif; }
         
         .container { width: 90%; max-width: 1200px; margin: auto; padding: 0; }
         
-        /* Zmiany dla Google Translate Widget */
         .top-bar {
             background-color: #0d2a20; 
             padding: 5px 0;
@@ -63,7 +61,6 @@
         body { top: 0 !important; }
         .skiptranslate iframe { display: none !important; }
         
-        /* Ciemna, elegancka góra z wycentrowanym logo */
         header { 
             background-color: #133a2d; 
             background-image: linear-gradient(to bottom, rgba(19, 58, 45, 0) 65%, #133a2d 98%), url('tlo_strony.jpg'); 
@@ -103,7 +100,6 @@
         
         .section-desc { font-family: 'Georgia', serif; font-size: 1.15em; color: #555; text-align: justify; max-width: 900px; margin: 0 auto 30px auto; line-height: 1.8; }
 
-        /* Style linków tekstowych */
         .text-link { color: #1a5f4a; text-decoration: underline; font-weight: bold; transition: color 0.3s; }
         .text-link:hover { color: #D4AF37; }
         .gold-link { color: #D4AF37; font-weight: bold; text-decoration: none; font-style: italic; font-size: 1.1em; transition: 0.3s; padding: 0 4px; }
@@ -122,7 +118,6 @@
         .mission-item span { display: inline-block; margin-top: 15px; color: #a83232; font-weight: bold; font-family: 'Arial', sans-serif; font-size: 0.95em; transition: 0.3s; }
         .mission-item:hover span { color: #1a5f4a; }
 
-        /* Klasa do obsługi dużego kafla AGE */
         .span-2-row { grid-row: span 2; }
 
         footer { 
@@ -150,7 +145,6 @@
         #cookie-banner button { margin-left: 20px; background-color: #D4AF37; color: #133a2d; border: none; padding: 10px 20px; font-weight: bold; border-radius: 4px; cursor: pointer; vertical-align: middle; transition: 0.3s;}
         #cookie-banner button:hover { background-color: #fff; }
 
-        /* Style dla przycisku pływającego WhatsApp */
         .whatsapp-float {
             position: fixed;
             width: 60px;
@@ -201,7 +195,6 @@
 
             .span-2-row { grid-row: auto; }
 
-            /* Responsive dla WhatsApp Float */
             .whatsapp-float {
                 width: 50px;
                 height: 50px;
@@ -268,12 +261,19 @@
         </p>
         
         <div class="mission-grid">
-            <a href="o_fundacji_en.html" class="mission-item">
-                <h4>About the Foundation</h4>
-                <p><strong>Get to know Ostatnia Warta.</strong><br>Who we are and why the Foundation was created. Discover our history and the true meaning of what we do.</p>
-                <span>Get to know us &rarr;</span>
-            </a>
-            
+            <div class="mission-item span-2-row" style="position: relative;">
+                <a href="https://festiwalaktywnosci.pl/wystawcy/" target="_blank" rel="noopener noreferrer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></a>
+                <h4 style="position: relative; z-index: 2; pointer-events: none;">Senior Job and Activity Fair</h4>
+                
+                <div style="display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; pointer-events: none; margin: 15px 0;">
+                    <img src="targi2.jpg" alt="Senior Job and Activity Fair Poster" style="max-width: 100%; height: auto;">
+                </div>
+                
+                <p style="position: relative; z-index: 2; pointer-events: none; margin-bottom: 15px;">Join us and let's build a space full of inspiration together – visit our stand, meet us in person, and let's discover together how to wisely support the autumn of life.</p>
+                
+                <span style="position: relative; z-index: 2; pointer-events: none;">Check the exhibitors list &rarr;</span>
+            </div>
+
             <div class="mission-item span-2-row" style="position: relative;">
                 <a href="https://www.age-platform.eu/" target="_blank" rel="noopener noreferrer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></a>
                 <h4 style="position: relative; z-index: 2; pointer-events: none;">AGE Platform Europe</h4>
@@ -284,22 +284,11 @@
                 
                 <p style="position: relative; z-index: 2; pointer-events: none; margin-bottom: 15px;">Membership in the most prestigious expert network in Europe confirms the highest quality of our activities. Together with EU partners, we directly shape and implement modern standards of long-term care.</p>
                 
-                <div style="width: 100%; position: relative; z-index: 2; pointer-events: none; margin-bottom: 15px;">
-                    <img src="PROO_zestawienie_2_plik_edytowalny_KOLOR.jpg" alt="Funded by PROO" style="width: 100%; height: auto;">
+                <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; pointer-events: none; margin-bottom: 15px;">
+                    <img src="PROO_zestawienie_2_plik_edytowalny_KOLOR.jpg" alt="Funded by PROO" style="max-width: 100%; height: auto; max-height: 350px;">
                 </div>
                 
                 <span style="position: relative; z-index: 2; pointer-events: none;">Visit the AGE website &rarr;</span>
-            </div>
-
-            <div class="mission-item" style="position: relative;">
-                <a href="https://niw.gov.pl/ivy-2026/wlacz-sie-w-obchody/" target="_blank" rel="noopener noreferrer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></a>
-                
-                <h4 style="position: relative; z-index: 2; pointer-events: none;">International Year of Volunteers</h4>
-                <p style="position: relative; z-index: 2; pointer-events: none;">As part of the IVY 2026 celebrations, we have received the patronage of the Director of NIW-CRSO for the innovative training of our volunteers for the noble service of end-of-life doula within the <a href="gst.html" class="text-link" style="pointer-events: auto; position: relative; z-index: 3;">"Gdańsk School of Accompanying"</a> project.</p>
-                <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; pointer-events: none; margin-top: 15px;">
-                    <img src="IVY_Logo_RGB_Horiz_PL.png" alt="International Year of Volunteers 2026 Logo" style="max-width: 100%; height: auto; max-height: 100px;">
-                </div>
-                <span style="position: relative; z-index: 2; pointer-events: none;">Join the celebrations &rarr;</span>
             </div>
             
             <a href="projekty_en.html" class="mission-item">
@@ -329,10 +318,10 @@
         </p>
         
         <div class="mission-grid">
-            <a href="doula_en.html" class="mission-item">
-                <h4>End-of-Life Doula</h4>
-                <p>The noble service of accompanying people in the process of passing away. We care for a space free from fear, saturated with peace and emotional support.</p>
-                <span>Meet the End-of-Life Doulas &rarr;</span>
+            <a href="o_fundacji_en.html" class="mission-item">
+                <h4>About the Foundation</h4>
+                <p><strong>Get to know Ostatnia Warta.</strong><br>Who we are and why the Foundation was created. Discover our history and the true meaning of what we do.</p>
+                <span>Get to know us &rarr;</span>
             </a>
             <a href="gst_en.html" class="mission-item">
                 <h4>Gdańsk School of Accompanying</h4>
@@ -379,10 +368,10 @@
                 <span>Read the manifesto &rarr;</span>
             </a>
 
-            <a href="pracespol_en.html" class="mission-item">
-                <h4>Community Service</h4>
-                <p>Has the court sentenced you to a limitation of liberty in the form of community service? Fulfill this obligation in a place where your work takes on deep meaning. Help us with organizational and logistical activities.</p>
-                <span>Check the rules &rarr;</span>
+            <a href="doula_en.html" class="mission-item">
+                <h4>End-of-Life Doula</h4>
+                <p>The noble service of accompanying people in the process of passing away. We care for a space free from fear, saturated with peace and emotional support.</p>
+                <span>Meet the End-of-Life Doulas &rarr;</span>
             </a>
         </div>
         
@@ -539,7 +528,6 @@ function googleTranslateElementInit() {
     <svg class="whatsapp-icon" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.126.549 4.195 1.594 6.015L.141 24l6.094-1.602c1.781.984 3.797 1.503 5.796 1.503 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zm0 21.906c-1.802 0-3.578-.483-5.123-1.406l-.366-.216-3.804.998.984-3.708-.234-.375C2.457 15.688 1.969 13.886 1.969 12.031c0-5.555 4.507-10.062 10.062-10.062 5.555 0 10.062 4.507 10.062 10.062s-4.507 10.062-10.062 10.062zm5.526-7.53c-.303-.15-1.785-.88-2.062-.984-.277-.103-.483-.15-.684.15-.202.3-.778.984-.954 1.185-.176.202-.352.227-.655.077-1.543-.762-2.583-1.391-3.56-2.618-.258-.323-.028-.497.124-.649.136-.136.303-.352.455-.527.15-.176.202-.303.303-.504.103-.202.052-.377-.024-.527-.077-.15-.684-1.649-.938-2.257-.246-.595-.497-.514-.684-.524-.176-.009-.377-.009-.578-.009-.202 0-.527.077-.804.377-.277.303-1.055 1.031-1.055 2.514 0 1.483 1.08 2.917 1.231 3.118.15.202 2.126 3.243 5.148 4.545 1.83.788 2.541.854 3.442.716.711-.108 2.219-.906 2.533-1.781.314-.875.314-1.625.22-1.781-.094-.156-.346-.248-.649-.398z"/></svg>
 </a>
 <script>
-    // Zegar
     function updateClock() {
         const now = new Date();
         const second = now.getSeconds();
@@ -557,7 +545,6 @@ function googleTranslateElementInit() {
     setInterval(updateClock, 1000);
     updateClock();
     
-    // Obsługa ciasteczek
     function acceptCookies() {
         localStorage.setItem('cookiesAccepted', 'true');
         document.getElementById('cookie-banner').style.display = 'none';
